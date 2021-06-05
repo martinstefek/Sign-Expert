@@ -1,0 +1,169 @@
+html, body {
+    font-size: @font-size-base;
+}
+
+a {
+    &, &:hover {
+        text-decoration: none;
+    }
+}
+
+svg {
+    vertical-align: middle;
+}
+
+address {
+    margin-bottom: 0;
+}
+
+.container {
+    .container-fixed();
+    width: 100%;
+
+    @media (min-width: @screen-sm-min) {
+        width: 100%;
+        max-width: @container-sm;
+    }
+    @media (min-width: @screen-md-min) {
+        width: 100%;
+        max-width: @container-md;
+    }
+    @media (min-width: @screen-lg-min) {
+        width: 100%;
+        max-width: @container-lg;
+    }
+    @media (min-width: @screen-xl-min) {
+        width: 100%;
+        max-width: @container-xl;
+    }
+}
+
+.text-double-col {
+    column-count: 2;
+}
+
+.list {
+    .list-unstyled();
+}
+
+.text-default-links {
+    a {
+        color: @text-color;
+    }
+}
+
+.section {
+    padding: 2rem 0;
+
+    @media (min-width: @screen-sm-min) {
+        padding: .rem(56px)[@value] 0;
+    }
+
+    .section-header {
+        margin-bottom: 1rem;
+
+        .breakpoint(sm, {
+            margin-bottom: .rem(32px)[@value];
+        });
+    }
+
+    .section-title {
+        font-size: .rem(20px)[@value];
+        text-align: center;
+        margin-bottom: 0;
+
+        .breakpoint(sm, {
+            font-size: .rem(24px)[@value];
+        });
+    }
+
+    .section-description {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 0;
+
+        .breakpoint(sm, {
+            font-size: .rem(18px)[@value];
+        });
+    }
+}
+
+.no-more-section {
+    position: relative;
+    margin-top: -29rem;
+    padding-top: 20rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 17rem);
+    z-index: 10;
+
+    .breakpoint(sm, {
+        padding-top: 18rem;
+        margin-top: -32rem;
+    })
+}
+
+img {
+    max-width: 100%;
+}
+
+each(@colors, {
+    .fill-@{key} {
+        fill: @value;
+    }
+
+    .stroke-@{key} {
+        stroke: @value;
+    }
+});
+
+.dark-theme-text {
+    color: @dark-theme-text-color;
+}
+
+.dark-theme-text-dark {
+    color: @dark-theme-text-color-dark;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    line-height: 1.5;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.font-weight-semibold {
+    font-weight: 600;
+}
+
+.font-weight-medium {
+    font-weight: 500;
+}
+
+.font-weight-normal {
+    font-weight: 400;
+}
+
+.font-weight-light {
+    font-weight: 300;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+.text-secondary {
+    color: @brand-secondary;
+}
+
+.line-height-large {
+    line-height: 1.75;
+}
+
+.generateSpacings();

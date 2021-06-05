@@ -1,0 +1,66 @@
+.btn {
+    .customTransition(background, background-color, border, outline, color;);
+
+    &:active,
+    &.active {
+        .box-shadow(inset 0 3px 5px rgba(0, 0, 0, .05));
+    }
+}
+
+.btn-bordered {
+    .btn();
+    .btn-lighter();
+    background-color: transparent;
+}
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg, .icon {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        vertical-align: middle;
+        margin-right: .rem(10px)[@value];
+    }
+}
+
+.btn-icon-right {
+    .btn-icon();
+
+    svg, .icon {
+        margin-right: 0;
+        margin-left: .rem(10px)[@value];
+    }
+}
+
+.btn-icon-only {
+    .btn-icon();
+
+    svg, .icon {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.btn-white {
+    .button-variant(@text-color; #FFFFFF; #FFFFFF);
+}
+
+.btn-light {
+    .button-variant(@text-color; @gray-light; @gray-light);
+}
+
+.btn-lighter {
+    .button-variant(@text-color; @gray-lighter; @gray-lighter);
+}
+
+.btn-transparent {
+    background-color: transparent;
+
+    &:hover {
+        background-color: rgba(#FFFFFF, .0875);
+    }
+}

@@ -1,0 +1,296 @@
+.rem(@size, @baseFontSize: 16px) {
+    @value: (@size/@baseFontSize) * 1rem;
+}
+
+.em(@size, @baseFontSize: 16px) {
+    @value: (@size/@baseFontSize) * 1em;
+}
+
+.fontSize(@size, @baseFontSize: 16px) {
+    font-size: .rem(@size, @baseFontSize)[@value];
+}
+
+.customPlaceholder(@rules) {
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+
+    &::-moz-placeholder {
+        @rules();
+    }
+
+    &:-ms-input-placeholder {
+        @rules();
+    }
+
+    &::placeholder {
+        @rules();
+    }
+}
+
+.transition() {
+    transition: all .2s ease-in-out;
+}
+
+.customTransition(@props) {
+    transition: all .2s ease-in-out;
+    transition-property: @props;
+}
+
+.tab-focus() {
+    outline: none;
+}
+
+.list-unstyled() {
+    padding-left: 0;
+    list-style: none;
+}
+
+.button-variant(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:focus,
+    &.focus {
+        color: @color;
+        background-color: darken(@background, 7.5%);
+        border-color: transparent;
+    }
+    &:hover {
+        color: @color;
+        background-color: darken(@background, 7.5%);
+        border-color: transparent;
+    }
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        color: @color;
+        background-color: darken(@background, 10%);
+        background-image: none;
+        border-color: transparent;
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color;
+            background-color: darken(@background, 12.5%);
+            border-color: transparent;
+        }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            background-color: @background;
+            border-color: @border;
+        }
+    }
+
+    .badge {
+        color: @background;
+        background-color: @color;
+    }
+}
+
+.generateSpacings(@spacingIndex: length(@spacings)) when (@spacingIndex > 0) {
+    @spacing: extract(@spacings, @spacingIndex);
+    @spacingKey: extract(@spacing, 1);
+    @spacingValue: extract(@spacing, 2);
+
+    .mt-@{spacingKey} {
+        margin-top: @spacingValue;
+    }
+
+    .mr-@{spacingKey} {
+        margin-right: @spacingValue;
+    }
+
+    .mb-@{spacingKey} {
+        margin-bottom: @spacingValue;
+    }
+
+    .ml-@{spacingKey} {
+        margin-left: @spacingValue;
+    }
+
+    .pt-@{spacingKey} {
+        padding-top: @spacingValue;
+    }
+
+    .pr-@{spacingKey} {
+        padding-right: @spacingValue;
+    }
+
+    .pb-@{spacingKey} {
+        padding-bottom: @spacingValue;
+    }
+
+    .pl-@{spacingKey} {
+        padding-left: @spacingValue;
+    }
+
+    .generateSpacings(@spacingIndex - 1);
+}
+
+.breakpoint(@size, @rules) {
+    & when (@size = sm) {
+        @media (min-width: @screen-sm-min) {
+            @rules();
+        }
+    }
+
+    & when (@size = md) {
+        @media (min-width: @screen-md-min) {
+            @rules();
+        }
+    }
+
+    & when (@size = lg) {
+        @media (min-width: @screen-lg-min) {
+            @rules();
+        }
+    }
+
+    & when (@size = xl) {
+        @media (min-width: @screen-xl-min) {
+            @rules();
+        }
+    }
+}
+
+.breakpointMax(@size, @rules) {
+    & when (@size = sm) {
+        @media (max-width: @screen-sm-max) {
+            @rules();
+        }
+    }
+
+    & when (@size = md) {
+        @media (max-width: @screen-md-max) {
+            @rules();
+        }
+    }
+
+    & when (@size = lg) {
+        @media (max-width: @screen-lg-max) {
+            @rules();
+        }
+    }
+
+    & when (@size = xl) {
+        @media (max-width: @screen-xl-max) {
+            @rules();
+        }
+    }
+}
+
+.fixedHeader(@rules) {
+    body.main-header-fixed & {
+        @rules();
+    }
+}
+
+.navigationVisible(@rules) {
+    body.navigation-visible & {
+        @rules();
+    }
+}
+
+.desktopHeader(@rules) {
+    .breakpoint(lg, @rules);
+}
+
+.mobileHeader(@rules) {
+    .breakpointMax(lg, @rules);
+}
+
+.mobileSearchInputRules() {
+    border-radius: @border-radius-base;
+    height: .rem(48px)[@value];
+    font-size: .rem(16px)[@value];
+    padding: .rem(7px)[@value] 2.75rem .rem(7px)[@value] .rem(18px)[@value];
+    border: 2px solid @brand-primary;
+}
+
+.mobileSearchInputPlaceholderRules() {
+    font-size: .rem(16px)[@value];
+}
+
+.fixedHeaderRules() {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: @headerHeightMobile;
+    z-index: 300;
+}
+
+.searchCancelRulesWhenPlaceholderIsShown() {
+    width: 0;
+    height: 0;
+    margin-left: 0;
+}
+
+.navigationHover(@rules, @mobileRules: {}) {
+    .desktopHeader({
+        &:hover {
+            @rules();
+        }
+    });
+
+    .mobileHeader({
+        &.active {
+            @rules();
+            @mobileRules();
+        }
+    });
+}
+
+.removePseudoElements() {
+    &::before, &::after {
+        display: none;
+    }
+}
+
+.make-row(@gutter: @grid-gutter-width) {
+    display: flex;
+    flex-wrap: wrap;
+    .removePseudoElements();
+}
+
+.make-xs-column(@columns; @gutter: @grid-gutter-width) {
+    float: none;
+    flex-basis: percentage((@columns / @grid-columns));
+}
+
+.make-sm-column(@columns; @gutter: @grid-gutter-width) {
+    .breakpoint(sm, {
+        float: none;
+        flex-basis: percentage((@columns / @grid-columns));
+    });
+}
+
+.make-md-column(@columns; @gutter: @grid-gutter-width) {
+    .breakpoint(md, {
+        float: none;
+        flex-basis: percentage((@columns / @grid-columns));
+    });
+}
+
+.make-lg-column(@columns; @gutter: @grid-gutter-width) {
+    .breakpoint(lg, {
+        float: none;
+        flex-basis: percentage((@columns / @grid-columns));
+    });
+}
+
+.calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
+    .col-@{class}-@{index} {
+        width: percentage((@index / @grid-columns));
+        flex-basis: percentage((@index / @grid-columns));
+        float: none;
+    }
+}

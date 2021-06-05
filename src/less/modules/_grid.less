@@ -1,0 +1,18 @@
+.row, .container {
+    .removePseudoElements();
+}
+
+.row-align-start {
+    align-items: flex-start;
+}
+
+@media (min-width: @screen-xl-min) {
+    .make-grid(xl);
+
+    .row > *[class*="col-xl-"] {
+        position: relative;
+        min-height: 1px;
+        padding-right: floor((@grid-gutter-width / 2));
+        padding-left: ceil((@grid-gutter-width / 2));
+    }
+}

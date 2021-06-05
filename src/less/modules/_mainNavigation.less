@@ -1,0 +1,144 @@
+.main-nav {
+    display: none;
+
+    .desktopHeader({
+        position: absolute;
+        top: 100%;
+        transform: translate(0, .5rem);
+        z-index: @zindex-dropdown;
+    });
+
+    .mobileHeader({
+        margin-bottom: 1.15rem;
+        .transition();
+    });
+
+    .navigationVisible({
+        display: block;
+    });
+
+    .main-nav-level, .main-nav-sub-level {
+        padding: .rem(10px)[@value] 0;
+        margin: 0;
+        list-style-type: none;
+        width: max-content;
+        background-color: #FFFFFF;
+        min-width: .rem(210px)[@value];
+        max-width: .rem(300px)[@value];
+        border-radius: @border-radius-base;
+
+        .mobileHeader({
+            width: 100%;
+            max-width: none;
+        });
+
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+
+            .desktopHeader({
+                box-shadow: @dropdown-box-shadow;
+            });
+        }
+    }
+
+    .main-nav-sub-level {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        bottom: 0;
+
+        &::before {
+            display: none;
+            content: '';
+            width: 1px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background-color: @gray-light;
+
+            .desktopHeader({
+                display: block;
+            })
+        }
+    }
+
+    .main-nav-menu-item {
+        .breakpoint(lg, {
+            &:hover {
+                background-color: lighten(@gray-light, 1%);
+
+                > .main-nav-sub-level {
+                    display: block;
+                }
+
+                > .main-nav-menu-item-link {
+                    color: @brand-primary;
+                    text-decoration: none;
+                }
+            }
+        });
+
+        .breakpointMax(lg, {
+            &.active {
+                > .main-nav-sub-level {
+                    display: block;
+                }
+            }
+        });
+
+        &.main-nav-menu-item-current-level, &.main-nav-menu-item-back {
+            display: none;
+
+            .mobileHeader({
+                display: block;
+            });
+
+            .icon {
+                vertical-align: -0.1rem;
+                fill: @brand-secondary;
+                width: 1rem;
+                height: 1rem;
+                margin-right: .5rem;
+            }
+        }
+
+        &.main-nav-menu-item-back {
+            .main-nav-menu-item-link {
+                font-size: .rem(20px)[@value];
+                font-weight: 700;
+                background-image: none;
+            }
+
+            .icon {
+                fill: @text-color-light;
+            }
+        }
+    }
+
+    .main-nav-menu-item-link {
+        display: block;
+        padding: .rem(5px)[@value] .rem(40px)[@value] .rem(4px)[@value] .rem(18px)[@value];
+        font-weight: 600;
+        font-size: .rem(14px)[@value];
+        color: @text-color;
+        background-image: url('../../img/menu-chevron-right.svg');
+        background-repeat: no-repeat;
+        background-position: calc(100% - .75rem) center;
+        text-decoration: none;
+
+        .mobileHeader({
+            padding: .rem(6px)[@value] .rem(9px)[@value] .rem(5px)[@value];
+            border-bottom: 1px solid @gray-light;
+        });
+    }
+}
+

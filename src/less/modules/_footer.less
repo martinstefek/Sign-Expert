@@ -1,0 +1,165 @@
+.main-footer {
+    border-top: 1px solid @gray-light;
+    margin-top: @footerMarginTop;
+    padding: .rem(40px)[@value] 0;
+    font-weight: 500;
+
+    .breakpoint(lg, {
+        padding: .rem(60px)[@value] 0;
+    });
+
+    .logo {
+        display: block;
+        margin-bottom: 1rem;
+        margin-top: -1rem;
+
+        .breakpoint(lg, {
+            margin-bottom: 2rem;
+        });
+
+        .icon {
+            width: 10.5rem;
+            height: 3.5rem;
+        }
+    }
+
+    .footer-collapse-col {
+        .breakpointMax(lg, {
+            border-top: 1px solid @gray-light;
+            border-bottom: 1px solid @gray-light;
+            margin: -1px .rem(8px)[@value] 0;
+        });
+
+        .footer-heading {
+            position: relative;
+            padding-top: .rem(11px)[@value];
+            padding-bottom: .rem(11px)[@value];
+            margin-bottom: 0;
+
+            .breakpoint(lg, {
+                margin-bottom: 1rem;
+                padding: 0;
+
+                .icon-active, .icon-inactive {
+                    display: none !important;
+                }
+            });
+
+            &[aria-expanded="false"] {
+                .icon-active {
+                    display: none;
+                }
+
+                .icon-inactive {
+                    display: block;
+                }
+            }
+
+            &[aria-expanded="true"] {
+                .icon-active {
+                    display: block;
+                }
+
+                .icon-inactive {
+                    display: none;
+                }
+            }
+        }
+
+        .footer-collapse-content {
+            padding: .5rem 0 1rem;
+
+            .breakpoint(lg, {
+                padding: 0;
+            });
+        }
+
+        .footer-collapse-icon {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+            width: 1rem;
+            height: 1rem;
+            fill: @brand-primary
+        }
+    }
+
+    .footer-heading {
+        margin-bottom: 1rem;
+    }
+
+    .footer-list-of-links {
+        li {
+            margin-bottom: .65rem;
+
+            .breakpoint(lg, {
+                margin-bottom: .35rem;
+            });
+        }
+    }
+
+    address {
+        color: @text-color-light;
+        line-height: .rem(30px)[@value];
+    }
+
+    .socials-list {
+        .list-unstyled();
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        margin-top: 1rem;
+
+        .breakpoint(lg, {
+            margin-top: 0;
+        });
+
+        .breakpoint(lg, {
+            justify-content: flex-end;
+        });
+
+        li {
+            margin-right: .95rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        svg {
+            width: .rem(20px)[@value];
+            height: .rem(20px)[@value];
+            .transition();
+
+            &:hover {
+                fill: @brand-primary;
+            }
+        }
+    }
+
+    .copyright {
+        padding-top: 1.5rem;
+        font-size: .rem(14px)[@value];
+        color: @text-color-light;
+
+        .breakpoint(sm, {
+            padding-top: 2.5rem;
+
+            .copyright-powered-by {
+                text-align: right;
+
+            }
+        });
+    }
+
+    .breakpoint(lg, {
+        .footer-collapse-col {
+            .footer-collapse-content {
+                display: block !important;
+                height: auto !important;
+            }
+        }
+    });
+}

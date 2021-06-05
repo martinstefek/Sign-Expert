@@ -1,0 +1,65 @@
+.input-number-with-controls {
+    display: flex;
+
+    input {
+        appearance: none;
+        width: .em(60px, @inputNumberWithControlsFontSize)[@value];
+        height: .em(50px, @inputNumberWithControlsFontSize)[@value];
+        border: 1px solid @gray-light;
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 600;
+        border-radius: 0;
+
+        .breakpoint(lg, {
+            font-size: .rem(@inputNumberWithControlsFontSize)[@value];
+        });
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            appearance: none;
+            margin: 0;
+        }
+    }
+
+    button {
+        .btn();
+        background-color: transparent;
+        width: .em(50px, @inputNumberWithControlsFontSize)[@value];
+        height: .em(50px, @inputNumberWithControlsFontSize)[@value];
+        font-size: 1rem;
+        padding: 1rem;
+
+        .breakpoint(lg, {
+            font-size: .rem(@inputNumberWithControlsFontSize)[@value];
+        });
+
+        &:hover:not(:disabled) {
+            background-color: @gray-lighter;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: @text-color;
+        }
+
+        &:disabled {
+            svg {
+                fill: rgba(@text-color, 0.3);
+            }
+        }
+
+        &.button-plus {
+            border: 1px solid @gray-light;
+            border-left: none;
+            border-radius: 0 @border-radius-base @border-radius-base 0;
+        }
+
+        &.button-minus {
+            border: 1px solid @gray-light;
+            border-right: none;
+            border-radius: @border-radius-base 0 0 @border-radius-base;
+        }
+    }
+}

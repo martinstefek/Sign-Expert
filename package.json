@@ -1,0 +1,50 @@
+{
+  "name": "signexpert",
+  "version": "1.0.0",
+  "description": "Hello worlds",
+  "scripts": {
+    "build:dev": "npx mix",
+    "build:production": "npx mix --production",
+    "watch": "npx mix watch",
+    "watch:hot": "npx mix watch --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinstefek/rinoparts.git"
+  },
+  "author": "Martin Štefek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinstefek/rinoparts/issues"
+  },
+  "homepage": "https://github.com/martinstefek/rinoparts#readme",
+  "devDependencies": {
+    "@ayctor/laravel-mix-svg-sprite": "git+https://github.com/Ayctor/laravel-mix-svg-sprite.git#next",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.16",
+    "less": "^4.1.1",
+    "less-loader": "^8.1.1",
+    "postcss": "^8.2.9",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "svg-spritemap-webpack-plugin": "^3.9.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^3.4.1",
+    "bootstrap-icons": "^1.4.1",
+    "jquery": "^3.6.0",
+    "lightgallery": "^1.10.0",
+    "popper.js": "^1.16.1",
+    "reset-css": "^5.0.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "IE 11"
+  ]
+}

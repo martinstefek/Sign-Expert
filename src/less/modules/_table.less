@@ -1,0 +1,29 @@
+.table {
+    > tbody {
+        > tr {
+            > th {
+                font-weight: 600;
+            }
+
+            > th, > td {
+                font-size: .rem(14px)[@value];
+                padding: .rem(11px)[@value];
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+
+            &:last-child {
+                > th, > td {
+                    border-bottom: 1px solid @table-border-color;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,108 @@
+.category-banner-row {
+    .make-row(@categoryBannerGutter);
+}
+
+.category-banner-col {
+    .make-xs-column(12, @categoryBannerGutter);
+    margin-bottom: @categoryBannerGutter;
+
+    .breakpoint(lg, {
+        .make-xs-column(4, @categoryBannerGutter);
+        margin-bottom: .rem(@categoryBannerGutter)[@value];
+    });
+}
+
+.category-banner {
+    position: relative;
+    padding-top: 130%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    border-color: transparent;
+    .transition();
+
+    &:hover {
+        border-left: 1px solid #FFFFFF;
+        border-right: 1px solid #FFFFFF;
+        transform: scale(1.033);
+        box-shadow: 0 .5rem 2.125rem .rem(2px)[@value] rgba(0, 0, 0, .2);
+        z-index: 10;
+    }
+
+    .breakpoint(sm, {
+        padding-top: 110%;
+    });
+
+    .breakpoint(md, {
+        padding-top: 80%;
+    });
+
+    .breakpoint(lg, {
+        padding-top: 110%;
+    });
+
+    a {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color: #FFFFFF;
+        text-decoration: none;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 50%, #000000 100%);
+        z-index: 10;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        right: 1rem;
+
+        .breakpoint(lg, {
+            left: .rem(24px)[@value];
+            bottom: .rem(24px)[@value];
+            right: .rem(24px)[@value];
+        });
+    }
+
+    .title {
+        color: #FFFFFF;
+        font-size: .rem(20px)[@value];
+        margin-bottom: .rem(4px)[@value];
+
+        .breakpoint(md, {
+            //font-size: @font-size-h3;
+        });
+
+        .breakpoint(lg, {
+            font-size: @font-size-h3;
+        });
+    }
+
+    .description {
+        color: rgba(#FFFFFF, .6);
+        margin-bottom: 0;
+    }
+
+    .link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: .rem(60px)[@value];
+        height: .rem(60px)[@value];
+        margin-left: 1rem;
+
+        .icon {
+            width: .rem(19px)[@value];
+            height: .rem(12px)[@value];
+            fill: #FFFFFF;
+        }
+    }
+}

@@ -1,0 +1,176 @@
+@headerSearchTransitionDelay: .2s;
+
+@navigationButtonAnimationDuration: .2s;
+
+@partnersLogosGutter: 24px;
+@partnersLogosGutterMobile: 8px;
+@categoryBannerGutter: 2px;
+
+@headerHeight: 6.25rem;
+@headerHeightMobile: 4.125rem;
+
+@footerMarginTop: 2rem;
+
+@inputNumberWithControlsFontSize: 18px;
+
+@baseSpacing: 1rem;
+@spacings:
+  0 0,
+  1 (@baseSpacing * .25),
+  2 (@baseSpacing * .5),
+  3 (@baseSpacing),
+  4 (@baseSpacing * 1.5),
+  5 (@baseSpacing * 2);
+
+/**
+    Bootstrap Config
+ */
+@gray-dark: #1F222B;
+@gray: rgba(@text-color, .8);
+@gray-light: rgba(@text-color, .6);
+@gray-lighter: #E5E5E7;
+@gray-lightest: #FAFAFA;
+
+@brand-primary: #FF9215;
+@brand-secondary: #0094D2;
+@brand-success: #00A046;
+
+@text-color: @gray-dark;
+@text-color-light: rgba(@text-color, .8);
+@text-muted: @text-color-light;
+
+@dark-theme-text-color: #B0B1B5;
+@dark-theme-text-color-dark: #76777E;
+
+@border-color: #E4E4E4;
+
+@colors: {
+  gray-dark: @gray-dark;
+  gray: @gray;
+  gray-light: @gray-light;
+  brand-primary: @brand-primary;
+  brand-secondary: @brand-secondary;
+  brand-success: @brand-success;
+}
+
+@border-radius-base:        6px;
+@border-radius-small:       4px;
+
+/**
+    Grid
+ */
+@grid-gutter-width:         18px;
+
+@screen-xs:                  0px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+@screen-sm:                  576px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+@screen-sm-max:              (@screen-sm-min - 1);
+
+@screen-md:                  768px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+@screen-md-max:              (@screen-md-min - 1);
+
+@screen-lg:                  992px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+@screen-lg-max:              (@screen-lg-min - 1);
+
+@screen-xl:                  1200px;
+@screen-xl-min:              @screen-xl;
+@screen-xl-desktop:          @screen-xl-min;
+@screen-xl-max:              (@screen-xl-min - 1);
+
+
+/**
+    Container
+ */
+
+@container-tablet:             (540px + @grid-gutter-width);
+@container-sm:                 @container-tablet;
+
+@container-desktop:            (720px + @grid-gutter-width);
+@container-md:                 @container-desktop;
+
+@container-large-desktop:      (960px + @grid-gutter-width);
+@container-lg:                 @container-large-desktop;
+
+@container-xl:                 (@screen-xl + @grid-gutter-width);
+
+/**
+    Breakpoints
+ */
+
+
+/**
+    Typography
+ */
+@font-family-base: 'DM Sans', sans-serif;
+
+@font-size-base:          16px;
+@font-size-large:         ceil((@font-size-base * 1.25));
+@font-size-small:         ceil((@font-size-base * .85));
+
+@line-height-base:        1.5;
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+@font-size-base:          16px;
+@font-size-h1:            2rem;
+@font-size-h2:            1.75rem;
+@font-size-h3:            1.5rem;
+@font-size-h4:            1.25rem;
+@font-size-h5:            1.125rem;
+@font-size-h6:            1rem;
+
+@headings-font-weight: 500;
+
+/**
+    General components
+ */
+//@enable-shadows:              true;
+@component-active-color:      @brand-primary;
+@component-active-bg:         @gray-lighter;
+
+/**
+    Button variables
+ */
+//@btn-box-shadow:              none;
+//@btn-active-box-shadow:       none;
+//@input-btn-focus-width:       0;
+@btn-font-weight: 500;
+
+/**
+    Bootstrap Dropdown Config
+ */
+@dropdown-min-width:                8rem;
+//@dropdown-item-padding-y:           .25rem;
+//@dropdown-item-padding-x:           1.25rem;
+@dropdown-link-color:               @text-color;
+@dropdown-link-hover-color:         @brand-primary;
+@dropdown-link-hover-bg:            transparent;
+@dropdown-box-shadow:               0 11px 22px 6px rgba(0,0,0,0.08);
+//@dropdown-border-width:             0;
+
+/**
+    Bootstrap Breadcrumb Config
+ */
+@breadcrumb-padding-vertical:   0;
+@breadcrumb-padding-horizontal: 0;
+@breadcrumb-bg:                 transparent;
+@breadcrumb-color:              @text-color-light;
+@breadcrumb-active-color:       @text-color-light;
+@breadcrumb-separator:          "";
+
+/**
+    Forms
+ */
+@input-color-placeholder: @text-color-light;
+
+/**
+    Table
+ */
+@table-border-color: @gray-light;
