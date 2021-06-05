@@ -9260,6 +9260,10 @@ body.main-header-fixed .main-header {
 .main-header .bottom-header .navigation .navigation-first-level > ul > li.active .navigation-second-level {
   display: block;
 }
+.main-header .bottom-header .navigation .navigation-first-level > ul > li.active > a {
+  background-color: #E9E9E9;
+  color: #1F222B;
+}
 .main-header .bottom-header .navigation .navigation-first-level > ul > li > a {
   display: block;
   font-weight: 500;

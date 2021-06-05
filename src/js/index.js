@@ -22,8 +22,12 @@ allTopLevelItems.each((index, topLevelItem) => {
     $(topLevelItem).on(clickEvent, (e) => {
         e.preventDefault();
 
+        const parentHasActiveClass = topLevelParent.hasClass(activeClass);
         allTopLevelItems.each((__index, i) => navLevelElement(i).removeClass(activeClass))
-        topLevelParent.addClass(activeClass);
+
+        if (!parentHasActiveClass) {
+            topLevelParent.addClass(activeClass);
+        }
     });
 
     const allFirstLevelItemsOfSuperior = topLevelParent.find('[data-toggle="navigation-second-level"]');

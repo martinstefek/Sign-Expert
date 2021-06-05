@@ -170,10 +170,14 @@ allTopLevelItems.each(function (index, topLevelItem) {
   var topLevelParent = navLevelElement(topLevelItem);
   $(topLevelItem).on(_modules_config__WEBPACK_IMPORTED_MODULE_2__.clickEvent, function (e) {
     e.preventDefault();
+    var parentHasActiveClass = topLevelParent.hasClass(activeClass);
     allTopLevelItems.each(function (__index, i) {
       return navLevelElement(i).removeClass(activeClass);
     });
-    topLevelParent.addClass(activeClass);
+
+    if (!parentHasActiveClass) {
+      topLevelParent.addClass(activeClass);
+    }
   });
   var allFirstLevelItemsOfSuperior = topLevelParent.find('[data-toggle="navigation-second-level"]');
   allFirstLevelItemsOfSuperior.each(function (_index, firstLevelItem) {
