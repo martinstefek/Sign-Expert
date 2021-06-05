@@ -8,7 +8,7 @@
         .transition();
     }
 
-    &[aria-expanded="true"] {
+    &.active, &[aria-expanded="true"] {
         & .caret {
             transform: rotate(180deg);
         }
@@ -19,12 +19,21 @@
     box-shadow: @dropdown-box-shadow;
     border: none;
     padding: 0;
+    margin-top: 0;
+    border-radius: 0;
 
     li {
         border-bottom: 1px solid @border-color;
 
-        &:last-child {
+        &:last-child, &.dropdown-header {
             border-bottom : none;
+        }
+
+        &.dropdown-header {
+            font-weight: 500;
+            font-size: 1rem;
+            color: @text-color;
+            padding-top: .rem(12px)[@value];
         }
     }
 

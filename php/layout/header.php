@@ -74,34 +74,47 @@
                         <span class="caret"></span>
                     </button>
 
-                    <ul class="dropdown-menu list-of-languages">
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">
+                            Zmeniť jazyk
+                        </li>
                         <li>
-                            <a class="dropdown-item">
+                            <a class="dropdown-item active">
+                                <span>Slovenčina - SK</span>
                                 <img class="icon" src="./img/SK.png" alt="Slovak language">
-                                <span>SK</span>
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item">
+                                <span>Čeština - CZ</span>
                                 <img class="icon" src="./img/SK.png" alt="Slovak language">
-                                <span>SK</span>
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item">
+                                <span>Magyar - HUN</span>
                                 <img class="icon" src="./img/SK.png" alt="Slovak language">
-                                <span>SK</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item">
+                                <span>English - EN</span>
+                                <img class="icon" src="./img/SK.png" alt="Slovak language">
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <a href="#" class="btn btn-lighter login-button" type="button">
-                    <svg class="icon fill-primary"><use xlink:href="#sprite-avatar"></use></svg> <span>Prihlásiť/registrovať</span>
+                <a href="#" class="btn btn-action login-button" type="button">
+                    <svg class="icon"><use xlink:href="#sprite-avatar"></use></svg>
+                    <span class="login-button-label">
+                        <span>Prihlásenie</span>
+                        <span>Registrácia</span>
+                    </span>
                 </a>
 
-                <a href="#" class="btn btn-lighter login-button" type="button">
-                    <svg class="icon fill-primary"><use xlink:href="#sprite-avatar"></use></svg> <span>Košík</span>
+                <a href="#" class="btn btn-action" type="button">
+                    <svg class="icon"><use xlink:href="#sprite-avatar"></use></svg> <span>Košík</span>
                 </a>
             </div>
         </div>
@@ -109,9 +122,37 @@
 
     <div class="bottom-header">
         <div class="container">
+            <div class="bottom-header-content-wrap">
+                <div id="main-nav" class="navigation">
+                    <?php navigationTopLevelItem('Podľa technológie', 0) ?>
+                    <?php navigationTopLevelItem('Zariadenia', 1) ?>
+                    <?php navigationTopLevelItem('Materiály', 2) ?>
+                </div>
 
+                <div class="quick-nav">
+                    <a href="#" class="quick-nav-item">
+                        <svg class="icon"><use xlink:href="#sprite-avatar"></use></svg>
+                        Blog
+                    </a>
+
+                    <a href="#" class="quick-nav-item">
+                        <svg class="icon"><use xlink:href="#sprite-avatar"></use></svg>
+                        Kontakty
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
 
     <div class="container">
         <a href="/" class="logo">

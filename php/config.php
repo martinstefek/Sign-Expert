@@ -10,3 +10,5 @@ function path($assetToPath) {
 function asset($assetToPath) {
     echo path($assetToPath);
 }
+
+include_once('components/navigation/topLevelItem.php');

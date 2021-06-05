@@ -1,6 +1,62 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/config.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/config.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clickEvent": function() { return /* binding */ clickEvent; },
+/* harmony export */   "mobileNavigationThreshold": function() { return /* binding */ mobileNavigationThreshold; }
+/* harmony export */ });
+var clickEvent = 'ontouchend' in document ? 'touchend' : 'click';
+var mobileNavigationThreshold = 991;
+
+/***/ }),
+
+/***/ "./src/js/modules/helpers.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/helpers.js ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "focusInput": function() { return /* binding */ focusInput; }
+/* harmony export */ });
+/**
+ * This focus function works on every device even on iOS
+ * @param element HTMLElement
+ */
+var focusInput = function focusInput(element) {
+  // create invisible dummy input to receive the focus first
+  var fakeInput = document.createElement('input');
+  fakeInput.setAttribute('type', 'text');
+  fakeInput.style.position = 'absolute';
+  fakeInput.style.opacity = '0';
+  fakeInput.style.height = '0';
+  fakeInput.style.fontSize = '16px'; // disable auto zoom;
+  // you may need to append to another element depending on the browser's auto
+  // zoom/scroll behavior
+
+  document.body.prepend(fakeInput); // focus so that subsequent async focus will work
+
+  fakeInput.focus();
+  setTimeout(function () {
+    // now we can focus on the target input
+    element.focus(); // cleanup
+
+    fakeInput.remove();
+  }, 500);
+};
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.min.js":
 /*!*********************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.min.js ***!
@@ -94,223 +150,123 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/js/bootstrap.min */ "./node_modules/bootstrap/dist/js/bootstrap.min.js");
 /* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
+/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
 
-/**
- * This focus function works on every device even on iOS
- * @param element HTMLElement
- */
 
-var focusInput = function focusInput(element) {
-  // create invisible dummy input to receive the focus first
-  var fakeInput = document.createElement('input');
-  fakeInput.setAttribute('type', 'text');
-  fakeInput.style.position = 'absolute';
-  fakeInput.style.opacity = '0';
-  fakeInput.style.height = '0';
-  fakeInput.style.fontSize = '16px'; // disable auto zoom;
-  // you may need to append to another element depending on the browser's auto
-  // zoom/scroll behavior
 
-  document.body.prepend(fakeInput); // focus so that subsequent async focus will work
-
-  fakeInput.focus();
-  setTimeout(function () {
-    // now we can focus on the target input
-    element.focus(); // cleanup
-
-    fakeInput.remove();
-  }, 500);
-};
-
-var clickEvent = 'ontouchend' in document ? 'touchend' : 'click';
-var mainNavId = 'main-nav';
-var mainNav = $('#' + mainNavId);
-var mainNavToggleId = 'main-nav-toggle-desktop';
+var mainNavId = '#main-nav';
 var currentLevelAttribute = 'data-current-level';
-var mainNavToggle = $('#' + mainNavToggleId);
-var mainNavToggleMobile = $('#main-nav-toggle-mobile');
-var searchToggleMobile = $('#search-toggle-mobile');
 var headerSearchInput = document.getElementById('header-search-input');
 var activeClass = 'active';
-var inactiveClass = 'inactive';
-var fixedHeaderClass = 'main-header-fixed';
-var mobileNavigationThreshold = 991;
 
-var toggleNavigationBodyClass = function toggleNavigationBodyClass() {
-  $('body').toggleClass('navigation-visible');
-};
+function navLevelElement(element) {
+  return $(element).parent();
+}
 
-var toggleMenuFunction = function toggleMenuFunction() {
-  mainNavToggle.toggleClass(activeClass);
-  mainNavToggleMobile.toggleClass(activeClass);
-  toggleNavigationBodyClass();
-
-  if (mainNavToggle.hasClass(activeClass)) {
-    mainNavToggle.removeClass(inactiveClass);
-    mainNavToggleMobile.removeClass(inactiveClass);
-  } else {
-    mainNavToggle.addClass(inactiveClass);
-    mainNavToggleMobile.addClass(inactiveClass);
-  }
-};
-
-var fixedNavigationScrollEventListener = function fixedNavigationScrollEventListener() {
-  if (window.scrollY > 110) {
-    $('body').addClass(fixedHeaderClass);
-  } else {
-    $('body').removeClass(fixedHeaderClass);
-  }
-};
-
-mainNav.on('levelChanged', function (e, data) {
-  var offset = "".concat(data.level * -100, "%");
-  mainNav.css('transform', "translate(".concat(offset, ", 0)"));
-  mainNav.attr(currentLevelAttribute, data.level);
-});
-$('#' + mainNavId + ' [data-toggle="main-nav-next-level"]').each(function (index, item) {
-  $(item).on(clickEvent, function (e) {
-    if (window.innerWidth > mobileNavigationThreshold) {
-      return;
-    }
-
+var allTopLevelItems = $(mainNavId + ' [data-toggle="navigation-first-level"]');
+var allFirstLevelItems = $(mainNavId + ' [data-toggle="navigation-second-level"]');
+allTopLevelItems.each(function (index, topLevelItem) {
+  var topLevelParent = navLevelElement(topLevelItem);
+  $(topLevelItem).on(_modules_config__WEBPACK_IMPORTED_MODULE_2__.clickEvent, function (e) {
     e.preventDefault();
-    var currentLevelAttr = mainNav.attr(currentLevelAttribute);
-    var currentLevel = Number(currentLevelAttr);
-    var actualLevel = currentLevelAttr ? currentLevel : 0;
-    var nextLevel = actualLevel + 1;
-    mainNav.trigger('levelChanged', {
-      level: nextLevel
+    allTopLevelItems.each(function (__index, i) {
+      return navLevelElement(i).removeClass(activeClass);
     });
-    $(item).parent().addClass('active');
+    topLevelParent.addClass(activeClass);
+  });
+  var allFirstLevelItemsOfSuperior = topLevelParent.find('[data-toggle="navigation-second-level"]');
+  allFirstLevelItemsOfSuperior.each(function (_index, firstLevelItem) {
+    var firstLevelParent = navLevelElement(firstLevelItem);
+    $(firstLevelItem).on(_modules_config__WEBPACK_IMPORTED_MODULE_2__.clickEvent, function (e) {
+      e.preventDefault();
+      allFirstLevelItemsOfSuperior.each(function (__index, i) {
+        return navLevelElement(i).removeClass(activeClass);
+      });
+      firstLevelParent.addClass(activeClass);
+    });
   });
 });
-$('#' + mainNavId + ' [data-toggle="main-nav-prev-level"]').each(function (index, item) {
-  $(item).on(clickEvent, function (e) {
-    if (window.innerWidth > mobileNavigationThreshold) {
+document.addEventListener(_modules_config__WEBPACK_IMPORTED_MODULE_2__.clickEvent, function (e) {
+  allTopLevelItems.each(function (index, item) {
+    if (e.path.some(function (el) {
+      return $(el).hasClass('navigation-top-level');
+    })) {
       return;
     }
 
-    e.preventDefault();
-    var currentLevelAttr = mainNav.attr(currentLevelAttribute);
-    var currentLevel = Number(currentLevelAttr);
-
-    if (!currentLevelAttr || currentLevel <= 0) {
-      return;
-    }
-
-    var prev = currentLevel - 1;
-    mainNav.trigger('levelChanged', {
-      level: prev
+    navLevelElement(item).removeClass(activeClass);
+    allFirstLevelItems.each(function (__index, i) {
+      return navLevelElement(i).removeClass(activeClass);
     });
-    $(item).parent().parent().parent().removeClass('active');
   });
-});
-searchToggleMobile.on(clickEvent, function () {
-  toggleMenuFunction();
-  focusInput(headerSearchInput);
-});
-mainNavToggle.on(clickEvent, function () {
-  toggleMenuFunction();
-});
-mainNavToggleMobile.on(clickEvent, function () {
-  toggleMenuFunction();
-});
-$('[data-toggle="search-reset"]').each(function (index, item) {
-  $(item).on(clickEvent, function () {
-    var target = $(item).attr('data-target'); // Timeout so it doesn't trigger submit at the same time with reset
-
-    setTimeout(function () {
-      $(target).val('');
-    }, 100);
-  });
-});
-$('[data-toggle="input-number-decrease"]').each(function (index, item) {
-  var target = $(item).attr('data-target');
-  var targetElement = $(target);
-  var boundaryAttr = targetElement.attr('min');
-  var boundary = boundaryAttr ? Number(boundaryAttr) : null;
-
-  var addOrRemoveClass = function addOrRemoveClass(value) {
-    if (boundary !== null && value <= boundary) {
-      $(item).prop('disabled', true);
-    } else {
-      $(item).prop('disabled', false);
-    }
-  };
-
-  addOrRemoveClass(targetElement.val());
-  $(item).on(clickEvent, function () {
-    var elementValue = Number(targetElement.val());
-    targetElement.val(elementValue - 1);
-    targetElement.change();
-  });
-  targetElement.on('change', function () {
-    var elementValue = Number(targetElement.val());
-    addOrRemoveClass(elementValue);
-  });
-});
-$('[data-toggle="input-number-increase"]').each(function (index, item) {
-  var target = $(item).attr('data-target');
-  var targetElement = $(target);
-  var boundaryAttr = targetElement.attr('max');
-  var boundary = boundaryAttr ? Number(boundaryAttr) : null;
-
-  var addOrRemoveClass = function addOrRemoveClass(value) {
-    if (boundary !== null && value >= boundary) {
-      $(item).prop('disabled', true);
-    } else {
-      $(item).prop('disabled', false);
-    }
-  };
-
-  addOrRemoveClass(targetElement.val());
-  $(item).on(clickEvent, function () {
-    var elementValue = Number(targetElement.val());
-    targetElement.val(elementValue + 1);
-    targetElement.change();
-  });
-  targetElement.on('change', function () {
-    var elementValue = Number(targetElement.val());
-    addOrRemoveClass(elementValue);
-  });
-});
-$('input[type="number"]').each(function (index, item) {
-  $(item).on('change', function () {
-    var value = $(item).val();
-    var numberValue = value.length > 0 ? Number(value) : null;
-    var boundaryMinAttr = $(item).attr('min');
-    var boundaryMin = boundaryMinAttr ? Number(boundaryMinAttr) : null;
-    var boundaryMaxAttr = $(item).attr('max');
-    var boundaryMax = boundaryMaxAttr ? Number(boundaryMaxAttr) : null;
-
-    if (boundaryMin !== null && numberValue < boundaryMin) {
-      $(item).val(boundaryMin);
-    }
-
-    if (boundaryMax !== null && numberValue > boundaryMax) {
-      $(item).val(boundaryMax);
-    }
-  });
-});
-document.addEventListener('click', function (e) {
-  if (window.innerWidth <= mobileNavigationThreshold) {
-    return;
-  }
-
-  if (mainNavToggle.hasClass(activeClass)) {
-    var shouldNotToggle = e.path.some(function (item) {
-      return [mainNavToggleId, mainNavId].includes(item.id);
-    });
-
-    if (!shouldNotToggle) {
-      toggleMenuFunction();
-    }
-  }
-});
-document.addEventListener('scroll', function () {
-  return fixedNavigationScrollEventListener();
-});
-fixedNavigationScrollEventListener();
+}); // mainNav.on('levelChanged', (e, data) => {
+//     const offset = `${data.level * -100}%`;
+//
+//     mainNav.css('transform', `translate(${offset}, 0)`);
+//     mainNav.attr(currentLevelAttribute, data.level);
+// });
+//
+// $('#' + mainNavId + ' [data-toggle="main-nav-next-level"]').each((index, item) => {
+//     $(item).on(clickEvent, (e) => {
+//         if (window.innerWidth > mobileNavigationThreshold) {
+//             return;
+//         }
+//
+//         e.preventDefault();
+//
+//         const currentLevelAttr = mainNav.attr(currentLevelAttribute);
+//         const currentLevel = Number(currentLevelAttr);
+//
+//         const actualLevel = currentLevelAttr ? currentLevel : 0;
+//         const nextLevel = actualLevel + 1;
+//
+//         mainNav.trigger('levelChanged', {
+//             level: nextLevel,
+//         });
+//
+//         $(item).parent().addClass('active');
+//     });
+// });
+//
+// $('#' + mainNavId + ' [data-toggle="main-nav-prev-level"]').each((index, item) => {
+//     $(item).on(clickEvent, (e) => {
+//         if (window.innerWidth > mobileNavigationThreshold) {
+//             return;
+//         }
+//
+//         e.preventDefault();
+//
+//         const currentLevelAttr = mainNav.attr(currentLevelAttribute);
+//         const currentLevel = Number(currentLevelAttr);
+//
+//         if (!currentLevelAttr || currentLevel <= 0) {
+//             return;
+//         }
+//
+//         const prev = currentLevel - 1;
+//
+//         mainNav.trigger('levelChanged', {
+//             level: prev,
+//         });
+//
+//         $(item).parent().parent().parent().removeClass('active');
+//     });
+// });
+//
+// document.addEventListener('click', (e) => {
+//     if (window.innerWidth <= mobileNavigationThreshold) {
+//         return;
+//     }
+//
+//     if (mainNavToggle.hasClass(activeClass)) {
+//         const shouldNotToggle = e.path.some(item => [mainNavToggleId, mainNavId].includes(item.id));
+//
+//         if (!shouldNotToggle) {
+//             toggleMenuFunction();
+//         }
+//     }
+// });
 }();
 /******/ })()
 ;
