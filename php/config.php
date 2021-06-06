@@ -12,3 +12,4 @@ function asset($assetToPath) {
 }
 
 include_once('components/navigation/topLevelItem.php');
+include_once('components/productListItem/ProductListItem.php');

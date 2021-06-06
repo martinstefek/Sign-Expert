@@ -54,18 +54,18 @@
                 <svg class="icon"><use xlink:href="#sprite-logo"></use></svg>
             </a>
 
-            <form id="header-search" class="search">
-                <div class="search-wrap">
-                    <label for="header-search-input">
+            <div id="header-search" class="search">
+                <form class="search-wrap">
+                    <label class="header-search-input-label" for="header-search-input">
                         <svg class="icon"><use xlink:href="#sprite-lens"></use></svg>
                     </label>
 
-                    <input id="header-search-input" type="text" autocomplete="off" placeholder="Zadajte hľadaný výraz">
+                    <input id="header-search-input" class="header-search-input" type="text" autocomplete="off" placeholder="Zadajte hľadaný výraz">
 
                     <button type="submit" class="btn">
                         <span class="button-label">Hľadať</span>
                     </button>
-                </div>
+                </form>
 
                 <div id="header-search-autocomplete" class="search-autocomplete">
                     <div class="search-autocomplete-col">
@@ -93,6 +93,7 @@
 
                     <div class="search-autocomplete-col">
                         <h6>Top produkt</h6>
+                        <?php productListItem(null, null, 2, false, false, 'Dvojhlavová sublimačná tlačiareň XpertJet 1682WR', 'Sublimačné tlačiarne'); ?>
                     </div>
 
                     <div class="search-autocomplete-col-2">
@@ -125,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-            </form>
+            </div>
 
             <div class="mid-header-actions">
                 <div class="dropdown language">
@@ -167,7 +168,7 @@
                 </div>
 
                 <a href="#" class="btn btn-action login-button" type="button">
-                    <svg class="icon"><use xlink:href="#sprite-avatar"></use></svg>
+                    <svg class="icon fill-primary"><use xlink:href="#sprite-avatar"></use></svg>
                     <span class="login-button-label">
                         <span>Prihlásenie</span>
                         <span>Registrácia</span>
@@ -175,7 +176,7 @@
                 </a>
 
                 <a href="#" class="btn btn-action" type="button">
-                    <svg class="icon"><use xlink:href="#sprite-avatar"></use></svg> <span>Košík</span>
+                    <svg class="icon fill-primary"><use xlink:href="#sprite-avatar"></use></svg> <span>Košík</span>
                 </a>
             </div>
         </div>
@@ -200,268 +201,6 @@
                         <svg class="icon"><use xlink:href="#sprite-avatar"></use></svg>
                         Kontakty
                     </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    <div class="container">
-        <a href="/" class="logo">
-            <svg class="icon"><use xlink:href="#sprite-logo"></use></svg>
-        </a>
-
-        <div class="mobile-header-icon-buttons">
-            <button id="search-toggle-mobile" class="btn-icon-only icon-button-mobile">
-                <svg class="icon"><use xlink:href="#sprite-lens"></use></svg>
-            </button>
-        </div>
-
-        <button id="main-nav-toggle-mobile" class="btn-icon menu-button">
-            <svg class="icon-open"><use xlink:href="#sprite-menu"></use></svg>
-            <svg class="icon-close"><use xlink:href="#sprite-cancel"></use></svg>
-            <span class="content">Menu</span>
-        </button>
-
-        <div class="mobile-navigation-wrap">
-            <div class="mobile-account">
-                <a href="#" class="btn btn-lighter login-button" type="button">
-                    Prihlásenie
-                </a>
-
-                <a href="#" class="btn btn-lighter login-button" type="button">
-                    Registrácia
-                </a>
-            </div>
-
-            <div class="main-nav-wrap">
-                <button id="main-nav-toggle-desktop" class="btn-icon menu-button">
-                    <svg class="icon-open"><use xlink:href="#sprite-menu"></use></svg>
-                    <svg class="icon-close"><use xlink:href="#sprite-cancel"></use></svg>
-                    <span class="content">Menu</span>
-                </button>
-
-                <nav id="main-nav" class="main-nav">
-                    <ul class="main-nav-level">
-                        <li class="main-nav-menu-item">
-                            <a class="main-nav-menu-item-link" href="#" data-toggle="main-nav-next-level">IVECO</a>
-
-                            <ul class="main-nav-level main-nav-sub-level">
-                                <li class="main-nav-menu-item main-nav-menu-item-back">
-                                    <a href="#" class="main-nav-menu-item-link" data-toggle="main-nav-prev-level">
-                                        <svg class="icon"><use xlink:href="#sprite-arrow-left-short"></use></svg>
-                                        IVECO
-                                    </a>
-                                </li>
-                                <li class="main-nav-menu-item main-nav-menu-item-current-level">
-                                    <a href="#" class="main-nav-menu-item-link">
-                                        <svg class="icon"><use xlink:href="#sprite-home"></use></svg>
-                                        IVECO
-                                    </a>
-                                </li>
-                                <li class="main-nav-menu-item">
-                                    <a class="main-nav-menu-item-link" href="#">IVECO DAILY 2000</a>
-                                </li>
-                                <li class="main-nav-menu-item">
-                                    <a class="main-nav-menu-item-link" href="#" data-toggle="main-nav-next-level">IVECO DAILY 2006</a>
-
-                                    <ul class="main-nav-level main-nav-sub-level">
-                                        <li class="main-nav-menu-item main-nav-menu-item-back">
-                                            <a href="#" class="main-nav-menu-item-link" data-toggle="main-nav-prev-level">
-                                                <svg class="icon"><use xlink:href="#sprite-arrow-left-short"></use></svg>
-                                                IVECO DAILY 2006
-                                            </a>
-                                        </li>
-                                        <li class="main-nav-menu-item main-nav-menu-item-current-level">
-                                            <a href="#" class="main-nav-menu-item-link">
-                                                <svg class="icon"><use xlink:href="#sprite-home"></use></svg>
-                                                IVECO DAILY 2006
-                                            </a>
-                                        </li>
-                                        <li class="main-nav-menu-item">
-                                            <a class="main-nav-menu-item-link" href="#">BRZDY</a>
-                                        </li>
-                                        <li class="main-nav-menu-item">
-                                            <a class="main-nav-menu-item-link" href="#">KAROSÉRIA</a>
-                                        </li>
-                                        <li class="main-nav-menu-item">
-                                            <a class="main-nav-menu-item-link" href="#">FILTRE</a>
-                                        </li>
-                                        <li class="main-nav-menu-item">
-                                            <a class="main-nav-menu-item-link" href="#">MOTOR</a>
-                                        </li>
-                                        <li class="main-nav-menu-item">
-                                            <a class="main-nav-menu-item-link" href="#">PODVOZOK</a>
-                                        </li>
-                                        <li class="main-nav-menu-item">
-                                            <a class="main-nav-menu-item-link" href="#">ŠTARTÉR , ALTERNÁTOR</a>
-                                        </li>
-                                        <li class="main-nav-menu-item">
-                                            <a class="main-nav-menu-item-link" href="#">NEZARADENÉ</a>
-                                        </li>
-                                        <li class="main-nav-menu-item">
-                                            <a class="main-nav-menu-item-link" href="#">AKUMULÁTOR</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="main-nav-menu-item">
-                                    <a class="main-nav-menu-item-link" href="#">IVECO EUROCARGO</a>
-                                </li>
-                                <li class="main-nav-menu-item">
-                                    <a class="main-nav-menu-item-link" href="#">IVECO STRALIS</a>
-                                </li>
-                                <li class="main-nav-menu-item">
-                                    <a class="main-nav-menu-item-link" href="#">IVECO TRAKKER</a>
-                                </li>
-                                <li class="main-nav-menu-item">
-                                    <a class="main-nav-menu-item-link" href="#">IVECO TURBODAILY</a>
-                                </li>
-                                <li class="main-nav-menu-item">
-                                    <a class="main-nav-menu-item-link" href="#">KAROSÉRIA</a>
-                                </li>
-                                <li class="main-nav-menu-item">
-                                    <a class="main-nav-menu-item-link" href="#">TESNENIA</a>
-                                </li>
-                                <li class="main-nav-menu-item">
-                                    <a class="main-nav-menu-item-link" href="#">IVECO</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">DAF</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">FIAT</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">FORD</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">MAN</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">MERCEDES</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">RENAULT</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">SCANIA</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">VOLVO</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">BPW</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">LED SVETLÁ</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">UNIVERZÁLNE DIELY</a>
-                        </li>
-                        <li class="main-nav-menu-item">
-                            <a href="#" class="main-nav-menu-item-link">OLEJ/KVAPALINY</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-            <form class="search">
-                <input id="header-search-input" type="text" placeholder="Hľadať podľa OE čísla">
-
-                <button type="submit" class="btn btn-icon">
-                    <svg><use xlink:href="#sprite-lens"></use></svg>
-                    <span class="button-label">Hľadať</span>
-                </button>
-
-                <div class="search-cancel" data-toggle="search-reset" data-target="#header-search-input">
-                    <svg class="icon"><use xlink:href="#sprite-cancel"></use></svg>
-                    <span class="search-cancel-label">Zrušiť</span>
-                </div>
-            </form>
-
-            <div class="double-floor-section">
-                <div class="site-settings">
-                    <div class="dropdown header-dropdown language">
-                        <button class="btn btn-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                            <img class="icon" src="./img/SK.png" alt="Slovak language">
-                            <span>SK</span>
-                            <span class="caret"></span>
-                        </button>
-
-                        <ul class="dropdown-menu list-of-languages">
-                            <li>
-                                <a class="dropdown-item">
-                                    <img class="icon" src="./img/SK.png" alt="Slovak language">
-                                    <span>SK</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item">
-                                    <img class="icon" src="./img/SK.png" alt="Slovak language">
-                                    <span>SK</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item">
-                                    <img class="icon" src="./img/SK.png" alt="Slovak language">
-                                    <span>SK</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <a href="#" class="btn btn-lighter login-button" type="button">
-                        <svg class="icon fill-primary"><use xlink:href="#sprite-avatar"></use></svg> <span>Prihlásiť/registrovať</span>
-                    </a>
-                </div>
-
-                <nav class="quick-menu">
-                    <ul>
-                        <li><a href="#">O nás</a></li>
-                        <li><a href="#">Výhodý</a></li>
-                        <li><a href="#">Ako nakupovať</a></li>
-                        <li><a href="#">Kontakty</a></li>
-                    </ul>
-                </nav>
-
-                <div class="dropdown header-dropdown mobile-language">
-                    <button class="btn btn-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                        <img class="icon" src="./img/SK.png" alt="Slovak language">
-                        <span>Slovenský jazyk</span>
-                        <span class="mobile-language-open-button">Zmeniť</span>
-                    </button>
-
-                    <ul class="dropdown-menu list-of-languages">
-                        <li>
-                            <a class="dropdown-item">
-                                <img class="icon" src="./img/SK.png" alt="Slovak language">
-                                <span>Slovenský jazyk</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item">
-                                <img class="icon" src="./img/SK.png" alt="Slovak language">
-                                <span>Slovenský jazyk</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item">
-                                <img class="icon" src="./img/SK.png" alt="Slovak language">
-                                <span>Slovenský jazyk</span>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>

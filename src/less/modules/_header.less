@@ -21,7 +21,7 @@
 .main-header {
     background: #FFFFFF;
     //height: @headerHeight;
-    border-bottom: 1px solid @gray-light;
+    //border-bottom: 1px solid @gray-light;
 
     .mobileHeader({
         .fixedHeaderRules();
@@ -123,7 +123,7 @@
                 position: relative;
             }
 
-            label {
+            label.header-search-input-label {
                 margin-bottom: 0;
 
                 .icon {
@@ -137,7 +137,7 @@
                 }
             }
 
-            input {
+            input.header-search-input {
                 display: block;
                 width: 100%;
                 border: 1px solid transparent;
@@ -206,13 +206,13 @@
                 left: 50%;
                 width: 100%;
                 max-width: .rem(980px)[@value];
-                max-height: .rem(460px)[@value];
+                //max-height: .rem(460px)[@value];
                 padding: 0 .5rem;
                 background-color: #FFFFFF;
                 box-shadow: 0 11px 22px 6px rgba(0,0,0,0.08);
                 z-index: @zindex-navbar;
-                overflow: auto;
-                .customScrollBar();
+                //overflow: auto;
+                //.customScrollBar();
 
                 &.active {
                     display: flex;
@@ -222,8 +222,30 @@
                     background: @border-color;
                 }
 
+                .product-list-item {
+                    article {
+                        padding: .5rem 0 0 0;
+                    }
+
+                    .product-list-item-category {
+                        font-size: 1rem;
+                        color: @brand-primary;
+                    }
+
+                    .product-list-item-stock {
+                        font-size: 1rem;
+                    }
+
+                    &:hover {
+                        .product-list-item-title {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
                 .search-autocomplete-col {
                     .searchAutocompleteCol(25%);
+                    display: flex;
                 }
 
                 .search-autocomplete-col-2 {
