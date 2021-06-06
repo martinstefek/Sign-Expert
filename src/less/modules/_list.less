@@ -4,7 +4,7 @@
 
     li {
         position: relative;
-        padding-left: .rem(20px)[@value];
+        padding-left: .rem(17px)[@value];
 
         &::before {
             content: '';
@@ -17,6 +17,14 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-image: url("../../img/menu-chevron-right.svg");
+        }
+    }
+
+    a {
+        color: @text-color;
+
+        &:hover {
+            color: @brand-primary;
         }
     }
 }

@@ -132,6 +132,38 @@
         padding-left: @spacingValue;
     }
 
+    .mt-@{spacingKey}-negative {
+        margin-top: -@spacingValue;
+    }
+
+    .mr-@{spacingKey}-negative {
+        margin-right: -@spacingValue;
+    }
+
+    .mb-@{spacingKey}-negative {
+        margin-bottom: -@spacingValue;
+    }
+
+    .ml-@{spacingKey}-negative {
+        margin-left: -@spacingValue;
+    }
+
+    .pt-@{spacingKey}-negative {
+        padding-top: -@spacingValue;
+    }
+
+    .pr-@{spacingKey}-negative {
+        padding-right: -@spacingValue;
+    }
+
+    .pb-@{spacingKey}-negative {
+        padding-bottom: -@spacingValue;
+    }
+
+    .pl-@{spacingKey}-negative {
+        padding-left: -@spacingValue;
+    }
+
     .generateSpacings(@spacingIndex - 1);
 }
 
@@ -292,5 +324,39 @@
         width: percentage((@index / @grid-columns));
         flex-basis: percentage((@index / @grid-columns));
         float: none;
+    }
+}
+
+.searchAutocompleteCol(@size) {
+    display: block;
+    flex-shrink: 0;
+    flex-basis: @size;
+    width: @size;
+    max-width: @size;
+    border-right: 1px solid @border-color;
+    padding: 1rem;
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.customScrollBar() {
+    &::-webkit-scrollbar {
+        width: .rem(4px)[@value];               /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #EFEFEF;        /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #DADADA;    /* color of the scroll thumb */
+        border-radius: .rem(2px)[@value];       /* roundness of the scroll thumb */
+    }
+
+    & {
+        scrollbar-width: thin;          /* "auto" or "thin" */
+        scrollbar-color: #DADADA #EFEFEF;   /* scroll thumb and track */
     }
 }

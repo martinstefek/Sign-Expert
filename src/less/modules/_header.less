@@ -96,6 +96,7 @@
         background: linear-gradient(180deg, #373944 0%, #2B2F38 100%);
 
         .container {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -113,11 +114,18 @@
         }
 
         .search {
+            width: 100%;
+            max-width: .rem(350px)[@value];
             margin: 0 1rem;
             flex-shrink: 1;
-            position: relative;
+
+            .search-wrap {
+                position: relative;
+            }
 
             label {
+                margin-bottom: 0;
+
                 .icon {
                     position: absolute;
                     left: 1rem;
@@ -130,9 +138,11 @@
             }
 
             input {
+                display: block;
+                width: 100%;
                 border: 1px solid transparent;
                 height: .rem(46px)[@value];
-                padding: .rem(10px)[@value] .rem(99px)[@value] .rem(10px)[@value] .rem(52px)[@value];
+                padding: .rem(9px)[@value] .rem(99px)[@value] .rem(10px)[@value] .rem(52px)[@value];
                 border-radius: @border-radius-base;
                 background: @gray-dark;
                 color: #FFFFFF;
@@ -185,6 +195,121 @@
                     left: 0;
                     width: 1px;
                     background: #575960;
+                }
+            }
+
+            .search-autocomplete {
+                display: none;
+                position: absolute;
+                top: 100%;
+                transform: translate(-50%, 0);
+                left: 50%;
+                width: 100%;
+                max-width: .rem(980px)[@value];
+                max-height: .rem(460px)[@value];
+                padding: 0 .5rem;
+                background-color: #FFFFFF;
+                box-shadow: 0 11px 22px 6px rgba(0,0,0,0.08);
+                z-index: @zindex-navbar;
+                overflow: auto;
+                .customScrollBar();
+
+                &.active {
+                    display: flex;
+                }
+
+                .matched-phrase {
+                    background: @border-color;
+                }
+
+                .search-autocomplete-col {
+                    .searchAutocompleteCol(25%);
+                }
+
+                .search-autocomplete-col-2 {
+                    .searchAutocompleteCol(50%);
+                    padding-right: 0;
+                    padding-left: 0;
+                    padding-bottom: .5rem;
+                    margin-right: -.5rem;
+                }
+
+                .search-autocomplete-col-product-header {
+                    padding: 0 1.5rem .45rem;
+                    border-bottom: 1px solid @border-color;
+                    margin-right: -.5rem;
+                }
+
+                .search-autocomplete-col-product-footer {
+                    padding-top: .5rem;
+                    padding-left: .5rem;
+
+                    a.btn {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        padding: .rem(12px)[@value] 2.5rem;
+
+                        .icon {
+                            position: absolute;
+                            top: 50%;
+                            right: 1rem;
+                            transform: translate(0, -50%);
+                            width: .5rem;
+                            height: .rem(14px)[@value];
+                            fill: #FFFFFF;
+                            stroke: #FFFFFF;
+                            stroke-width: 3px;
+                        }
+                    }
+                }
+
+                .search-autocomplete-product-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-right: -.5rem;
+                }
+
+                .search-autocomplete-product-item {
+                    display: flex;
+                    align-items: flex-start;
+                    width: 50%;
+                    flex-basis: 50%;
+                    flex-shrink: 0;
+                    padding: .rem(12px)[@value] .rem(5px)[@value];
+                    border-bottom: 1px solid @border-color;
+                    color: @text-color;
+                    
+                    &:hover {
+                        .search-autocomplete-product-item-title {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &:nth-child(2n) {
+                        border-left: 1px solid @border-color;
+                    }
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        max-width: .rem(80px)[@value];
+                        margin-right: .rem(3px)[@value];
+                    }
+
+                    .search-autocomplete-product-item-info {
+                        .search-autocomplete-product-item-title {
+                            font-size: .rem(14px)[@value];
+                            margin-bottom: .5rem;
+                            line-height: 1.29;
+                        }
+
+                        .search-autocomplete-product-item-price {
+                            span {
+                                opacity: .4;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -349,6 +474,10 @@
                     border-radius: 0;
                     border-bottom: 2px solid transparent;
 
+                    &:hover {
+                        border-bottom: 2px solid @brand-primary;
+                    }
+
                     &:focus {
                         box-shadow: none;
                     }
@@ -366,6 +495,7 @@
                 padding: @navigationPaddingTop 0 @navigationPaddingBottom 0;
                 box-shadow: 0 11px 22px 6px rgba(0,0,0,0.08);
                 min-height: 30rem;
+                z-index: @zindex-navbar;
                 
                 &::after {
                     content: '';
