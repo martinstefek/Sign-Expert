@@ -355,6 +355,7 @@
         .container {
             .mobileHeader({
                 max-width: none;
+                padding: 0;
             });
         }
 
@@ -370,6 +371,7 @@
 
             .mobileHeader({
                 display: block;
+                overflow: hidden;
             });
         }
 
@@ -391,10 +393,10 @@
                 });
 
                 .mobileHeader({
-                    margin-left: -(@grid-gutter-width/2);
-                    margin-right: -(@grid-gutter-width/2);
+                    //margin-left: -(@grid-gutter-width/2);
+                    //margin-right: -(@grid-gutter-width/2);
                     border-top: 1px solid @border-color;
-                    padding: 0 .rem(20px)[@value];
+                    //padding: 0 .rem(20px)[@value];
 
                     &:last-child {
                         border-bottom: 1px solid @border-color;
@@ -415,6 +417,7 @@
 
                         .caret {
                             transform: rotate(180deg);
+                            border-top: 6px solid @brand-primary;
                         }
                     }
                 }
@@ -435,7 +438,7 @@
 
                     .mobileHeader({
                         width: 100%;
-                        padding: .rem(14px)[@value] 0;
+                        padding: .rem(14px)[@value] @grid-gutter-width;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -455,10 +458,18 @@
                 top: calc(100% + 2px);
                 background: #FFF;
                 right: 0;
-                padding: @navigationPaddingTop 0 @navigationPaddingBottom 0;
-                box-shadow: 0 11px 22px 6px rgba(0,0,0,0.08);
                 min-height: 30rem;
                 z-index: @zindex-navbar;
+
+                .desktopHeader({
+                    padding: @navigationPaddingTop 0 @navigationPaddingBottom 0;
+                    box-shadow: 0 11px 22px 6px rgba(0,0,0,0.08);
+                });
+                
+                .mobileHeader({
+                    position: static;
+                    margin-bottom: -.5rem;
+                });
                 
                 &::after {
                     content: '';
@@ -469,12 +480,18 @@
                     bottom: 0;
                     width: 1px;
                     background-color: #E9E9E9;
+
+                    .mobileHeader({
+                        display: none;
+                    });
                 }
 
                 > ul {
                     padding: 0;
                     list-style-type: none;
                     max-width: @firstLevelNavigationWidth;
+
+                    .mobileNavigationList();
 
                     > li {
                         &.active {
@@ -502,6 +519,8 @@
                                 background-color: #E9E9E9;
                                 color: @text-color;
                             }
+
+                            .mobileNavigationListItemLink();
                         }
 
                         .navigation-first-level-home-link {
@@ -522,9 +541,19 @@
                             padding: (@navigationPaddingTop + 0.5rem) 1rem @navigationPaddingBottom .rem(34px)[@value];
                             overflow: auto;
 
+                            .mobileHeader({
+                                width: 100%;
+                                bottom: auto;
+                                left: 100%;
+                                padding: 0;
+                                overflow: visible;
+                            });
+
                             .navigation-columns {
-                                column-count: 3;
-                                column-gap: .rem(24px)[@value];
+                                .desktopHeader({
+                                    column-count: 3;
+                                    column-gap: .rem(24px)[@value];
+                                });
                             }
 
                             .navigation-category {
@@ -539,10 +568,15 @@
                             }
 
                             ul {
-                                .link-list();
+                                .desktopHeader({
+                                    .link-list();
+                                });
+
+                                .mobileNavigationList();
 
                                 li {
                                     a {
+                                        .mobileNavigationListItemLink();
                                         color: @text-color;
 
                                         &:hover {
@@ -563,7 +597,7 @@
 
             .mobileHeader({
                 display: block;
-                padding: 0 (@grid-gutter-width/2);
+                padding: 0 @grid-gutter-width;
             });
 
             .quick-nav-item {

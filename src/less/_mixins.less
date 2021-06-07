@@ -313,3 +313,36 @@
         scrollbar-color: #DADADA #EFEFEF;   /* scroll thumb and track */
     }
 }
+
+.mobileNavigationList() {
+    .mobileHeader({
+        padding-left: 0;
+        list-style-type: none;
+        margin-bottom: 0;
+        max-width: none;
+
+        > li {
+            &:last-child > a {
+                border-bottom: none;
+            }
+        }
+    });
+}
+
+.mobileNavigationListItemLink() {
+    .mobileHeader({
+        display: block;
+        padding: .rem(9px)[@value] 1rem;
+        padding-left: 2.2rem;
+        background-color: rgba(@gray-dark, 0.05);
+        border-bottom: 1px solid @border-color;
+        background-position: 1rem center;
+        background-image: url("../../img/menu-chevron-right.svg");
+        background-repeat: no-repeat;
+        background-size: .rem(7px)[@value] .rem(12px)[@value];
+
+        &:hover, &.active {
+            background-color: rgba(@gray-dark, 0.05);
+        }
+    });
+}
