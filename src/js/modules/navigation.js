@@ -1,8 +1,11 @@
 import { clickEvent } from "./config";
 
 const mainNavId = '#main-nav';
+const mobileNavOpen = document.getElementById('mobile-nav-open');
+const mobileNavClose = document.getElementById('mobile-nav-close');
 const currentLevelAttribute = 'data-current-level';
 const activeClass = 'active';
+const mobileMenuActiveClass = 'navigation-visible';
 
 function navLevelElement(element) {
     return $(element).parent();
@@ -48,4 +51,12 @@ document.addEventListener(clickEvent, (e) => {
         navLevelElement(item).removeClass(activeClass);
         allFirstLevelItems.each((__index, i) => navLevelElement(i).removeClass(activeClass));
     });
+});
+
+mobileNavOpen.addEventListener(clickEvent, (e) => {
+    document.body.classList.add(mobileMenuActiveClass);
+});
+
+mobileNavClose.addEventListener(clickEvent, (e) => {
+    document.body.classList.remove(mobileMenuActiveClass);
 });

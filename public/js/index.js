@@ -68,8 +68,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ "./src/js/modules/config.js");
 
 var mainNavId = '#main-nav';
+var mobileNavOpen = document.getElementById('mobile-nav-open');
+var mobileNavClose = document.getElementById('mobile-nav-close');
 var currentLevelAttribute = 'data-current-level';
 var activeClass = 'active';
+var mobileMenuActiveClass = 'navigation-visible';
 
 function navLevelElement(element) {
   return $(element).parent();
@@ -115,6 +118,12 @@ document.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, funct
       return navLevelElement(i).removeClass(activeClass);
     });
   });
+});
+mobileNavOpen.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+  document.body.classList.add(mobileMenuActiveClass);
+});
+mobileNavClose.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+  document.body.classList.remove(mobileMenuActiveClass);
 });
 
 /***/ }),
