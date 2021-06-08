@@ -225,6 +225,10 @@
                     width: 100%;
                     padding: .rem(20px)[@value] 0;
                     border-bottom: 1px solid rgba(#FFFFFF, .15);
+
+                    .caret {
+                        margin-left: auto;
+                    }
                 });
 
                 .icon {
@@ -252,24 +256,25 @@
                 position: relative;
 
                 &.logged-in {
+                    .desktopHeader({
+                        &::before, &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: .rem(12px)[@value];
+                            bottom: .rem(12px)[@value];
+                            width: 1px;
+                            background: #575960;
+                        }
 
-                    &::before, &::after {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: .rem(12px)[@value];
-                        bottom: .rem(12px)[@value];
-                        width: 1px;
-                        background: #575960;
-                    }
+                        &::before {
+                            left: 0;
+                        }
 
-                    &::before {
-                        left: 0;
-                    }
-
-                    &::after {
-                        right: 0;
-                    }
+                        &::after {
+                            right: 0;
+                        }
+                    });
                 }
 
                 .login-button-label {
