@@ -225,6 +225,18 @@
     }
 }
 
+.navigationSecondLevelVisible(@rules) {
+    body.mobile-navigation-second-level-visible & {
+        @rules();
+    }
+}
+
+.navigationSecondLevelNotVisible(@rules) {
+    body:not(.mobile-navigation-second-level-visible) & {
+        @rules();
+    }
+}
+
 .desktopHeader(@rules) {
     .breakpoint(lg, @rules);
 }

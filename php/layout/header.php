@@ -20,10 +20,17 @@
     <?php include_once(path('img/sprite.svg')) ?>
 </div>
 
-<header>
+<header class="main-header-overlay">
     <div id="main-header" class="main-header">
         <div class="mobile-navigation-header">
             <div class="mobile-navigation-title">Menu</div>
+            <div class="mobile-navigation-title-second-level">
+                <button type="button" id="mobile-navigation-second-level-back" class="btn btn-icon-only btn-transparent">
+                    <svg><use xlink:href="#sprite-cancel"></use></svg>
+                </button>
+
+                <span id="mobile-navigation-title-second-level">Menu</span>
+            </div>
 
             <button id="mobile-nav-close" type="button" class="btn btn-transparent btn-icon-only">
                 <svg><use xlink:href="#sprite-cancel"></use></svg>
