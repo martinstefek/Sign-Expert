@@ -73,7 +73,7 @@ var mobileNavOpen = document.getElementById('mobile-nav-open');
 var mobileNavClose = document.getElementById('mobile-nav-close');
 var activeClass = 'active';
 var mobileMenuActiveClass = 'navigation-visible';
-var mobileMenuSecondLevelActiveClass = 'mobile-navigation-second-level-visible';
+var mobileMenuSecondLevelActiveClass = 'navigation-second-level-visible';
 var mobileMenuSecondLevelTitleId = 'mobile-navigation-title-second-level';
 var secondLevelBackButton = document.getElementById('mobile-navigation-second-level-back');
 
@@ -85,6 +85,7 @@ var allTopLevelItems = $(mainNavId + ' [data-toggle="navigation-first-level"]');
 var allFirstLevelItems = $(mainNavId + ' [data-toggle="navigation-second-level"]');
 allTopLevelItems.each(function (index, topLevelItem) {
   var topLevelParent = navLevelElement(topLevelItem);
+  var allFirstLevelItemsOfSuperior = topLevelParent.find('[data-toggle="navigation-second-level"]');
   $(topLevelItem).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
     e.preventDefault();
     var parentHasActiveClass = topLevelParent.hasClass(activeClass);
@@ -94,9 +95,12 @@ allTopLevelItems.each(function (index, topLevelItem) {
 
     if (!parentHasActiveClass) {
       topLevelParent.addClass(activeClass);
+      document.body.classList.remove(mobileMenuSecondLevelActiveClass);
+      allFirstLevelItemsOfSuperior.each(function (__index, i) {
+        navLevelElement(i).removeClass(activeClass);
+      });
     }
   });
-  var allFirstLevelItemsOfSuperior = topLevelParent.find('[data-toggle="navigation-second-level"]');
   allFirstLevelItemsOfSuperior.each(function (_index, firstLevelItem) {
     var firstLevelParent = navLevelElement(firstLevelItem);
     var sectionTitle = $(firstLevelParent).data('sectionName');

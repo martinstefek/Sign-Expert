@@ -6,7 +6,7 @@ const mobileNavOpen = document.getElementById('mobile-nav-open');
 const mobileNavClose = document.getElementById('mobile-nav-close');
 const activeClass = 'active';
 const mobileMenuActiveClass = 'navigation-visible';
-const mobileMenuSecondLevelActiveClass = 'mobile-navigation-second-level-visible';
+const mobileMenuSecondLevelActiveClass = 'navigation-second-level-visible';
 const mobileMenuSecondLevelTitleId = 'mobile-navigation-title-second-level';
 const secondLevelBackButton = document.getElementById('mobile-navigation-second-level-back');
 
@@ -19,19 +19,22 @@ const allFirstLevelItems = $(mainNavId + ' [data-toggle="navigation-second-level
 
 allTopLevelItems.each((index, topLevelItem) => {
     const topLevelParent = navLevelElement(topLevelItem);
+    const allFirstLevelItemsOfSuperior = topLevelParent.find('[data-toggle="navigation-second-level"]');
 
     $(topLevelItem).on(clickEvent, (e) => {
         e.preventDefault();
 
         const parentHasActiveClass = topLevelParent.hasClass(activeClass);
-        allTopLevelItems.each((__index, i) => navLevelElement(i).removeClass(activeClass))
+        allTopLevelItems.each((__index, i) => navLevelElement(i).removeClass(activeClass));
 
         if (!parentHasActiveClass) {
             topLevelParent.addClass(activeClass);
+            document.body.classList.remove(mobileMenuSecondLevelActiveClass);
+            allFirstLevelItemsOfSuperior.each((__index, i) => {
+                navLevelElement(i).removeClass(activeClass);
+            });
         }
     });
-
-    const allFirstLevelItemsOfSuperior = topLevelParent.find('[data-toggle="navigation-second-level"]');
 
     allFirstLevelItemsOfSuperior.each((_index, firstLevelItem) => {
         const firstLevelParent = navLevelElement(firstLevelItem);

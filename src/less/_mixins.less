@@ -226,13 +226,13 @@
 }
 
 .navigationSecondLevelVisible(@rules) {
-    body.mobile-navigation-second-level-visible & {
+    body.navigation-second-level-visible & {
         @rules();
     }
 }
 
 .navigationSecondLevelNotVisible(@rules) {
-    body:not(.mobile-navigation-second-level-visible) & {
+    body:not(.navigation-second-level-visible) & {
         @rules();
     }
 }
@@ -332,6 +332,7 @@
         list-style-type: none;
         margin-bottom: 0;
         max-width: none;
+        width: auto;
 
         > li {
             &:last-child > a {
