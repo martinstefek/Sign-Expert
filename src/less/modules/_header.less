@@ -205,6 +205,12 @@
                 border-radius: 0;
                 color: @dark-theme-text-color;
 
+                .text-highlighted {
+                    display: block;
+                    color: #FFFFFF;
+                    font-weight: 400;
+                }
+
                 .desktopHeader({
                     padding-left: .5rem;
                     padding-right: .5rem;
@@ -243,6 +249,29 @@
             }
 
             .login-button {
+                position: relative;
+
+                &.logged-in {
+
+                    &::before, &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: .rem(12px)[@value];
+                        bottom: .rem(12px)[@value];
+                        width: 1px;
+                        background: #575960;
+                    }
+
+                    &::before {
+                        left: 0;
+                    }
+
+                    &::after {
+                        right: 0;
+                    }
+                }
+
                 .login-button-label {
                     .mobileHeader({
                         display: flex;
@@ -288,6 +317,14 @@
                         }
                     }
                 }
+
+                + .dropdown-menu {
+                    svg, .icon {
+                        width: .rem(22px)[@value];
+                        height: .rem(20px)[@value];
+                        margin-right: .rem(5px)[@value];
+                    }
+                }
             }
         }
 
@@ -314,10 +351,6 @@
                         height: 2rem;
                     }
                 }
-            }
-
-            .dropdown-menu {
-                min-width: .rem(250px)[@value];
             }
 
             .dropdown-item {

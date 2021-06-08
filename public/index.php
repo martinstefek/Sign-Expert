@@ -1,4 +1,6 @@
 <?php include_once('../php/config.php'); ?>
+<?php $loggedIn = true; ?>
+
 <?php include_once('../php/layout/header.php'); ?>
 
 <div class="container">

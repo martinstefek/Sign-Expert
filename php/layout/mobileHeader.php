@@ -11,19 +11,19 @@
 
             <div>
                 <a href="#" class="main-header-mobile-action">
-                    <svg class="icon fill-primary">
+                    <svg class="icon stroke-primary">
                         <use xlink:href="#sprite-avatar"></use>
                     </svg>
                 </a>
 
                 <a href="#" class="main-header-mobile-action">
-                    <svg class="icon fill-primary">
-                        <use xlink:href="#sprite-avatar"></use>
+                    <svg class="icon stroke-primary">
+                        <use xlink:href="#sprite-shopping-cart"></use>
                     </svg>
                 </a>
 
                 <span id="mobile-nav-open" class="main-header-mobile-action">
-                    <svg class="icon fill-primary">
+                    <svg class="icon action-icon-grey">
                         <use xlink:href="#sprite-menu"></use>
                     </svg>
                 </span>

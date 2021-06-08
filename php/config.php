@@ -3,6 +3,9 @@
 const PATH = './';
 const LOGGED_IN = false;
 
+global $loggedIn;
+$loggedIn = false;
+
 function path($assetToPath) {
     return PATH . $assetToPath;
 }

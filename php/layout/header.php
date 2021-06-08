@@ -125,22 +125,7 @@
                         </ul>
                     </div>
 
-                    <a href="#" class="btn btn-action login-button" type="button">
-                        <svg class="icon stroke-primary">
-                            <use xlink:href="#sprite-avatar"></use>
-                        </svg>
-                        <span class="login-button-label">
-                        <span>Prihlásenie</span>
-                        <span>Registrácia</span>
-                    </span>
-                    </a>
-
-                    <a href="#" class="btn btn-action" type="button">
-                        <svg class="icon stroke-primary">
-                            <use xlink:href="#sprite-shopping-cart"></use>
-                        </svg>
-                        <span>Košík</span>
-                    </a>
+                    <?php include_once('loginButtonAndShoppingCart.php'); ?>
                 </div>
             </div>
         </div>
