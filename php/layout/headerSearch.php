@@ -78,7 +78,7 @@
                     Zobraziť všetky produkty (365)
 
                     <svg class="icon">
-                        <use xlink:href="#sprite-detail-chevron-right"></use>
+                        <use xlink:href="#sprite-chevron-right"></use>
                     </svg>
                 </a>
             </div>
