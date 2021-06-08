@@ -292,6 +292,29 @@
         }
 
         .language {
+            .dropdown-toggle {
+                .icon-wrap {
+                    position: relative;
+                    display: inline-block;
+                    width: .rem(28px)[@value];
+                    height: .rem(28px)[@value];
+                    overflow: hidden;
+                    border: 2px solid @gray-dark;
+                    border-radius: 50%;
+                    z-index: 5;
+
+                    img, .icon {
+                        position: absolute;
+                        left: -1px;
+                        top: 0;
+                        min-width: 100%;
+                        max-height: 100%;
+                        max-width: none;
+                        height: 2rem;
+                    }
+                }
+            }
+
             .dropdown-menu {
                 min-width: .rem(250px)[@value];
             }
@@ -527,7 +550,7 @@
                             font-weight: 500;
                             color: @text-color-light;
                             padding: .rem(9px)[@value] 1rem;
-                            background-image: url("../../img/menu-chevron-right.svg");
+                            background-image: url("../../img/chevron-right-first-level-nav.svg");
                             background-repeat: no-repeat;
                             background-size: .rem(7px)[@value] .rem(12px)[@value];
                             background-position: calc(100% - 1rem) center;
@@ -693,7 +716,7 @@
                 transform: translate(0, -50%);
                 width: .rem(24px)[@value];
                 height: .rem(24px)[@value];
-                fill: #D9D9DA;
+                stroke: #D9D9DA;
             }
         }
 
@@ -906,6 +929,15 @@
             justify-content: space-between;
         });
 
+        .mobile-nav-close {
+            padding: .5rem;
+
+            svg, .icon {
+                width: .rem(20px)[@value];
+                height: .rem(20px)[@value];
+            }
+        }
+
         .mobile-navigation-title, .mobile-navigation-title-second-level {
             font-size: .rem(28px)[@value];
             margin-right: 1rem;
@@ -913,6 +945,7 @@
 
         .mobile-navigation-title-second-level {
             display: none;
+            margin-left: -.5rem;
 
             button {
                 padding: .75rem .5rem;
@@ -920,6 +953,7 @@
                 svg {
                     width: 1rem;
                     height: 1rem;
+                    stroke: #C9C9C9;
                 }
             }
             

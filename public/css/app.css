@@ -8521,7 +8521,7 @@ fieldset[disabled] .btn-lighter.focus {
   height: 0.5625rem;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../img/menu-chevron-right.svg");
+  background-image: url("../img/chevron-right-link-list.svg");
 }
 .link-list a {
   color: #1F222B;
@@ -9669,6 +9669,26 @@ h6,
 .main-header .mid-header .mid-header-actions .login-button .login-button-label span:last-child::after {
   display: none;
 }
+.main-header .mid-header .language .dropdown-toggle .icon-wrap {
+  position: relative;
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  overflow: hidden;
+  border: 2px solid #1F222B;
+  border-radius: 50%;
+  z-index: 5;
+}
+.main-header .mid-header .language .dropdown-toggle .icon-wrap img,
+.main-header .mid-header .language .dropdown-toggle .icon-wrap .icon {
+  position: absolute;
+  left: -1px;
+  top: 0;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: none;
+  height: 2rem;
+}
 .main-header .mid-header .language .dropdown-menu {
   min-width: 15.625rem;
 }
@@ -9921,7 +9941,7 @@ h6,
   font-weight: 500;
   color: rgba(31, 34, 43, 0.8);
   padding: 0.5625rem 1rem;
-  background-image: url("../img/menu-chevron-right.svg");
+  background-image: url("../img/chevron-right-first-level-nav.svg");
   background-repeat: no-repeat;
   background-size: 0.4375rem 0.75rem;
   background-position: calc(100% - 1rem) center;
@@ -9939,7 +9959,7 @@ h6,
     background-color: rgba(31, 34, 43, 0.05);
     border-bottom: 1px solid #E4E4E4;
     background-position: 1rem center;
-    background-image: url("../../img/menu-chevron-right.svg");
+    background-image: url("../../img/chevron-right-link-list.svg");
     background-repeat: no-repeat;
     background-size: 0.4375rem 0.75rem;
   }
@@ -10024,7 +10044,7 @@ h6,
     height: 0.5625rem;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../img/menu-chevron-right.svg");
+    background-image: url("../img/chevron-right-link-list.svg");
   }
   .main-header .bottom-header .navigation .navigation-first-level > ul > li .navigation-second-level ul a {
     color: #1F222B;
@@ -10056,7 +10076,7 @@ h6,
     background-color: rgba(31, 34, 43, 0.05);
     border-bottom: 1px solid #E4E4E4;
     background-position: 1rem center;
-    background-image: url("../../img/menu-chevron-right.svg");
+    background-image: url("../../img/chevron-right-link-list.svg");
     background-repeat: no-repeat;
     background-size: 0.4375rem 0.75rem;
   }
@@ -10157,7 +10177,7 @@ h6,
           transform: translate(0, -50%);
   width: 1.5rem;
   height: 1.5rem;
-  fill: #D9D9DA;
+  stroke: #D9D9DA;
 }
 .main-header .search input.header-search-input,
 .header-mobile .search input.header-search-input {
@@ -10450,6 +10470,17 @@ h6,
             justify-content: space-between;
   }
 }
+.main-header .mobile-navigation-header .mobile-nav-close,
+.header-mobile .mobile-navigation-header .mobile-nav-close {
+  padding: 0.5rem;
+}
+.main-header .mobile-navigation-header .mobile-nav-close svg,
+.header-mobile .mobile-navigation-header .mobile-nav-close svg,
+.main-header .mobile-navigation-header .mobile-nav-close .icon,
+.header-mobile .mobile-navigation-header .mobile-nav-close .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
 .main-header .mobile-navigation-header .mobile-navigation-title,
 .header-mobile .mobile-navigation-header .mobile-navigation-title,
 .main-header .mobile-navigation-header .mobile-navigation-title-second-level,
@@ -10460,6 +10491,7 @@ h6,
 .main-header .mobile-navigation-header .mobile-navigation-title-second-level,
 .header-mobile .mobile-navigation-header .mobile-navigation-title-second-level {
   display: none;
+  margin-left: -0.5rem;
 }
 .main-header .mobile-navigation-header .mobile-navigation-title-second-level button,
 .header-mobile .mobile-navigation-header .mobile-navigation-title-second-level button {
@@ -10469,6 +10501,7 @@ h6,
 .header-mobile .mobile-navigation-header .mobile-navigation-title-second-level button svg {
   width: 1rem;
   height: 1rem;
+  stroke: #C9C9C9;
 }
 .main-header .mobile-navigation-header .mobile-navigation-title-second-level span,
 .header-mobile .mobile-navigation-header .mobile-navigation-title-second-level span {

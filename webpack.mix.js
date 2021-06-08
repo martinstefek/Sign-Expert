@@ -33,6 +33,7 @@ mix.setPublicPath('public')
                 plugins: [{
                     removeEmptyAttrs: false,
                     convertStyleToAttrs: true,
+                    removeUselessStrokeAndFill: false,
                 }],
             }
         },

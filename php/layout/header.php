@@ -26,13 +26,13 @@
             <div class="mobile-navigation-title">Menu</div>
             <div class="mobile-navigation-title-second-level">
                 <button type="button" id="mobile-navigation-second-level-back" class="btn btn-icon-only btn-transparent">
-                    <svg><use xlink:href="#sprite-cancel"></use></svg>
+                    <svg><use xlink:href="#sprite-arrow-left"></use></svg>
                 </button>
 
                 <span id="mobile-navigation-title-second-level">Menu</span>
             </div>
 
-            <button id="mobile-nav-close" type="button" class="btn btn-transparent btn-icon-only">
+            <button id="mobile-nav-close" type="button" class="btn btn-transparent btn-icon-only mobile-nav-close">
                 <svg><use xlink:href="#sprite-cancel"></use></svg>
             </button>
         </div>
@@ -85,9 +85,11 @@
 
                 <div class="mid-header-actions">
                     <div class="dropdown language">
-                        <button class="btn btn-action dropdown-toggle" type="button" data-toggle="dropdown"
-                                aria-expanded="false">
-                            <img class="icon" src="./img/SK.png" alt="Slovak language">
+                        <button class="btn btn-action dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                            <span class="icon-wrap">
+                                <img src="./img/language/lang-sk.svg" alt="Slovak language">
+                            </span>
+
                             <span>SK</span>
                             <span class="caret"></span>
                         </button>
@@ -99,32 +101,32 @@
                             <li>
                                 <a class="dropdown-item active">
                                     <span>Slovenčina - SK</span>
-                                    <img class="icon" src="./img/SK.png" alt="Slovak language">
+                                    <img class="icon" src="./img/language/lang-sk.svg" alt="Slovak language">
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item">
                                     <span>Čeština - CZ</span>
-                                    <img class="icon" src="./img/SK.png" alt="Slovak language">
+                                    <img class="icon" src="./img/language/lang-cz.svg" alt="Slovak language">
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item">
                                     <span>Magyar - HUN</span>
-                                    <img class="icon" src="./img/SK.png" alt="Slovak language">
+                                    <img class="icon" src="./img/language/lang-hu.svg" alt="Slovak language">
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item">
                                     <span>English - EN</span>
-                                    <img class="icon" src="./img/SK.png" alt="Slovak language">
+                                    <img class="icon" src="./img/language/lang-gb.svg" alt="Slovak language">
                                 </a>
                             </li>
                         </ul>
                     </div>
 
                     <a href="#" class="btn btn-action login-button" type="button">
-                        <svg class="icon fill-primary">
+                        <svg class="icon stroke-primary">
                             <use xlink:href="#sprite-avatar"></use>
                         </svg>
                         <span class="login-button-label">
@@ -134,8 +136,8 @@
                     </a>
 
                     <a href="#" class="btn btn-action" type="button">
-                        <svg class="icon fill-primary">
-                            <use xlink:href="#sprite-avatar"></use>
+                        <svg class="icon stroke-primary">
+                            <use xlink:href="#sprite-shopping-cart"></use>
                         </svg>
                         <span>Košík</span>
                     </a>
@@ -155,14 +157,14 @@
                     <div class="quick-nav">
                         <a href="#" class="quick-nav-item">
                             <svg class="icon">
-                                <use xlink:href="#sprite-avatar"></use>
+                                <use xlink:href="#sprite-book-circled"></use>
                             </svg>
                             Blog
                         </a>
 
                         <a href="#" class="quick-nav-item">
                             <svg class="icon">
-                                <use xlink:href="#sprite-avatar"></use>
+                                <use xlink:href="#sprite-phone-circled"></use>
                             </svg>
                             Kontakty
                         </a>

@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="21.256" height="21.972" viewBox="0 0 21.256 21.972">
-  <g id="shopping-cart-7" transform="translate(-0.047 0)">
-    <circle id="Oval" cx="2.597" cy="2.597" r="2.597" transform="translate(5.905 16.777)"/>
-    <path id="Path" d="M2.6,0h0a2.6,2.6,0,1,0,2.6,2.6A2.6,2.6,0,0,0,2.6,0Z" transform="translate(13.485 16.777)"/>
-    <path id="Path-2" data-name="Path" d="M20.461,14.126H6.917l-.265-1.537H17.784a.8.8,0,0,0,.742-.5l2.65-6.679a.8.8,0,0,0-.742-1.087H5.274L4.638.663A.8.8,0,0,0,3.843,0H.8a.8.8,0,0,0,0,1.59H3.18L5.46,15.054a.8.8,0,0,0,.8.663H20.461a.8.8,0,1,0,0-1.59Z" transform="translate(0.047 0)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="35.237" height="30" viewBox="0 0 35.237 30">
+  <g transform="translate(0 1)" fill="none" stroke-miterlimit="10" stroke-width="2">
+    <path d="M0,0H27L24,14H3Z" transform="translate(7 4)" />
+    <circle cx="3" cy="3" r="3" transform="translate(10 22)" />
+    <circle cx="3" cy="3" r="3" transform="translate(25 22)"  />
+    <path d="M7,4,6.1,0H0"  />
+    <path d="M0,.5H15" transform="translate(13 21.5)" />
   </g>
 </svg>
