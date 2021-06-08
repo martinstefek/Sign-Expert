@@ -63,7 +63,7 @@
                 </div>
                 <?php else: ?>
                 <div class="product-list-item-request-price">
-                    <svg><use xlink:href="#sprite-facebook"></use></svg>
+                    <svg><use xlink:href="#sprite-mail"></use></svg>
                     Vyžiadať si dobru cenu
                 </div>
                 <?php endif; ?>
@@ -75,12 +75,12 @@
 
                     <div class="product-list-item-actions">
                         <span class="action">
-                            <svg class="fill-gray-dark"><use xlink:href="#sprite-facebook"></use></svg>
+                            <svg class="stroke-gray-dark"><use xlink:href="#sprite-heart"></use></svg>
                         </span>
 
                         <?php if (isset($price)): ?>
                         <span class="action">
-                            <svg class="fill-success"><use xlink:href="#sprite-facebook"></use></svg>
+                            <svg class="stroke-success"><use xlink:href="#sprite-shopping-cart"></use></svg>
                         </span>
                         <?php endif; ?>
                     </div>
