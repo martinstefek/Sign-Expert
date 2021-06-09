@@ -132,8 +132,8 @@
 
 <section class="section home-tech">
     <div class="container">
-        <div class="section-header">
-            <h1 class="section-title section-title-bordered">Technológie</h1>
+        <div class="section-header section-header-bordered">
+            <h1 class="section-title">Technológie</h1>
         </div>
 
         <div class="row">
