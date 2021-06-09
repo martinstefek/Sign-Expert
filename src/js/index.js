@@ -2,6 +2,7 @@ import 'bootstrap/dist/js/bootstrap.min';
 import './modules/navigation';
 import './modules/searchAutocomplete';
 import './modules/banner';
+import './modules/accordion';
 
 import { focusInput } from "./modules/helpers";
 import { clickEvent, mobileNavigationThreshold } from "./modules/config";

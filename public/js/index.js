@@ -1,6 +1,64 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/accordion.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/accordion.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ "./src/js/modules/config.js");
+
+var accordionTriggers = $('[data-toggle="accordion"]');
+var accordions = $('[data-type="accordion"]');
+
+var getTrigger = function getTrigger(panelId) {
+  return $('[data-toggle="accordion"][data-target="#' + panelId + '"]');
+};
+
+accordions.each(function (index, item) {
+  var panels = $(item).find('[data-type="accordion-item"]');
+  console.log(panels);
+  panels.each(function (index, panel) {
+    $(panel).addClass('collapse');
+    $(panel).collapse({
+      toggle: false
+    });
+  });
+  var firstPanel = panels.get(0);
+  $(firstPanel).collapse('show');
+  getTrigger($(firstPanel).attr('id')).each(function (_index, trigger) {
+    $(trigger).addClass('active');
+  });
+});
+accordionTriggers.each(function (index, trigger) {
+  var target = $(trigger).data('target');
+  var parent = $(trigger).data('parent');
+  $(target).collapse({
+    toggle: false
+  });
+  trigger.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+    if ($(target).hasClass('collapse') && $(target).hasClass('in')) {
+      return;
+    }
+
+    $(parent).find('[data-type="accordion-item"]').each(function (index, panel) {
+      $(panel).collapse('hide');
+      getTrigger($(panel).attr('id')).each(function (_index, _trigger) {
+        $(_trigger).removeClass('active');
+      });
+    });
+    $(target).collapse('show');
+    getTrigger($(target).attr('id')).each(function (_index, _trigger) {
+      $(_trigger).addClass('active');
+    });
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/modules/banner.js":
 /*!**********************************!*\
   !*** ./src/js/modules/banner.js ***!
@@ -17559,8 +17617,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_searchAutocomplete__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/searchAutocomplete */ "./src/js/modules/searchAutocomplete.js");
 /* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/banner */ "./src/js/modules/banner.js");
 /* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_banner__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
-/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./src/js/modules/accordion.js");
+/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
+/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+
 
 
 

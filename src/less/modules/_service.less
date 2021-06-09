@@ -1,13 +1,22 @@
 .services {
-
+    background: linear-gradient(180deg, #FFFFFF 0%, #F9F8F8 100%) no-repeat center bottom;
+    background-size: 100% .rem(800px)[@value];
 }
 
 .services-list-row {
     .make-row(@servicesSmallGutter);
-    flex-wrap: nowrap;
-    overflow: auto;
-    padding-bottom: 2rem;
-    .noScrollBar();
+
+    .breakpointMax(sm, {
+        margin-left: -@servicesSmallGutter;
+        margin-right: -@servicesSmallGutter;
+    });
+
+    .breakpointMax(lg, {
+        flex-wrap: nowrap;
+        overflow: auto;
+        padding-bottom: 1.5rem;
+        .noScrollBar();
+    });
 
     .breakpoint(lg, {
         .make-row(.5rem);

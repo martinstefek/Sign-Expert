@@ -18,7 +18,7 @@
             <a href="#" class="btn btn-primary btn-full">
                 Objaviť produkty
 
-                <svg class="icon icon-arrow-right">
+                <svg class="icon icon-arrow-right stroke-white">
                     <use xlink:href="#sprite-chevron-right"></use>
                 </svg>
             </a>

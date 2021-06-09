@@ -91,6 +91,22 @@ address {
         text-align: center;
         margin-bottom: 0;
 
+        &.section-title-bordered {
+            position: relative;
+            text-align: left;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: .rem(-26px)[@value];
+                left: 0;
+                width: .rem(500px)[@value];
+                height: 1px;
+                background-color: @brand-primary;
+            }
+        }
+
         .breakpoint(md, {
             font-size: 2rem;
         });
@@ -179,6 +195,10 @@ h6, .h6 {
 
 .line-height-large {
     line-height: 1.75;
+}
+
+.transform-uppercase {
+    text-transform: uppercase;
 }
 
 .generateSpacings();

@@ -130,6 +130,93 @@
     </div>
 </section>
 
+<section class="section home-tech">
+    <div class="container">
+        <div class="section-header">
+            <h1 class="section-title section-title-bordered">Technológie</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3">
+                <?php homeTechButton('Ecosolventná tlač', 'home-tech-1', false, true); ?>
+                <?php homeTechButton('UV Led tlač a potlač', 'home-tech-2', false); ?>
+                <?php homeTechButton('Rezaná reklama', 'home-tech-3', false); ?>
+                <?php homeTechButton('Sublimácia', 'home-tech-4', false); ?>
+                <?php homeTechButton('Chromablast', 'home-tech-5', false); ?>
+                <?php homeTechButton('Nažehľovacie fólie', 'home-tech-6', false); ?>
+                <?php homeTechButton('Sieťotlač', 'home-tech-7', false); ?>
+                <?php homeTechButton('Priama potlač - DTG', 'home-tech-8', false); ?>
+                <?php homeTechButton('Potlač DTF', 'home-tech-9', false); ?>
+                <?php homeTechButton('Výroba odznakov', 'home-tech-10', false); ?>
+                <?php homeTechButton('Gravírovanie laserom', 'home-tech-11', false); ?>
+            </div>
+
+            <div class="col-xs-8 col-xs-offset-1">
+                <div id="techs-accordion" data-type="accordion">
+                    <?php homeTechAccordion('Ecosolventná tlač', 'home-tech-1', true); ?>
+                    <?php homeTechAccordion('UV Led tlač a potlač', 'home-tech-2'); ?>
+                    <?php homeTechAccordion('Rezaná reklama', 'home-tech-3'); ?>
+                    <?php homeTechAccordion('Sublimácia', 'home-tech-4'); ?>
+                    <?php homeTechAccordion('Chromablast', 'home-tech-5'); ?>
+                    <?php homeTechAccordion('Nažehľovacie fólie', 'home-tech-6'); ?>
+                    <?php homeTechAccordion('Sieťotlač', 'home-tech-7'); ?>
+                    <?php homeTechAccordion('Priama potlač - DTG', 'home-tech-8'); ?>
+                    <?php homeTechAccordion('Potlač DTF', 'home-tech-9'); ?>
+                    <?php homeTechAccordion('Výroba odznakov', 'home-tech-10'); ?>
+                    <?php homeTechAccordion('Gravírovanie laserom', 'home-tech-11'); ?>
+                </div>
+
+
+
+<!--                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">-->
+<!--                    <div class="panel panel-default">-->
+<!--                        <div class="panel-heading" role="tab" id="headingOne">-->
+<!--                            <h4 class="panel-title">-->
+<!--                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+<!--                                    Collapsible Group Item #1-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                        </div>-->
+<!--                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">-->
+<!--                            <div class="panel-body">-->
+<!--                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="panel panel-default">-->
+<!--                        <div class="panel-heading" role="tab" id="headingTwo">-->
+<!--                            <h4 class="panel-title">-->
+<!--                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">-->
+<!--                                    Collapsible Group Item #2-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                        </div>-->
+<!--                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">-->
+<!--                            <div class="panel-body">-->
+<!--                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="panel panel-default">-->
+<!--                        <div class="panel-heading" role="tab" id="headingThree">-->
+<!--                            <h4 class="panel-title">-->
+<!--                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
+<!--                                    Collapsible Group Item #3-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                        </div>-->
+<!--                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">-->
+<!--                            <div class="panel-body">-->
+<!--                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="container">
     This is Index!
 
