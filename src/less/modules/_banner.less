@@ -1,0 +1,128 @@
+.banner {
+    .breakpointMax(sm, {
+        padding-top: (@grid-gutter-width / 2);
+    });
+
+    .banner-item-list {
+        box-shadow: @bannerBoxShadow;
+        border-radius: @border-radius-base;
+        overflow: visible;
+        background-color: #FFFFFF;
+
+        .breakpoint(sm, {
+            overflow: hidden;
+        })
+    }
+
+    .banner-item {
+        min-height: 100%;
+        padding: 2rem;
+        text-align: center;
+        background-color: #FFFFFF;
+        border-radius: @border-radius-base;
+
+        img {
+            margin: 0 auto .5rem;
+        }
+
+        .banner-title {
+            margin-bottom: .3rem;
+        }
+
+        .banner-description {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .banner-item-secondary {
+        display: block;
+        border-radius: @border-radius-base;
+        box-shadow: @bannerBoxShadow;
+        margin-bottom: @grid-gutter-width;
+        background-color: #FFFFFF;
+        overflow: hidden;
+
+        .breakpointMax(lg, {
+            display: none;
+        });
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        height: .rem(50px)[@value];
+        width: .rem(38px)[@value];
+        background-color: rgba(0,0,0,0.2);
+        transform: translate(0, -50%);
+        z-index: 5;
+
+        .breakpoint(sm, {
+            width: .rem(50px)[@value];
+            background-color: @brand-primary;
+            border-radius: 50%;
+            .transition();
+
+            &:hover {
+                box-shadow: 0 6px 14px -2px rgba(#000000, .15);
+            }
+        });
+
+        &::before {
+            display: none;
+        }
+
+        svg, .icon {
+            width: .rem(9px)[@value];
+            height: 1rem;
+            stroke: #FFFFFF;
+        }
+    }
+
+    .slick-next {
+        right: 2rem;
+
+        .breakpointMax(sm, {
+            right: -(@grid-gutter-width / 2);
+            border-radius: .rem(100px)[@value] 0 0 .rem(100px)[@value];
+        });
+    }
+
+    .slick-prev {
+        left: 2rem;
+
+        .breakpointMax(sm, {
+            left: -(@grid-gutter-width / 2);
+            border-radius: 0 .rem(100px)[@value] .rem(100px)[@value] 0;
+        });
+    }
+
+    .slick-dots {
+        bottom: 2rem;
+
+        li {
+            height: .rem(4px)[@value];
+            width: .rem(50px)[@value];
+            background-color: @gray-lighter;
+            margin: 0 .rem(2px)[@value];
+            .transition();
+
+            button {
+                &::before {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                background-color: darken(@gray-lighter, 7%);
+            }
+
+            &.slick-active {
+                background-color: @brand-primary;
+            }
+        }
+    }
+}

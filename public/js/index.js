@@ -1,6 +1,26 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/banner.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/banner.js ***!
+  \**********************************/
+/***/ (function() {
+
+$(document).ready(function () {
+  // Definitions
+  var slick = $('#home-banner-slider');
+  slick.slick({
+    draggable: false,
+    arrows: true,
+    dots: true,
+    prevArrow: '<button class="slick-prev"><svg class="icon"><use xlink:href="#sprite-chevron-left"></use></svg></button>',
+    nextArrow: '<button class="slick-next"><svg class="icon"><use xlink:href="#sprite-chevron-right"></use></svg></button>'
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/modules/config.js":
 /*!**********************************!*\
   !*** ./src/js/modules/config.js ***!
@@ -17537,8 +17557,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/navigation */ "./src/js/modules/navigation.js");
 /* harmony import */ var _modules_searchAutocomplete__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/searchAutocomplete */ "./src/js/modules/searchAutocomplete.js");
-/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
-/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+/* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/banner */ "./src/js/modules/banner.js");
+/* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_banner__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
+/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+
 
 
 

@@ -1,12 +1,18 @@
 .card {
     display: block;
     padding: 1.5rem;
-    box-shadow: 0 12px 24px 6px rgba(14,25,67,0.08);
-    border-radius: 1rem;
+    box-shadow: 0 11px 22px -4px rgba(0,0,0,0.1);
+    border-radius: @border-radius-base;
     margin-bottom: 1rem;
-    background-color: #fff;
+    background: linear-gradient(0deg, #FFFFFF 0%, #F9F8F8 100%);
+    overflow: hidden;
 
-    .breakpoint(lg, {
-        padding: 2rem;
-    });
+    .card-hero {
+        display: block;
+        min-width: 100%;
+        height: .rem(240px)[@value];
+        background-size: cover;
+        background-position: center;
+        margin: -1.5rem -1.5rem .rem(20px)[@value];
+    }
 }

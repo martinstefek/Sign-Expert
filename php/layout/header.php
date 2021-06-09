@@ -162,5 +162,5 @@
     <?php include_once('mobileHeader.php'); ?>
 </header>
 
-<main>
+<main class="main">
 

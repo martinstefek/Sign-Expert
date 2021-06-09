@@ -1,4 +1,9 @@
+.btn() {
+    padding: .rem(13px)[@value] .rem(18px)[@value];
+}
+
 .btn {
+    padding: .rem(13px)[@value] .rem(18px)[@value];
     .customTransition(background, background-color, border, outline, color;);
 
     &:active,
@@ -9,8 +14,9 @@
 
 .btn-bordered {
     .btn();
-    .btn-lighter();
+    .button-variant(@text-color; lighten(@gray-lighter, 8%); @border-color);
     background-color: transparent;
+    font-weight: 400;
 }
 
 .btn-icon {
@@ -62,5 +68,25 @@
 
     &:hover {
         background-color: rgba(#000000, .0575);
+    }
+}
+
+.btn-full {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: block;
+
+    .icon, .icon-arrow-right {
+        position: absolute;
+        right: .rem(18px)[@value];
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .icon-arrow-right {
+        width: .rem(8px)[@value];
+        height: .rem(14px)[@value];
+        stroke: #FFFFFF;
     }
 }
