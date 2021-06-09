@@ -309,6 +309,7 @@
 .customScrollBar() {
     &::-webkit-scrollbar {
         width: .rem(4px)[@value];               /* width of the entire scrollbar */
+        height: .rem(4px)[@value];               /* width of the entire scrollbar */
     }
 
     &::-webkit-scrollbar-track {
@@ -323,6 +324,27 @@
     & {
         scrollbar-width: thin;          /* "auto" or "thin" */
         scrollbar-color: #DADADA #EFEFEF;   /* scroll thumb and track */
+    }
+}
+
+.noScrollBar() {
+    &::-webkit-scrollbar {
+        width: .rem(0)[@value];               /* width of the entire scrollbar */
+        height: .rem(0)[@value];               /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(#FFFFFF, 0);        /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(#FFFFFF, 0);    /* color of the scroll thumb */
+        border-radius: .rem(2px)[@value];       /* roundness of the scroll thumb */
+    }
+
+    & {
+        scrollbar-width: thin;          /* "auto" or "thin" */
+        scrollbar-color: rgba(#FFFFFF, 0) rgba(#FFFFFF, 0);   /* scroll thumb and track */
     }
 }
 

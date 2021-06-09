@@ -54,32 +54,78 @@
         </header>
 
         <div class="services-list-row">
-            <div class="services-list-col">
-                <div class="card service">
-                    <div class="card-hero" style="background-image: url('img/services/service-1.jpg');"></div>
+            <?php service(
+                    'Veľkoformátovú tlač',
+                    [
+                        'Sublimácia',
+                        'Ecosolventná tlač',
+                        'UV LED tlač',
+                        'Latexová tlač',
+                        'Rezacie plottre',
+                        'Laminovanie a kašírovanie',
+                        'Rezanie a skladanie',
+                    ],
+                    'img/services/service-1.jpg'
+            ); ?>
 
-                    <div class="service-title">Veľkoformátovú tlač</div>
-                    
-                    <ul class="link-list">
-                        <li><a href="#">Sublimácia</a></li>
-                        <li><a href="#">Ecosolventná tlač</a></li>
-                        <li><a href="#">UV LED tlač</a></li>
-                        <li><a href="#">Latexová tlač</a></li>
-                        <li><a href="#">Rezacie plottre</a></li>
-                        <li><a href="#">Laminovanie a kašírovanie</a></li>
-                        <li><a href="#">Rezanie a skladanie</a></li>
-                    </ul>
+            <?php service(
+                'Rezanú reklamu',
+                [
+                    'Rezaná reklama',
+                    'Plottrové fólie',
+                    'Nažehľovacie fólie',
+                    'Rezanie a skladanie',
+                ],
+                'img/services/service-2.jpg'
+            ); ?>
 
-                    <a href="#" class="btn btn-bordered btn-full">Čo môžem vytvoriť?</a>
-                    <a href="#" class="btn btn-primary btn-full">
-                        Objaviť produkty
+            <?php service(
+                'Potlač textilu',
+                [
+                    'Sublimácia',
+                    'Chromablast',
+                    'Transferová potlač',
+                    'Sieťotlač',
+                    'DTG potlač',
+                    'DTF potlač',
+                    'Nažehľovacie fólie',
+                ],
+                'img/services/service-3.jpg'
+            ); ?>
 
-                        <svg class="icon icon-arrow-right">
-                            <use xlink:href="#sprite-chevron-right"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+            <?php service(
+                'Potlač predmetov',
+                [
+                    'Sublimácia',
+                    'UV LED potlač',
+                    'Sieťotlač',
+                    'Tonerový transfer',
+                    'Predmety pre sublimácia',
+                ],
+                'img/services/service-4.jpg'
+            ); ?>
+
+            <?php service(
+                'Gravírovanie',
+                [
+                    'Laserové gravírky',
+                    'Chladenie',
+                    'Odsávanie a filtrácia',
+                    'Náhradné diely',
+                ],
+                'img/services/service-5.jpg'
+            ); ?>
+
+            <?php service(
+                'Výrobu odznakov',
+                [
+                    'Lisy',
+                    'Nástroje do lisov',
+                    'Vysekávače grafiky',
+                    'Odznaky',
+                ],
+                'img/services/service-6.jpg'
+            ); ?>
         </div>
     </div>
 </section>

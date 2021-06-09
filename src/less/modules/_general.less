@@ -58,7 +58,11 @@ address {
 }
 
 .section {
-    padding: @sectionPadding 0;
+    padding: (@sectionPadding / 2) 0;
+
+    .breakpoint(md, {
+        padding: @sectionPadding 0;
+    });
 
     each(@sectionPaddings, {
         &.section-padding-@{key} {
@@ -75,13 +79,21 @@ address {
     });
 
     .section-header {
-        margin-bottom: .rem(48px)[@value];
+        margin-bottom: 1.5rem;
+
+        .breakpoint(md, {
+            margin-bottom: .rem(48px)[@value];
+        });
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: .rem(26px)[@value];
         text-align: center;
         margin-bottom: 0;
+
+        .breakpoint(md, {
+            font-size: 2rem;
+        });
     }
 
     .section-description {

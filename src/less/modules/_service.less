@@ -3,15 +3,50 @@
 }
 
 .services-list-row {
-    .make-row(@servicesGutter);
+    .make-row(@servicesSmallGutter);
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding-bottom: 2rem;
+    .noScrollBar();
+
+    .breakpoint(lg, {
+        .make-row(.5rem);
+    });
+
+    .breakpoint(xl, {
+        .make-row(@servicesGutter);
+    });
 }
 
 .services-list-col {
-    .make-xs-column(4, @servicesGutter);
-    margin-bottom: (@servicesGutter * 2);
+    display: inline-block;
+    .make-xs-column(10, @servicesSmallGutter);
+    flex-shrink: 0;
+
+    .breakpoint(sm, {
+        .make-xs-column(7, .5rem);
+    });
+
+    .breakpoint(md, {
+        .make-xs-column(5, .5rem);
+    });
+
+    .breakpoint(lg, {
+        .make-xs-column(4, .5rem);
+        margin-bottom: (1rem * 2);
+    });
+
+    .breakpoint(xl, {
+        .make-xs-column(4, @servicesGutter);
+        margin-bottom: (@servicesGutter * 2);
+    });
 }
 
 .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     padding-bottom: .rem(20px)[@value];
 
     .card-hero {
@@ -33,5 +68,21 @@
         font-size: .rem(21px)[@value];
         margin-bottom: .rem(10px)[@value];
         font-weight: 500;
+    }
+
+    .service-content {
+        margin-bottom: auto;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .btn {
+        margin-bottom: .rem(9px)[@value];
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
