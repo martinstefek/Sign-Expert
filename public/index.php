@@ -130,14 +130,14 @@
     </div>
 </section>
 
-<section class="section home-tech">
+<section class="section section-padding-bottom-large home-tech">
     <div class="container">
         <div class="section-header section-header-bordered">
             <h1 class="section-title">Technológie</h1>
         </div>
 
         <div class="row">
-            <div class="col-xs-3">
+            <div class="col-xs-12 col-lg-3">
                 <?php homeTechButton('Ecosolventná tlač', 'home-tech-1', false, true); ?>
                 <?php homeTechButton('UV Led tlač a potlač', 'home-tech-2', false); ?>
                 <?php homeTechButton('Rezaná reklama', 'home-tech-3', false); ?>
@@ -151,7 +151,7 @@
                 <?php homeTechButton('Gravírovanie laserom', 'home-tech-11', false); ?>
             </div>
 
-            <div class="col-xs-8 col-xs-offset-1">
+            <div class="col-xs-12 col-lg-9 col-xl-8 col-xl-offset-1">
                 <div id="techs-accordion" data-type="accordion">
                     <?php homeTechAccordion('Ecosolventná tlač', 'home-tech-1', true); ?>
                     <?php homeTechAccordion('UV Led tlač a potlač', 'home-tech-2'); ?>

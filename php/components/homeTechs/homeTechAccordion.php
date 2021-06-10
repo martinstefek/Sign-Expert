@@ -1,5 +1,6 @@
 <?php
 include_once('homeTechButton.php');
+include_once('../category.php');
 
 function homeTechAccordion($title, $id, $open = false) { ?>
 <div>
@@ -14,13 +15,14 @@ function homeTechAccordion($title, $id, $open = false) { ?>
             Techniku transferovej tlače, ktorá sa hovorovo v tlačovom prostredí nazýva farbenie. Táto metóda, ako zdôrazňujú špecialisti, je veľmi jednoduchá, ale účinná metóda digitálnej tlače, ktorá sa používa predovšetkým na prenos kvalitnej grafiky alebo obrazu na polymérny substrát.
             <br>
             <br>
-            V procese sublimácie sa tlač uskutočňuje pomocou tlačiarne na prenosovom papieri pomocou profesionálnych sublimačných farieb… Čítať viac
+            V procese sublimácie sa tlač uskutočňuje pomocou tlačiarne na prenosovom papieri pomocou profesionálnych sublimačných farieb…
+            <a href="#">Čítať viac</a>
         </div>
 
         <div>
             <h5>Čo všetko sa dá potlačiť:</h5>
 
-            <ul class="check-list-gray-inline">
+            <ul class="check-list-gray-inline mb-5">
                 <li>Keramika</li>
                 <li>Papier a drevo</li>
                 <li>Kovové predmety</li>
@@ -30,6 +32,24 @@ function homeTechAccordion($title, $id, $open = false) { ?>
                 <li>Kameň</li>
                 <li>Textil</li>
             </ul>
+
+            <div class="row">
+                <div class="col-xs-6 col-lg-3">
+                    <?php category('Zariadenia pre sublimáciu', '128', 'img/category/category-1.jpg'); ?>
+                </div>
+
+                <div class="col-xs-6 col-lg-3">
+                    <?php category('Materiály pre sublimáciu', '128', 'img/category/category-2.jpg'); ?>
+                </div>
+
+                <div class="col-xs-6 col-lg-3">
+                    <?php category('Predmety pre sublimáciu', '128', 'img/category/category-3.jpg'); ?>
+                </div>
+
+                <div class="col-xs-6 col-lg-3">
+                    <?php category('Príslušenstvo & pomôcky', '128', 'img/category/category-4.jpg'); ?>
+                </div>
+            </div>
         </div>
     </div>
 </div>

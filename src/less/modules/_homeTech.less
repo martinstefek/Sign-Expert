@@ -1,20 +1,86 @@
 .home-tech {
     background-color: #F9F8F8;
+    padding-top: 0;
 
     .home-tech-button {
+        display: none;
         text-align: left;
         box-shadow: 0 9px 18px -4px rgba(0,0,0,0.08);
         padding-top: .5rem;
         padding-bottom: .5rem;
         margin-bottom: .5rem;
 
-        &:hover, &:focus, &:active, &[aria-expanded="true"], &.active {
-            border-color: rgba(@brand-primary, .6);
-            background-color: #FAEFE2;
-        }
-        
+        .breakpoint(lg, {
+            &:not(.home-tech-button-mobile) {
+                display: block;
+            }
+
+            &:hover, &:focus, &:active {
+                border-color: rgba(@brand-primary, .6);
+                background-color: #FFFFFF;
+            }
+
+            &[aria-expanded="true"], &.active {
+                border-color: rgba(@brand-primary, .6);
+
+                &, &:hover {
+                    background-color: #FAEFE2;
+                }
+            }
+        });
+
+
         &.home-tech-button-mobile {
-            display: none;
+            .breakpointMax(lg, {
+                display: block;
+                padding-left: .rem(14px)[@value];
+                padding-right: .rem(14px)[@value];
+                margin-bottom: .rem(4px)[@value];
+                background: #FFFFFF;
+                box-shadow: none;
+                font-weight: 500;
+
+                &[aria-expanded="true"], &.active {
+                    .icon-arrow-right {
+                        right: .rem(14px)[@value];
+                        fill: @brand-primary;
+                        transform: rotate(0deg) translate(0, -50%);
+                        font-weight: 700;
+                    }
+                }
+
+                .icon-arrow-right {
+                    right: 1.375rem;
+                    fill: #C9C9C9;
+                    width: .95rem;
+                    height: .95rem;
+                    transform: rotate(45deg) translate(0, -50%);
+                    transform-origin: 70% 60%;
+                    .transition();
+                }
+            });
         }
+    }
+
+    .tech-accordion-item {
+        .breakpointMax(lg, {
+            background-color: #FFFFFF;
+            margin-top: .rem(-6px)[@value];
+            padding: .rem(14px)[@value];
+            margin-bottom: .rem(12px)[@value];
+
+            .category {
+                box-shadow: none;
+            }
+
+            .check-list-gray-inline {
+                column-count: 2;
+                column-gap: .rem(24px)[@value];
+
+                li {
+                    display: block;
+                }
+            }
+        });
     }
 }

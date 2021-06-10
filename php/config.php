@@ -19,3 +19,4 @@ include_once('components/productListItem/ProductListItem.php');
 include_once('components/service.php');
 include_once('components/homeTechs/homeTechButton.php');
 include_once('components/homeTechs/homeTechAccordion.php');
+include_once('components/category.php');

@@ -87,7 +87,7 @@ address {
 
         &.section-header-bordered {
             position: relative;
-            text-align: left;
+            margin-bottom: .rem(46px)[@value];
 
             .breakpoint(md, {
                 margin-bottom: .rem(52px)[@value];
@@ -97,11 +97,23 @@ address {
                 content: '';
                 display: block;
                 position: absolute;
-                bottom: .rem(-26px)[@value];
-                left: 0;
+                bottom: .rem(-22px)[@value];
+                left: -(@grid-gutter-width / 2);
                 width: .rem(500px)[@value];
                 height: 1px;
                 background-color: @brand-primary;
+                max-width: 90%;
+
+                .breakpoint(sm, {
+                    left: 0;
+                });
+
+            }
+
+            .section-title {
+                .breakpoint(sm, {
+                    text-align: left;
+                });
             }
         }
     }
@@ -168,6 +180,12 @@ h6, .h6 {
     margin-bottom: .5rem;
     line-height: 1.5;
 }
+
+.breakpointMax(lg, {
+    h1, .h1 {
+        font-size: @font-size-h2;
+    }
+});
 
 .font-weight-bold {
     font-weight: 700;

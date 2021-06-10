@@ -20,18 +20,20 @@ var getTrigger = function getTrigger(panelId) {
 
 accordions.each(function (index, item) {
   var panels = $(item).find('[data-type="accordion-item"]');
-  console.log(panels);
   panels.each(function (index, panel) {
     $(panel).addClass('collapse');
     $(panel).collapse({
       toggle: false
     });
   });
-  var firstPanel = panels.get(0);
-  $(firstPanel).collapse('show');
-  getTrigger($(firstPanel).attr('id')).each(function (_index, trigger) {
-    $(trigger).addClass('active');
-  });
+
+  if (window.innerWidth > _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold) {
+    var firstPanel = panels.get(0);
+    $(firstPanel).collapse('show');
+    getTrigger($(firstPanel).attr('id')).each(function (_index, trigger) {
+      $(trigger).addClass('active');
+    });
+  }
 });
 accordionTriggers.each(function (index, trigger) {
   var target = $(trigger).data('target');
@@ -40,10 +42,11 @@ accordionTriggers.each(function (index, trigger) {
     toggle: false
   });
   trigger.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
-    if ($(target).hasClass('collapse') && $(target).hasClass('in')) {
+    if (window.innerWidth > _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold && $(target).hasClass('collapse') && $(target).hasClass('in')) {
       return;
     }
 
+    var targetHadClassIn = $(target).hasClass('in');
     $(parent).find('[data-type="accordion-item"]').each(function (index, panel) {
       $(panel).collapse('hide');
       getTrigger($(panel).attr('id')).each(function (_index, _trigger) {
@@ -51,9 +54,16 @@ accordionTriggers.each(function (index, trigger) {
       });
     });
     $(target).collapse('show');
-    getTrigger($(target).attr('id')).each(function (_index, _trigger) {
-      $(_trigger).addClass('active');
-    });
+
+    if (targetHadClassIn) {
+      getTrigger($(target).attr('id')).each(function (_index, _trigger) {
+        $(_trigger).removeClass('active');
+      });
+    } else {
+      getTrigger($(target).attr('id')).each(function (_index, _trigger) {
+        $(_trigger).addClass('active');
+      });
+    }
   });
 });
 

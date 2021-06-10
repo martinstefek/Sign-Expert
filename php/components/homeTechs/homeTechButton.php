@@ -7,8 +7,14 @@
     >
         <?php echo $title; ?>
 
+        <?php if ($mobile): ?>
+        <svg class="icon icon-arrow-right">
+            <use xlink:href="#sprite-cancel"></use>
+        </svg>
+        <?php else: ?>
         <svg class="icon icon-arrow-right stroke-primary">
             <use xlink:href="#sprite-chevron-right"></use>
         </svg>
+        <?php endif; ?>
     </button >
 <?php } ?>

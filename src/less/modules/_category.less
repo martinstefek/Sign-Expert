@@ -1,0 +1,42 @@
+.category {
+    display: block;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 9px 22px -4px rgba(0,0,0,0.1);
+    border-radius: @border-radius-base;
+    color: @text-color;
+    margin-bottom: @grid-gutter-width;
+    .transition();
+
+    &:hover {
+        color: @text-color;
+        box-shadow: 0 9px 22px -2px rgba(0,0,0,0.2);
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto .3rem;
+    }
+
+    .category-title {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: .rem(3px)[@value];
+        line-height: .rem(20px)[@value];
+    }
+
+    .category-description {
+        text-align: center;
+        font-size: .rem(14px)[@value];
+        color: @text-color-light;
+    }
+}
+
+.category-row {
+    .make-row(@categoryBannerGutter);
+}
+
+.category-col {
+    .make-xs-column(12, @categoryBannerGutter);
+}
