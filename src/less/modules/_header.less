@@ -34,17 +34,19 @@
     background: #FFFFFF;
 
     .mobileHeader({
-        display: none;
+        display: flex;
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
-        left: 16%;
+        width: 84%;
         z-index: @zindex-navbar-fixed;
         overflow: auto;
+        transform: translate(110%, 0);
 
         .navigationVisible({
-            display: flex;
+            transform: translate(0, 0);
+            transition: all .3s ease-in-out;
         });
     });
 
@@ -323,7 +325,7 @@
                     }
                 }
 
-                + .dropdown-menu {
+                ~ .dropdown-menu {
                     svg, .icon {
                         width: .rem(22px)[@value];
                         height: .rem(20px)[@value];
@@ -453,6 +455,7 @@
             .mobileHeader({
                 display: block;
                 margin-bottom: .rem(18px)[@value];
+                transition: all .3s ease-in-out;
 
                 .navigationSecondLevelVisible({
                     transform: translate(-100%, 0);
@@ -672,6 +675,19 @@
                                         }
                                     }
                                 }
+
+                                .mobileHeader({
+                                    &:not(.navigation-first-level-home-link) {
+                                        li:first-child {
+                                            a {
+                                                background-position: .7rem center;
+                                                background-image: url("../../img/home.svg");
+                                                //background-repeat: no-repeat;
+                                                background-size: .rem(15px)[@value] .rem(14px)[@value];
+                                            }
+                                        }
+                                    }
+                                });
                             }
                         }
                     }
@@ -970,6 +986,7 @@
 
         .mobile-nav-close {
             padding: .5rem;
+            align-self: flex-start;
 
             svg, .icon {
                 width: .rem(20px)[@value];
@@ -984,10 +1001,14 @@
 
         .mobile-navigation-title-second-level {
             display: none;
-            margin-left: -.5rem;
+            font-size: .rem(24px)[@value];
 
             button {
+                position: absolute;
+                top: .7rem;
+                left: .8rem;
                 padding: .75rem .5rem;
+                margin-left: -.5rem;
 
                 svg {
                     width: 1rem;
@@ -998,8 +1019,8 @@
             
             span {
                 display: inline-block;
-                margin-left: -6px;
                 vertical-align: middle;
+                padding-left: 1.6rem;
             }
         }
 

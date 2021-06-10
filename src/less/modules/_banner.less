@@ -101,28 +101,6 @@
     }
 
     .slick-dots {
-        bottom: 2rem;
-
-        li {
-            height: .rem(4px)[@value];
-            width: .rem(50px)[@value];
-            background-color: @gray-lighter;
-            margin: 0 .rem(2px)[@value];
-            .transition();
-
-            button {
-                &::before {
-                    display: none;
-                }
-            }
-
-            &:hover {
-                background-color: darken(@gray-lighter, 7%);
-            }
-
-            &.slick-active {
-                background-color: @brand-primary;
-            }
-        }
+        .slickDots();
     }
 }

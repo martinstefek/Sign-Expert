@@ -116,12 +116,30 @@ address {
                 });
             }
         }
+
+        &.section-header-flex {
+            display: flex;
+            justify-content: space-between;
+
+            .section-title {
+                margin-top: .rem(2px)[@value];
+            }
+
+            > * {
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 
     .section-title {
         font-size: .rem(26px)[@value];
         text-align: center;
         margin-bottom: 0;
+        font-weight: 500;
 
         .breakpoint(md, {
             font-size: 2rem;
@@ -132,6 +150,8 @@ address {
         font-size: .rem(18px)[@value];
         text-align: center;
         margin-bottom: 0;
+        color: @text-color-light;
+        margin-top: 1rem;
     }
 }
 

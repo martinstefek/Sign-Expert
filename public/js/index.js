@@ -1,6 +1,43 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/ProductListCarousel.js":
+/*!***********************************************!*\
+  !*** ./src/js/modules/ProductListCarousel.js ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ "./src/js/modules/config.js");
+
+$(document).ready(function () {
+  if (window.innerWidth <= 767) {
+    return;
+  } // Definitions
+
+
+  var slick = $('[data-type="product-list-carousel"]');
+  slick.slick({
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    draggable: false,
+    arrows: true,
+    dots: true,
+    prevArrow: '<button class="slick-prev"><svg class="icon"><use xlink:href="#sprite-chevron-left"></use></svg></button>',
+    nextArrow: '<button class="slick-next"><svg class="icon"><use xlink:href="#sprite-chevron-right"></use></svg></button>',
+    responsive: [{
+      breakpoint: _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }]
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/modules/accordion.js":
 /*!*************************************!*\
   !*** ./src/js/modules/accordion.js ***!
@@ -17628,8 +17665,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/banner */ "./src/js/modules/banner.js");
 /* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_banner__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./src/js/modules/accordion.js");
-/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
-/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+/* harmony import */ var _modules_ProductListCarousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/ProductListCarousel */ "./src/js/modules/ProductListCarousel.js");
+/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
+/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+
 
 
 

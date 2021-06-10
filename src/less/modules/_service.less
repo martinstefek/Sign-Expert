@@ -1,7 +1,31 @@
 .services {
     background: linear-gradient(180deg, #FFFFFF 0%, #F9F8F8 100%) no-repeat center bottom;
-    background-size: 100% .rem(800px)[@value];
+    background-size: 100% .rem(500px)[@value];
     padding-bottom: 0;
+
+    .breakpoint(lg, {
+        background-size: 100% .rem(800px)[@value];
+    });
+
+    > .container {
+        padding-left: (@servicesSmallGutter / 2);
+        padding-right: (@servicesSmallGutter / 2);
+
+        .breakpointMax(sm, {
+            padding-left: @servicesSmallGutter;
+            padding-right: @servicesSmallGutter;
+        });
+
+        .breakpoint(lg, {
+            padding-left: .25rem;
+            padding-right: .25rem;
+        });
+
+        .breakpoint(xl, {
+            padding-left: (@servicesGutter / 2);
+            padding-right: (@servicesGutter / 2);
+        });
+    }
 }
 
 .services-list-row {
@@ -17,10 +41,6 @@
         overflow: auto;
         padding-bottom: 1.5rem;
         .noScrollBar();
-    });
-
-    .breakpoint(lg, {
-        .make-row(.5rem);
     });
 
     .breakpoint(xl, {

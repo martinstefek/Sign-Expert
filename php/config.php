@@ -15,8 +15,11 @@ function asset($assetToPath) {
 }
 
 include_once('components/navigation/topLevelItem.php');
-include_once('components/productListItem/ProductListItem.php');
+include_once('components/productList/ProductListItem.php');
+include_once('components/productList/ProductListCarousel.php');
 include_once('components/service.php');
 include_once('components/homeTechs/homeTechButton.php');
 include_once('components/homeTechs/homeTechAccordion.php');
 include_once('components/category.php');
+include_once('components/article.php');
+include_once('components/Newsletter.php');
