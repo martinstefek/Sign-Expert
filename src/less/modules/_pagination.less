@@ -1,0 +1,56 @@
+.pagination {
+    display: flex;
+    margin: 0;
+
+    li {
+        margin-right: .rem(9.5px)[@value];
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: .rem(40px)[@value];
+        height: .rem(40px)[@value];
+
+        &:first-child {
+            svg, .icon {
+                margin-right: 1px;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            svg, .icon {
+                margin-left: 1px;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: .rem(40px)[@value];
+            height: .rem(40px)[@value];
+            border: 1px solid @border-color;
+            font-size: 1rem;
+            color: @text-color;
+
+            &:hover, &.active, &.focus {
+                color: @text-color;
+            }
+
+            svg, .icon {
+                width: .5rem;
+                height: .rem(15px)[@value];
+                stroke: @gray-light;
+            }
+        }
+
+        &.active {
+            a, a:hover, a:active, a:focus {
+                background: #FFF0D6;
+                border-color: #FFF0D6;
+                color: @text-color;
+            }
+        }
+    }
+}

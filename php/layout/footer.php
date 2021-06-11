@@ -185,7 +185,7 @@
         </div>
 
         <div class="footer-bottom">
-            <a href="#" class="logo">
+            <a href="<?php indexHref() ?>" class="logo">
                 <svg>
                     <use xlink:href="#sprite-logo"></use>
                 </svg>

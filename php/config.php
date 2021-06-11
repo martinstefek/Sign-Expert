@@ -1,25 +1,46 @@
 <?php
 
 const PATH = './';
-const LOGGED_IN = false;
+const USE_HTML_EXTENSION = false;
 
 global $loggedIn;
 $loggedIn = false;
 
-function path($assetToPath) {
-    return PATH . $assetToPath;
+global $mainBgActive;
+$mainBgActive = false;
+
+function path($pathToAsset) {
+    return PATH . $pathToAsset;
 }
 
-function asset($assetToPath) {
-    echo path($assetToPath);
+function asset($pathToAsset) {
+    echo path($pathToAsset);
+}
+
+function href($path) {
+    echo path(
+        USE_HTML_EXTENSION
+            ? str_replace('.php', '.html', $path)
+            : $path
+    );
+}
+
+function productListHref() {
+    href('product-list.php');
+}
+
+function indexHref() {
+    href('index.php');
 }
 
 include_once('components/navigation/topLevelItem.php');
 include_once('components/productList/ProductListItem.php');
 include_once('components/productList/ProductListCarousel.php');
+include_once('components/productList/Pagination.php');
 include_once('components/service.php');
 include_once('components/homeTechs/homeTechButton.php');
 include_once('components/homeTechs/homeTechAccordion.php');
 include_once('components/category.php');
 include_once('components/article.php');
 include_once('components/Newsletter.php');
+include_once('components/Breadcrumb.php');

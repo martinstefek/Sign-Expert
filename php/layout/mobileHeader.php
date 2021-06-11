@@ -3,7 +3,7 @@
 <div class="header-mobile">
     <div class="mid-header-mobile">
         <div class="container">
-            <a href="/" class="logo">
+            <a href="<?php indexHref() ?>" class="logo">
                 <svg class="icon">
                     <use xlink:href="#sprite-logo"></use>
                 </svg>

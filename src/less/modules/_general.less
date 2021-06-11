@@ -3,6 +3,8 @@ html, body {
 }
 
 a {
+    cursor: pointer;
+
     &, &:hover, &:focus, &:active {
         text-decoration: none;
     }
@@ -16,7 +18,7 @@ address {
     margin-bottom: 0;
 }
 
-.main {
+.main-background {
     background: linear-gradient(0deg, #FFFFFF 0%, #EEEEEE 100%) no-repeat top center;
     background-size: 100% .rem(700px)[@value];
 }
@@ -147,11 +149,15 @@ address {
     }
 
     .section-description {
+        max-width: .rem(740px)[@value];
         font-size: .rem(18px)[@value];
         text-align: center;
-        margin-bottom: 0;
         color: @text-color-light;
-        margin-top: 1rem;
+        margin: 1rem auto 0;
+
+        small {
+            font-size: 1rem;
+        }
     }
 }
 

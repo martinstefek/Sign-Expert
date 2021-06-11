@@ -1,5 +1,6 @@
 <?php include_once('../php/config.php'); ?>
 <?php $loggedIn = true; ?>
+<?php $mainBgActive = true; ?>
 
 <?php include_once('../php/layout/header.php'); ?>
 
@@ -8,38 +9,38 @@
         <div class="row">
             <div class="col-xs-12 col-lg-6 col-xl-7">
                 <div id="home-banner-slider" class="banner-item-list">
-                    <div class="banner-item">
+                    <a href="<?php productListHref() ?>" class="banner-item">
                         <img src="img/banner/primary-banner.jpg" alt="Banner image">
                         <h2 class="banner-title">Sublimačné tlačiarne</h2>
                         <div class="banner-description">ideálne riešenie pre výrobu reklamného <br>a osobného tovaru</div>
-                    </div>
+                    </a>
 
-                    <div class="banner-item">
+                    <a href="<?php productListHref() ?>" class="banner-item">
                         <img src="img/banner/primary-banner.jpg" alt="Banner image">
                         <h2 class="banner-title">Sublimačné tlačiarne</h2>
                         <div class="banner-description">ideálne riešenie pre výrobu reklamného <br>a osobného tovaru</div>
-                    </div>
+                    </a>
 
-                    <div class="banner-item">
+                    <a href="<?php productListHref() ?>" class="banner-item">
                         <img src="img/banner/primary-banner.jpg" alt="Banner image">
                         <h2 class="banner-title">Sublimačné tlačiarne</h2>
                         <div class="banner-description">ideálne riešenie pre výrobu reklamného <br>a osobného tovaru</div>
-                    </div>
+                    </a>
 
-                    <div class="banner-item">
+                    <a href="<?php productListHref() ?>" class="banner-item">
                         <img src="img/banner/primary-banner.jpg" alt="Banner image">
                         <h2 class="banner-title">Sublimačné tlačiarne</h2>
                         <div class="banner-description">ideálne riešenie pre výrobu reklamného <br>a osobného tovaru</div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
             <div class="col-lg-12  col-lg-6 col-xl-5">
-                <a href="#" class="banner-item-secondary">
+                <a href="<?php productListHref() ?>" class="banner-item-secondary">
                     <img src="img/banner/secondary-banner.jpg" alt="Banner image">
                 </a>
 
-                <a href="#" class="banner-item-secondary">
+                <a href="<?php productListHref() ?>" class="banner-item-secondary">
                     <img src="img/banner/secondary-banner-2.jpg" alt="Banner image">
                 </a>
             </div>

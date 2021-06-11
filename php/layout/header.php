@@ -75,7 +75,7 @@
 
         <div class="mid-header">
             <div class="container">
-                <a href="/" class="logo">
+                <a href="<?php indexHref() ?>" class="logo">
                     <svg class="icon">
                         <use xlink:href="#sprite-logo"></use>
                     </svg>
@@ -162,5 +162,5 @@
     <?php include_once('mobileHeader.php'); ?>
 </header>
 
-<main class="main">
+<main class="<?php echo !empty($mainBgActive) ? 'main-background' : '' ?>">
 

@@ -31,16 +31,16 @@
             <div>
                 <h6>Kategórie</h6>
                 <ul class="link-list">
-                    <li><a href="#"><span class="matched-phrase">Sub</span>limácia</a></li>
-                    <li><a href="#">Zariadenia pre <span class="matched-phrase">sub</span>limáciu</a>
+                    <li><a href="<?php productListHref() ?>"><span class="matched-phrase">Sub</span>limácia</a></li>
+                    <li><a href="<?php productListHref() ?>">Zariadenia pre <span class="matched-phrase">sub</span>limáciu</a>
                     </li>
-                    <li><a href="#">Materiály pre <span class="matched-phrase">sub</span>limáciu</a>
+                    <li><a href="<?php productListHref() ?>">Materiály pre <span class="matched-phrase">sub</span>limáciu</a>
                     </li>
-                    <li><a href="#">Predmety pre <span class="matched-phrase">sub</span>limáciu</a></li>
-                    <li><a href="#"><span class="matched-phrase">Sub</span>limačné tlačiarne</a></li>
-                    <li><a href="#"><span class="matched-phrase">Sub</span>limačné atramenty</a></li>
-                    <li><a href="#"><span class="matched-phrase">Sub</span>limačný papier</a></li>
-                    <li><a href="#"><span class="matched-phrase">Sub</span>limácia na bavlnu</a></li>
+                    <li><a href="<?php productListHref() ?>">Predmety pre <span class="matched-phrase">sub</span>limáciu</a></li>
+                    <li><a href="<?php productListHref() ?>"><span class="matched-phrase">Sub</span>limačné tlačiarne</a></li>
+                    <li><a href="<?php productListHref() ?>"><span class="matched-phrase">Sub</span>limačné atramenty</a></li>
+                    <li><a href="<?php productListHref() ?>"><span class="matched-phrase">Sub</span>limačný papier</a></li>
+                    <li><a href="<?php productListHref() ?>"><span class="matched-phrase">Sub</span>limácia na bavlnu</a></li>
                 </ul>
             </div>
         </div>

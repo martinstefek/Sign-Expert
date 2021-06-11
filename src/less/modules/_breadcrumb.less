@@ -1,13 +1,17 @@
-.breadcrumb {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: .rem(12px)[@value];
+.breadcrumb-nav {
+    padding: .rem(12px)[@value];
+    border-bottom: 1px solid @border-color;
+
+    .breadcrumb {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
 
     .breadcrumb-item {
         position: relative;
-        font-weight: 700;
-        padding-left: 1.35rem;
+        padding-left: 1.5rem;
         font-size: .rem(14px)[@value];
 
         &:first-of-type {
@@ -17,7 +21,7 @@
         &::before {
             position: absolute;
             top: 50%;
-            left: .5rem;
+            left: .6rem;
             transform: translate(0, -50%);
             display: inline-block;
             background-image: url('../../img/breadcrumb-separator.svg');
@@ -30,14 +34,19 @@
         }
 
         .icon {
-            width: .rem(15px)[@value];
-            height: .rem(13px)[@value];
-            fill: @brand-secondary;
+            width: .rem(19px)[@value];
+            height: .rem(18px)[@value];
+            fill: @brand-primary;
+            margin-bottom: 1px;
         }
     }
 
     a {
         display: inline-block;
-        color: @brand-secondary;
+        color: @brand-primary;
+
+        &:hover {
+            color: @link-hover-color;
+        }
     }
 }
