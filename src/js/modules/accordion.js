@@ -19,26 +19,45 @@ accordions.each((index, item) => {
     });
 
     if (window.innerWidth > mobileNavigationThreshold) {
-        const firstPanel = panels.get(0);
-        $(firstPanel).collapse('show');
+        panels.each((index, panel) => {
+            const initialState = $(panel).data('initialState');
 
-        getTrigger($(firstPanel).attr('id')).each((_index, trigger) => {
-            $(trigger).addClass('active');
+            if (index === 0) {
+                if (initialState) {
+                    $(panel).collapse(initialState);
+
+                    getTrigger($(panel).attr('id')).each((_index, trigger) => {
+                        if (initialState === 'show') {
+                            $(trigger).addClass('active');
+                        } else {
+                            $(trigger).removeClass('active');
+                        }
+                    });
+
+                } else {
+                    $(panel).collapse('show');
+
+                    getTrigger($(panel).attr('id')).each((_index, trigger) => {
+                        $(trigger).addClass('active');
+                    });
+                }
+            }
         });
+
     }
 });
 
 accordionTriggers.each((index, trigger) => {
     const target = $(trigger).data('target');
     const parent = $(trigger).data('parent');
-
+    const allowClose = $(target).data('allowClose') === true;
 
     $(target).collapse({
         toggle: false
     });
 
     trigger.addEventListener(clickEvent, e => {
-        if (window.innerWidth > mobileNavigationThreshold && $(target).hasClass('collapse') && $(target).hasClass('in')) {
+        if (window.innerWidth > mobileNavigationThreshold && $(target).hasClass('collapse') && $(target).hasClass('in') && !allowClose) {
             return;
         }
 

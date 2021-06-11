@@ -306,10 +306,10 @@
     }
 }
 
-.customScrollBar() {
+.customScrollBar(@width: 4px) {
     &::-webkit-scrollbar {
-        width: .rem(4px)[@value];               /* width of the entire scrollbar */
-        height: .rem(4px)[@value];               /* width of the entire scrollbar */
+        width: .rem(@width)[@value];               /* width of the entire scrollbar */
+        height: .rem(@width)[@value];               /* width of the entire scrollbar */
     }
 
     &::-webkit-scrollbar-track {

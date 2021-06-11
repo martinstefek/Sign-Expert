@@ -1,6 +1,13 @@
-<?php include_once('../php/config.php'); ?>
-<?php $loggedIn = false; ?>
-<?php $mainBgActive = true; ?>
+<?php
+
+include_once('../php/config.php');
+
+addFooterContent('<script src="./js/productList.js"></script>');
+
+$loggedIn = false;
+$mainBgActive = true;
+
+?>
 
 <?php include_once('../php/layout/header.php'); ?>
 
@@ -54,7 +61,7 @@
 
     <section class="section section-padding-top-small">
         <div class="container">
-            <div>
+            <div class="mb-2">
                 1 - 32 z 1089 produktov
             </div>
 
@@ -99,7 +106,89 @@
 
             <div class="product-list-container">
                 <div class="product-list-sidebar">
-                    Sidebar
+                    <div class="product-list-filters-list">
+                        <?php filterCheckbox('Podľa kategórie', 15, 'category', true, [
+                            'Šálky',
+                            'Hrnčeky',
+                            'Krígle na pivo',
+                            'Vankúše a poťahy',
+                            'Podložky pod myš',
+                            'Pazzle',
+                            'Bridlice',
+                            'Prívesky na kľúče',
+                            'Dáždniky',
+                            'Flašky',
+                            'Kozmetické zrkadlo',
+                            'Dosky na krájanie',
+
+                            'Šálky',
+                            'Hrnčeky',
+                            'Krígle na pivo',
+                            'Vankúše a poťahy',
+                            'Podložky pod myš',
+                            'Pazzle',
+                            'Bridlice',
+                            'Prívesky na kľúče',
+                            'Dáždniky',
+                            'Flašky',
+                            'Kozmetické zrkadlo',
+                            'Dosky na krájanie',
+                        ]); ?>
+
+                        <?php filterCheckbox('Podľa materiálu', 9, 'material', true, [
+                            'Keramika',
+                            'Papier',
+                            'Drevo',
+                            'Sklo',
+                            'Kovové predmety',
+                            'Plastové predmety',
+                            'Magnetické predmety',
+                            'Kameň',
+                            'Textil',
+                        ]); ?>
+
+                        <?php filterCheckbox('Podľa farby', 16, 'color', false, [
+                            'Keramika',
+                            'Papier',
+                            'Drevo',
+                            'Sklo',
+                            'Kovové predmety',
+                            'Plastové predmety',
+                            'Magnetické predmety',
+                            'Kameň',
+                            'Textil',
+                        ]); ?>
+
+                        <?php filterCheckbox('Podľa značky', 8, 'brand', false, [
+                            'Keramika',
+                            'Papier',
+                            'Drevo',
+                            'Sklo',
+                            'Kovové predmety',
+                            'Plastové predmety',
+                            'Magnetické predmety',
+                            'Kameň',
+                            'Textil',
+                        ]); ?>
+
+                        <div id="parent-filter-price" data-type="accordion" class="product-list-filter">
+                            <h6
+                                    data-toggle="accordion"
+                                    data-parent="#parent-filter-price"
+                                    data-target="#filter-price"
+                            >
+                                Cena
+
+                                <svg class="icon">
+                                    <use xlink:href="#sprite-chevron-right"></use>
+                                </svg>
+                            </h6>
+
+                            <div class="product-list-filter-content" id="filter-price" data-type="accordion-item" data-allow-close="true">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="product-list-content">

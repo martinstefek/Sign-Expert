@@ -47,4 +47,68 @@
             }
         }
     }
+
+    .product-list-filters-list {
+        border-bottom: 1px solid @border-color;
+
+        .product-list-filter {
+            position: relative;
+            border-top: 1px solid @border-color;
+            margin-bottom: .rem(14px)[@value];
+
+            //&::after {
+            //    content: '';
+            //    display: block;
+            //    position: absolute;
+            //    left: 0;
+            //    bottom: 0;
+            //    right: 0;
+            //    height: 2rem;
+            //    background: linear-gradient(180deg, rgba(#FFFFFF, 0) -100%, rgba(#FFFFFF, 1) 100%);
+            //}
+
+            h6 {
+                position: relative;
+                padding: .rem(10px)[@value] .rem(46px)[@value] .rem(10px)[@value] 0;
+                margin: .rem(13px)[@value] .rem(18px)[@value] .rem(11px)[@value] 0;
+                font-weight: 400;
+                cursor: pointer;
+                background-color: #FFFFFF;
+                z-index: 4;
+
+                .faded {
+                    display: inline-block;
+                    color: #ACACAC;
+                    margin-left: .rem(4px)[@value];
+                }
+
+                svg, .icon {
+                    position: absolute;
+                    top: .rem(15px)[@value];
+                    right: .rem(22px)[@value];
+                    width: .rem(8.5px)[@value];
+                    height: .rem(15.5px)[@value];
+                    stroke: #A6A7AB;
+                    transform: rotate(90deg);
+                    .transition();
+                }
+
+                &.active {
+                    svg, .icon {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+
+            .product-list-filter-content {
+                max-height: .rem(404px)[@value];
+                overflow: auto;
+                padding-top: 2.8rem;
+                margin-top: -2.8rem;
+                margin-right: .rem(12px)[@value];
+                //padding-bottom: 2.25rem;
+                .customScrollBar(5px);
+            }
+        }
+    }
 }

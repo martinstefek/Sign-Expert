@@ -10,6 +10,7 @@ mix.setPublicPath('public')
     .js('src/js/jQuery.js', 'public/js')
     .js('src/js/index.js', 'public/js')
     .js('src/js/detail.js', 'public/js')
+    .js('src/js/productList.js', 'public/js')
     .copy(
         [
             'node_modules/lightgallery/dist/fonts/lg.ttf',

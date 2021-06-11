@@ -9,6 +9,9 @@ $loggedIn = false;
 global $mainBgActive;
 $mainBgActive = false;
 
+global $footerContent;
+$footerContent = '';
+
 function path($pathToAsset) {
     return PATH . $pathToAsset;
 }
@@ -33,9 +36,16 @@ function indexHref() {
     href('index.php');
 }
 
+function addFooterContent($content) {
+    global $footerContent;
+    $footerContent = $footerContent . $content;
+}
+
+include_once('components/form/Checkbox.php');
 include_once('components/navigation/topLevelItem.php');
 include_once('components/productList/ProductListItem.php');
 include_once('components/productList/ProductListCarousel.php');
+include_once('components/productList/FilterCheckbox.php');
 include_once('components/productList/Pagination.php');
 include_once('components/service.php');
 include_once('components/homeTechs/homeTechButton.php');

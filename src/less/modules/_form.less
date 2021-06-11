@@ -63,3 +63,43 @@
         }
     }
 }
+
+.form-checkbox {
+    label {
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    input {
+        display: none;
+
+        &:checked + .form-checkbox-name::before {
+            border: 0px solid #A6A7AB;
+            background-image: url("../../img/checkbox-active.svg");
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    
+    .form-checkbox-name {
+        position: relative;
+        padding: 0 0 0 .rem(24px)[@value];
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: .rem(2px)[@value];
+            width: 1rem;
+            height: 1rem;
+            border-radius: 2px;
+            border: 1px solid #A6A7AB;
+        }
+    }
+}
+
+.form-group-checkbox {
+    margin-bottom: .rem(6px)[@value];
+}
