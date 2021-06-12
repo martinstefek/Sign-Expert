@@ -348,6 +348,33 @@ document.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, funct
 
 /***/ }),
 
+/***/ "./src/js/modules/setMinMaxEventsOnInputNumber.js":
+/*!********************************************************!*\
+  !*** ./src/js/modules/setMinMaxEventsOnInputNumber.js ***!
+  \********************************************************/
+/***/ (function() {
+
+$('input[type="number"]').each(function (index, item) {
+  $(item).on('change', function () {
+    var value = $(item).val();
+    var numberValue = value.length > 0 ? Number(value) : null;
+    var boundaryMinAttr = $(item).attr('min');
+    var boundaryMin = boundaryMinAttr ? Number(boundaryMinAttr) : null;
+    var boundaryMaxAttr = $(item).attr('max');
+    var boundaryMax = boundaryMaxAttr ? Number(boundaryMaxAttr) : null;
+
+    if (boundaryMin !== null && numberValue < boundaryMin) {
+      $(item).val(boundaryMin);
+    }
+
+    if (boundaryMax !== null && numberValue > boundaryMax) {
+      $(item).val(boundaryMax);
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.min.js":
 /*!*********************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.min.js ***!
@@ -17683,8 +17710,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_banner__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./src/js/modules/accordion.js");
 /* harmony import */ var _modules_ProductListCarousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/ProductListCarousel */ "./src/js/modules/ProductListCarousel.js");
-/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
-/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+/* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/setMinMaxEventsOnInputNumber */ "./src/js/modules/setMinMaxEventsOnInputNumber.js");
+/* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
+/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+
 
 
 

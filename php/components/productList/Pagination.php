@@ -10,7 +10,7 @@
         </li>
 
         <li class="active">
-            <a href="#" class="btn btn-bordered">
+            <a class="btn btn-bordered">
                 1
             </a>
         </li>

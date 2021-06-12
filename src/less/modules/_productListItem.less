@@ -3,10 +3,18 @@
 }
 
 .product-list-item-col {
-    .make-xs-column(3, 0);
+    .make-xs-column(6, 0);
     border: 1px solid @border-color;
     margin: 0 0 -1px -1px;
     .transition();
+
+    .breakpoint(lg, {
+        .make-xs-column(4, 0);
+    });
+
+    .breakpoint(xl, {
+        .make-xs-column(3, 0);
+    });
 
     &:hover {
         border-color: @brand-primary;
@@ -146,6 +154,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 0;
+        min-height: .rem(27px)[@value];
 
         .product-variant {
             display: inline-block;

@@ -4,6 +4,7 @@ import './modules/searchAutocomplete';
 import './modules/banner';
 import './modules/accordion';
 import './modules/ProductListCarousel';
+import './modules/setMinMaxEventsOnInputNumber';
 
 import { focusInput } from "./modules/helpers";
 import { clickEvent, mobileNavigationThreshold } from "./modules/config";

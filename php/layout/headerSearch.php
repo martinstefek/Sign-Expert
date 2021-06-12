@@ -47,7 +47,7 @@
 
         <div class="search-autocomplete-col">
             <h6>Top produkt</h6>
-            <?php productListItem(null, null, 2, false, false, 'Dvojhlavová sublimačná tlačiareň XpertJet 1682WR', 'Sublimačné tlačiarne'); ?>
+            <?php productListItem(null, null, 2, false, false, 'Dvojhlavová sublimačná tlačiareň XpertJet 1682WR', 'Sublimačné tlačiarne', 'product-list-image-4.jpg'); ?>
         </div>
 
         <div class="search-autocomplete-col-2">

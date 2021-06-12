@@ -1,14 +1,14 @@
-<?php function productListItem($price, $oldPrice, $stock, $variants, $parameters, $title, $category) { ?>
+<?php function productListItem($price, $oldPrice, $stock, $variants, $parameters, $title, $category, $img) { ?>
     <a href="#" class="product-list-item">
         <article>
             <div>
                 <?php if ($oldPrice): ?>
                 <span class="product-list-item-sale-label">- <?php echo number_format(abs((($price / $oldPrice) - 1) * 100), 0) ?>%</span>
                 <?php endif; ?>
-                <img src="img/product-list-image.jpg" alt="Product list item image" >
+                <img src="<?php echo $img; ?>" alt="Product list item image" >
 
-                <?php if ($variants): ?>
                 <form class="product-variants-list">
+                <?php if ($variants): ?>
                     <label class="product-variant">
                         <input type="radio" name="product-variant">
                         <span class="product-variant-fake-input" style="background-color: #1F222B"></span>
@@ -30,8 +30,8 @@
                     </label>
 
                     <span class="product-variants-more">+ 12 farieb</span>
-                </form>
                 <?php endif; ?>
+                </form>
 
                 <h2 class="product-list-item-title"><?php echo $title; ?></h2>
                 <div class="product-list-item-category"><?php echo $category; ?></div>
@@ -78,10 +78,16 @@
                             <svg class="stroke-gray-dark"><use xlink:href="#sprite-heart"></use></svg>
                         </span>
 
-                        <?php if (isset($price)): ?>
+                        <?php if (isset($price) && $stock > 0): ?>
                         <span class="action">
                             <svg class="stroke-success"><use xlink:href="#sprite-shopping-cart"></use></svg>
                         </span>
+                        <?php endif; ?>
+
+                        <?php if ($stock <= 0): ?>
+                            <span class="action">
+                                <svg class="stroke-primary"><use xlink:href="#sprite-mail"></use></svg>
+                            </span>
                         <?php endif; ?>
                     </div>
                 </div>
