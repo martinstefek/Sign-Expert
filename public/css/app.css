@@ -10571,6 +10571,7 @@ fieldset[disabled] a.product-list-item .product-list-item-footer .product-list-i
   border-radius: 6px;
   color: #1F222B;
   height: 100%;
+  width: 100%;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }

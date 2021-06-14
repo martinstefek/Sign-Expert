@@ -10,7 +10,7 @@
             </a>
 
             <div>
-                <a href="#" class="main-header-mobile-action">
+                <a href="<?php href('./index-logged-in.php'); ?>" class="main-header-mobile-action">
                     <svg class="icon stroke-primary">
                         <use xlink:href="#sprite-avatar"></use>
                     </svg>

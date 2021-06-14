@@ -40,7 +40,7 @@
             </a>
         </li>
         <li>
-            <a class="dropdown-item">
+            <a href="<?php href('./index.php'); ?>" class="dropdown-item">
                 <svg class="icon fill-gray-dark">
                     <use xlink:href="#sprite-logout"></use>
                 </svg>
@@ -62,7 +62,7 @@
     </span>
 </a>
 <?php else: ?>
-    <a href="#" class="btn btn-action login-button" type="button">
+    <a href="<?php href('./index-logged-in.php'); ?>" class="btn btn-action login-button" type="button">
         <svg class="icon stroke-primary">
             <use xlink:href="#sprite-avatar"></use>
         </svg>

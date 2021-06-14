@@ -1,5 +1,5 @@
 <?php include_once('../php/config.php'); ?>
-<?php $loggedIn = true; ?>
+<?php $loggedIn = false; ?>
 <?php $mainBgActive = true; ?>
 
 <?php include_once('../php/layout/header.php'); ?>
