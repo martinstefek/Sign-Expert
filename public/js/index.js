@@ -274,8 +274,9 @@ var shouldNotHideNav = function shouldNotHideNav(el) {
 };
 
 document.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+  var path = e.path || e.composedPath && e.composedPath();
   allTopLevelItems.each(function (index, item) {
-    if (e.path.some(function (el) {
+    if (path.some(function (el) {
       return shouldNotHideNav(el);
     })) {
       return;
@@ -287,7 +288,7 @@ document.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, funct
     });
     document.body.classList.remove(mobileMenuSecondLevelActiveClass);
 
-    if (window.innerWidth <= _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold && e.path.every(function (item) {
+    if (window.innerWidth <= _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold && path.every(function (item) {
       return item !== mobileNavOpen;
     })) {
       closeNavigation();
@@ -339,7 +340,9 @@ headerSearchInput.addEventListener('focus', function (e) {
   }
 });
 document.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
-  if (e.path.includes(headerSearch)) {
+  var path = e.path || e.composedPath && e.composedPath();
+
+  if (path.includes(headerSearch)) {
     return;
   }
 

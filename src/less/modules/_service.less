@@ -3,43 +3,45 @@
     background-size: 100% .rem(500px)[@value];
     padding-bottom: 0;
 
+    .breakpointMax(lg, {
+        padding-bottom: 1.5rem;
+    });
+
     .breakpoint(lg, {
         background-size: 100% .rem(800px)[@value];
     });
 
     > .container {
-        padding-left: (@servicesSmallGutter / 2);
-        padding-right: (@servicesSmallGutter / 2);
-
+        //
         .breakpointMax(sm, {
-            padding-left: @servicesSmallGutter;
-            padding-right: @servicesSmallGutter;
+            padding-left: (@servicesSmallGutter / 2);
+            padding-right: (@servicesSmallGutter / 2);
         });
-
+        //
         .breakpoint(lg, {
-            padding-left: .25rem;
-            padding-right: .25rem;
+            //padding-left: .25rem;
+            //padding-right: .25rem;
+            //overflow: hidden;
         });
-
-        .breakpoint(xl, {
-            padding-left: (@servicesGutter / 2);
-            padding-right: (@servicesGutter / 2);
-        });
+        //
+        //.breakpoint(xl, {
+        //    padding-left: (@servicesGutter / 2);
+        //    padding-right: (@servicesGutter / 2);
+        //});
     }
 }
 
 .services-list-row {
-    .make-row(@servicesSmallGutter);
+    .make-row(0);
 
     .breakpointMax(sm, {
-        margin-left: -@servicesSmallGutter;
-        margin-right: -@servicesSmallGutter;
+        //margin-left: -@servicesSmallGutter;
+        //margin-right: -@servicesSmallGutter;
     });
 
     .breakpointMax(lg, {
         flex-wrap: nowrap;
         overflow: auto;
-        padding-bottom: 1.5rem;
         .noScrollBar();
     });
 
@@ -49,7 +51,7 @@
 }
 
 .services-list-col {
-    display: inline-block;
+    display: inline-flex;
     .make-xs-column(10, @servicesSmallGutter);
     flex-shrink: 0;
     margin-bottom: (@servicesGutter / 2);
@@ -78,6 +80,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    width: 100%;
     padding-bottom: .rem(20px)[@value];
 
     .card-hero {

@@ -23,7 +23,9 @@ headerSearchInput.addEventListener('focus', (e) => {
 });
 
 document.addEventListener(clickEvent, (e) => {
-    if (e.path.includes(headerSearch)) {
+    const path = e.path || (e.composedPath && e.composedPath());
+
+    if (path.includes(headerSearch)) {
         return;
     }
 

@@ -69,8 +69,10 @@ const shouldNotHideNav = (el) => {
 }
 
 document.addEventListener(clickEvent, (e) => {
+    const path = e.path || (e.composedPath && e.composedPath());
+
     allTopLevelItems.each((index, item) => {
-        if (e.path.some(el => shouldNotHideNav(el))) {
+        if (path.some(el => shouldNotHideNav(el))) {
             return;
         }
 
@@ -78,7 +80,7 @@ document.addEventListener(clickEvent, (e) => {
         allFirstLevelItems.each((__index, i) => navLevelElement(i).removeClass(activeClass));
         document.body.classList.remove(mobileMenuSecondLevelActiveClass);
 
-        if (window.innerWidth <= mobileNavigationThreshold && e.path.every(item => item !== mobileNavOpen)) {
+        if (window.innerWidth <= mobileNavigationThreshold && path.every(item => item !== mobileNavOpen)) {
             closeNavigation();
         }
     });
