@@ -13126,6 +13126,12 @@ body.mobile-filters-visible  {
     margin-bottom: 1.5rem;
   }
 }
+@media (max-width: 767px) {
+  .product-list .product-list-bottom .product-list-progressbar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .product-list .product-list-bottom .product-list-progressbar .product-list-progressbar-tack {
   position: relative;
   height: 3px;
