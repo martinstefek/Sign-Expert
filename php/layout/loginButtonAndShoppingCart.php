@@ -32,11 +32,14 @@
         </li>
         <li>
             <a class="dropdown-item">
-                <svg class="icon stroke-gray-dark">
+                <svg class="icon stroke-gray-dark fill-none">
                     <use xlink:href="#sprite-heart"></use>
                 </svg>
 
-                <span>Nákupný zoznam</span>
+                <span>
+                    Nákupný zoznam
+                    <span class="badge badge-primary badge-right">2</span>
+                </span>
             </a>
         </li>
         <li>

@@ -31,13 +31,33 @@
         color: @text-color;
     }
 
+    .mobile-text {
+        display: inline;
+
+        .breakpoint(md, {
+            display: none;
+        });
+    }
+
+    .desktop-text {
+        display: none;
+
+        .breakpoint(md, {
+            display: inline;
+        });
+    }
+
     article {
         position: relative;
-        padding: 1rem;
+        padding: .5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+
+        .breakpoint(md, {
+            padding: 1rem;
+        });
     }
 
     img {
@@ -61,6 +81,7 @@
         font-size: 1rem;
         margin-bottom: .rem(3px)[@value];
         line-height: .rem(21px)[@value];
+        color: @text-color;
     }
 
     .product-list-item-category {
@@ -76,6 +97,7 @@
         font-size: .rem(14px)[@value];
         margin-top: .rem(15px)[@value];
         margin-bottom: .rem(15px)[@value];
+        color: @text-color;
         .transition();
 
         &:hover {
@@ -96,6 +118,7 @@
 
         .price {
             font-size: .rem(18px)[@value];
+            color: @text-color;
         }
 
         .old-price {

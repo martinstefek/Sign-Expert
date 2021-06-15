@@ -11,6 +11,7 @@
 }
 
 .product-list-carousel {
+    display: flex;
     padding-bottom: .rem(32px)[@value];
 
     .breakpointMax(md, {
@@ -83,6 +84,7 @@
     }
 
     .product-list-carousel-item {
+        width: 20%;
         height: auto;
         flex-shrink: 0;
         flex-grow: 0;
@@ -102,6 +104,17 @@
 
             &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
                 display: block;
+            }
+        });
+
+        .breakpointMax(sm, {
+            &:nth-child(2n) {
+                width: calc(50% + 2px);
+                flex-basis: calc(50% + 2px);
+
+                &::after {
+                    display: none;
+                }
             }
         });
 

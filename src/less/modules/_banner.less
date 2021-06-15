@@ -4,6 +4,7 @@
     });
 
     .banner-item-list {
+        display: flex;
         box-shadow: @bannerBoxShadow;
         border-radius: @border-radius-base;
         overflow: visible;
@@ -16,12 +17,14 @@
 
     .banner-item {
         display: block;
+        width: 100%;
         min-height: 100%;
         padding: 2rem;
         text-align: center;
         background-color: #FFFFFF;
         border-radius: @border-radius-base;
         color: @text-color;
+        flex-shrink: 0;
 
         img {
             margin: 0 auto .5rem;
