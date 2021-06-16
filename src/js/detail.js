@@ -23,8 +23,8 @@ $(document).ready(function() {
     slick.slick({
         draggable: false,
         arrows: true,
-        prevArrow: '<button class="slick-prev"><svg class="icon"><use xlink:href="#sprite-detail-chevron-left"></use></svg></button>',
-        nextArrow: '<button class="slick-next"><svg class="icon"><use xlink:href="#sprite-detail-chevron-right"></use></svg></button>',
+        prevArrow: '<button class="slick-prev"><svg class="icon"><use xlink:href="#sprite-chevron-left"></use></svg></button>',
+        nextArrow: '<button class="slick-next"><svg class="icon"><use xlink:href="#sprite-chevron-right"></use></svg></button>',
     });
 
     slick.on('beforeChange', (e, slick, currentSlide, nextSlide) => {

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-  <g id="Group_3" data-name="Group 3" transform="translate(1 1)">
-    <circle id="Oval" cx="5" cy="5" r="5" transform="translate(9 6)" fill="none" stroke="#ff9215" stroke-miterlimit="10" stroke-width="2"/>
-    <path id="Rectangle" d="M1,8.63H1A7.74,7.74,0,0,1,8.688,0h2.624A7.74,7.74,0,0,1,19,8.63h0" transform="translate(4 16)" fill="none" stroke="#ff9215" stroke-miterlimit="10" stroke-width="2"/>
-    <circle id="Oval-2" data-name="Oval" cx="14" cy="14" r="14" fill="none" stroke="#ff9215" stroke-miterlimit="10" stroke-width="2"/>
-  </g>
-</svg>

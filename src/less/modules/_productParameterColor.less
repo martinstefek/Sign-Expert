@@ -1,0 +1,51 @@
+.product-parameter-color-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    min-height: .rem(27px)[@value];
+
+    .product-parameter-color {
+        display: inline-block;
+        align-items: center;
+        margin-right: .rem(8px)[@value];
+        margin-bottom: .5rem;
+
+        .product-parameter-color-fake-input {
+            display: block;
+            position: relative;
+            width: .rem(14px)[@value];
+            height: .rem(14px)[@value];
+            border-radius: 50%;
+            cursor: pointer;
+            .transition();
+
+            &:hover {
+                box-shadow: inset 0 0 .5rem 0 rgba(0, 0, 0, .1);
+            }
+        }
+
+        input {
+            display: none;
+
+            &:checked + .product-parameter-color-fake-input {
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: .rem(-3px)[@value];
+                    right: .rem(-3px)[@value];
+                    bottom: .rem(-3px)[@value];
+                    left: .rem(-3px)[@value];
+                    border: 1px solid @brand-primary;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .product-parameter-color-more {
+        font-size: .rem(14px)[@value];
+        color: @gray-light;
+        margin-bottom: .4rem;
+    }
+}

@@ -1,75 +1,130 @@
 .product-detail {
-    padding: .rem(14px)[@value] 0 6rem;
+    padding: .rem(44px)[@value] 0 6rem;
     margin-bottom: -(@footerMarginTop);
-
-    .breakpointMax(lg, {
-        background:
-                // Top to bottom white
-                linear-gradient(180deg, #FFFFFF 56%, rgba(#FFFFFF, 0) 100%) no-repeat right,
-
-                // Right bg
-                linear-gradient(320deg, rgba(#FFFFFF, 0), #FFFFFF 35%) no-repeat right,
-                repeating-linear-gradient(320deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04) 13px, rgba(#000000, 0) 3px, rgba(#000000, 0) 15px) no-repeat right;
-
-        background-size:
-                100% 100%,
-                100% 100%,
-                100% 100%;
-    });
-
-    .breakpoint(lg, {
-        background:
-                // Top to bottom white
-                linear-gradient(180deg, #FFFFFF 56%, rgba(#FFFFFF, 0) 100%) no-repeat right,
-
-                // Right bg
-                linear-gradient(320deg, rgba(#FFFFFF, 0), #FFFFFF 35%) no-repeat right,
-                repeating-linear-gradient(320deg, rgba(#000000, 0.04), rgba(#000000, 0.04) 13px, rgba(#000000, 0) 3px, rgba(#000000, 0) 15px) no-repeat right,
-
-                // Left bg
-                linear-gradient(320deg, #FFFFFF 32%, rgba(#FFFFFF, 0) 40%) no-repeat left,
-                linear-gradient(45deg, rgba(#FFFFFF, 0), #FFFFFF 35%) no-repeat left,
-                repeating-linear-gradient(320deg, rgba(#000000, 0.04), rgba(#000000, 0.04) 13px, rgba(#000000, 0) 3px, rgba(#000000, 0) 15px) no-repeat left;
-
-        background-size:
-                100% 100%,
-                50% 100%,
-                50% 100%,
-                50% 100%,
-                50% 100%,
-                50% 100%;
-    });
 
     a:not(.btn) {
         color: @brand-secondary;
     }
 
-    .product-detail-main-content {
-        .breakpoint(md, {
-            max-width: .rem(490px)[@value];
-        });
-
-        .breakpoint(lg, {
-            margin-left: auto;
-        });
-
-        .breakpoint(xl, {
-            margin-left: 10%;
-        });
-    }
-
     .product-detail-title {
-        font-size: .rem(20px)[@value];
-        margin-bottom: .rem(6px)[@value];
+        font-size: .rem(24px)[@value];
+        margin-bottom: .rem(24px)[@value];
 
         .breakpoint(lg, {
-            font-size: .rem(24px)[@value];
+            font-size: .rem(32px)[@value];
         })
     }
 
     .product-detail-description {
-        font-size: .rem(14px)[@value];
-        margin-bottom: .rem(14px)[@value];
+        margin-bottom: .rem(4px)[@value];
+    }
+
+    .product-detail-code {
+        font-weight: 500;
+        margin-bottom: .rem(24px)[@value];
+    }
+
+    .product-parameter {
+        margin-bottom: .rem(24px)[@value];
+    }
+
+    .product-parameter-label {
+        font-weight: 500;
+        margin-bottom: .5rem;
+    }
+
+    .product-parameter-color-list {
+        .product-parameter-color {
+            margin-right: .rem(12px)[@value];
+
+            .product-parameter-color-fake-input {
+                width: .rem(20px)[@value];
+                height: .rem(20px)[@value];
+                border: 1px solid rgba(0,0,0,0.1);
+                border-radius: 50%;
+
+                &::before {
+                    top: .rem(-5px)[@value];
+                    right: .rem(-5px)[@value];
+                    bottom: .rem(-5px)[@value];
+                    left: .rem(-5px)[@value];
+                }
+            }
+        }
+
+        .product-parameter-color-more {
+            font-size: 1rem;
+            color: @brand-primary;
+        }
+    }
+
+    .product-parameter-box-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .product-parameter-box {
+            font-weight: 400;
+            width: .rem(150px)[@value];
+            margin-right: .rem(12px)[@value];
+            margin-bottom:.rem(6px)[@value];
+
+            input {
+                display: none;
+
+                &:checked + .product-parameter-box-fake-input {
+                    border-color: @brand-primary;
+                    background-color: @brand-primary-light;
+                }
+            }
+
+            .product-parameter-box-fake-input {
+                display: inline-block;
+                width: 100%;
+                padding: .rem(9px)[@value];
+                border: 1px solid @border-color;
+                border-radius: @border-radius-base;
+                cursor: pointer;
+            }
+
+            .product-parameter-box-name {
+                display: block;
+                margin-bottom:.rem(6px)[@value];
+            }
+
+            .product-parameter-box-info {
+                display: block;
+                font-size: .rem(15px)[@value];
+            }
+
+            .product-parameter-box-price {
+                font-weight: 500;
+                color: @text-color-light;
+            }
+
+            .product-parameter-box-unit {
+                color: @gray-light;
+            }
+        }
+    }
+
+    .product-detail-price {
+        font-size: 2rem;
+        line-height: 1.5rem;
+    }
+
+    .product-detail-price-faded {
+        font-weight: 400;
+        font-size: 1rem;
+        color: @text-color;
+        opacity: .4;
+    }
+
+    .product-detail-price-with-vat {
+        line-height: 1.5rem;
+        margin-top: .rem(4px)[@value];
+        font-size: .rem(18px)[@value];
+        color: @gray-light;
+        font-weight: 500;
     }
 
     .product-detail-price-table {
@@ -102,87 +157,131 @@
             flex-shrink: 0;
         }
 
+        .input-number-with-controls {
+            margin-right: .rem(10px)[@value];
+
+            input {
+                width: .rem(72px)[@value];
+                height: .rem(60px)[@value];
+                font-size: .rem(18px)[@value];
+            }
+
+            button {
+                width: .rem(29px)[@value];
+                height: .rem(60px)[@value];
+            }
+        }
+
         .product-detail-button {
             flex-shrink: 1;
             width: 100%;
-            height: .em(50px, 18px)[@value];
+            height: .em(60px, 18px)[@value];
             font-size: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            .breakpointMax(lg, {
-                &:last-child {
-                    margin-top: 1.5rem;
-                }
-            });
-
-            &.background-less:not(:hover) {
-                background-color: transparent;
-            }
-
             .breakpoint(lg, {
                 font-size: .rem(18px)[@value];
-                margin-top: 0;
-
-                &:last-child {
-                    margin-left: .rem(18px)[@value];
-                }
             });
         }
     }
 
-    .product-detail-back {
-        .btn();
-        .btn-icon();
-        .btn-white();
-        font-size: .rem(14px)[@value];
-        color: @brand-secondary !important;
-        font-weight: 700;
-        margin-bottom: 1rem;
+    .product-detail-additional-info {
+        margin-bottom: .rem(12px)[@value];
 
-        .icon {
-            fill: @text-color-light;
+        svg, .icon {
+            width: .rem(20px)[@value];
+            height: .rem(20px)[@value];
+            margin-right: .rem(6px)[@value];
+            margin-top: -2px;
+        }
+    }
+
+    .product-detail-availability {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: .rem(10px)[@value];
+
+        .product-detail-additional-info {
+            margin-right: .5rem;
+            margin-bottom: 0;
+        }
+
+        .product-detail-availability-btn {
+            .btn {
+                height: .rem(36px)[@value];
+                font-size: .rem(14px)[@value];
+                padding: .rem(6px)[@value] .rem(12px)[@value];
+            }
+        }
+    }
+    
+    .product-detail-wishlist {
+        svg, .icon {
+            width: .rem(23px)[@value];
+            height: .rem(21px)[@value];
+            margin-right: .rem(4px)[@value];
+        }
+
+        a {
+            text-decoration: underline;
+            color: @gray-light;
+
+            &:hover {
+                color: @text-color-light;
+            }
         }
     }
 
     .product-detail-gallery {
-        padding: 0 3rem;
-        margin-bottom: 1.5rem;
+        padding: 0 .rem(60px)[@value];
+        margin-bottom: .rem(50px)[@value];
 
-        .breakpoint(xl, {
-            width: 110%;
-        });
+        img {
+            width: 100%;
+            max-width: .rem(420px)[@value];
+        }
 
         .slick-next, .slick-prev {
             overflow: visible;
-            width: .rem(20px)[@value];
-            height: .rem(40px)[@value];
+            width: .rem(51px)[@value];
+            height: .rem(51px)[@value];
+            background-color: #FFFFFF;
+            border: 1px solid @border-color;
+            border-radius: 50%;
+            .transition();
 
             &::before {
                 display: none;
             }
 
-            .icon {
-                width: 100%;
-                height: 100%;
-                stroke: @text-color-light;
-                stroke-width: 1px;
+            svg, .icon {
+                width: .rem(9px)[@value];
+                height: 1rem;
+                stroke: @gray-light;
             }
 
             &:hover {
-                .icon {
-                    stroke: @text-color;
-                }
+                background-color: rgba(#000000, 0.05);
             }
         }
 
         .slick-next {
             right: 0;
+
+            svg, .icon {
+                margin-left: 1px;
+            }
         }
 
         .slick-prev {
             left: 0;
+
+            svg, .icon {
+                margin-right: 1px;
+            }
         }
 
         .slick-track {
@@ -210,24 +309,26 @@
 
         .product-detail-gallery-thumbnail-item {
             display: block;
-            width: .rem(50px)[@value];
-            height: .rem(50px)[@value];
+            width: .rem(70px)[@value];
+            height: .rem(70px)[@value];
             padding: .rem(5px)[@value];
             background-color: #FFFFFF;
-            border: 1px solid @gray-lighter;
+            border: 1px solid @border-color;
             border-radius: (@border-radius-base/2px);
-            margin-right: 1rem;
+            margin-right: .rem(12px)[@value];
 
             &:last-child {
                 margin-right: 0;
             }
 
             &:hover {
-                border-color: @gray-light;
+                border-color: rgba(@brand-secondary, .5);
             }
 
             &.active {
-                border-color: @brand-secondary;
+                &, &:hover {
+                    border-color: @brand-secondary;
+                }
             }
         }
     }

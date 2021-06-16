@@ -3,16 +3,17 @@
 
     input {
         appearance: none;
-        width: .em(60px, @inputNumberWithControlsFontSize)[@value];
-        height: .em(50px, @inputNumberWithControlsFontSize)[@value];
-        border: 1px solid @gray-light;
-        font-size: 1rem;
+        width: .rem(46px)[@value];
+        height: .rem(40px)[@value];
+        border: 1px solid @border-color;
+        font-size: .rem(14px)[@value];
         text-align: center;
-        font-weight: 600;
+        font-weight: 400;
         border-radius: 0;
+        color: @text-color;
 
         .breakpoint(lg, {
-            font-size: .rem(@inputNumberWithControlsFontSize)[@value];
+            font-size: .rem(14px)[@value];
         });
 
         &::-webkit-inner-spin-button,
@@ -24,14 +25,14 @@
 
     button {
         .btn();
-        background-color: transparent;
-        width: .em(50px, @inputNumberWithControlsFontSize)[@value];
-        height: .em(50px, @inputNumberWithControlsFontSize)[@value];
+        background-color: #FBFAFA;
+        width: .rem(29px)[@value];
+        height: .rem(40px)[@value];
         font-size: 1rem;
-        padding: 1rem;
+        padding: .5rem;
 
         .breakpoint(lg, {
-            font-size: .rem(@inputNumberWithControlsFontSize)[@value];
+            font-size: 1rem
         });
 
         &:hover:not(:disabled) {
@@ -39,25 +40,25 @@
         }
 
         svg {
-            width: 100%;
-            height: 100%;
+            width: .rem(13px)[@value];
+            height: .rem(13px)[@value];
             fill: @text-color;
         }
 
         &:disabled {
             svg {
-                fill: rgba(@text-color, 0.3);
+                fill: rgba(@text-color, 0.4);
             }
         }
 
         &.button-plus {
-            border: 1px solid @gray-light;
+            border: 1px solid @border-color;
             border-left: none;
             border-radius: 0 @border-radius-base @border-radius-base 0;
         }
 
         &.button-minus {
-            border: 1px solid @gray-light;
+            border: 1px solid @border-color;
             border-right: none;
             border-radius: @border-radius-base 0 0 @border-radius-base;
         }

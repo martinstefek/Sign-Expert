@@ -1,6 +1,69 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/InputWithPlusMinusButtons.js":
+/*!*****************************************************!*\
+  !*** ./src/js/modules/InputWithPlusMinusButtons.js ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ "./src/js/modules/config.js");
+
+$('[data-toggle="input-number-decrease"]').each(function (index, item) {
+  var target = $(item).attr('data-target');
+  var targetElement = $(target);
+  var boundaryAttr = targetElement.attr('min');
+  var boundary = boundaryAttr ? Number(boundaryAttr) : null;
+
+  var addOrRemoveClass = function addOrRemoveClass(value) {
+    if (boundary !== null && value <= boundary) {
+      $(item).prop('disabled', true);
+    } else {
+      $(item).prop('disabled', false);
+    }
+  };
+
+  addOrRemoveClass(targetElement.val());
+  $(item).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function () {
+    var elementValue = Number(targetElement.val());
+    targetElement.val(elementValue - 1);
+    targetElement.change();
+  });
+  targetElement.on('change', function () {
+    var elementValue = Number(targetElement.val());
+    addOrRemoveClass(elementValue);
+  });
+});
+$('[data-toggle="input-number-increase"]').each(function (index, item) {
+  var target = $(item).attr('data-target');
+  var targetElement = $(target);
+  var boundaryAttr = targetElement.attr('max');
+  var boundary = boundaryAttr ? Number(boundaryAttr) : null;
+
+  var addOrRemoveClass = function addOrRemoveClass(value) {
+    if (boundary !== null && value >= boundary) {
+      $(item).prop('disabled', true);
+    } else {
+      $(item).prop('disabled', false);
+    }
+  };
+
+  addOrRemoveClass(targetElement.val());
+  $(item).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function () {
+    var elementValue = Number(targetElement.val());
+    targetElement.val(elementValue + 1);
+    targetElement.change();
+  });
+  targetElement.on('change', function () {
+    var elementValue = Number(targetElement.val());
+    addOrRemoveClass(elementValue);
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/modules/ProductListCarousel.js":
 /*!***********************************************!*\
   !*** ./src/js/modules/ProductListCarousel.js ***!
@@ -17713,10 +17776,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_banner__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./src/js/modules/accordion.js");
 /* harmony import */ var _modules_ProductListCarousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/ProductListCarousel */ "./src/js/modules/ProductListCarousel.js");
-/* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/setMinMaxEventsOnInputNumber */ "./src/js/modules/setMinMaxEventsOnInputNumber.js");
-/* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
-/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+/* harmony import */ var _modules_InputWithPlusMinusButtons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/InputWithPlusMinusButtons */ "./src/js/modules/InputWithPlusMinusButtons.js");
+/* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/setMinMaxEventsOnInputNumber */ "./src/js/modules/setMinMaxEventsOnInputNumber.js");
+/* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
+/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+
 
 
 

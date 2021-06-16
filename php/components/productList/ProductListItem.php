@@ -9,29 +9,13 @@
                     <img src="<?php echo $img; ?>" alt="Product list item image" >
                 </a>
 
-                <form class="product-variants-list">
+                <form class="product-parameter-color-list">
                 <?php if ($variants): ?>
-                    <label class="product-variant">
-                        <input type="radio" name="product-variant">
-                        <span class="product-variant-fake-input" style="background-color: #1F222B"></span>
-                    </label>
-
-                    <label class="product-variant">
-                        <input type="radio" name="product-variant">
-                        <span class="product-variant-fake-input" style="background-color: #00C4DC"></span>
-                    </label>
-
-                    <label class="product-variant">
-                        <input type="radio" name="product-variant">
-                        <span class="product-variant-fake-input" style="background-color: #FF8044"></span>
-                    </label>
-
-                    <label class="product-variant">
-                        <input type="radio" name="product-variant">
-                        <span class="product-variant-fake-input" style="background-color: #3FDC65"></span>
-                    </label>
-
-                    <span class="product-variants-more">+ 12 farieb</span>
+                    <?php productParameterColor('#1F222B'); ?>
+                    <?php productParameterColor('#00C4DC'); ?>
+                    <?php productParameterColor('#FF8044'); ?>
+                    <?php productParameterColor('#3FDC65'); ?>
+                    <span class="product-parameter-color-more">+ 12 farieb</span>
                 <?php endif; ?>
                 </form>
 

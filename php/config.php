@@ -54,3 +54,5 @@ include_once('components/category.php');
 include_once('components/article.php');
 include_once('components/Newsletter.php');
 include_once('components/Breadcrumb.php');
+include_once('components/ProductParameterColor.php');
+include_once('components/ProductParameterBox.php');
