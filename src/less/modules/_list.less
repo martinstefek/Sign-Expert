@@ -16,7 +16,7 @@
             height: .rem(9px)[@value];
             background-size: cover;
             background-repeat: no-repeat;
-            background-image: url("../../img/chevron-right-link-list.svg");
+            background-image: url("../../img/");
         }
     }
 
@@ -53,4 +53,32 @@
             background-image: url("../../img/check-gray.svg");
         }
     }
+}
+
+.check-list {
+    display: block;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+        display: block;
+        position: relative;
+        padding-left: .rem(21px)[@value];
+        margin-bottom: .3rem;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: .5rem;
+            left: 0;
+            width: .rem(13px)[@value];
+            height: .rem(9px)[@value];
+            background-image: url("../../img/check-gray.svg");
+        }
+    }
+}
+
+.check-list-success li::before {
+    background-image: url("../../img/check-green.svg");
 }

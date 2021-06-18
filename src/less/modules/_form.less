@@ -104,3 +104,68 @@
 .form-group-checkbox {
     margin-bottom: .rem(6px)[@value];
 }
+
+.form-group {
+    position: relative;
+    margin-bottom: .rem(10px)[@value];
+}
+
+.form-error {
+    display: none;
+    color: @brand-danger;
+    font-size: .rem(14px)[@value];
+    margin-top: .rem(2px)[@value];
+}
+
+input.form-control {
+    height: .rem(50px)[@value];
+    background-color: #F6F6F6;
+    border: 1px solid transparent;
+    outline: none;
+    box-shadow: none;
+    padding: .rem(20px)[@value] .rem(16px)[@value] .rem(6px)[@value] .rem(16px)[@value];
+
+    .customPlaceholder({
+        color: rgba(#FFFFFF, 0);
+    });
+    
+    &:focus {
+        background-color: #FFFFFF;
+        border: 1px solid rgba(0,160,70,0.6);
+        box-shadow: none;
+    }
+
+    &:placeholder-shown {
+        & ~ .form-label {
+            top: .85rem;
+            font-size: 1rem;
+            color: @gray-light;
+        }
+    }
+
+    &:not(:placeholder-shown) {
+        &:not(:focus) {
+            &:valid, &.form-valid {
+                background-color: #F0F7F3;
+            }
+        }
+
+        &:invalid, &.form-invalid {
+            background-color: #FFFFFF;
+            border: 1px solid rgba(@brand-danger, 0.6);
+
+            & ~ .form-error {
+                display: block;
+            }
+        }
+    }
+}
+
+.form-label {
+    position: absolute;
+    font-weight: 400;
+    top: .3rem;
+    left: .rem(16px)[@value];
+    color: rgba(@text-color, .4);
+    font-size: .rem(14px)[@value];
+}

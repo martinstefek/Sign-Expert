@@ -423,6 +423,8 @@
         });
 
         .container {
+            height: 100%;
+
             .mobileHeader({
                 max-width: none;
                 padding: 0;
@@ -759,16 +761,20 @@
         .search-wrap {
             position: relative;
             margin-bottom: 0;
+
+            .desktopHeader({
+                height: .rem(46px)[@value];
+            });
         }
 
         label.header-search-input-label {
             margin-bottom: 0;
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translate(0, -50%);
 
             .icon {
-                position: absolute;
-                left: 1rem;
-                top: 50%;
-                transform: translate(0, -50%);
                 width: .rem(24px)[@value];
                 height: .rem(24px)[@value];
                 stroke: #D9D9DA;
@@ -817,8 +823,7 @@
             top: 0;
             bottom: 0;
             color: @dark-theme-text-color;
-            padding-left: 1rem;
-            padding-right: 1rem;
+            padding: .rem(6px)[@value] 1rem;
 
             &:hover {
                 color: @brand-primary;

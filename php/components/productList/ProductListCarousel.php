@@ -1,11 +1,11 @@
 <?php
 include_once ('ProductListItem.php');
 
-function productListCarousel() { ?>
-<section class="section product-list-carousel-section">
+function productListCarousel($name = 'Navštívili ste', $class = '') { ?>
+<section class="section product-list-carousel-section <?php echo $class; ?>">
     <div class="container">
         <div class="section-header">
-            <div class="section-title">Navštívili ste</div>
+            <div class="section-title"><?php echo $name; ?></div>
         </div>
 
         <div class="product-list-carousel" data-type="product-list-carousel">

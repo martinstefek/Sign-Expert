@@ -130,15 +130,16 @@ $mainBgActive = false;
                                         <svg class="icon fill-primary"><use xlink:href="#sprite-minus"></use></svg>
                                     </button>
 
-                                    <input id="product-detail-amount" type="number" min="1" value="1">
+                                    <input id="product-detail-amount" type="number" min="1" value="9">
 
                                     <button class="button-plus" type="button" data-toggle="input-number-increase" data-target="#product-detail-amount">
                                         <svg class="icon fill-primary"><use xlink:href="#sprite-plus"></use></svg>
                                     </button>
                                 </div>
 
-                                <div class="product-detail-button">
-                                    <button class="btn btn-success product-detail-button" type="submit" id="add-to-cart">Pridať do košíka</button>
+                                <div class="product-detail-button-wrap">
+                                    <div class="lucrative-offer-popup">Ihneď ušetrite 6,58 €</div>
+                                    <button class="btn btn-success product-detail-button" type="submit" id="add-to-cart">+ 1 meter do košíka </button>
                                 </div>
                             </div>
                         </div>

@@ -1,3 +1,162 @@
 .product-detail-additional-content {
+    border-bottom: 1px solid @border-color;
+
+    .product-detail-additional-content-header {
+        height: .rem(60px)[@value];
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+
+        .container {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+
+            .breakpointMax(md, {
+                justify-content: flex-start;
+                overflow: auto;
+            });
+        }
+
+        .product-detail-accordion-trigger {
+            position: relative;
+            margin-right: 2rem;
+            padding-left: .5rem;
+            padding-right: .5rem;
+            background: transparent;
+            border-radius: 0;
+            height: 100%;
+            border: none;
+            flex-shrink: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active, &:active {
+                box-shadow: none;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: .5rem;
+                    right: .5rem;
+                    height: 2px;
+                    background-color: @brand-primary;
+                }
+            }
+
+        }
+    }
+
+
+    .product-detail-accordion {
+        background-color: #FBFAFA;
+        padding-top: .rem(30px)[@value];
+        padding-bottom: .rem(25px)[@value];
+
+        .breakpoint(md, {
+            padding-top: .rem(60px)[@value];
+            padding-bottom: .rem(50px)[@value];
+        });
+    }
+
+    .pd-ac-section {
+        margin-bottom: 1.75rem;
+
+        .breakpoint(md, {
+            margin-bottom: .rem(38px)[@value];
+        });
+    }
+
+    .pd-ac-section-title {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .pd-ac-section-content-border {
+        padding-bottom: .rem(38px)[@value];
+        border-bottom: 1px solid @border-color;
+
+        .breakpoint(md, {
+            padding-bottom: 1.75rem;
+        });
+    }
+
+    .pd-ac-accordion-right-col {
+        .breakpoint(xl, {
+            padding-left: 2rem;
+        });
+    }
+
+    .product-detail-video {
+        position: relative;
+        border-radius: @border-radius-base;
+        overflow: hidden;
+        width: 100%;
+
+        img {
+            user-select: none;
+        }
+
+        svg, .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: .rem(106px)[@value];
+            height: .rem(106px)[@value];
+        }
+    }
+
+    .product-detail-document {
+        border-radius: @border-radius-base;
+        border: 1px solid @border-color;
+        overflow: hidden;
+
+        .product-detail-document-preview {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            min-height: 11.5rem;
+            background-color: #F8F7F7;
+
+            .breakpoint(md, {
+                min-height: .rem(254px)[@value];
+            });
+
+            img {
+                box-shadow: 0 1px 22px -6px rgba(0,0,0,0.1);
+            }
+        }
+
+        .product-detail-document-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-top: 1px solid @border-color;
+            background-color: #FBFAFA;
+            padding: .rem(12px)[@value] .rem(10px)[@value] .rem(12px)[@value] .rem(20px)[@value];
+
+            .product-detail-document-title {
+                font-weight: 500;
+                margin-right: .5rem;
+            }
+
+            .product-detail-document-download {
+                margin-left: auto;
+                padding: .rem(5px)[@value] .rem(10px)[@value];
+
+                svg, .icon {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+    }
 
 }

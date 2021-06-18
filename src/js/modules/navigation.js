@@ -47,8 +47,10 @@ allTopLevelItems.each((index, topLevelItem) => {
             firstLevelParent.addClass(activeClass);
             document.body.classList.add(mobileMenuSecondLevelActiveClass);
 
-            const height = firstLevelParent.find('.navigation-second-level').height();
-            $(mainNavId).css('height', height + 'px');
+            if (window.innerWidth <= mobileNavigationThreshold) {
+                const height = firstLevelParent.find('.navigation-second-level').height();
+                $(mainNavId).css('height', height + 'px');
+            }
 
             document.getElementById(mobileMenuSecondLevelTitleId).innerHTML = sectionTitle;
         });

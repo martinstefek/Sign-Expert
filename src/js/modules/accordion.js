@@ -18,23 +18,23 @@ accordions.each((index, item) => {
         });
     });
 
-    if (window.innerWidth > mobileNavigationThreshold) {
-        panels.each((index, panel) => {
-            const initialState = $(panel).data('initialState');
+    panels.each((index, panel) => {
+        const initialState = $(panel).data('initialState');
 
-            if (index === 0) {
-                if (initialState) {
-                    $(panel).collapse(initialState);
+        if (index === 0) {
+            if (initialState) {
+                $(panel).collapse(initialState);
 
-                    getTrigger($(panel).attr('id')).each((_index, trigger) => {
-                        if (initialState === 'show') {
-                            $(trigger).addClass('active');
-                        } else {
-                            $(trigger).removeClass('active');
-                        }
-                    });
+                getTrigger($(panel).attr('id')).each((_index, trigger) => {
+                    if (initialState === 'show') {
+                        $(trigger).addClass('active');
+                    } else {
+                        $(trigger).removeClass('active');
+                    }
+                });
 
-                } else {
+            } else {
+                if (window.innerWidth > mobileNavigationThreshold) {
                     $(panel).collapse('show');
 
                     getTrigger($(panel).attr('id')).each((_index, trigger) => {
@@ -42,9 +42,8 @@ accordions.each((index, item) => {
                     });
                 }
             }
-        });
-
-    }
+        }
+    });
 });
 
 accordionTriggers.each((index, trigger) => {

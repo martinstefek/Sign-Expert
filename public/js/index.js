@@ -126,30 +126,29 @@ accordions.each(function (index, item) {
       toggle: false
     });
   });
+  panels.each(function (index, panel) {
+    var initialState = $(panel).data('initialState');
 
-  if (window.innerWidth > _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold) {
-    panels.each(function (index, panel) {
-      var initialState = $(panel).data('initialState');
-
-      if (index === 0) {
-        if (initialState) {
-          $(panel).collapse(initialState);
-          getTrigger($(panel).attr('id')).each(function (_index, trigger) {
-            if (initialState === 'show') {
-              $(trigger).addClass('active');
-            } else {
-              $(trigger).removeClass('active');
-            }
-          });
-        } else {
+    if (index === 0) {
+      if (initialState) {
+        $(panel).collapse(initialState);
+        getTrigger($(panel).attr('id')).each(function (_index, trigger) {
+          if (initialState === 'show') {
+            $(trigger).addClass('active');
+          } else {
+            $(trigger).removeClass('active');
+          }
+        });
+      } else {
+        if (window.innerWidth > _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold) {
           $(panel).collapse('show');
           getTrigger($(panel).attr('id')).each(function (_index, trigger) {
             $(trigger).addClass('active');
           });
         }
       }
-    });
-  }
+    }
+  });
 });
 accordionTriggers.each(function (index, trigger) {
   var target = $(trigger).data('target');
@@ -316,8 +315,12 @@ allTopLevelItems.each(function (index, topLevelItem) {
       });
       firstLevelParent.addClass(activeClass);
       document.body.classList.add(mobileMenuSecondLevelActiveClass);
-      var height = firstLevelParent.find('.navigation-second-level').height();
-      $(mainNavId).css('height', height + 'px');
+
+      if (window.innerWidth <= _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold) {
+        var height = firstLevelParent.find('.navigation-second-level').height();
+        $(mainNavId).css('height', height + 'px');
+      }
+
       document.getElementById(mobileMenuSecondLevelTitleId).innerHTML = sectionTitle;
     });
   });

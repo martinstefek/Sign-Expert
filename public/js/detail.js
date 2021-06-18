@@ -4,7 +4,8 @@ var __webpack_exports__ = {};
   !*** ./src/js/detail.js ***!
   \**************************/
 $(document).ready(function () {
-  // Definitions
+  $('[data-toggle="tooltip"]').tooltip(); // Definitions
+
   var thumbnails = $('#product-detail-gallery-thumbnails .product-detail-gallery-thumbnail-item');
   var slick = $('#product-detail-gallery');
 

@@ -3,6 +3,7 @@
     include_once('headerSearch.php');
 ?>
 
+<!DOCTYPE html>
 <html lang="sk">
 <head>
     <title>SignExpert</title>

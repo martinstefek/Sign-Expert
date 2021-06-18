@@ -1,13 +1,17 @@
 .table {
+    margin-bottom: .rem(12px)[@value];
+
     > tbody {
         > tr {
             > th {
-                font-weight: 600;
+                font-weight: 500;
             }
 
             > th, > td {
-                font-size: .rem(14px)[@value];
-                padding: .rem(11px)[@value];
+                font-size: 1rem;
+                padding: .rem(4px)[@value] .rem(12px)[@value];
+                border: none;
+                border-bottom: 1px solid @border-color;
 
                 &:first-child {
                     padding-left: 0;
@@ -20,10 +24,76 @@
 
             &:last-child {
                 > th, > td {
-                    border-bottom: 1px solid @table-border-color;
+                    border-bottom: none;
                 }
             }
         }
 
+    }
+}
+
+.table-sm {
+    > tbody {
+        > tr {
+            > th, > td {
+                font-size: .rem(14px)[@value];
+            }
+        }
+    }
+}
+
+.table-md {
+    > tbody {
+        > tr {
+            > th, > td {
+                padding: .rem(8px)[@value] .rem(12px)[@value];
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.table-space-between {
+    > tbody {
+        > tr {
+            > th, > td {
+                &:first-child {
+                    text-align: left;
+                }
+
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.table-bordered {
+    border: none;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+
+    > tbody {
+        > tr {
+            > th, > td {
+                border: 1px solid @border-color;
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
     }
 }

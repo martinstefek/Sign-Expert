@@ -1,7 +1,7 @@
 <?php
 
 const PATH = './';
-const USE_HTML_EXTENSION = true;
+const USE_HTML_EXTENSION = false;
 
 global $loggedIn;
 $loggedIn = false;
@@ -56,3 +56,5 @@ include_once('components/Newsletter.php');
 include_once('components/Breadcrumb.php');
 include_once('components/ProductParameterColor.php');
 include_once('components/ProductParameterBox.php');
+include_once('components/ProductParameterBoxLarge.php');
+include_once('components/productDetail/productDetailAccordion.php');

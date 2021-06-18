@@ -1,10 +1,12 @@
 .product-parameter-color-list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 0;
     min-height: .rem(27px)[@value];
 
     .product-parameter-color {
+        position: relative;
         display: inline-block;
         align-items: center;
         margin-right: .rem(8px)[@value];
@@ -39,6 +41,72 @@
                     border: 1px solid @brand-primary;
                     border-radius: 50%;
                 }
+            }
+        }
+
+        &:hover {
+            .product-info-tooltip {
+                display: block;
+            }
+        }
+
+        .product-info-tooltip {
+            display: none;
+            position: absolute;
+            left: .rem(10px)[@value];
+            bottom: 2.1rem;
+            transform: translate(-50%, 0);
+            width: .rem(200px)[@value];
+            padding: 1rem;
+            background: #FFFFFF;
+            box-shadow: 0 11px 22px 4px rgb(0 0 0 / 10%);
+            border-radius: 4px;
+            font-weight: 400;
+            font-size: .rem(14px)[@value];
+            z-index: 5;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: calc(100% - 1px);
+                left: 50%;
+                transform: translate(-50%, 0);
+                border-top: 20px solid #FFFFFF;
+                border-right: 13px solid transparent;
+                border-left: 13px solid transparent;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto .5rem;
+            }
+
+            .product-info-tooltip-name {
+                display: block;
+                font-weight: 500;
+                font-size: .rem(14px)[@value];
+                margin-bottom: .5rem;
+            }
+
+            .product-info-tooltip-price {
+                display: block;
+                font-size: .rem(18px)[@value];
+            }
+
+            .product-info-tooltip-price-with-vat {
+                display: block;
+                font-size: .rem(16px)[@value];
+            }
+
+            .faded {
+                font-size: .rem(15px)[@value];
+                color: @gray-light;
+            }
+            
+            .product-info-tooltip-availability {
+                display: block;
+                margin-top: .5rem;
             }
         }
     }

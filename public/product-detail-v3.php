@@ -78,16 +78,16 @@ $mainBgActive = false;
                             </div>
 
                             <div class="product-parameter-color-list">
-                                <?php productParameterColor('#61a375'); ?>
-                                <?php productParameterColor('#F66A2E'); ?>
-                                <?php productParameterColor('#DDC17F'); ?>
-                                <?php productParameterColor('#B80D3B'); ?>
-                                <?php productParameterColor('#404D63'); ?>
-                                <?php productParameterColor('#F8FAF7'); ?>
-                                <?php productParameterColor('#DDC17F'); ?>
-                                <?php productParameterColor('#EFD402'); ?>
-                                <?php productParameterColor('#FFCE2E'); ?>
-                                <?php productParameterColor('#00568D'); ?>
+                                <?php productParameterColor('#61a375', false); ?>
+                                <?php productParameterColor('#F66A2E', false); ?>
+                                <?php productParameterColor('#DDC17F', false); ?>
+                                <?php productParameterColor('#B80D3B', false); ?>
+                                <?php productParameterColor('#404D63', false); ?>
+                                <?php productParameterColor('#F8FAF7', false); ?>
+                                <?php productParameterColor('#DDC17F', false); ?>
+                                <?php productParameterColor('#EFD402', false); ?>
+                                <?php productParameterColor('#FFCE2E', false); ?>
+                                <?php productParameterColor('#00568D', false); ?>
                                 <span class="product-parameter-color-more">+ 12 farieb</span>
                             </div>
                         </div>
@@ -98,15 +98,14 @@ $mainBgActive = false;
                             </div>
 
                             <div class="product-parameter-box-list">
-                                <?php productParameterBox('od 1m', 6.58); ?>
-                                <?php productParameterBox('od 10m', 5.60); ?>
-                                <?php productParameterBox('od 50m', 5.20); ?>
+                                <?php productParameterBoxLarge('1 kus', 3); ?>
+                                <?php productParameterBoxLarge('Balenie - 36 kusov', 2.8, 'Ušetríte 7,20 €'); ?>
                             </div>
                         </div>
 
                         <div class="product-parameter">
                             <div class="product-parameter-label">
-                                Cena za meter:
+                                Cena za balenie:
                             </div>
 
                             <div class="product-detail-price">
@@ -145,28 +144,21 @@ $mainBgActive = false;
                     </form>
 
                     <div class="product-detail-availability">
-                        <div class="product-detail-additional-info text-success">
-                            <svg class="icon stroke-success"><use xlink:href="#sprite-check-circled"></use></svg>
-                            Dostupnosť 245 metrov
-                        </div>
-
-                        <div class="product-detail-availability-btn">
-                            <a href="#" class="btn btn-bordered btn-icon-right">
-                                Objednať viac ako 245 metrov
-                                <svg class="icon fill-gray-dark"><use xlink:href="#sprite-info"></use></svg>
-                            </a>
+                        <div class="product-detail-additional-info text-primary">
+                            <svg class="icon stroke-primary"><use xlink:href="#sprite-watch"></use></svg>
+                            Tovar na objednávku
                         </div>
                     </div>
 
-                    <div class="product-detail-additional-info text-success">
-                        <svg class="icon stroke-success"><use xlink:href="#sprite-car"></use></svg>
-                        Doručíme do 48 hod
+                    <div class="product-detail-additional-info text-primary">
+                        <svg class="icon stroke-primary"><use xlink:href="#sprite-car"></use></svg>
+                        Doručíme do 2 týždňov
                     </div>
 
                     <div class="product-detail-additional-info product-detail-wishlist">
                         <a href="#">
-                            <svg class="icon stroke-gray-dark fill-none"><use xlink:href="#sprite-heart"></use></svg>
-                            Pridať do nákupného zoznamu
+                            <svg class="icon stroke-primary fill-primary"><use xlink:href="#sprite-heart"></use></svg>
+                            Odobrať z nákupného zoznamu
                         </a>
                     </div>
                 </div>

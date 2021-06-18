@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+
     // Definitions
     const thumbnails = $('#product-detail-gallery-thumbnails .product-detail-gallery-thumbnail-item');
 
