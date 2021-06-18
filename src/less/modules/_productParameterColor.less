@@ -45,9 +45,11 @@
         }
 
         &:hover {
-            .product-info-tooltip {
-                display: block;
-            }
+            .breakpoint(md, {
+                .product-info-tooltip {
+                    display: block;
+                }
+            });
         }
 
         .product-info-tooltip {
