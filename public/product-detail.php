@@ -151,7 +151,7 @@ $mainBgActive = false;
                         </div>
 
                         <div class="product-detail-availability-btn">
-                            <a href="#" class="btn btn-bordered btn-icon-right">
+                            <a href="#" class="btn btn-bordered btn-icon-right" data-toggle="tooltip" data-placement="bottom" title="Pri objednávke viac ako 245 metrov doba dodania tovaru sa zmení z 48 hod. na 2 týždňa.">
                                 Objednať viac ako 245 metrov
                                 <svg class="icon fill-gray-dark"><use xlink:href="#sprite-info"></use></svg>
                             </a>

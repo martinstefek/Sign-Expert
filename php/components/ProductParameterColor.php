@@ -25,5 +25,12 @@
             <span class="product-info-tooltip-availability text-success">Skladom 15 m.</span>
         </span>
         <?php endif; ?>
+
+        <div class="tooltip bottom" role="tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">
+                Some tooltip text!
+            </div>
+        </div>
     </label>
 <?php } ?>

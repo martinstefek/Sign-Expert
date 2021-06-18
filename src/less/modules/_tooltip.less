@@ -1,14 +1,33 @@
 .tooltip {
+    &.in {
+        opacity: 1;
+    }
+
     .tooltip-inner {
+        max-width: .rem(280px)[@value];
         width: max-content;
-        font-size: .rem(15px)[@value];
-        padding: .5rem .rem(10px)[@value];
+        font-size: .rem(14px)[@value];
+        padding: .5rem .rem(12px)[@value];
         color: rgba(#FFFFFF, .8);
+        box-shadow: 0 11px 22px 4px rgba(0,0,0,0.1);
+        background-color: @gray-dark;
     }
 
     &.top .tooltip-arrow {
         bottom: -7px;
         border-width: 13px 10px 0;
         margin-left: -10px;
+        border-top-color: @gray-dark;
+    }
+
+    &.bottom {
+        margin-top: 10px;
+
+        .tooltip-arrow {
+            top: -7px;
+            border-width: 0 10px 13px;
+            margin-left: -10px;
+            border-bottom-color: @gray-dark;
+        }
     }
 }

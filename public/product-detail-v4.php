@@ -71,9 +71,9 @@ $mainBgActive = false;
                     <div class="product-detail-code">Kód: SXS GREEN25</div>
 
                     <div class="product-detail-availability">
-                        <div class="product-detail-additional-info text-success">
-                            <svg class="icon stroke-success"><use xlink:href="#sprite-check-circled"></use></svg>
-                            Dostupnosť 245 metrov
+                        <div class="product-detail-additional-info text-danger">
+                            <svg class="icon stroke-danger"><use xlink:href="#sprite-cancel-circled"></use></svg>
+                            Nie je skladom
                         </div>
                     </div>
 
