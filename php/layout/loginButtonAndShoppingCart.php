@@ -65,7 +65,11 @@
     </span>
 </a>
 <?php else: ?>
-    <a href="<?php href('./index-logged-in.php'); ?>" class="btn btn-action login-button" type="button">
+    <button type="button"
+       class="btn btn-action login-button"
+       data-toggle="modal"
+       data-target="#login-register-modal"
+    >
         <svg class="icon stroke-primary">
             <use xlink:href="#sprite-avatar"></use>
         </svg>
@@ -74,7 +78,7 @@
             <span>Prihlásenie</span>
             <span>Registrácia</span>
         </span>
-    </a>
+    </button>
 
     <a href="#" class="btn btn-action" type="button">
         <svg class="icon stroke-primary">

@@ -1,4 +1,4 @@
-<?php function productListItem($price, $oldPrice, $stock, $variants, $parameters, $title, $category, $img) { ?>
+<?php function productListItem($price, $oldPrice, $stock, $variants, $parameters, $title, $category, $img, $wishlist = false) { ?>
     <div class="product-list-item">
         <article>
             <div>
@@ -67,22 +67,27 @@
                     </a>
 
                     <div class="product-list-item-actions">
-                        <?php if ($stock > 0): ?>
+                        <?php if ($stock <= 0 || $wishlist): ?>
                         <a href="#" class="action">
-                            <svg class="stroke-gray-dark fill-none">
+                            <svg class="stroke-primary fill-primary">
                                 <use xlink:href="#sprite-heart"></use>
                             </svg>
                         </a>
                         <?php else: ?>
                         <a href="#" class="action">
-                            <svg class="stroke-primary fill-primary">
+                            <svg class="stroke-gray-dark fill-none">
                                 <use xlink:href="#sprite-heart"></use>
                             </svg>
                         </a>
                         <?php endif; ?>
 
                         <?php if (isset($price) && $stock > 0): ?>
-                        <a href="#" class="action">
+                        <a href="#" class="action"
+                           <?php if ($wishlist): ?>
+                           data-toggle="modal"
+                           data-target="#wishlist-product-detail"
+                            <?php endif; ?>
+                        >
                             <svg class="stroke-success"><use xlink:href="#sprite-shopping-cart"></use></svg>
                         </a>
                         <?php endif; ?>

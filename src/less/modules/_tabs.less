@@ -1,0 +1,37 @@
+.ui-tabs {
+    padding: 0;
+
+    .ui-tabs-nav {
+        margin-left: -@modal-inner-padding;
+        margin-right: -@modal-inner-padding;
+        padding: 0 @modal-inner-padding;
+        border-bottom: 1px solid @border-color;
+
+        .ui-tabs-tab {
+            margin-right: 2rem;
+
+            .ui-tabs-anchor {
+                position: relative;
+                border-bottom: 2px solid transparent;
+                color: @text-color-light;
+                font-size: .rem(18px)[@value];
+                padding: .5rem 0 1rem;
+            }
+
+            &.ui-tabs-active, &.ui-state-active {
+                .ui-tabs-anchor {
+                    border-bottom: 2px solid @brand-primary;
+                    color: @text-color;
+                }
+            }
+
+        }
+    }
+
+    .ui-tabs-panel {
+        margin-left: -@modal-inner-padding;
+        margin-right: -@modal-inner-padding;
+        padding: 1.5rem @modal-inner-padding 0;
+    }
+}
+

@@ -1,11 +1,16 @@
 import 'bootstrap/dist/js/bootstrap.min';
 import './modules/navigation';
 import './modules/searchAutocomplete';
+import './modules/customSelect';
 import './modules/banner';
 import './modules/accordion';
 import './modules/ProductListCarousel';
 import './modules/InputWithPlusMinusButtons';
 import './modules/setMinMaxEventsOnInputNumber';
+
+$(document).ready(function() {
+    $( "#login-register-tabs" ).tabs();
+});
 
 import { focusInput } from "./modules/helpers";
 import { clickEvent, mobileNavigationThreshold } from "./modules/config";

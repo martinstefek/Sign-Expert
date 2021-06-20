@@ -11,6 +11,7 @@ mix.setPublicPath('public')
     .js('src/js/index.js', 'public/js')
     .js('src/js/detail.js', 'public/js')
     .js('src/js/productList.js', 'public/js')
+    .js('src/js/wishlist.js', 'public/js')
     .copy(
         [
             'node_modules/lightgallery/dist/fonts/lg.ttf',
@@ -43,7 +44,7 @@ mix.setPublicPath('public')
         }
     });
 
-mix.browserSync({
-    proxy: 'signexpert.test',
-    files: ['public/css/*.css', 'public/js/*.js', '**/*.php']
-})
+// mix.browserSync({
+//     proxy: 'signexpert.test',
+//     files: ['public/css/*.css', 'public/js/*.js', '**/*.php']
+// })

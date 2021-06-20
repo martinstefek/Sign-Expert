@@ -1,0 +1,269 @@
+.account {
+    display: flex;
+    padding-top: .rem(40px)[@value];
+    padding-bottom: .rem(100px)[@value];
+    align-items: flex-start;
+
+    .account-nav {
+        width: .rem(262px)[@value];
+        flex-basis: .rem(262px)[@value];
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid @border-color;
+        margin-right: .rem(42px)[@value];
+        margin-top: .rem(10px)[@value];
+
+        .account-nav-header {
+            padding: .rem(36px)[@value] .rem(14px)[@value] .rem(28px)[@value];
+            background-color: #FFFFFF;
+            text-align: center;
+        }
+
+        .account-nav-img {
+            display: block;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .account-nav-img-wrap {
+            position: relative;
+            display: block;
+            width: .rem(100px)[@value];
+            height: .rem(100px)[@value];
+            margin: 0 auto 1rem;
+        }
+
+        .account-nav-img-plus-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: .rem(30px)[@value];
+            height: .rem(30px)[@value];
+            border-radius: 50%;
+            border: 4px solid #FFFFFF;
+            background-color: @brand-primary;
+
+            &::before, &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #FFFFFF;
+            }
+
+            &::before {
+                width: .rem(2px)[@value];
+                height: .rem(12px)[@value];
+            }
+
+            &::after {
+                height: .rem(2px)[@value];
+                width: .rem(12px)[@value];
+            }
+
+            svg, .icon {
+                width: .rem(12px)[@value];
+                height: .rem(12px)[@value];
+            }
+        }
+
+        .account-nav-title {
+            font-size: .rem(21px)[@value];
+            line-height: .rem(28px)[@value];
+            margin-bottom: .rem(4px)[@value];
+        }
+
+        .account-nav-description {
+            color: @gray-light
+        }
+
+        .account-nav-link-list {
+            display: block;
+            margin: 0;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .account-nav-link {
+            display: block;
+            border-top: 1px solid @border-color;
+            margin: 0;
+
+            a {
+                padding: .rem(11px)[@value] 1rem .rem(10px)[@value];
+                display: block;
+                color: @text-color;
+            }
+
+            svg, .icon {
+                width: .rem(22px)[@value];
+                height: .rem(20px)[@value];
+                margin-right: .rem(5px)[@value];
+                margin-top: -2px;
+            }
+
+            &.active, &:hover {
+                background-color: #F8F8F8;
+            }
+        }
+    }
+
+    .account-main-content {
+        width: 100%;
+
+        .btn {
+            min-width: 6rem;
+        }
+    }
+
+    .account-main-content-header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+
+        h1 {
+            margin-top: .5rem;
+            margin-bottom: 0;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        .account-main-content-header-actions {
+            .btn {
+                min-width: .rem(105px)[@value];
+                text-align: center;
+                margin-left: .rem(12px)[@value];
+            }
+        }
+    }
+
+    .account-info-table {
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+
+        td, th {
+            padding-top: .rem(13px)[@value];
+            padding-bottom: .rem(12px)[@value];
+
+            &:not(:first-child) {
+                color: @gray-light;
+            }
+
+            &:first-child {
+                width: .rem(220px)[@value];
+            }
+        }
+    }
+
+    .account-address {
+        margin-bottom: 1rem;
+        border: 1px solid @border-color;
+        border-radius: @border-radius-base;
+        padding: 1.3rem 1rem .rem(18px)[@value];
+
+        .account-address-title {
+            font-size: .rem(21px)[@value];
+            color: @gray-light;
+            margin-bottom: .8rem;
+            font-weight: 400;
+        }
+    }
+
+    .account-wishlist {
+        .product-detail {
+            padding: 0;
+            margin-bottom: 0;
+
+            .product-detail-title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .product-parameter {
+                margin-bottom: 1rem;
+            }
+
+            .product-detail-small-parameter-wrap {
+                display: flex;
+
+                .product-parameter {
+                    margin-right: 1.5rem;
+                    flex-shrink: 0;
+                }
+
+                .product-parameter-label {
+                    font-size: .rem(14px)[@value];
+                }
+
+                .product-details-small-add-to-cart-section {
+                    width: 100%;
+                }
+
+                .input-number-with-controls {
+                    input {
+                        width: .rem(52px)[@value];
+                        height: .rem(50px)[@value];
+                    }
+
+                    button {
+                        width: .rem(29px)[@value];
+                        height: .rem(50px)[@value];
+                    }
+                }
+
+                .product-detail-button {
+                    height: .rem(50px)[@value];
+                    font-size: 1rem;
+                }
+            }
+
+            .product-detail-price {
+                font-size: .rem(21px)[@value];
+            }
+
+            .product-detail-gallery {
+                padding:  0;
+                margin-bottom: 1.5rem;
+
+                img {
+                    max-width: .rem(210px)[@value];
+                }
+
+                .slick-prev, .slick-next {
+                    display: none !important;
+                }
+            }
+
+            .product-detail-gallery-thumbnails {
+                .product-detail-gallery-thumbnail-item {
+                    width: .rem(50px)[@value];
+                    height: .rem(50px)[@value];
+                }
+            }
+        }
+
+        .modal-wishlist-product-detail {
+            .modal-header {
+                border-bottom: none;
+            }
+
+            .modal-body {
+                margin-top: .rem(-48px)[@value];
+            }
+
+            .modal-footer {
+                padding: 0;
+
+                .btn-product-link {
+                    font-weight: 400;
+                    color: @text-color;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,24 @@
+.modal {
+    padding: 1.5rem;
+
+    .modal-header {
+        position: relative;
+
+        &.modal-header-no-content {
+            padding: 0;
+        }
+
+        .close {
+            position: absolute;
+            top: @modal-inner-padding;
+            right: @modal-inner-padding;
+            z-index: 1;
+        }
+
+        .icon-close {
+            width: .rem(20px)[@value];
+            height: .rem(20px)[@value];
+            //fill: #C9C9C9;
+        }
+    }
+}

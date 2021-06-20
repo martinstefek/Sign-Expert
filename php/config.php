@@ -12,6 +12,9 @@ $mainBgActive = false;
 global $footerContent;
 $footerContent = '';
 
+global $accountNavSelectedIndex;
+$accountNavSelectedIndex = 0;
+
 function path($pathToAsset) {
     return PATH . $pathToAsset;
 }
@@ -41,7 +44,10 @@ function addFooterContent($content) {
     $footerContent = $footerContent . $content;
 }
 
+include_once('components/form/Radio.php');
 include_once('components/form/Checkbox.php');
+include_once('components/form/Input.php');
+include_once('components/form/Select.php');
 include_once('components/navigation/topLevelItem.php');
 include_once('components/productList/ProductListItem.php');
 include_once('components/productList/ProductListCarousel.php');
@@ -58,3 +64,5 @@ include_once('components/ProductParameterColor.php');
 include_once('components/ProductParameterBox.php');
 include_once('components/ProductParameterBoxLarge.php');
 include_once('components/productDetail/productDetailAccordion.php');
+include_once('components/productDetail/productDetailGallery.php');
+include_once('components/productDetail/productDetailMainContent.php');

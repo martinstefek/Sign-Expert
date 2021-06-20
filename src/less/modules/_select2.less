@@ -1,0 +1,82 @@
+.select2-container {
+    display: block;
+
+    .select2-selection {
+        height: .rem(50px)[@value];
+        border: 1px solid @border-color;
+        border-radius: @border-radius-base;
+
+        .select2-selection__rendered {
+            line-height: .rem(50px)[@value];
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .select2-selection__arrow {
+            height: .rem(48px)[@value];
+
+            b {
+                border-color: #B0B1B5 transparent transparent transparent;
+                border-width: 8px 6px 0 6px;
+                margin-left: .rem(-14px)[@value];
+            }
+        }
+    }
+
+    &.select2-container--open .select2-selection--single .select2-selection__arrow b {
+        border-color: transparent transparent #B0B1B5 transparent;
+        border-width: 0 6px 8px 6px;
+    }
+}
+
+.select2-dropdown {
+    border: none;
+    box-shadow: @dropdown-box-shadow;
+}
+
+.select2-results__option {
+    padding: .rem(10px)[@value] .rem(16px)[@value];
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: rgba(0, 0, 0, 0.035);
+    color: @text-color;
+
+    &.select2-results__option--selected {
+        &, &:hover {
+            background-color: #e6e6e6;
+        }
+    }
+}
+
+.select2-container--default .select2-results__option--selected {
+    background-color: #e6e6e6;
+}
+
+.select2-option-with-image {
+    display: flex;
+    align-items: center;
+
+    .select2-option-with-image-wrap {
+        display: inline-block;
+        margin-right: .75rem;
+        margin-bottom: 2px;
+    }
+
+    .select2-option-with-image-wrap {
+        display: inline-block;
+        width: .rem(27px)[@value];
+        height: .rem(27px)[@value];
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid @border-color;
+
+        img {
+            display: block;
+            max-width: none;
+            width: 2.4rem;
+            margin-left: -1px;
+        }
+    }
+}
+

@@ -10,11 +10,15 @@
             </a>
 
             <div class="mobile-header-actions">
-                <a href="<?php href('./index-logged-in.php'); ?>" class="main-header-mobile-action">
+                <button type="button"
+                   class="main-header-mobile-action"
+                   data-toggle="modal"
+                   data-target="#login-register-modal"
+                >
                     <svg class="icon stroke-primary">
                         <use xlink:href="#sprite-avatar"></use>
                     </svg>
-                </a>
+                </button>
 
                 <a href="#" class="main-header-mobile-action">
                     <svg class="icon stroke-primary">
