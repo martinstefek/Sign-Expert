@@ -108,6 +108,7 @@
 .form-group {
     position: relative;
     margin-bottom: .rem(10px)[@value];
+    overflow: hidden;
 }
 
 .form-error {
@@ -140,6 +141,10 @@ input.form-control {
             top: .85rem;
             font-size: 1rem;
             color: @gray-light;
+
+            &.text-default {
+                color: @text-color;
+            }
         }
     }
 
@@ -172,7 +177,45 @@ input.form-control {
     left: .rem(16px)[@value];
     color: rgba(@text-color, .4);
     font-size: .rem(14px)[@value];
+    z-index: 10;
+    white-space: nowrap;
 }
+
+.input-group {
+    display: block;
+
+    .form-label {
+        left: .rem(54px)[@value];
+    }
+
+    input.form-control {
+        display: block !important;
+        border-radius: @border-radius-base !important;
+        float: none;
+        padding-left: .rem(54px)[@value];
+    }
+
+    .input-group-addon {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        top: 0;
+        left: 1rem;
+        bottom: 0;
+        padding: 0;
+        z-index: 5;
+        width: 1.5rem;
+
+        svg, .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            stroke: #B0B1B5;
+        }
+    }
+}
+
 
 .form-control-readonly {
     position: relative;

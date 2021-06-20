@@ -7,13 +7,18 @@ import './modules/accordion';
 import './modules/ProductListCarousel';
 import './modules/InputWithPlusMinusButtons';
 import './modules/setMinMaxEventsOnInputNumber';
+import { clickEvent, mobileNavigationThreshold } from "./modules/config";
 
 $(document).ready(function() {
-    $( "#login-register-tabs" ).tabs();
+    $("#login-register-tabs").tabs();
+
+    if (window.innerWidth <= mobileNavigationThreshold) {
+        $("#account-nav").collapse('hide');
+        $("#account-nav").addClass('collapse');
+    }
 });
 
 import { focusInput } from "./modules/helpers";
-import { clickEvent, mobileNavigationThreshold } from "./modules/config";
 
 
 

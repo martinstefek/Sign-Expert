@@ -17810,8 +17810,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_InputWithPlusMinusButtons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/InputWithPlusMinusButtons */ "./src/js/modules/InputWithPlusMinusButtons.js");
 /* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/setMinMaxEventsOnInputNumber */ "./src/js/modules/setMinMaxEventsOnInputNumber.js");
 /* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
-/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
+
 
 
 
@@ -17823,8 +17824,12 @@ __webpack_require__.r(__webpack_exports__);
 
 $(document).ready(function () {
   $("#login-register-tabs").tabs();
-});
 
+  if (window.innerWidth <= _modules_config__WEBPACK_IMPORTED_MODULE_9__.mobileNavigationThreshold) {
+    $("#account-nav").collapse('hide');
+    $("#account-nav").addClass('collapse');
+  }
+});
  // mainNav.on('levelChanged', (e, data) => {
 //     const offset = `${data.level * -100}%`;
 //

@@ -11,7 +11,7 @@
 
             <div class="mobile-header-actions">
                 <button type="button"
-                   class="main-header-mobile-action"
+                   class="btn main-header-mobile-action"
                    data-toggle="modal"
                    data-target="#login-register-modal"
                 >

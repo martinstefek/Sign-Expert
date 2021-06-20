@@ -26,7 +26,7 @@ $accountNavSelectedIndex = 1;
 <div>
 
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-xs-12 col-md-6 col-lg-6">
             <?php input('company-name', 'Obchodné meno', 'ui42 s.r.o. ') ?>
 
             <?php input('company-id', 'IČO', '35713003', 'text', 'readonly') ?>

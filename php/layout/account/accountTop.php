@@ -7,7 +7,14 @@ function setAccountNavItemActive($index) {
 
 <div class="container">
     <div class="account">
-        <div class="account-nav">
+        <div class="account-menu-trigger-wrap">
+            <button class="btn btn-transparent btn-icon account-menu-trigger" type="button" data-toggle="collapse" data-target="#account-nav">
+                <svg class="icon fill-gray"><use xlink:href="#sprite-menu"></use></svg>
+                Menu účtu
+            </button>
+        </div>
+
+        <div id="account-nav" class="account-nav">
             <div class="account-nav-header">
                 <a href="#" class="account-nav-img-wrap">
                     <span class="account-nav-img">

@@ -193,7 +193,7 @@
 
                             <button type="submit" class="btn btn-full btn-success btn-icon-right mt-4 mb-3">
                                 Prihlasiť sa
-                                <svg class="icon stroke-wihte">
+                                <svg class="icon stroke-white">
                                     <use xlink:href="#sprite-chevron-right"></use>
                                 </svg>
                             </button>
@@ -221,12 +221,35 @@
                                 ],
                             ]) ?>
 
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <svg class="icon">
+                                            <use xlink:href="#sprite-lens"></use>
+                                        </svg>
+                                    </span>
+
+                                    <input id="register-search-company"
+                                           type="text"
+                                           class="form-control"
+                                           placeholder="Vyhľadať firmu podľa názvu alebo IČO"
+                                    >
+                                    <label for="register-search-company" class="form-label text-default">Vyhľadať firmu podľa názvu alebo IČO</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="form-group text-center">
+                                    <a href="#">Zadať firemne údaje ručne</a>
+                                </div>
+                            </div>
+
                             <div class="row">
-                                <div class="col-xs-6">
+                                <div class="col-xs-12 col-sm-6">
                                     <?php input('register-firstname', 'Meno') ?>
                                 </div>
 
-                                <div class="col-xs-6">
+                                <div class="col-xs-12 col-sm-6">
                                     <?php input('register-lastname', 'Priezvisko') ?>
                                 </div>
                             </div>
@@ -241,8 +264,8 @@
                             <?php input('register-password', 'Heslo') ?>
 
                             <button type="submit" class="btn btn-full btn-success btn-icon-right mt-4">
-                                Prihlasiť sa
-                                <svg class="icon stroke-wihte">
+                                Vytvoriť konto
+                                <svg class="icon stroke-white">
                                     <use xlink:href="#sprite-chevron-right"></use>
                                 </svg>
                             </button>

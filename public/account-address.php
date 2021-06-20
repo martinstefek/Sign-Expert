@@ -23,7 +23,7 @@ $accountNavSelectedIndex = 2;
 <div>
     <div class="row">
         <?php for ($x = 1; $x <= 3; $x++): ?>
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-md-6">
             <div class="account-address">
                 <h2 class="account-address-title">Sibírska 62</h2>
 

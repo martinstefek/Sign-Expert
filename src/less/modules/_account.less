@@ -1,17 +1,48 @@
 .account {
-    display: flex;
-    padding-top: .rem(40px)[@value];
-    padding-bottom: .rem(100px)[@value];
-    align-items: flex-start;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+
+    .breakpoint(lg, {
+        display: flex;
+        align-items: flex-start;
+        padding-top: .rem(40px)[@value];
+        padding-bottom: .rem(100px)[@value];
+    });
+
+    .account-menu-trigger {
+        padding-left: 0;
+        padding-right: 0;
+        background-color: transparent;
+        box-shadow: none;
+
+        .breakpoint(lg, {
+            display: none;
+        });
+    }
+
+    .account-menu-trigger-wrap {
+        margin-bottom: 2rem;
+        border-bottom: 1px solid @border-color;
+
+        .breakpoint(lg, {
+            display: none;
+        });
+    }
 
     .account-nav {
-        width: .rem(262px)[@value];
-        flex-basis: .rem(262px)[@value];
         flex-shrink: 0;
         flex-grow: 0;
         border: 1px solid @border-color;
-        margin-right: .rem(42px)[@value];
-        margin-top: .rem(10px)[@value];
+        margin-top: -1px;
+        margin-bottom: 2rem;
+
+        .breakpoint(lg, {
+            width: .rem(262px)[@value];
+            flex-basis: .rem(262px)[@value];
+            margin-right: .rem(42px)[@value];
+            margin-top: .rem(10px)[@value];
+            margin-bottom: 0;
+        });
 
         .account-nav-header {
             padding: .rem(36px)[@value] .rem(14px)[@value] .rem(28px)[@value];
@@ -154,7 +185,9 @@
             }
 
             &:first-child {
-                width: .rem(220px)[@value];
+                .breakpoint(md, {
+                    width: .rem(220px)[@value];
+                });
             }
         }
     }
