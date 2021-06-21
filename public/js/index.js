@@ -17850,6 +17850,12 @@ $(document).ready(function () {
     $("#account-nav").collapse('hide');
     $("#account-nav").addClass('collapse');
   }
+
+  $('[data-toggle-class]').on(_modules_config__WEBPACK_IMPORTED_MODULE_9__.clickEvent, function (e) {
+    var toggleClassName = $(e.currentTarget).data('toggleClass');
+    var target = $(e.currentTarget).data('target');
+    $(target).toggleClass(toggleClassName);
+  });
 });
  // mainNav.on('levelChanged', (e, data) => {
 //     const offset = `${data.level * -100}%`;

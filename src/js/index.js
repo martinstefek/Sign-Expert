@@ -16,6 +16,13 @@ $(document).ready(function() {
         $("#account-nav").collapse('hide');
         $("#account-nav").addClass('collapse');
     }
+
+    $('[data-toggle-class]').on(clickEvent, (e) => {
+        const toggleClassName = $(e.currentTarget).data('toggleClass');
+        const target = $(e.currentTarget).data('target');
+
+        $(target).toggleClass(toggleClassName)
+    });
 });
 
 import { focusInput } from "./modules/helpers";

@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Account responsive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/components/form/Select.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/form/Select.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-info-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-info-edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/account-orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-orders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/sprite.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/modules/customSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/customSelect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/modules/_account.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_account.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/modules/_general.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_general.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/modules/_select2.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_select2.less" afterDir="false" />
@@ -85,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1624091672183</updated>
       <workItem from="1624091673589" duration="25245000" />
-      <workItem from="1624284863325" duration="12962000" />
+      <workItem from="1624284863325" duration="18214000" />
     </task>
     <task id="LOCAL-00001" summary="Account responsive">
       <created>1624221858045</created>
@@ -94,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624221858045</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Account responsive">
+      <created>1624300052598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624300052598</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
