@@ -239,10 +239,31 @@ $(document).ready(function () {
     return state.text;
   };
 
-  $('[data-type="select"]').select2({
-    minimumResultsForSearch: -1,
-    templateResult: optionRender,
-    templateSelection: optionRender
+  var selectedActionLabelRender = function selectedActionLabelRender(state) {
+    if (state.element && state.element.dataset.image) {
+      return $("<span class=\"select2-option-with-action-label\">\n                            ".concat(state.text, "\n                            <span class=\"select2-option-action-label\">\n                                <img src=\"").concat(state.element.dataset.image, "\" alt=\"option item image\">\n                            </span>\n                        </span>"));
+    }
+
+    return state.text;
+  };
+
+  $('[data-type="select"]').each(function (index, item) {
+    var imageType = item.dataset.theme === 'select-image';
+    var actionLabel = item.dataset.actionLabel;
+    var config = {
+      minimumResultsForSearch: -1
+    };
+
+    if (imageType) {
+      config.templateResult = optionRender;
+      config.templateSelection = optionRender;
+    } else if (actionLabel) {
+      config.templateSelection = function (state) {
+        return $("<span class=\"select2-option-with-action-label\">\n                        ".concat(state.text, "\n                        <span class=\"select2-option-action-label\">\n                            ").concat(actionLabel, "\n                        </span>\n                    </span>"));
+      };
+    }
+
+    $(item).select2(config);
   });
 });
 

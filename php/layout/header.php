@@ -206,20 +206,26 @@
 
                     <div id="register-tab">
                         <form>
-                            <?php select('address_country', 'Krajina', 'sk', [
-                                'sk' => [
-                                    'img' => 'img/language/lang-sk.svg',
-                                    'text' => 'Slovenska Republika',
+                            <?php select(
+                                'address_country',
+                                'Krajina',
+                                'sk',
+                                [
+                                    'sk' => [
+                                        'img' => 'img/language/lang-sk.svg',
+                                        'text' => 'Slovenska Republika',
+                                    ],
+                                    'cz' => [
+                                        'img' => 'img/language/lang-cz.svg',
+                                        'text' => 'Česká Republika',
+                                    ],
+                                    'en' => [
+                                        'img' => 'img/language/lang-gb.svg',
+                                        'text' => 'Veľká Británia',
+                                    ],
                                 ],
-                                'cz' => [
-                                    'img' => 'img/language/lang-cz.svg',
-                                    'text' => 'Česká Republika',
-                                ],
-                                'en' => [
-                                    'img' => 'img/language/lang-gb.svg',
-                                    'text' => 'Veľká Británia',
-                                ],
-                            ]) ?>
+                                true
+                            ) ?>
 
                             <div class="form-group">
                                 <div class="input-group">

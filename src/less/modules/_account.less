@@ -298,5 +298,172 @@
             }
         }
     }
+
+    .account-order {
+        border: 1px solid @border-color;
+
+        .account-order-label {
+            font-size: .rem(14px)[@value];
+            color: @gray-light;
+            font-weight: 400;
+        }
+
+        .account-order-header {
+            background-color: #F6F6F6;
+            border-bottom: 1px solid @border-color;
+            padding: .rem(18px)[@value];
+
+            .account-order-header-top {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .account-order-header-bottom {
+                margin-top: -.6rem;
+            }
+
+            .account-order-base-info {
+                display: inline-block;
+                margin-right: .rem(42px)[@value];
+                margin-top: .25rem;
+            }
+        }
+
+        .account-order-title {
+            font-weight: 500;
+        }
+
+        .account-order-body {
+            padding: .rem(26px)[@value] .rem(18px)[@value] .rem(20px)[@value] .rem(18px)[@value];
+        }
+
+        .account-order-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: .rem(10px)[@value] .rem(18px)[@value];
+            border-top: 1px solid @border-color;
+
+            .btn {
+                margin-left: .rem(4px)[@value];
+                padding: .5rem .rem(10px)[@value];
+            }
+
+            .btn-footer-toggle {
+                margin-left: .rem(-12px)[@value];
+                font-weight: 500;
+                color: @brand-primary;
+                background-color: transparent;
+                box-shadow: none;
+                border-right: 1px solid @border-color;
+                border-radius: 0;
+                padding-right: .rem(14px)[@value];
+                
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    border-top: 6px solid #B0B1B5;
+                    border-right: 5px solid transparent;
+                    border-left: 5px solid transparent;
+                    margin-left: .rem(8px)[@value];
+                    margin-top: 1px;
+                }
+            }
+
+            svg, .icon {
+                width: .rem(25px)[@value];
+                height: .rem(21px)[@value];
+                margin-top: .rem(-5px)[@value];
+            }
+        }
+
+        .account-order-status {
+            display: inline-block;
+            min-width: .rem(150px)[@value];
+            padding: .rem(10px)[@value] .rem(15px)[@value];
+            border-radius: @border-radius-base;
+
+            &.danger {
+                background-color: #FFDADA;
+            }
+
+            &.warning {
+                background-color: #FEE8CF;
+            }
+
+            .info {
+                background-color: #CFE5FE;
+            }
+
+            &.success {
+                background-color: #DAF1E4;
+            }
+        }
+
+        .account-order-table {
+            margin-bottom: .rem(40px)[@value];
+        }
+
+        .account-order-item-list {
+            margin-bottom: 1.5rem;
+        }
+
+        .account-order-item {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: 1px solid @border-color;
+            padding-bottom: .rem(20px)[@value];
+            margin-bottom: .rem(12px)[@value];
+
+            .account-order-item-img {
+                display: block;
+                width: .rem(111px)[@value];
+                margin-right: 1.5rem;
+                flex-shrink: 0;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            .account-order-item-info {
+                display: block;
+                color: @text-color;
+                font-size: .rem(14px)[@value];
+                width: 100%;
+            }
+
+            .account-order-item-title {
+                margin-bottom: .rem(2px)[@value];
+                font-weight: 500;
+            }
+
+            .account-order-item-price {
+                font-size: 1rem;
+            }
+
+            .account-order-item-price-alternative {
+                color: rgba(@gray-dark, .5);
+            }
+
+            .account-order-item-reorder {
+                width: .rem(40px)[@value];
+                padding: .5rem .rem(10px)[@value];
+                stroke: @brand-success;
+                min-width: auto;
+                align-self: flex-end;
+                margin-left: .5rem;
+
+                svg, .icon {
+                    width: .rem(20px)[@value];
+                    height: .rem(20px)[@value];
+                }
+            }
+        }
+
+        .account-order-item-list-left-col {
+            padding-right: 2.5rem;
+        }
+    }
 }
 

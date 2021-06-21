@@ -4,25 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Missing detail things">
+    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Account responsive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sign-Expert.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sign-Expert.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/account/accountTop.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/account/accountTop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/components/form/Select.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/form/Select.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/mobileHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/mobileHeader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-address.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-address.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/account-info-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-info-edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-orders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/sprite.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jQuery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/wishlist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/customSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/customSelect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/modules/_account.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_account.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_form.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_form.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/modules/_general.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_general.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_mobileHeader.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_mobileHeader.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_modal.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_modal.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_select2.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_select2.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,15 +64,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,7 +85,16 @@
       <option name="presentableId" value="Default" />
       <updated>1624091672183</updated>
       <workItem from="1624091673589" duration="25245000" />
+      <workItem from="1624284863325" duration="12962000" />
     </task>
+    <task id="LOCAL-00001" summary="Account responsive">
+      <created>1624221858045</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624221858045</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +111,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Account responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Account responsive" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

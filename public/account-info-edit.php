@@ -57,7 +57,7 @@ $accountNavSelectedIndex = 1;
                         'img' => 'img/language/lang-gb.svg',
                         'text' => 'Veľká Británia',
                     ],
-            ]) ?>
+            ], true,) ?>
             <?php input('firstname', 'Meno', 'Fero') ?>
             <?php input('lastname', 'Priezvisko', 'Novotny') ?>
             <?php input('email', 'Fakturačný e-mail', 'fero@ui42.com') ?>
