@@ -1,25 +1,11 @@
 $(document).ready(function() {
     const optionRender = (state) => {
-        console.log(state);
         if (state.element && state.element.dataset.image) {
             return $(`<span class="select2-option-with-image">
                             <span class="select2-option-with-image-wrap">
                                 <img src="${state.element.dataset.image}" alt="option item image">
                             </span>
                             ${state.text}
-                        </span>`);
-        }
-
-        return state.text
-    };
-
-    const selectedActionLabelRender = (state) => {
-        if (state.element && state.element.dataset.image) {
-            return $(`<span class="select2-option-with-action-label">
-                            ${state.text}
-                            <span class="select2-option-action-label">
-                                <img src="${state.element.dataset.image}" alt="option item image">
-                            </span>
                         </span>`);
         }
 

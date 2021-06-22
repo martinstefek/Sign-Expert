@@ -12,6 +12,7 @@ mix.setPublicPath('public')
     .js('src/js/detail.js', 'public/js')
     .js('src/js/productList.js', 'public/js')
     .js('src/js/wishlist.js', 'public/js')
+    .js('src/js/checkout.js', 'public/js')
     .copy(
         [
             'node_modules/lightgallery/dist/fonts/lg.ttf',

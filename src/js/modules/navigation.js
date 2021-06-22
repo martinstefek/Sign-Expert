@@ -88,14 +88,20 @@ document.addEventListener(clickEvent, (e) => {
     });
 });
 
-mobileNavOpen.addEventListener(clickEvent, (e) => {
-    document.body.classList.add(mobileMenuActiveClass);
-});
+if (mobileNavOpen) {
+    mobileNavOpen.addEventListener(clickEvent, (e) => {
+        document.body.classList.add(mobileMenuActiveClass);
+    });
+}
 
-mobileNavClose.addEventListener(clickEvent, (e) => {
-    closeNavigation();
-});
+if (mobileNavClose) {
+    mobileNavClose.addEventListener(clickEvent, (e) => {
+        closeNavigation();
+    });
+}
 
-secondLevelBackButton.addEventListener(clickEvent, (e) => {
-    document.body.classList.remove(mobileMenuSecondLevelActiveClass);
-});
+if (secondLevelBackButton) {
+    secondLevelBackButton.addEventListener(clickEvent, (e) => {
+        document.body.classList.remove(mobileMenuSecondLevelActiveClass);
+    });
+}

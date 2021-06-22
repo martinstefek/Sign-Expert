@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Prepared first account order">
+    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Finished Shopping cart modal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/loginButtonAndShoppingCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/loginButtonAndShoppingCart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/mobileHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/mobileHeader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/shoppingCartModal.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/shoppingCartModal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/_mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/_mixins.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/customSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/customSelect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/searchAutocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/searchAutocomplete.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/app.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_general.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_general.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_shoppingCartModal.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_shoppingCartModal.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_form.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_form.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +59,9 @@
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/php/components/form" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\projects\Sign-Expert\src\js" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -86,7 +87,7 @@
       <workItem from="1624091673589" duration="25245000" />
       <workItem from="1624284863325" duration="18259000" />
       <workItem from="1624345550682" duration="10552000" />
-      <workItem from="1624374509900" duration="3997000" />
+      <workItem from="1624374509900" duration="12085000" />
     </task>
     <task id="LOCAL-00001" summary="Account responsive">
       <created>1624221858045</created>
@@ -109,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624310523521</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finished Shopping cart modal">
+      <created>1624378574328</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624378574329</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,7 +138,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Account responsive" />
     <MESSAGE value="Prepared first account order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prepared first account order" />
+    <MESSAGE value="Finished Shopping cart modal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Shopping cart modal" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

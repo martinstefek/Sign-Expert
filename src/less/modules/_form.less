@@ -298,3 +298,57 @@ textarea.form-control {
         color: @gray-light;
     });
 }
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    opacity: .5;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.form-autocomplete-wrap {
+    position: relative;
+}
+
+.form-autocomplete {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 11px 22px 6px rgba(0,0,0,0.08);
+    width: 100%;
+    max-height: .rem(240px)[@value];
+    padding: .rem(4px)[@value] 0;
+    border-radius: 2px;
+    overflow: auto;
+    .customScrollBar();
+    z-index: 10;
+    
+    &.visible {
+        display: block;
+    }
+
+    .breakpoint(lg, {
+        width: .rem(500px)[@value];
+    });
+
+    .form-autocomplete-item {
+        padding: .rem(10px)[@value] 1rem;
+        border-bottom: 1px solid @border-color;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: #F8F8F8;
+        }
+    }
+}
+
+.form-margin-bottom {
+    margin-bottom: 0.625rem;
+}
+
+.form-margin-bottom-large {
+    margin-bottom: 0.625rem * 2;
+}

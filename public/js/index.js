@@ -230,18 +230,8 @@ var mobileNavigationThreshold = 991;
 
 $(document).ready(function () {
   var optionRender = function optionRender(state) {
-    console.log(state);
-
     if (state.element && state.element.dataset.image) {
       return $("<span class=\"select2-option-with-image\">\n                            <span class=\"select2-option-with-image-wrap\">\n                                <img src=\"".concat(state.element.dataset.image, "\" alt=\"option item image\">\n                            </span>\n                            ").concat(state.text, "\n                        </span>"));
-    }
-
-    return state.text;
-  };
-
-  var selectedActionLabelRender = function selectedActionLabelRender(state) {
-    if (state.element && state.element.dataset.image) {
-      return $("<span class=\"select2-option-with-action-label\">\n                            ".concat(state.text, "\n                            <span class=\"select2-option-action-label\">\n                                <img src=\"").concat(state.element.dataset.image, "\" alt=\"option item image\">\n                            </span>\n                        </span>"));
     }
 
     return state.text;
@@ -408,15 +398,24 @@ document.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, funct
     }
   });
 });
-mobileNavOpen.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
-  document.body.classList.add(mobileMenuActiveClass);
-});
-mobileNavClose.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
-  closeNavigation();
-});
-secondLevelBackButton.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
-  document.body.classList.remove(mobileMenuSecondLevelActiveClass);
-});
+
+if (mobileNavOpen) {
+  mobileNavOpen.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+    document.body.classList.add(mobileMenuActiveClass);
+  });
+}
+
+if (mobileNavClose) {
+  mobileNavClose.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+    closeNavigation();
+  });
+}
+
+if (secondLevelBackButton) {
+  secondLevelBackButton.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+    document.body.classList.remove(mobileMenuSecondLevelActiveClass);
+  });
+}
 
 /***/ }),
 
@@ -482,28 +481,31 @@ var activeClass = 'active';
 var headerSearch = document.getElementById('header-search');
 var headerSearchInput = document.getElementById('header-search-input');
 var headerSearchAutocomplete = document.getElementById('header-search-autocomplete');
-headerSearchInput.addEventListener('input', (0,lodash__WEBPACK_IMPORTED_MODULE_2__.debounce)(function (e) {
-  if (e.target.value.length >= 3) {
-    headerSearchAutocomplete.classList.add(activeClass);
-    return;
-  }
 
-  headerSearchAutocomplete.classList.remove(activeClass);
-}, 350));
-headerSearchInput.addEventListener('focus', function (e) {
-  if (e.target.value.length >= 3) {
-    headerSearchAutocomplete.classList.add(activeClass);
-  }
-});
-document.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
-  var path = e.path || e.composedPath && e.composedPath();
+if (headerSearchInput) {
+  headerSearchInput.addEventListener('input', (0,lodash__WEBPACK_IMPORTED_MODULE_2__.debounce)(function (e) {
+    if (e.target.value.length >= 3) {
+      headerSearchAutocomplete.classList.add(activeClass);
+      return;
+    }
 
-  if (path.includes(headerSearch)) {
-    return;
-  }
+    headerSearchAutocomplete.classList.remove(activeClass);
+  }, 350));
+  headerSearchInput.addEventListener('focus', function (e) {
+    if (e.target.value.length >= 3) {
+      headerSearchAutocomplete.classList.add(activeClass);
+    }
+  });
+  document.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+    var path = e.path || e.composedPath && e.composedPath();
 
-  headerSearchAutocomplete.classList.remove(activeClass);
-});
+    if (path.includes(headerSearch)) {
+      return;
+    }
+
+    headerSearchAutocomplete.classList.remove(activeClass);
+  });
+}
 
 /***/ }),
 
