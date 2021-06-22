@@ -284,3 +284,17 @@ input.form-control {
 .form-group-radio {
     margin-bottom: .rem(6px)[@value];
 }
+
+textarea.form-control {
+    background-color: #F6F6F6;
+    padding: .rem(14px)[@value];
+    font-size: 1rem;
+    resize: vertical;
+    border: 1px solid @border-color;
+    outline: none;
+    box-shadow: none;
+
+    .customPlaceholder({
+        color: @gray-light;
+    });
+}

@@ -311,5 +311,31 @@ h6, .h6 {
 }
 
 .product-availability {
+    display: flex;
+    align-items: center;
 
+    svg, .icon {
+        width: .rem(20px)[@value];
+        height: .rem(20px)[@value];
+        margin-right: .rem(8px)[@value];
+        margin-top: -1px;
+    }
+
+    &.text-success {
+        svg, .icon {
+            stroke: @brand-success;
+        }
+    }
+
+    &.text-primary {
+        svg, .icon {
+            stroke: @brand-primary;
+        }
+    }
+
+    &.text-danger {
+        svg, .icon {
+            stroke: @brand-danger;
+        }
+    }
 }

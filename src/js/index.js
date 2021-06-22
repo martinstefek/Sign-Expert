@@ -7,6 +7,7 @@ import './modules/accordion';
 import './modules/ProductListCarousel';
 import './modules/InputWithPlusMinusButtons';
 import './modules/setMinMaxEventsOnInputNumber';
+import './modules/order';
 import { clickEvent, mobileNavigationThreshold } from "./modules/config";
 
 $(document).ready(function() {

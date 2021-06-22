@@ -26,7 +26,7 @@ $(document).ready(function() {
         return state.text
     };
 
-    $('[data-type="select"]').each((index, item) => {
+    $('select[data-type="select"]').each((index, item) => {
         const imageType = item.dataset.theme === 'select-image';
         const actionLabel = item.dataset.actionLabel;
 

@@ -1,6 +1,6 @@
-<?php function select($id, $label, $value, $options, $imageTheme = false, $actionLabel = false) { ?>
+<?php function select($id, $label, $value, $options, $imageTheme = false, $actionLabel = false, $name = false) { ?>
     <div class="form-group">
-        <select name="<?php echo $id ?>"
+        <select name="<?php echo $name ? $name : $id ?>"
                 id="<?php echo $id ?>"
                 data-type="select" class="form-control language-select"
                 <?php echo $imageTheme ? 'data-theme="select-image"' : '' ?>

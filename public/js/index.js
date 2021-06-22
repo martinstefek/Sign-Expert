@@ -247,7 +247,7 @@ $(document).ready(function () {
     return state.text;
   };
 
-  $('[data-type="select"]').each(function (index, item) {
+  $('select[data-type="select"]').each(function (index, item) {
     var imageType = item.dataset.theme === 'select-image';
     var actionLabel = item.dataset.actionLabel;
     var config = {
@@ -416,6 +416,49 @@ mobileNavClose.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent,
 });
 secondLevelBackButton.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
   document.body.classList.remove(mobileMenuSecondLevelActiveClass);
+});
+
+/***/ }),
+
+/***/ "./src/js/modules/order.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/order.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ "./src/js/modules/config.js");
+
+$('[data-type="order"]').each(function (index, item) {
+  var select = $(item).find('select[name="payment-method"]');
+
+  var decideVisibilityOfElement = function decideVisibilityOfElement(value) {
+    $('[data-visible-when-payment-method]').each(function (_index, element) {
+      if (value === element.dataset.visibleWhenPaymentMethod) {
+        element.classList.add('visible');
+      } else {
+        element.classList.remove('visible');
+      }
+    });
+  };
+
+  $(select).on('change', function (e) {
+    decideVisibilityOfElement(e.target.value);
+  });
+  decideVisibilityOfElement(select.val()); // Order Edit
+
+  var orderEditModal = $(item).find('[data-type="order-edit"]');
+  var orderEditModalClose = $(item).find('[data-order-edit-close]');
+  var orderEditModalOpen = $(item).find('[data-order-edit-open]');
+  $(orderEditModalOpen).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+    console.log('Open');
+    orderEditModal.addClass('visible');
+  });
+  $(orderEditModalClose).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+    console.log('Close');
+    orderEditModal.removeClass('visible');
+  });
 });
 
 /***/ }),
@@ -17831,8 +17874,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_InputWithPlusMinusButtons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/InputWithPlusMinusButtons */ "./src/js/modules/InputWithPlusMinusButtons.js");
 /* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/setMinMaxEventsOnInputNumber */ "./src/js/modules/setMinMaxEventsOnInputNumber.js");
 /* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
-/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
+/* harmony import */ var _modules_order__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/order */ "./src/js/modules/order.js");
+/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
+/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
+
 
 
 
@@ -17846,12 +17891,12 @@ __webpack_require__.r(__webpack_exports__);
 $(document).ready(function () {
   $("#login-register-tabs").tabs();
 
-  if (window.innerWidth <= _modules_config__WEBPACK_IMPORTED_MODULE_9__.mobileNavigationThreshold) {
+  if (window.innerWidth <= _modules_config__WEBPACK_IMPORTED_MODULE_10__.mobileNavigationThreshold) {
     $("#account-nav").collapse('hide');
     $("#account-nav").addClass('collapse');
   }
 
-  $('[data-toggle-class]').on(_modules_config__WEBPACK_IMPORTED_MODULE_9__.clickEvent, function (e) {
+  $('[data-toggle-class]').on(_modules_config__WEBPACK_IMPORTED_MODULE_10__.clickEvent, function (e) {
     var toggleClassName = $(e.currentTarget).data('toggleClass');
     var target = $(e.currentTarget).data('target');
     $(target).toggleClass(toggleClassName);
