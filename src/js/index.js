@@ -24,6 +24,13 @@ $(document).ready(function() {
 
         $(target).toggleClass(toggleClassName)
     });
+
+    document.body.classList.add('page-loaded');
+
+    $('[data-toggle="shopping-cart-modal"]').on(clickEvent, (e) => {
+        console.log('Event triggered');
+        $('body').toggleClass('shopping-cart-modal-visible');
+    });
 });
 
 import { focusInput } from "./modules/helpers";

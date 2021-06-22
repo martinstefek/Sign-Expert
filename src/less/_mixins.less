@@ -219,6 +219,12 @@
     }
 }
 
+.shoppingCartModalVisible(@rules) {
+    body.shopping-cart-modal-visible & {
+        @rules();
+    }
+}
+
 .navigationVisible(@rules) {
     body.navigation-visible & {
         @rules();

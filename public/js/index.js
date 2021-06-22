@@ -17901,6 +17901,11 @@ $(document).ready(function () {
     var target = $(e.currentTarget).data('target');
     $(target).toggleClass(toggleClassName);
   });
+  document.body.classList.add('page-loaded');
+  $('[data-toggle="shopping-cart-modal"]').on(_modules_config__WEBPACK_IMPORTED_MODULE_10__.clickEvent, function (e) {
+    console.log('Event triggered');
+    $('body').toggleClass('shopping-cart-modal-visible');
+  });
 });
  // mainNav.on('levelChanged', (e, data) => {
 //     const offset = `${data.level * -100}%`;

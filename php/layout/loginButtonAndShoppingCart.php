@@ -54,7 +54,7 @@
     </ul>
 </div>
 
-<a href="#" class="btn btn-action" type="button">
+<button class="btn btn-action" type="button" data-toggle="shopping-cart-modal">
     <svg class="icon stroke-success">
         <use xlink:href="#sprite-shopping-cart"></use>
     </svg>
@@ -63,7 +63,7 @@
         <span class="text-highlighted">Košík (2)</span>
         78,75 €
     </span>
-</a>
+</button>
 <?php else: ?>
     <button type="button"
        class="btn btn-action login-button"
@@ -80,11 +80,11 @@
         </span>
     </button>
 
-    <a href="#" class="btn btn-action" type="button">
+    <button class="btn btn-action" type="button" data-toggle="shopping-cart-modal">
         <svg class="icon stroke-primary">
             <use xlink:href="#sprite-shopping-cart"></use>
         </svg>
 
         <span>Košík</span>
-    </a>
+    </button>
 <?php endif; ?>

@@ -1,0 +1,83 @@
+.product-horizontal-list-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: .rem(12px)[@value] .rem(10px)[@value];
+    border: 1px solid @border-color;
+    border-top: none;
+
+    &:first-child {
+        border-top: 1px solid @border-color;
+    }
+
+    .product-horizontal-list-item-img {
+        display: block;
+        width: .rem(80px)[@value];
+        margin-right: 2rem;
+        flex-shrink: 0;
+
+        .breakpoint(xl, {
+            margin-right: 1.5rem;
+            width: .rem(111px)[@value];
+        })
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    .product-horizontal-list-item-info {
+        display: block;
+        color: @text-color;
+        font-size: .rem(14px)[@value];
+        width: 100%;
+    }
+
+    .product-horizontal-list-item-title {
+        margin-bottom: .rem(2px)[@value];
+        font-weight: 500;
+    }
+
+    .product-horizontal-list-item-price {
+        font-size: .rem(18px)[@value];
+        text-align: right;
+        line-height: 1.35rem;
+
+        span {
+            display: block;
+            font-size: .rem(15px)[@value];
+            color: @gray-light;
+        }
+    }
+
+    .product-horizontal-list-item-price-alternative {
+        color: rgba(@gray-dark, .5);
+        text-align: right;
+    }
+
+    .product-horizontal-list-item-remove {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: .rem(10px)[@value];
+        right: .rem(10px)[@value];
+        padding: 0;
+        width: .rem(27px)[@value];
+        height: .rem(27px)[@value];
+        border-radius: 50%;
+        border: 1px solid @border-color;
+        background-color: #FBFAFA;
+
+        &:hover {
+            background-color: #f4f1f1;
+        }
+
+        svg, .icon {
+            width: .rem(13px)[@value];
+            height: .rem(13px)[@value];
+            fill: @text-color;
+        }
+    }
+}

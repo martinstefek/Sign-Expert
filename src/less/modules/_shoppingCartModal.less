@@ -10,6 +10,12 @@
     box-shadow: -11px 0 22px 0 rgba(0,0,0,0.1);
     background-color: #FFFFFF;
     z-index: @zindex-navbar-fixed;
+    .transition();
+    transform: translate(110%, 0);
+
+    .shoppingCartModalVisible({
+        transform: translate(0, 0);
+    });
 
     .shopping-cart-modal-header {
         flex-shrink: 0;
@@ -33,14 +39,18 @@
 
     .shopping-cart-modal-body {
         height: 100%;
-        padding: 0 .rem(6px)[@value];
+        padding: 0 .rem(6px)[@value] 1.5rem;
+        margin-right: .rem(6px)[@value];
+        overflow: auto;
+        .customScrollBar();
 
-        .shopping-cart-modal-item-list {
+        .product-horizontal-list-item-img {
+            width: .rem(80px)[@value];
+            margin-right: .rem(14px)[@value];
 
-        }
-
-        .shopping-cart-modal-item {
-            color: @text-color;
+            @media (max-width: 359px) {
+                width: 4rem;
+            }
         }
     }
 

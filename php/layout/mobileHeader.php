@@ -20,11 +20,11 @@
                     </svg>
                 </button>
 
-                <a href="#" class="main-header-mobile-action">
+                <button type="button" class="btn main-header-mobile-action" data-toggle="shopping-cart-modal">
                     <svg class="icon stroke-primary">
                         <use xlink:href="#sprite-shopping-cart"></use>
                     </svg>
-                </a>
+                </button>
 
                 <span id="mobile-nav-open" class="main-header-mobile-action">
                     <svg class="icon action-icon-grey">

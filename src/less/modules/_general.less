@@ -4,6 +4,10 @@ html, body {
 
 body {
     overflow-x: hidden;
+
+    &:not(.page-loaded) * {
+        transition: all 0s !important;
+    }
 }
 
 a {
@@ -338,4 +342,10 @@ h6, .h6 {
             stroke: @brand-danger;
         }
     }
+}
+
+.element-label {
+    font-size: .rem(14px)[@value];
+    color: @gray-light;
+    font-weight: 400;
 }
