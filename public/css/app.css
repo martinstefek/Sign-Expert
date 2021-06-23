@@ -12008,6 +12008,9 @@ fieldset[disabled] .btn {
   color: #1F222B;
   height: 100%;
 }
+.product-list-item .product-parameter-color:hover .product-info-tooltip {
+  display: none;
+}
 .product-list-item:hover {
   color: #1F222B;
 }
@@ -16248,10 +16251,10 @@ body.mobile-filters-visible  {
   border-radius: 50%;
 }
 .product-detail .product-parameter-color-list .product-parameter-color .product-parameter-color-fake-input::before {
-  top: -0.3125rem;
-  right: -0.3125rem;
-  bottom: -0.3125rem;
-  left: -0.3125rem;
+  top: -0.3125rem !important;
+  right: -0.3125rem !important;
+  bottom: -0.3125rem !important;
+  left: -0.3125rem !important;
 }
 .product-detail .product-parameter-color-list .product-parameter-color-more {
   font-size: 1rem;

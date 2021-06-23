@@ -5,38 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Finished all pages">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/components/checkout/thankyouBottomButtons.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/checkout/thankyouBottomButtons.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/components/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/components/productDetail/productDetailMainContent.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/productDetail/productDetailMainContent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/components/productList/ProductListCarousel.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/productList/ProductListCarousel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/components/productList/ProductListItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/productList/ProductListItem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/account/accountTop.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/account/accountTop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/headerSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/headerSearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/loginButtonAndShoppingCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/loginButtonAndShoppingCart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/loginModal.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/loginModal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/layout/shoppingCartModal.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/shoppingCartModal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-info-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-info-edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-info.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-wishlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-payment-delivery.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-payment-delivery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-personal-info-add-address.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-personal-info-add-address.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-personal-info.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-personal-info.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/checkout-summary.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-summary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product-detail-v2.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product-detail-v3.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product-detail-v4.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product-detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/_mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/_mixins.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_general.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_general.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_productHorizontalListItem.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_productHorizontalListItem.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index-logged-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index-logged-in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_productDetail.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_productDetail.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_productListItem.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_productListItem.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +47,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/icons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -78,11 +56,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\projects\Sign-Expert\src\icons" />
       <recent name="E:\projects\Sign-Expert\public" />
+      <recent name="E:\projects\Sign-Expert\public\html" />
+      <recent name="E:\projects\Sign-Expert\src\icons" />
       <recent name="E:\projects\Sign-Expert\php\components\checkout" />
       <recent name="E:\projects\Sign-Expert\public\img" />
-      <recent name="$PROJECT_DIR$/src/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\projects\Sign-Expert\php\components\checkout" />
@@ -116,7 +94,7 @@
       <workItem from="1624284863325" duration="18259000" />
       <workItem from="1624345550682" duration="10552000" />
       <workItem from="1624374509900" duration="12153000" />
-      <workItem from="1624457467426" duration="23528000" />
+      <workItem from="1624457467426" duration="25444000" />
     </task>
     <task id="LOCAL-00001" summary="Account responsive">
       <created>1624221858045</created>
@@ -167,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624478775481</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Finished all pages">
+      <created>1624481907472</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624481907472</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

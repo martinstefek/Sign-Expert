@@ -173,7 +173,7 @@ include_once('../php/layout/checkout/header.php')
                         <div class="form-group">
                             <div class="fake-input-box form-control">
                                 <div class="row">
-                                    <div class="col-xs-8">Kuriér na adresu</div>
+                                    <div class="col-xs-8 text-default">Kuriér na adresu</div>
                                     <div class="col-xs-4 text-faded text-right">4,45 €</div>
                                 </div>
                             </div>
