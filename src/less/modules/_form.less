@@ -119,7 +119,7 @@
     margin-top: .rem(2px)[@value];
 }
 
-.fake-input-box.form-control, input.form-control {
+textarea.form-control, .fake-input-box.form-control, input.form-control {
     height: .rem(50px)[@value];
     background-color: #F6F6F6;
     border: 1px solid transparent;
@@ -137,7 +137,7 @@
         box-shadow: none;
     }
 
-    &:placeholder-shown {
+    &:placeholder-shown:not(:focus) {
         & ~ .form-label {
             top: .85rem;
             font-size: 1rem;
@@ -292,6 +292,10 @@
 }
 
 textarea.form-control {
+    height: auto;
+}
+
+textarea.order-textarea {
     background-color: #F6F6F6;
     padding: .rem(14px)[@value];
     font-size: 1rem;
@@ -299,6 +303,8 @@ textarea.form-control {
     border: 1px solid @border-color;
     outline: none;
     box-shadow: none;
+    border-radius: @border-radius-base;
+    width: 100%;
 
     .customPlaceholder({
         color: @gray-light;

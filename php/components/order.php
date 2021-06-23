@@ -357,7 +357,7 @@
                 <div class="order-box-edit-body">
                     <form>
                         <div class="form-group">
-                            <textarea rows="6" class="form-control" placeholder="Napíšte sem požadované zmeny"></textarea>
+                            <textarea rows="6" class="order-textarea" placeholder="Napíšte sem požadované zmeny"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-icon-right">
