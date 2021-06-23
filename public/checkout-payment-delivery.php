@@ -187,7 +187,7 @@ include_once('../php/layout/checkout/header.php')
         </div>
     </div>
 
-    <?php checkoutFooterActions('#', '#') ?>
+    <?php checkoutFooterActions(hrefReturn('checkout-personal-info.php'), hrefReturn('checkout-summary.php')) ?>
 </div>
 
 <?php include_once('../php/layout/checkout/footer.php') ?>

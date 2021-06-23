@@ -85,7 +85,7 @@
             </div>
 
             <div class="product-detail-button">
-                <button class="btn btn-success product-detail-button" form="product-detail-form" type="submit" id="add-to-cart">Pridať do košíka</button>
+                <a href="<?php href('checkout-login.php') ?>" class="btn btn-success product-detail-button" form="product-detail-form" type="submit" id="add-to-cart">Pridať do košíka</a>
             </div>
         </div>
     </div>
@@ -98,7 +98,7 @@
 
         <?php if ($largeProductDetail): ?>
         <div class="product-detail-availability-btn">
-            <a href="#" class="btn btn-bordered btn-icon-right" data-toggle="tooltip" data-placement="bottom" title="Pri objednávke viac ako 245 metrov doba dodania tovaru sa zmení z 48 hod. na 2 týždňa.">
+            <a href="<?php href('checkout-login.php') ?>" class="btn btn-bordered btn-icon-right" data-toggle="tooltip" data-placement="bottom" title="Pri objednávke viac ako 245 metrov doba dodania tovaru sa zmení z 48 hod. na 2 týždňa.">
                 Objednať viac ako 245 metrov
                 <svg class="icon fill-gray-dark"><use xlink:href="#sprite-info"></use></svg>
             </a>
@@ -117,7 +117,7 @@
     </div>
 
     <div class="product-detail-additional-info product-detail-wishlist">
-        <a href="#">
+        <a href="<?php href('account-wishlist.php') ?>">
             <svg class="icon stroke-gray-dark fill-none"><use xlink:href="#sprite-heart"></use></svg>
             Pridať do nákupného zoznamu
         </a>

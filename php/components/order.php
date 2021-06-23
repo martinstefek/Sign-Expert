@@ -35,11 +35,11 @@
                     <div class="order-box-item-list">
                         <?php for ($x = 1; $x <= $numberOfItems; $x++): ?>
                             <div class="order-box-item">
-                                <a href="#" class="order-box-item-img">
+                                <a href="<?php href('product-detail.php') ?>" class="order-box-item-img">
                                     <img src="img/product-detail/product-detail.jpg" alt="Product detail image">
                                 </a>
 
-                                <a href="#" class="order-box-item-info">
+                                <a href="<?php href('product-detail.php') ?>" class="order-box-item-info">
                                     <div class="order-box-item-title">SignFlex Screen Green 25</div>
 
                                     <div class="row">

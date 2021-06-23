@@ -10951,6 +10951,70 @@ h6,
 .large {
   font-size: 1.125rem !important;
 }
+.notice-message {
+  padding: 0.625rem 0;
+  opacity: 0.8;
+}
+.notice-message .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.notice-message .notice-message-icon {
+  width: 1.5rem;
+  height: 1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: 3px;
+}
+.notice-message .notice-message-content {
+  margin: 0 1.5rem 0 0.5rem;
+}
+.notice-message .notice-message-icon-cancel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  padding: 0;
+  width: 1.6875rem;
+  height: 1.6875rem;
+  border-radius: 50%;
+  border: 1px solid #E4E4E4;
+  background-color: #FBFAFA;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: static;
+  margin-top: -3px;
+}
+.notice-message .notice-message-icon-cancel:hover {
+  background-color: #f4f1f1;
+}
+.notice-message .notice-message-icon-cancel svg,
+.notice-message .notice-message-icon-cancel .icon {
+  width: 0.8125rem;
+  height: 0.8125rem;
+  fill: #1F222B;
+}
+.notice-message.success {
+  background-color: #DAF1E4;
+}
+.notice-message.danger {
+  background-color: #FFE1E1;
+}
 .input-number-with-controls {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -234,19 +234,19 @@ $mainBgActive = true;
                     <div class="product-list-item-row">
                         <?php for ($x = 1; $x <= (8); $x++): ?>
                         <div class="product-list-item-col">
-                            <?php productListItem(3.55, null, 12, true, true, 'Oracal 651G TURQUIOSE 054', 'Plotrové fólie', './img/product-list/product-list-image-1.jpg'); ?>
+                            <?php productListItem(3.55, null, 12, true, true, 'Oracal 651G TURQUIOSE 054', 'Plotrové fólie', './img/product-list/product-list-image-1.jpg', false, hrefReturn('product-detail.php')); ?>
                         </div>
 
                         <div class="product-list-item-col">
-                            <?php productListItem(78.75, null, 8, false, false, 'Aplikačná fólia 3M IAT papierová', 'Plotrové fólie', './img/product-list/product-list-image-2.jpg'); ?>
+                            <?php productListItem(78.75, null, 8, false, false, 'Aplikačná fólia 3M IAT papierová', 'Plotrové fólie', './img/product-list/product-list-image-2.jpg', false, hrefReturn('product-detail-v2.php')); ?>
                         </div>
 
                         <div class="product-list-item-col">
-                            <?php productListItem(null, null, 0, false, false, 'Laserová gravírka HSG Z4030 RF', 'Gravírky laserové', './img/product-list/product-list-image-3.jpg'); ?>
+                            <?php productListItem(null, null, 0, false, false, 'Laserová gravírka HSG Z4030 RF', 'Gravírky laserové', './img/product-list/product-list-image-3.jpg', false, hrefReturn('product-detail-v3.php')); ?>
                         </div>
 
                         <div class="product-list-item-col">
-                            <?php productListItem(null, null, 2, false, false, 'Dvojhlavová sublimačná tlačiareň XpertJet 1682WR', 'Sublimačné tlačiarne', './img/product-list/product-list-image-4.jpg'); ?>
+                            <?php productListItem(null, null, 2, false, false, 'Dvojhlavová sublimačná tlačiareň XpertJet 1682WR', 'Sublimačné tlačiarne', './img/product-list/product-list-image-4.jpg', false, hrefReturn('product-detail-v4.php')); ?>
                         </div>
                         <?php endfor; ?>
                     </div>

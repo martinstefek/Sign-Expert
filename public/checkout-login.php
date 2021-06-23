@@ -19,13 +19,13 @@ include_once('../php/layout/checkout/header.php')
                     </div>
 
                     <div class="form-group">
-                        <button class="btn btn-success btn-full btn-icon-right">
+                        <a href="<?php href('checkout-personal-info.php') ?>" class="btn btn-success btn-full btn-icon-right">
                             Prihlásiť sa
 
                             <svg class="icon stroke-white">
                                 <use xlink:href="#sprite-chevron-right"></use>
                             </svg>
-                        </button>
+                        </a>
                     </div>
 
                     <div class="text-center">

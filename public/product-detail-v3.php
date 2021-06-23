@@ -137,7 +137,7 @@ $mainBgActive = false;
                                 </div>
 
                                 <div class="product-detail-button">
-                                    <button class="btn btn-success product-detail-button" type="submit" id="add-to-cart">Pridať do košíka</button>
+                                    <a href="<?php href('checkout-login.php') ?>" class="btn btn-success product-detail-button" type="submit" id="add-to-cart">Pridať do košíka</a>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +156,7 @@ $mainBgActive = false;
                     </div>
 
                     <div class="product-detail-additional-info product-detail-wishlist">
-                        <a href="#">
+                        <a href="<?php href('checkout-login.php') ?>">
                             <svg class="icon stroke-primary fill-primary"><use xlink:href="#sprite-heart"></use></svg>
                             Odobrať z nákupného zoznamu
                         </a>
@@ -183,32 +183,6 @@ $mainBgActive = false;
 <?php productListCarousel(); ?>
 
 <?php newsletter(); ?>
-
-<!--<div class="container">-->
-<!--    This is Index!-->
-<!---->
-<!--    <br>-->
-<!--    <br>-->
-<!--    <br>-->
-<!---->
-<!---->
-<!--    <div class="product-list-item-row">-->
-<!--        --><?php //for ($x = 1; $x <= (3); $x++): ?>
-<!--        <div class="product-list-item-col">-->
-<!--            --><?php //productListItem(12.75, 15.84, 124, true, true, 'Oracal 651G TURQUIOSE 054', 'Plotrové fólie'); ?>
-<!--        </div>-->
-<!---->
-<!--        <div class="product-list-item-col">-->
-<!--            --><?php //productListItem(null, null, 124, true, true, 'Oracal 651G TURQUIOSE 054', 'Plotrové fólie'); ?>
-<!--        </div>-->
-<!--        --><?php //endfor; ?>
-<!--    </div>-->
-<!---->
-<!--    <br>-->
-<!--    <br>-->
-<!--    <br>-->
-<!--    <br>-->
-<!--</div>-->
 
 
 <?php include_once('../php/layout/footer.php'); ?>

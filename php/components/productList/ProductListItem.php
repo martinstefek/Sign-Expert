@@ -1,8 +1,8 @@
-<?php function productListItem($price, $oldPrice, $stock, $variants, $parameters, $title, $category, $img, $wishlist = false) { ?>
+<?php function productListItem($price, $oldPrice, $stock, $variants, $parameters, $title, $category, $img, $wishlist = false, $href = '#') { ?>
     <div class="product-list-item">
         <article>
             <div>
-                <a href="#">
+                <a href="<?php href($href) ?>">
                     <?php if ($oldPrice): ?>
                     <span class="product-list-item-sale-label">- <?php echo number_format(abs((($price / $oldPrice) - 1) * 100), 0) ?>%</span>
                     <?php endif; ?>

@@ -78,7 +78,7 @@
             </tr>
         </table>
 
-        <a href="#" class="btn btn-primary btn-icon-right btn-full">
+        <a href="<?php href('checkout-login.php') ?>" class="btn btn-primary btn-icon-right btn-full">
             OBJEDNAŤ
 
             <svg class="icon stroke-white">

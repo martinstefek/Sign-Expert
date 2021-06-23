@@ -1,7 +1,7 @@
 <?php
 function setAccountNavItemActive($index) {
     global $accountNavSelectedIndex;
-    echo !empty($accountNavSelectedIndex) && $accountNavSelectedIndex === $index ? 'active' : '' ;
+    echo $accountNavSelectedIndex === $index ? 'active' : '' ;
 }
 ?>
 
@@ -30,23 +30,23 @@ function setAccountNavItemActive($index) {
 
             <ul class="account-nav-link-list">
                 <li class="account-nav-link <?php setAccountNavItemActive(0) ?>">
-                    <a href="#">Objednávky a faktury</a>
+                    <a href="<?php href('account-orders.php') ?>">Objednávky a faktury</a>
                 </li>
 
                 <li class="account-nav-link <?php setAccountNavItemActive(1) ?>">
-                    <a href="#">Firemné údaje</a>
+                    <a href="<?php href('account-info.php') ?>">Firemné údaje</a>
                 </li>
 
                 <li class="account-nav-link <?php setAccountNavItemActive(2) ?>">
-                    <a href="#">Adresy</a>
+                    <a href="<?php href('account-address.php') ?>">Adresy</a>
                 </li>
 
                 <li class="account-nav-link <?php setAccountNavItemActive(3) ?>">
-                    <a href="#">Nastavenia konta</a>
+                    <a href="<?php href('account-settings.php') ?>">Nastavenia konta</a>
                 </li>
 
                 <li class="account-nav-link <?php setAccountNavItemActive(4) ?>">
-                    <a href="#">
+                    <a href="<?php href('account-wishlist.php') ?>">
                         <svg class="icon fill-none stroke-gray-dark"><use xlink:href="#sprite-heart"></use></svg>
                         Nákupný zoznam
                         <span class="badge badge-primary badge-right">2</span>
@@ -54,7 +54,7 @@ function setAccountNavItemActive($index) {
                 </li>
 
                 <li class="account-nav-link <?php setAccountNavItemActive(5) ?>">
-                    <a href="#">
+                    <a href="<?php href('index.php') ?>">
                         <svg class="icon fill-gray-dark"><use xlink:href="#sprite-logout"></use></svg>
                         Odhlasiť sa
                     </a>

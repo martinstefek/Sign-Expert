@@ -359,3 +359,40 @@ h6, .h6 {
 .large {
     font-size: .rem(18px)[@value] !important;
 }
+
+.notice-message {
+    padding: .rem(10px)[@value] 0;
+    opacity: .8;
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .notice-message-icon {
+        width: 1.5rem;
+        height: 1rem;
+        flex-shrink: 0;
+        margin-top: 3px;
+    }
+
+    .notice-message-content {
+        margin: 0 1.5rem 0 .5rem;
+    }
+
+    .notice-message-icon-cancel {
+        .cancelButton();
+        flex-shrink: 0;
+        position: static;
+        margin-top: -3px;
+    }
+
+    &.success {
+        background-color: #DAF1E4;
+    }
+
+    &.danger {
+        background-color: #FFE1E1;
+    }
+}

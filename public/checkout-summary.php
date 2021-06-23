@@ -285,7 +285,7 @@ include_once('../php/layout/checkout/header.php')
                     <?php checkbox('Súhlas so zasielaním noviniek/newslettera', 'newsletter', 'font-weight-medium'); ?>
                 </div>
 
-                <a href="#" class="btn btn-success btn-full btn-icon-right mt-3">
+                <a href="<?php href('checkout-thankyou-1.php') ?>" class="btn btn-success btn-full btn-icon-right mt-3">
                     Objednať s povinnosťou platby
 
                     <svg class="icon fill-white stroke-white">

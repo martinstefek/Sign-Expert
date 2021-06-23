@@ -13,7 +13,7 @@ $accountNavSelectedIndex = 1;
     <h1>ui 42 spol. s r.o.</h1>
 
     <div class="account-main-content-header-actions">
-        <a href="#" class="btn btn-bordered btn-icon">
+        <a href="<?php href('account-info-edit.php') ?>" class="btn btn-bordered btn-icon">
             <svg class="icon fill-primary"><use xlink:href="#sprite-pencil"></use></svg>
             Upraviť
         </a>

@@ -88,18 +88,18 @@ include_once('../php/layout/checkout/header.php')
                     <h1 class="checkout-title">Zadajte adresu doručenia</h1>
 
                     <form class="form form-inline">
-                        <div class="form-group">
+                        <div class="form-group mr-1">
                             <div class="fake-input-box form-control">
                                 <?php checkbox('Použiť fakturačnú adresu', 'use-invoice-address', 'text-default font-weight-medium'); ?>
                             </div>
                         </div>
-                        <button class="btn btn-primary btn-icon">
+                        <a href="<?php href('checkout-personal-info-add-address.php') ?>" class="btn btn-primary btn-icon">
                             <svg class="icon fill-white stroke-white">
                                 <use xlink:href="#sprite-plus"></use>
                             </svg>
 
                             Pridať novú
-                        </button>
+                        </a>
                     </form>
                 </section>
 
@@ -209,7 +209,7 @@ include_once('../php/layout/checkout/header.php')
         </div>
     </div>
 
-    <?php checkoutFooterActions('#', '#') ?>
+    <?php checkoutFooterActions(hrefReturn('checkout-login.php'), hrefReturn('checkout-payment-delivery.php')) ?>
 </div>
 
 <?php include_once('../php/layout/checkout/footer.php') ?>

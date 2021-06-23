@@ -3,7 +3,7 @@ include_once('../php/config.php');
 
 $loggedIn = true;
 $mainBgActive = false;
-$accountNavSelectedIndex = 3;
+$accountNavSelectedIndex = 4;
 
 addFooterContent('<script src="./js/wishlist.js"></script>');
 ?>
@@ -18,15 +18,15 @@ addFooterContent('<script src="./js/wishlist.js"></script>');
 <div class="account-wishlist">
     <div class="product-list-item-row">
         <div class="product-list-item-col">
-            <?php productListItem(3.55, null, 12, false, false, 'Sublimačná fľaša 600 ml strieborná', 'Sublimačné fľašky', './img/product-list/product-list-image-5.jpg', true); ?>
+            <?php productListItem(3.55, null, 12, false, false, 'Sublimačná fľaša 600 ml strieborná', 'Sublimačné fľašky', './img/product-list/product-list-image-5.jpg', true, hrefReturn('product-detail.php')); ?>
         </div>
 
         <div class="product-list-item-col">
-            <?php productListItem(3.55, null, 12, true, true, 'Oracal 651G TURQUIOSE 054', 'Plotrové fólie', './img/product-list/product-list-image-2.jpg', true); ?>
+            <?php productListItem(3.55, null, 12, true, true, 'Oracal 651G TURQUIOSE 054', 'Plotrové fólie', './img/product-list/product-list-image-2.jpg', true, hrefReturn('product-detail.php')); ?>
         </div>
 
         <div class="product-list-item-col">
-            <?php productListItem(3.55, null, 12, true, true, 'Oracal 651G TURQUIOSE 054', 'Plotrové fólie', './img/product-list/product-list-image-1.jpg', true); ?>
+            <?php productListItem(3.55, null, 12, true, true, 'Oracal 651G TURQUIOSE 054', 'Plotrové fólie', './img/product-list/product-list-image-1.jpg', true, hrefReturn('product-detail.php')); ?>
         </div>
     </div>
 
@@ -57,7 +57,7 @@ addFooterContent('<script src="./js/wishlist.js"></script>');
                 </div>
 
                 <div class="modal-footer">
-                    <a href="#" class="btn btn-transparent btn-icon-right btn-product-link">
+                    <a href="<?php href('product-detail.php') ?>" class="btn btn-transparent btn-icon-right btn-product-link">
                         Detail produktu
                         <svg class="icon stroke-primary">
                             <use xlink:href="#sprite-chevron-right"></use>

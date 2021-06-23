@@ -57,8 +57,8 @@
 
             <div class="search-autocomplete-product-list">
                 <?php for ($x = 1; $x <= 6; $x++): ?>
-                    <a href="#" class="search-autocomplete-product-item">
-                        <img src="img/product-list-image.jpg" alt="Poruct list image">
+                    <a href="<?php href('product-detail.php') ?>" class="search-autocomplete-product-item">
+                        <img src="img/product-detail/product-detail.jpg" alt="Poruct list image">
 
                         <div class="search-autocomplete-product-item-info">
                             <div class="search-autocomplete-product-item-title">Sublimačná tlačiareň
@@ -74,7 +74,7 @@
             </div>
 
             <div class="search-autocomplete-col-product-footer">
-                <a href="#" class="btn btn-primary">
+                <a href="<?php href('product-list.php') ?>" class="btn btn-primary">
                     Zobraziť všetky produkty (365)
 
                     <svg class="icon">

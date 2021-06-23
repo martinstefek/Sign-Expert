@@ -16,22 +16,22 @@
 
     <ul class="dropdown-menu">
         <li>
-            <a class="dropdown-item active">
+            <a href="<?php href('account-orders.php') ?>" class="dropdown-item active">
                 <span>Objednávky a faktury</span>
             </a>
         </li>
         <li>
-            <a class="dropdown-item">
+            <a href="<?php href('account-info.php') ?>" class="dropdown-item">
                 <span>Firemné údaje</span>
             </a>
         </li>
         <li>
-            <a class="dropdown-item">
+            <a href="<?php href('account-address.php') ?>" class="dropdown-item">
                 <span>Adresy</span>
             </a>
         </li>
         <li>
-            <a class="dropdown-item">
+            <a href="<?php href('account-wishlist.php') ?>" class="dropdown-item">
                 <svg class="icon stroke-gray-dark fill-none">
                     <use xlink:href="#sprite-heart"></use>
                 </svg>

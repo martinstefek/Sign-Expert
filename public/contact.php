@@ -5,6 +5,42 @@
 <?php include_once('../php/layout/header.php'); ?>
 
 <div class="page-contact">
+<!--    <div class="notice-message danger">-->
+<!--        <div class="container">-->
+<!--            <svg class="icon fill-danger notice-message-icon">-->
+<!--                <use xlink:href="#sprite-excalamation-mark"></use>-->
+<!--            </svg>-->
+<!---->
+<!--            <div class="notice-message-content">-->
+<!--                Počas odoslania správy došlo pravdepodobne k prerušeniu spojenia-->
+<!--            </div>-->
+<!---->
+<!--            <button type="button" class="btn notice-message-icon-cancel">-->
+<!--                <svg class="icon">-->
+<!--                    <use xlink:href="#sprite-cancel"></use>-->
+<!--                </svg>-->
+<!--            </button>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="notice-message success">
+        <div class="container">
+            <svg class="icon stroke-success notice-message-icon">
+                <use xlink:href="#sprite-check"></use>
+            </svg>
+
+            <div class="notice-message-content">
+                Vaša správa bola úspešné odoslaná. V krátkom čase vás budeme kontaktovať.
+            </div>
+
+            <button type="button" class="btn notice-message-icon-cancel">
+                <svg class="icon">
+                    <use xlink:href="#sprite-cancel"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <div class="container">
         <section class="section section-padding-bottom-large">
             <div class="row">

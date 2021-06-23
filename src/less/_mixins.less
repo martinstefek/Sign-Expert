@@ -432,3 +432,30 @@
         @rules();
     }
 }
+
+.cancelButton() {
+    & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: .rem(10px)[@value];
+        right: .rem(10px)[@value];
+        padding: 0;
+        width: .rem(27px)[@value];
+        height: .rem(27px)[@value];
+        border-radius: 50%;
+        border: 1px solid @border-color;
+        background-color: #FBFAFA;
+
+        &:hover {
+            background-color: #f4f1f1;
+        }
+
+        svg, .icon {
+            width: .rem(13px)[@value];
+            height: .rem(13px)[@value];
+            fill: @text-color;
+        }
+    }
+}

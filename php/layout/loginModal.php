@@ -26,12 +26,12 @@
                                 <?php input('login-password', 'Heslo'); ?>
                             </div>
 
-                            <button type="submit" class="btn btn-full btn-success btn-icon-right mt-4 mb-3">
+                            <a href="<?php href('index-logged-in.php') ?>" type="submit" class="btn btn-full btn-success btn-icon-right mt-4 mb-3">
                                 Prihlasiť sa
                                 <svg class="icon stroke-white">
                                     <use xlink:href="#sprite-chevron-right"></use>
                                 </svg>
-                            </button>
+                            </a>
 
                             <div class="text-center">
                                 <a href="#">Zabudnuté heslo</a>
@@ -104,12 +104,12 @@
 
                             <?php input('register-password', 'Heslo') ?>
 
-                            <button type="submit" class="btn btn-full btn-success btn-icon-right mt-4">
+                            <a href="<?php href('index-logged-in.php') ?>" type="submit" class="btn btn-full btn-success btn-icon-right mt-4">
                                 Vytvoriť konto
                                 <svg class="icon stroke-white">
                                     <use xlink:href="#sprite-chevron-right"></use>
                                 </svg>
-                            </button>
+                            </a>
                         </form>
                     </div>
                 </div>

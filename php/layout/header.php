@@ -148,7 +148,7 @@
                             Blog
                         </a>
 
-                        <a href="#" class="quick-nav-item">
+                        <a href="<?php href('contact.php'); ?>" class="quick-nav-item">
                             <svg class="icon">
                                 <use xlink:href="#sprite-phone-circled"></use>
                             </svg>

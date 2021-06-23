@@ -29,12 +29,16 @@ function asset($pathToAsset) {
     echo path($pathToAsset);
 }
 
-function href($path) {
-    echo path(
+function hrefReturn($path) {
+    return path(
         USE_HTML_EXTENSION
             ? str_replace('.php', '.html', $path)
             : $path
     );
+}
+
+function href($path) {
+    echo hrefReturn($path);
 }
 
 function productListHref() {

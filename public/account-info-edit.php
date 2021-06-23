@@ -13,11 +13,11 @@ $accountNavSelectedIndex = 1;
     <h1>Upraviť fakturačnú adresu</h1>
 
     <div class="account-main-content-header-actions">
-        <a href="#" class="btn btn-bordered">
+        <a href="<?php href('account-info.php') ?>" class="btn btn-bordered">
             Zrušiť
         </a>
 
-        <a href="#" class="btn btn-primary">
+        <a href="<?php href('account-info.php') ?>" class="btn btn-primary">
             Uložiť
         </a>
     </div>
