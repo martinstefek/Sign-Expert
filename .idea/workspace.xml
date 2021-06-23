@@ -4,16 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Finished Shopping cart modal">
+    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Finished checkout login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/components/form/Checkbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/form/Checkbox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/components/form/Radio.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/form/Radio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/components/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/layout/checkout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/checkout/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/layout/shoppingCartModal.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/shoppingCartModal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/modules/customSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/customSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/modules/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/modules/searchAutocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/searchAutocomplete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/app.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/_config.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/_config.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_account.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_account.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_button.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_button.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_checkout.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_checkout.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/less/modules/_form.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_form.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_general.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_general.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_order.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_order.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_select2.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_select2.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +59,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -55,22 +68,27 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projects\Sign-Expert\public" />
+      <recent name="E:\projects\Sign-Expert\php\components\checkout" />
+      <recent name="E:\projects\Sign-Expert\public\img" />
       <recent name="$PROJECT_DIR$/src/js" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/php/components/form" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\projects\Sign-Expert\php\components\checkout" />
       <recent name="E:\projects\Sign-Expert\src\js" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,7 +105,8 @@
       <workItem from="1624091673589" duration="25245000" />
       <workItem from="1624284863325" duration="18259000" />
       <workItem from="1624345550682" duration="10552000" />
-      <workItem from="1624374509900" duration="12085000" />
+      <workItem from="1624374509900" duration="12153000" />
+      <workItem from="1624457467426" duration="16909000" />
     </task>
     <task id="LOCAL-00001" summary="Account responsive">
       <created>1624221858045</created>
@@ -117,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624378574329</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finished checkout login">
+      <created>1624396088439</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624396088439</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +165,8 @@
     <MESSAGE value="Account responsive" />
     <MESSAGE value="Prepared first account order" />
     <MESSAGE value="Finished Shopping cart modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Shopping cart modal" />
+    <MESSAGE value="Finished checkout login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished checkout login" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

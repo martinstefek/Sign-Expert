@@ -1,6 +1,5 @@
 <?php
-include_once('../config.php');
-include_once('headerSearch.php');
+include_once('../../config.php');
 ?>
 
 <!DOCTYPE html>
@@ -22,12 +21,20 @@ include_once('headerSearch.php');
 </div>
 
 <div class="checkout-wrap">
-    <header class="checkout-header">
-        <a href="<?php indexHref() ?>" class="logo">
-            <svg class="icon">
-                <use xlink:href="#sprite-logo"></use>
-            </svg>
-        </a>
+    <header>
+        <div class="checkout-header">
+            <a href="<?php indexHref() ?>" class="logo">
+                <svg class="icon">
+                    <use xlink:href="#sprite-logo"></use>
+                </svg>
+            </a>
+        </div>
+
+        <?php
+            if ($checkoutProgressBar) {
+                checkoutProgress($checkoutActiveIndex);
+            }
+        ?>
     </header>
 
     <div class="checkout-main">

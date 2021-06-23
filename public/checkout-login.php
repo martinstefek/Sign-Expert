@@ -1,5 +1,10 @@
-<?php include_once('../php/config.php') ?>
-<?php include_once('../php/layout/checkout/header.php') ?>
+<?php
+include_once('../php/config.php');
+
+$checkoutActiveIndex = 0;
+
+include_once('../php/layout/checkout/header.php')
+?>
 
 <div class="checkout-login">
     <div class="row">

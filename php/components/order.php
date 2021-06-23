@@ -1,4 +1,4 @@
-<?php function order($id, $statusLabel, $statusColor, $numberOfItems, $paid, $editable, $edited) { ?>
+<?php function order($id, $statusLabel, $statusColor, $numberOfItems, $paid, $editable, $edited, $bottomActionsVisible = true) { ?>
     <div id="<?php echo $id ?>" class="order-box" data-type="order">
         <div class="order-box-header">
             <div class="order-box-header-top">
@@ -383,6 +383,7 @@
                 <span class="open-visible inline-block">Skryť detail</span>
             </button>
 
+            <?php if($bottomActionsVisible): ?>
             <div class="order-box-footer-actions">
                 <button class="btn btn-bordered btn-icon">
                     <svg class="icon stroke-success">
@@ -410,6 +411,7 @@
                     </button>
                 <?php endif; ?>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 <?php } ?>

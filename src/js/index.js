@@ -11,6 +11,8 @@ import './modules/order';
 import { clickEvent, mobileNavigationThreshold } from "./modules/config";
 
 $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+
     $("#login-register-tabs").tabs();
 
     if (window.innerWidth <= mobileNavigationThreshold) {

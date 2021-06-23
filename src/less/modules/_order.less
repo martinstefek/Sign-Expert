@@ -241,6 +241,10 @@
             .breakpoint(xl, {
                 margin-right: 1.5rem;
                 width: .rem(111px)[@value];
+            });
+
+            .breakpointMax(md, {
+                width: .rem(70px)[@value];
             })
         }
 
@@ -297,6 +301,12 @@
         font-size: 1.5rem;
         margin-top: .6rem;
         flex-shrink: 0;
+
+        .breakpointMax(md, {
+            height: .rem(36px)[@value];
+            width: .rem(36px)[@value];
+            font-size: 1rem;
+        })
     }
 
     .order-box-item-list-left-col {

@@ -37,7 +37,7 @@
 
                         <div class="col-xs-6 align-self-end">
                             <div class="product-horizontal-list-item-price">
-                                224,00 € <span class="text-faded small"> DPH</span>
+                                224,00 € <span class="text-faded small">bez DPH</span>
                             </div>
                         </div>
                     </div>

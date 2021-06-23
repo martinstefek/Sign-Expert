@@ -342,10 +342,20 @@ h6, .h6 {
             stroke: @brand-danger;
         }
     }
+
+    svg.info-icon {
+        stroke: none !important;
+        margin-right: 0;
+        margin-left: .rem(6px)[@value];
+    }
 }
 
 .element-label {
     font-size: .rem(14px)[@value];
     color: @gray-light;
     font-weight: 400;
+}
+
+.large {
+    font-size: .rem(18px)[@value] !important;
 }

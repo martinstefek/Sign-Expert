@@ -15,6 +15,12 @@ $footerContent = '';
 global $accountNavSelectedIndex;
 $accountNavSelectedIndex = 0;
 
+global $checkoutActiveIndex;
+$checkoutActiveIndex = 0;
+
+global $checkoutProgressBar;
+$checkoutProgressBar = true;
+
 function path($pathToAsset) {
     return PATH . $pathToAsset;
 }
@@ -68,3 +74,6 @@ include_once('components/productDetail/productDetailAccordion.php');
 include_once('components/productDetail/productDetailGallery.php');
 include_once('components/productDetail/productDetailMainContent.php');
 include_once('components/order.php');
+include_once('components/checkout/checkoutProgress.php');
+include_once('components/checkout/checkoutFooterAction.php');
+include_once('components/checkout/thankyouBottomButtons.php');

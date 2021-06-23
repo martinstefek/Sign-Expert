@@ -192,20 +192,6 @@
         }
     }
 
-    .account-address {
-        margin-bottom: 1rem;
-        border: 1px solid @border-color;
-        border-radius: @border-radius-base;
-        padding: 1.3rem 1rem .rem(18px)[@value];
-
-        .account-address-title {
-            font-size: .rem(21px)[@value];
-            color: @gray-light;
-            margin-bottom: .8rem;
-            font-weight: 400;
-        }
-    }
-
     .account-wishlist {
         .product-detail {
             padding: 0;
@@ -300,3 +286,38 @@
     }
 }
 
+.account-address {
+    margin-bottom: 1rem;
+    border: 1px solid @border-color;
+    border-radius: @border-radius-base;
+    padding: 1.3rem 1rem .rem(18px)[@value];
+
+    .account-address-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .5rem;
+
+        .account-address-title {
+            margin-right: .5rem;
+        }
+    }
+
+    table.table {
+        td:last-child {
+            color: @gray-light;
+        }
+    }
+
+    .account-address-title {
+        font-size: .rem(21px)[@value];
+        color: @gray-light;
+        margin-bottom: .8rem;
+        font-weight: 400;
+
+        &.account-address-title-emphasised {
+            font-size: 1.5rem;
+            color: @text-color;
+        }
+    }
+
+}

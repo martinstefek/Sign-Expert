@@ -17891,6 +17891,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 $(document).ready(function () {
+  $('[data-toggle="tooltip"]').tooltip();
   $("#login-register-tabs").tabs();
 
   if (window.innerWidth <= _modules_config__WEBPACK_IMPORTED_MODULE_10__.mobileNavigationThreshold) {
