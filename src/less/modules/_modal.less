@@ -1,5 +1,11 @@
 .modal {
-    padding: 1.5rem;
+    .breakpointMax(md, {
+        padding: .1rem !important;
+    });
+
+    .breakpoint(md, {
+        padding: 1.5rem !important;
+    });
 
     .modal-header {
         position: relative;
@@ -11,9 +17,14 @@
 
         .close {
             position: absolute;
-            top: @modal-inner-padding;
-            right: @modal-inner-padding;
+            top: 1rem;
+            right: 1rem;
             z-index: 1;
+
+            .breakpoint(md, {
+                top: @modal-inner-padding;
+                right: @modal-inner-padding;
+            });
         }
 
         .icon-close {
@@ -21,5 +32,21 @@
             height: .rem(20px)[@value];
             //fill: #C9C9C9;
         }
+    }
+
+    .modal-body {
+        padding: 1rem;
+
+        .breakpoint(md, {
+            padding: 1.5rem;
+        });
+    }
+
+    .modal-footer {
+        padding: 1rem;
+
+        .breakpoint(md, {
+            padding: 1.5rem;
+        });
     }
 }

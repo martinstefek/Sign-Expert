@@ -56,6 +56,10 @@ accordionTriggers.each((index, trigger) => {
     });
 
     trigger.addEventListener(clickEvent, e => {
+        if (window.scrollInProgress) {
+            return false;
+        }
+
         if (window.innerWidth > mobileNavigationThreshold && $(target).hasClass('collapse') && $(target).hasClass('in') && !allowClose) {
             return;
         }

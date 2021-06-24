@@ -164,10 +164,21 @@
         }
 
         .account-main-content-header-actions {
+            .breakpointMax(md, {
+                margin-top: .5rem;
+                width: 100%;
+            });
+
             .btn {
                 min-width: .rem(105px)[@value];
                 text-align: center;
                 margin-left: .rem(12px)[@value];
+
+                .breakpointMax(md, {
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                });
             }
         }
     }
@@ -272,6 +283,10 @@
 
             .modal-body {
                 margin-top: .rem(-48px)[@value];
+
+                .breakpointMax(md, {
+                    padding: .5rem;
+                })
             }
 
             .modal-footer {

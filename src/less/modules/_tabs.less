@@ -2,10 +2,16 @@
     padding: 0;
 
     .ui-tabs-nav {
-        margin-left: -@modal-inner-padding;
-        margin-right: -@modal-inner-padding;
-        padding: 0 @modal-inner-padding;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding: 0 1rem;
         border-bottom: 1px solid @border-color;
+
+        .breakpoint(md, {
+            margin-left: -@modal-inner-padding;
+            margin-right: -@modal-inner-padding;
+            padding: 0 @modal-inner-padding;
+        });
 
         .ui-tabs-tab {
             margin-right: 2rem;
@@ -29,9 +35,15 @@
     }
 
     .ui-tabs-panel {
-        margin-left: -@modal-inner-padding;
-        margin-right: -@modal-inner-padding;
-        padding: 1.5rem @modal-inner-padding 0;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding: 1.5rem 1rem 0;
+
+        .breakpoint(md, {
+            margin-left: -@modal-inner-padding;
+            margin-right: -@modal-inner-padding;
+            padding: 1.5rem @modal-inner-padding 0;
+        });
     }
 }
 

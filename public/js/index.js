@@ -158,6 +158,10 @@ accordionTriggers.each(function (index, trigger) {
     toggle: false
   });
   trigger.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+    if (window.scrollInProgress) {
+      return false;
+    }
+
     if (window.innerWidth > _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold && $(target).hasClass('collapse') && $(target).hasClass('in') && !allowClose) {
       return;
     }
@@ -329,6 +333,11 @@ allTopLevelItems.each(function (index, topLevelItem) {
   var allFirstLevelItemsOfSuperior = topLevelParent.find('[data-toggle="navigation-second-level"]');
   $(topLevelItem).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
     e.preventDefault();
+
+    if (window.scrollInProgress) {
+      return;
+    }
+
     var parentHasActiveClass = topLevelParent.hasClass(activeClass);
     allTopLevelItems.each(function (__index, i) {
       return navLevelElement(i).removeClass(activeClass);
@@ -347,6 +356,11 @@ allTopLevelItems.each(function (index, topLevelItem) {
     var sectionTitle = $(firstLevelParent).data('sectionName');
     $(firstLevelItem).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
       e.preventDefault();
+
+      if (window.scrollInProgress) {
+        return;
+      }
+
       allFirstLevelItemsOfSuperior.each(function (__index, i) {
         return navLevelElement(i).removeClass(activeClass);
       });
@@ -451,11 +465,17 @@ $('[data-type="order"]').each(function (index, item) {
   var orderEditModalClose = $(item).find('[data-order-edit-close]');
   var orderEditModalOpen = $(item).find('[data-order-edit-open]');
   $(orderEditModalOpen).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
-    console.log('Open');
+    if (window.scrollInProgress) {
+      return;
+    }
+
     orderEditModal.addClass('visible');
   });
   $(orderEditModalClose).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
-    console.log('Close');
+    if (window.scrollInProgress) {
+      return;
+    }
+
     orderEditModal.removeClass('visible');
   });
 });
@@ -17878,7 +17898,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_setMinMaxEventsOnInputNumber__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _modules_order__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/order */ "./src/js/modules/order.js");
 /* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/config */ "./src/js/modules/config.js");
-/* harmony import */ var _modules_helpers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/helpers */ "./src/js/modules/helpers.js");
 
 
 
@@ -17891,6 +17910,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 $(document).ready(function () {
+  var _this = this;
+
   $('[data-toggle="tooltip"]').tooltip();
   $("#login-register-tabs").tabs();
 
@@ -17900,6 +17921,10 @@ $(document).ready(function () {
   }
 
   $('[data-toggle-class]').on(_modules_config__WEBPACK_IMPORTED_MODULE_10__.clickEvent, function (e) {
+    if (window.scrollInProgress) {
+      return;
+    }
+
     var toggleClassName = $(e.currentTarget).data('toggleClass');
     var target = $(e.currentTarget).data('target');
     $(target).toggleClass(toggleClassName);
@@ -17909,74 +17934,19 @@ $(document).ready(function () {
     console.log('Event triggered');
     $('body').toggleClass('shopping-cart-modal-visible');
   });
+  window.scrollInProgress = false;
+
+  var scrollInProgressEventHandler = function scrollInProgressEventHandler() {
+    window.scrollInProgress = true;
+    clearTimeout($.data(_this, 'scrollTimer'));
+    $.data(_this, 'scrollTimer', setTimeout(function () {
+      window.scrollInProgress = false;
+    }, 300));
+  };
+
+  $(window).scroll(scrollInProgressEventHandler);
+  $('#main-header').scroll(scrollInProgressEventHandler);
 });
- // mainNav.on('levelChanged', (e, data) => {
-//     const offset = `${data.level * -100}%`;
-//
-//     mainNav.css('transform', `translate(${offset}, 0)`);
-//     mainNav.attr(currentLevelAttribute, data.level);
-// });
-//
-// $('#' + mainNavId + ' [data-toggle="main-nav-next-level"]').each((index, item) => {
-//     $(item).on(clickEvent, (e) => {
-//         if (window.innerWidth > mobileNavigationThreshold) {
-//             return;
-//         }
-//
-//         e.preventDefault();
-//
-//         const currentLevelAttr = mainNav.attr(currentLevelAttribute);
-//         const currentLevel = Number(currentLevelAttr);
-//
-//         const actualLevel = currentLevelAttr ? currentLevel : 0;
-//         const nextLevel = actualLevel + 1;
-//
-//         mainNav.trigger('levelChanged', {
-//             level: nextLevel,
-//         });
-//
-//         $(item).parent().addClass('active');
-//     });
-// });
-//
-// $('#' + mainNavId + ' [data-toggle="main-nav-prev-level"]').each((index, item) => {
-//     $(item).on(clickEvent, (e) => {
-//         if (window.innerWidth > mobileNavigationThreshold) {
-//             return;
-//         }
-//
-//         e.preventDefault();
-//
-//         const currentLevelAttr = mainNav.attr(currentLevelAttribute);
-//         const currentLevel = Number(currentLevelAttr);
-//
-//         if (!currentLevelAttr || currentLevel <= 0) {
-//             return;
-//         }
-//
-//         const prev = currentLevel - 1;
-//
-//         mainNav.trigger('levelChanged', {
-//             level: prev,
-//         });
-//
-//         $(item).parent().parent().parent().removeClass('active');
-//     });
-// });
-//
-// document.addEventListener('click', (e) => {
-//     if (window.innerWidth <= mobileNavigationThreshold) {
-//         return;
-//     }
-//
-//     if (mainNavToggle.hasClass(activeClass)) {
-//         const shouldNotToggle = e.path.some(item => [mainNavToggleId, mainNavId].includes(item.id));
-//
-//         if (!shouldNotToggle) {
-//             toggleMenuFunction();
-//         }
-//     }
-// });
 }();
 /******/ })()
 ;

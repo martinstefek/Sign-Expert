@@ -267,9 +267,18 @@
                 flex-grow: 0;
                 border-color: @border-color;
                 font-size: .rem(14px)[@value];
-                padding: .rem(6px)[@value] .rem(11px)[@value];
+                padding: .rem(7px)[@value] .rem(11px)[@value];
                 box-shadow: none;
                 .hideInputNumberArrows();
+                height: auto;
+
+                &:not(:placeholder-shown) {
+                    &:not(:focus) {
+                        &:valid, &.form-valid {
+                            background-color: #FFFFFF;
+                        }
+                    }
+                }
             }
 
             .filter-price-input-separator {

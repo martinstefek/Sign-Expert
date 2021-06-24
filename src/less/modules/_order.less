@@ -371,14 +371,20 @@
     .order-box-edit {
         display: none;
         position: absolute;
-        top: .5rem;
+        bottom: -10rem;
         right: .5rem;
         width: 100%;
-        max-width: .rem(440px)[@value];
+        max-width: calc(100% - 1rem);
         background-color: #FFFFFF;
         box-shadow: 0 9px 32px 12px rgba(0,0,0,0.1);
         border-radius: 4px;
         z-index: 10;
+
+        .breakpoint(lg, {
+            max-width: .rem(440px)[@value];
+            bottom: auto;
+            top: .5rem;
+        });
 
         &.visible {
             display: block;

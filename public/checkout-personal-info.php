@@ -137,7 +137,7 @@ include_once('../php/layout/checkout/header.php')
                                 <div class="col-xs-6">
                                     <div>
                                         <div class="element-label">Počet metrov:</div>
-                                        <?php inputNumberWithControls('shopping-cart-item'); ?>
+                                        <?php inputNumberWithControls("shopping-cart-item-${x}"); ?>
                                     </div>
                                 </div>
 

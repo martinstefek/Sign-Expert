@@ -30,6 +30,14 @@
     });
 }
 
+.article-wrap {
+    margin-bottom: 2rem;
+
+    .breakpoint(lg, {
+        margin-bottom: 3rem;
+    });
+}
+
 .article {
     display: flex;
     flex-direction: column;
@@ -40,7 +48,7 @@
     border-radius: @border-radius-base @border-radius-base 0 0;
     .transition();
 
-    &:hover {
+    &:not(.article-large):hover {
         color: @text-color;
         transform: scale(1.015);
     }
@@ -59,8 +67,12 @@
     }
 
     .article-title {
-        font-size: .rem(24px)[@value];
+        font-size: .rem(20px)[@value];
         margin-bottom: .rem(16px)[@value];
+
+        .breakpoint(lg, {
+            font-size: .rem(24px)[@value];
+        });
     }
 
     .article-description {
@@ -93,6 +105,82 @@
             width: .rem(8px)[@value];
             height: .rem(14px)[@value];
             stroke: @brand-primary;
+        }
+    }
+
+    &.article-large {
+        .breakpoint(md, {
+            flex-direction: row;
+            min-height: .rem(340px)[@value];
+            height: auto;
+            border-radius: @border-radius-base;
+        });
+
+        .breakpoint(lg, {
+            min-height: .rem(400px)[@value];
+        });
+
+        &:hover {
+            color: @text-color;
+        }
+
+        .article-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-right: -1.5rem;
+            padding: .rem(32px)[@value];
+            padding-bottom: 1rem;
+
+            .breakpointMax(md, {
+                margin: -1.5rem;
+            });
+
+            .breakpoint(lg, {
+                padding: .rem(60px)[@value] .rem(60px)[@value] .rem(44px)[@value];
+            });
+        }
+
+        .card-hero {
+            .breakpointMax(md, {
+                margin-bottom: 0;
+            });
+
+            .breakpoint(md, {
+                height: auto;
+                flex-basis: 50%;
+                width: 50%;
+                min-width: 50%;
+                max-width: 50%;
+                margin: -1.5rem 0 -1.5rem -1.5rem;
+            });
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+
+            .breakpoint(lg, {
+                font-size: 2rem;
+            });
+        }
+
+        .article-description {
+            font-size: 1rem;
+        }
+
+        .btn-article {
+            width: auto;
+            display: inline-block;
+            padding: 1rem 2.75rem 1rem 1rem;
+            background-color: rgba(0, 0, 0, 0);
+            margin-top: 1.5rem;
+            margin-left: -1rem;
+            font-size: .rem(14px)[@value];
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
         }
     }
 }

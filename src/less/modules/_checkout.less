@@ -15,12 +15,22 @@
     }
 }
 
+.checkout-progress-wrap {
+    overflow: auto;
+    .customScrollBar();
+}
+
 .checkout-progress {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: .rem(6px)[@value] .rem(9px)[@value];
     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+
+    .breakpointMax(sm, {
+        white-space: nowrap;
+        width: fit-content;
+    });
 
     .checkout-progress-item {
         display: inline-block;
@@ -63,10 +73,11 @@
 }
 
 .checkout-main {
-    padding: .rem(80px)[@value] 0;
+    padding: .rem(40px)[@value] 0;
 
     .breakpoint(md, {
         min-height: calc(100vh - .rem(217px)[@value]);
+        padding: .rem(80px)[@value] 0;
     });
 
     .checkout-login {

@@ -24,6 +24,10 @@ allTopLevelItems.each((index, topLevelItem) => {
     $(topLevelItem).on(clickEvent, (e) => {
         e.preventDefault();
 
+        if (window.scrollInProgress) {
+            return;
+        }
+
         const parentHasActiveClass = topLevelParent.hasClass(activeClass);
         allTopLevelItems.each((__index, i) => navLevelElement(i).removeClass(activeClass));
 
@@ -42,6 +46,11 @@ allTopLevelItems.each((index, topLevelItem) => {
 
         $(firstLevelItem).on(clickEvent, (e) => {
             e.preventDefault();
+
+            if (window.scrollInProgress) {
+                return;
+            }
+
             allFirstLevelItemsOfSuperior.each((__index, i) => navLevelElement(i).removeClass(activeClass));
 
             firstLevelParent.addClass(activeClass);

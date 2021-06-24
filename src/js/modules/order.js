@@ -27,12 +27,18 @@ $('[data-type="order"]').each((index, item) => {
 
 
     $(orderEditModalOpen).on(clickEvent, (e) => {
-        console.log('Open');
+        if (window.scrollInProgress) {
+            return;
+        }
+
         orderEditModal.addClass('visible');
     });
 
     $(orderEditModalClose).on(clickEvent, (e) => {
-        console.log('Close');
+        if (window.scrollInProgress) {
+            return;
+        }
+
         orderEditModal.removeClass('visible');
     });
 });
