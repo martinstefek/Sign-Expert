@@ -13,7 +13,7 @@
         </div>
 
         <div class="row">
-            <?php for ($x = 1; $x <= 16; $x++): ?>
+            <?php for ($x = 1; $x <= 12; $x++): ?>
             <div class="col-xs-12 col-sm-6 col-lg-4 article-wrap">
                 <?php article(); ?>
             </div>

@@ -141,7 +141,7 @@
                     </nav>
 
                     <div class="quick-nav">
-                        <a href="#" class="quick-nav-item">
+                        <a href="<?php href('blog-list.php'); ?>" class="quick-nav-item">
                             <svg class="icon">
                                 <use xlink:href="#sprite-book-circled"></use>
                             </svg>

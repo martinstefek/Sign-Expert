@@ -4,10 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Fixed bugs, added blog pages">
+    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Changed desktop navigation trigger on hover">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/modules/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/components/article.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/components/articleLarge.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/articleLarge.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-address.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-address.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-info-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-info-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-wishlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog-list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-payment-delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-payment-delivery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-personal-info-add-address.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-personal-info-add-address.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-personal-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-personal-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index-logged-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index-logged-in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index-logged-in.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index-logged-in.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail-v2.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail-v3.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail-v4.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +97,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="404.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/public/404.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.404.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -86,7 +119,7 @@
       <workItem from="1624345550682" duration="10552000" />
       <workItem from="1624374509900" duration="12153000" />
       <workItem from="1624457467426" duration="25571000" />
-      <workItem from="1624542759169" duration="15697000" />
+      <workItem from="1624542759169" duration="17589000" />
     </task>
     <task id="LOCAL-00001" summary="Account responsive">
       <created>1624221858045</created>
@@ -172,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624559457707</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Changed desktop navigation trigger on hover">
+      <created>1624561366997</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1624561366997</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +243,8 @@
     <MESSAGE value="use Browsersync proxy" />
     <MESSAGE value="Update project" />
     <MESSAGE value="Fixed bugs, added blog pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs, added blog pages" />
+    <MESSAGE value="Changed desktop navigation trigger on hover" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed desktop navigation trigger on hover" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

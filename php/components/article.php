@@ -1,5 +1,5 @@
 <?php function article() { ?>
-<a href="#" class="card article">
+<a href="<?php href('blog-item.php'); ?>" class="card article">
     <div>
         <div class="card-hero" style="background-image: url('img/blog.jpg')"></div>
 

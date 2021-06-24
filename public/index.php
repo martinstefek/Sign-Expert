@@ -175,7 +175,7 @@
     <div class="container">
         <div class="section-header section-header-flex">
             <div class="section-title">Najnovšie blogové články</div>
-            <a href="#" class="btn btn-bordered btn-icon-right btn-desktop">
+            <a href="<?php href('blog-list.php'); ?>" class="btn btn-bordered btn-icon-right btn-desktop">
                 <strong>
                     Prejsť na blog
                 </strong>
@@ -200,7 +200,7 @@
             </div>
         </div>
 
-        <a href="#" class="btn btn-full btn-bordered btn-mobile">
+        <a href="<?php href('blog-list.php'); ?>" class="btn btn-full btn-bordered btn-mobile">
             <strong>
                 Prejsť na blog
             </strong>

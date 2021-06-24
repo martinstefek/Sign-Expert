@@ -1,5 +1,5 @@
 <?php function articleLarge() { ?>
-    <a href="#" class="card article article-large">
+    <a href="<?php href('blog-item.php'); ?>" class="card article article-large">
         <div class="card-hero" style="background-image: url('img/blog.jpg')"></div>
 
         <div class="article-content">
