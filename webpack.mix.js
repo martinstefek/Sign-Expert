@@ -45,7 +45,7 @@ mix.setPublicPath('public')
         }
     });
 
-// mix.browserSync({
-//     proxy: 'signexpert.test',
-//     files: ['public/css/*.css', 'public/js/*.js', '**/*.php']
-// })
+mix.browserSync({
+    proxy: 'signexpert.test',
+    files: ['public/css/*.css', 'public/js/*.js', '**/*.php']
+})
