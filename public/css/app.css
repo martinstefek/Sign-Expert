@@ -14627,7 +14627,7 @@ fieldset[disabled] a.product-list-item .product-list-item-footer .product-list-i
 .main-header .mobile-navigation-header .mobile-navigation-title-second-level button,
 .header-mobile .mobile-navigation-header .mobile-navigation-title-second-level button {
   position: absolute;
-  top: 0.7rem;
+  top: 0.75rem;
   left: 0.8rem;
   padding: 0.75rem 0.5rem;
   margin-left: -0.5rem;

@@ -1,5 +1,7 @@
 import { clickEvent, mobileNavigationThreshold } from "./config";
 
+const navigationEvent = window.innerWidth > mobileNavigationThreshold ? 'mouseenter' : clickEvent;
+
 const mainHeaderId = 'main-header';
 const mainNavId = '#main-nav';
 const mobileNavOpen = document.getElementById('mobile-nav-open');
@@ -21,7 +23,7 @@ allTopLevelItems.each((index, topLevelItem) => {
     const topLevelParent = navLevelElement(topLevelItem);
     const allFirstLevelItemsOfSuperior = topLevelParent.find('[data-toggle="navigation-second-level"]');
 
-    $(topLevelItem).on(clickEvent, (e) => {
+    $(topLevelItem).on(navigationEvent, (e) => {
         e.preventDefault();
 
         if (window.scrollInProgress) {
@@ -38,13 +40,18 @@ allTopLevelItems.each((index, topLevelItem) => {
                 navLevelElement(i).removeClass(activeClass);
             });
         }
+
+        if (window.innerWidth > mobileNavigationThreshold) {
+            document.body.classList.add(mobileMenuSecondLevelActiveClass);
+            navLevelElement(allFirstLevelItemsOfSuperior.get(0)).addClass(activeClass);
+        }
     });
 
     allFirstLevelItemsOfSuperior.each((_index, firstLevelItem) => {
         const firstLevelParent = navLevelElement(firstLevelItem);
         const sectionTitle = $(firstLevelParent).data('sectionName');
 
-        $(firstLevelItem).on(clickEvent, (e) => {
+        $(firstLevelItem).on(navigationEvent, (e) => {
             e.preventDefault();
 
             if (window.scrollInProgress) {
@@ -113,4 +120,12 @@ if (secondLevelBackButton) {
     secondLevelBackButton.addEventListener(clickEvent, (e) => {
         document.body.classList.remove(mobileMenuSecondLevelActiveClass);
     });
+}
+
+if (window.innerWidth > mobileNavigationThreshold) {
+    $(mainNavId).on('mouseleave', () => {
+        closeNavigation();
+        allTopLevelItems.each((__index, i) => navLevelElement(i).removeClass(activeClass));
+        allFirstLevelItems.each((__index, i) => navLevelElement(i).removeClass(activeClass));
+    })
 }

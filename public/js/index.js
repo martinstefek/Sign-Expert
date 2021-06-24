@@ -312,6 +312,7 @@ var focusInput = function focusInput(element) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ "./src/js/modules/config.js");
 
+var navigationEvent = window.innerWidth > _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold ? 'mouseenter' : _config__WEBPACK_IMPORTED_MODULE_0__.clickEvent;
 var mainHeaderId = 'main-header';
 var mainNavId = '#main-nav';
 var mobileNavOpen = document.getElementById('mobile-nav-open');
@@ -331,7 +332,7 @@ var allFirstLevelItems = $(mainNavId + ' [data-toggle="navigation-second-level"]
 allTopLevelItems.each(function (index, topLevelItem) {
   var topLevelParent = navLevelElement(topLevelItem);
   var allFirstLevelItemsOfSuperior = topLevelParent.find('[data-toggle="navigation-second-level"]');
-  $(topLevelItem).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+  $(topLevelItem).on(navigationEvent, function (e) {
     e.preventDefault();
 
     if (window.scrollInProgress) {
@@ -350,11 +351,16 @@ allTopLevelItems.each(function (index, topLevelItem) {
         navLevelElement(i).removeClass(activeClass);
       });
     }
+
+    if (window.innerWidth > _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold) {
+      document.body.classList.add(mobileMenuSecondLevelActiveClass);
+      navLevelElement(allFirstLevelItemsOfSuperior.get(0)).addClass(activeClass);
+    }
   });
   allFirstLevelItemsOfSuperior.each(function (_index, firstLevelItem) {
     var firstLevelParent = navLevelElement(firstLevelItem);
     var sectionTitle = $(firstLevelParent).data('sectionName');
-    $(firstLevelItem).on(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
+    $(firstLevelItem).on(navigationEvent, function (e) {
       e.preventDefault();
 
       if (window.scrollInProgress) {
@@ -428,6 +434,18 @@ if (mobileNavClose) {
 if (secondLevelBackButton) {
   secondLevelBackButton.addEventListener(_config__WEBPACK_IMPORTED_MODULE_0__.clickEvent, function (e) {
     document.body.classList.remove(mobileMenuSecondLevelActiveClass);
+  });
+}
+
+if (window.innerWidth > _config__WEBPACK_IMPORTED_MODULE_0__.mobileNavigationThreshold) {
+  $(mainNavId).on('mouseleave', function () {
+    closeNavigation();
+    allTopLevelItems.each(function (__index, i) {
+      return navLevelElement(i).removeClass(activeClass);
+    });
+    allFirstLevelItems.each(function (__index, i) {
+      return navLevelElement(i).removeClass(activeClass);
+    });
   });
 }
 
