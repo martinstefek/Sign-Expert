@@ -70,7 +70,7 @@ $mainBgActive = false;
 
                     <div class="product-detail-code">Kód: SXS GREEN25</div>
 
-                    <form>
+                    <form action="<?php href('checkout-login.php') ?>" id="product-detail-form">
                         <div class="product-parameter">
                             <div class="product-parameter-label">
                                 Farba:
@@ -102,46 +102,36 @@ $mainBgActive = false;
                                 <?php productParameterBoxLarge('Balenie - 36 kusov', 2.8, 'Ušetríte 7,20 €'); ?>
                             </div>
                         </div>
-
-                        <div class="product-parameter">
-                            <div class="product-parameter-label">
-                                Cena za balenie:
-                            </div>
-
-                            <div class="product-detail-price">
-                                6,58 €
-                                <span class="product-detail-price-faded">bez DPH</span>
-                            </div>
-                            <div class="product-detail-price-with-vat">
-                                7,89 €
-                                <span class="product-detail-price-faded">s DPH</span>
-                            </div>
-                        </div>
-
-                        <div class="product-parameter">
-                            <div class="product-parameter-label">
-                                Počet metrov:
-                            </div>
-
-                            <div class="product-detail-add-to-cart-section">
-                                <div class="input-number-with-controls">
-                                    <button class="button-minus" type="button" data-toggle="input-number-decrease" data-target="#product-detail-amount">
-                                        <svg class="icon fill-primary"><use xlink:href="#sprite-minus"></use></svg>
-                                    </button>
-
-                                    <input id="product-detail-amount" type="number" min="1" value="1">
-
-                                    <button class="button-plus" type="button" data-toggle="input-number-increase" data-target="#product-detail-amount">
-                                        <svg class="icon fill-primary"><use xlink:href="#sprite-plus"></use></svg>
-                                    </button>
-                                </div>
-
-                                <div class="product-detail-button">
-                                    <a href="<?php href('checkout-login.php') ?>" class="btn btn-success product-detail-button" type="submit" id="add-to-cart">Pridať do košíka</a>
-                                </div>
-                            </div>
-                        </div>
                     </form>
+
+                    <div class="product-parameter">
+                        <div class="product-parameter-label">
+                            Cena za balenie:
+                        </div>
+
+                        <div class="product-detail-price">
+                            6,58 €
+                            <span class="product-detail-price-faded">bez DPH</span>
+                        </div>
+                        <div class="product-detail-price-with-vat">
+                            7,89 €
+                            <span class="product-detail-price-faded">s DPH</span>
+                        </div>
+                    </div>
+
+                    <div class="product-parameter">
+                        <div class="product-parameter-label">
+                            Počet metrov:
+                        </div>
+
+                        <div class="product-detail-add-to-cart-section">
+                            <?php inputNumberWithControls('product-detail-amount') ?>
+
+                            <div class="product-detail-button">
+                                <button class="btn btn-success product-detail-button" form="product-detail-form" type="submit" id="add-to-cart">Pridať do košíka</button>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="product-detail-availability">
                         <div class="product-detail-additional-info text-primary">

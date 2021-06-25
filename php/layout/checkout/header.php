@@ -23,7 +23,7 @@ include_once('../../config.php');
 <div class="checkout-wrap">
     <header>
         <div class="checkout-header">
-            <a href="<?php indexHref() ?>" class="logo">
+            <a href="<?php indexHref() ?>" class="logo" aria-label="Logo">
                 <svg class="icon">
                     <use xlink:href="#sprite-logo"></use>
                 </svg>

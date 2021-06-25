@@ -2,7 +2,7 @@
 <nav>
     <ul class="pagination">
         <li>
-            <a href="#" class="btn btn-bordered">
+            <a href="#" class="btn btn-bordered" aria-label="Predchádzajúca strana">
                 <svg class="icon">
                     <use xlink:href="#sprite-pagination-chevron-left"></use>
                 </svg>
@@ -38,7 +38,7 @@
         </li>
 
         <li>
-            <a href="#" class="btn btn-bordered">
+            <a href="#" class="btn btn-bordered" aria-label="Nasledujúca strana">
                 <svg class="icon">
                     <use xlink:href="#sprite-pagination-chevron-right"></use>
                 </svg>

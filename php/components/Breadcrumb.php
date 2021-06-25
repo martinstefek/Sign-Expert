@@ -10,7 +10,7 @@ function breadcrumb($items) {
     <div class="container">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="<?php indexHref() ?>">
+                <a href="<?php indexHref() ?>" aria-label="Domov">
                     <svg class="icon"><use xlink:href="#sprite-home"></use></svg>
                 </a>
             </li>

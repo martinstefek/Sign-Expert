@@ -9,25 +9,25 @@
         <div class="row">
             <div class="col-xs-12 col-lg-6 col-xl-7">
                 <div id="home-banner-slider" class="banner-item-list">
-                    <a href="<?php productListHref() ?>" class="banner-item">
+                    <a href="<?php productListHref() ?>" class="banner-item" aria-label="Kategória Sublimačné tlačiarne">
                         <img src="img/banner/primary-banner.jpg" alt="Banner image">
                         <h2 class="banner-title">Sublimačné tlačiarne</h2>
                         <div class="banner-description">ideálne riešenie pre výrobu reklamného <br>a osobného tovaru</div>
                     </a>
 
-                    <a href="<?php productListHref() ?>" class="banner-item">
+                    <a href="<?php productListHref() ?>" class="banner-item" aria-label="Kategória Sublimačné tlačiarne">
                         <img src="img/banner/primary-banner.jpg" alt="Banner image">
                         <h2 class="banner-title">Sublimačné tlačiarne</h2>
                         <div class="banner-description">ideálne riešenie pre výrobu reklamného <br>a osobného tovaru</div>
                     </a>
 
-                    <a href="<?php productListHref() ?>" class="banner-item">
+                    <a href="<?php productListHref() ?>" class="banner-item" aria-label="Kategória Sublimačné tlačiarne">
                         <img src="img/banner/primary-banner.jpg" alt="Banner image">
                         <h2 class="banner-title">Sublimačné tlačiarne</h2>
                         <div class="banner-description">ideálne riešenie pre výrobu reklamného <br>a osobného tovaru</div>
                     </a>
 
-                    <a href="<?php productListHref() ?>" class="banner-item">
+                    <a href="<?php productListHref() ?>" class="banner-item" aria-label="Kategória Sublimačné tlačiarne">
                         <img src="img/banner/primary-banner.jpg" alt="Banner image">
                         <h2 class="banner-title">Sublimačné tlačiarne</h2>
                         <div class="banner-description">ideálne riešenie pre výrobu reklamného <br>a osobného tovaru</div>

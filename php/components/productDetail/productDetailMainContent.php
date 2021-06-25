@@ -10,7 +10,7 @@
     <div class="product-detail-code">Kód: SXS GREEN25</div>
     <?php endif; ?>
 
-    <form id="product-detail-form">
+    <form action="<?php href('checkout-login.php') ?>" id="product-detail-form">
         <div class="product-parameter">
             <div class="product-parameter-label">
                 Farba:
@@ -72,20 +72,10 @@
         </div>
 
         <div class="product-detail-add-to-cart-section">
-            <div class="input-number-with-controls">
-                <button class="button-minus" type="button" data-toggle="input-number-decrease" data-target="#product-detail-amount">
-                    <svg class="icon fill-primary"><use xlink:href="#sprite-minus"></use></svg>
-                </button>
-
-                <input id="product-detail-amount" type="number" min="1" value="1">
-
-                <button class="button-plus" type="button" data-toggle="input-number-increase" data-target="#product-detail-amount">
-                    <svg class="icon fill-primary"><use xlink:href="#sprite-plus"></use></svg>
-                </button>
-            </div>
+            <?php inputNumberWithControls('product-detail-amount') ?>
 
             <div class="product-detail-button">
-                <a href="<?php href('checkout-login.php') ?>" class="btn btn-success product-detail-button" form="product-detail-form" type="submit" id="add-to-cart">Pridať do košíka</a>
+                <button class="btn btn-success product-detail-button" form="product-detail-form" type="submit" id="add-to-cart">Pridať do košíka</button>
             </div>
         </div>
     </div>

@@ -98,7 +98,7 @@ include_once('../php/layout/checkout/header.php')
             <div class="checkout-summary-product-list">
                 <?php for ($x = 1; $x <= 3; $x++): ?>
                     <div class="product-horizontal-list-item">
-                        <button class="btn product-horizontal-list-item-remove">
+                        <button class="btn product-horizontal-list-item-remove" aria-label="Odstrániť">
                             <svg class="icon">
                                 <use xlink:href="#sprite-cancel"></use>
                             </svg>

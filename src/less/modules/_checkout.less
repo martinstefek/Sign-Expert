@@ -207,7 +207,11 @@
             });
 
             > * {
-                width: 100%;
+                width: calc(100% - .rem(132px)[@value]);
+
+                .breakpointMax(sm, {
+                    width: 100%;
+                });
             }
 
             .btn {

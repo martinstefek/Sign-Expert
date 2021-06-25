@@ -25,6 +25,7 @@
     img {
         display: block;
         width: 100%;
+        aspect-ratio: @productListHorizontalAspectRatio;
     }
 
     .product-horizontal-list-item-info {
@@ -37,12 +38,14 @@
     .product-horizontal-list-item-title {
         margin-bottom: .rem(2px)[@value];
         font-weight: 500;
+        color: @text-color;
     }
 
     .product-horizontal-list-item-price {
         font-size: .rem(18px)[@value];
         text-align: right;
         line-height: 1.35rem;
+        color: @text-color;
 
         span {
             display: block;

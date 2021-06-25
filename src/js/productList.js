@@ -24,6 +24,17 @@ const filterPriceSlider = filterPrice.slider({
     $('#filter-price-input-max').val(a.value.newValue[1]);
 });
 
+const minHandle = document.querySelector('#filter-price .slider-handle.min-slider-handle.round');
+const maxHandle = document.querySelector('#filter-price .slider-handle.max-slider-handle.round');
+
+if (minHandle) {
+    minHandle.setAttribute('aria-label', 'Posuvník minimálnej ceny');
+}
+
+if (maxHandle) {
+    maxHandle.setAttribute('aria-label', 'Posuvník maximálnej ceny');
+}
+
 const inputMin = $('#filter-price-input-min');
 const inputMax = $('#filter-price-input-max');
 

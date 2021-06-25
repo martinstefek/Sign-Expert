@@ -20,7 +20,7 @@ $mainBgActive = true;
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <div class="section-title">Predmety pre sublimáciu</div>
+                <h1 class="section-title">Predmety pre sublimáciu</h1>
                 <div class="section-description">
                     <small>
                         Techniku transferovej tlače, ktorá sa hovorovo v tlačovom prostredí nazýva farbenie. Táto metóda, ako zdôrazňujú špecialisti, je veľmi jednoduchá, ale účinná metóda digitálnej tlače…
@@ -126,7 +126,7 @@ $mainBgActive = true;
                             Filter
                         </div>
 
-                        <button id="mobile-filters-button-close" type="button" class="btn btn-sm btn-white">
+                        <button id="mobile-filters-button-close" type="button" class="btn btn-sm btn-white" aria-label="Zavrieť">
                             <svg class="icon">
                                 <use xlink:href="#sprite-cancel"></use>
                             </svg>
@@ -199,7 +199,8 @@ $mainBgActive = true;
                         ]); ?>
 
                         <div id="parent-filter-price" data-type="accordion" class="product-list-filter product-filter-price">
-                            <h6
+                            <div
+                                    class="product-list-filter-heading"
                                     data-toggle="accordion"
                                     data-parent="#parent-filter-price"
                                     data-target="#filter-price"
@@ -209,15 +210,15 @@ $mainBgActive = true;
                                 <svg class="icon">
                                     <use xlink:href="#sprite-chevron-right"></use>
                                 </svg>
-                            </h6>
+                            </div>
 
                             <div class="product-list-filter-content" id="filter-price" data-type="accordion-item" data-allow-close="true">
                                 <div class="filter-price-flex">
-                                    <input id="filter-price-input-min" type="number" min="0" value="0" class="form-control">
+                                    <input id="filter-price-input-min" type="number" min="0" value="0" class="form-control" aria-label="Minimálna cena" aria-valuemin="0">
 
                                     <div class="filter-price-input-separator"></div>
 
-                                    <input id="filter-price-input-max" type="number" max="1240" value="1240" class="form-control">
+                                    <input id="filter-price-input-max" type="number" max="1240" value="1240" class="form-control" aria-label="Maximálna cena" aria-valuemax="1240">
 
                                     <button type="button" class="btn filter-price-btn">Ok</button>
                                 </div>
