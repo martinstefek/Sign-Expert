@@ -5,7 +5,7 @@ function productListCarousel($name = 'Navštívili ste', $class = '') { ?>
 <section class="section product-list-carousel-section <?php echo $class; ?>">
     <div class="container">
         <div class="section-header">
-            <div class="section-title"><?php echo $name; ?></div>
+            <h1 class="section-title"><?php echo $name; ?></h1>
         </div>
 
         <div class="product-list-carousel" data-type="product-list-carousel">

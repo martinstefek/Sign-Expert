@@ -26,14 +26,14 @@
         <div class="mobile-navigation-header">
             <div class="mobile-navigation-title">Menu</div>
             <div class="mobile-navigation-title-second-level">
-                <button type="button" id="mobile-navigation-second-level-back" class="btn btn-icon-only btn-transparent">
+                <button type="button" id="mobile-navigation-second-level-back" class="btn btn-icon-only btn-transparent" aria-label="Späť">
                     <svg><use xlink:href="#sprite-arrow-left"></use></svg>
                 </button>
 
                 <span id="mobile-navigation-title-second-level">Menu</span>
             </div>
 
-            <button id="mobile-nav-close" type="button" class="btn btn-transparent btn-icon-only mobile-nav-close">
+            <button id="mobile-nav-close" type="button" class="btn btn-transparent btn-icon-only mobile-nav-close" aria-label="Zatvoriť">
                 <svg><use xlink:href="#sprite-cancel"></use></svg>
             </button>
         </div>
@@ -76,7 +76,7 @@
 
         <div class="mid-header">
             <div class="container">
-                <a href="<?php indexHref() ?>" class="logo">
+                <a href="<?php indexHref() ?>" class="logo" aria-label="Logo">
                     <svg class="icon">
                         <use xlink:href="#sprite-logo"></use>
                     </svg>

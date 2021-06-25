@@ -1,6 +1,7 @@
 <?php function homeTechButton($title, $id, $mobile, $open = false) { ?>
     <button  class="btn btn-white btn-full home-tech-button <?php echo $mobile ? 'home-tech-button-mobile' : ''; ?>"
              type="button"
+             aria-label="Open <?php $title ?>"
              data-toggle="accordion"
              data-parent="#techs-accordion"
              data-target="#<?php echo $id; ?>"

@@ -220,9 +220,18 @@
             .product-detail-small-parameter-wrap {
                 display: flex;
 
+                .breakpointMax(sm, {
+                    flex-direction: column;
+                });
+
                 .product-parameter {
                     margin-right: 1.5rem;
                     flex-shrink: 0;
+
+                    .breakpointMax(sm, {
+                        margin-right: 0;
+                    });
+
                 }
 
                 .product-parameter-label {
@@ -286,7 +295,15 @@
 
                 .breakpointMax(md, {
                     padding: .5rem;
-                })
+                });
+
+                .product-parameter-color {
+                    &:hover {
+                        .product-info-tooltip {
+                            display: none;
+                        }
+                    }
+                }
             }
 
             .modal-footer {

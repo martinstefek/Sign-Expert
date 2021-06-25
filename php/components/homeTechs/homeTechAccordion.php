@@ -20,7 +20,7 @@ function homeTechAccordion($title, $id, $open = false) { ?>
         </div>
 
         <div>
-            <h5>Čo všetko sa dá potlačiť:</h5>
+            <h2 class="h5">Čo všetko sa dá potlačiť:</h2>
 
             <ul class="check-list-gray-inline mb-5">
                 <li>Keramika</li>

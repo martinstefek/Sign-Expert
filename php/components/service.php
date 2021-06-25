@@ -1,7 +1,9 @@
 <?php function service($title, $arrayOfLinks, $image) { ?>
 <div class="services-list-col">
     <div class="card service">
-        <div class="card-hero" style="background-image: url('<?php echo $image; ?>');"></div>
+        <div class="card-hero">
+            <img src="<?php echo $image; ?>" alt="Service image">
+        </div>
 
         <div class="service-content">
             <div class="service-title"><?php echo $title; ?></div>

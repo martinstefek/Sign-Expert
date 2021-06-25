@@ -30,7 +30,7 @@ addFooterContent('<script src="./js/wishlist.js"></script>');
         </div>
     </div>
 
-    <div class="modal modal-wishlist-product-detail fade" id="wishlist-product-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal modal-wishlist-product-detail fade" id="wishlist-product-detail" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">

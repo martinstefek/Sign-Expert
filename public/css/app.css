@@ -10323,9 +10323,6 @@ html,
 body {
   font-size: 16px;
 }
-body {
-  overflow-x: hidden;
-}
 body:not(.page-loaded) * {
   -webkit-transition: all 0s !important;
   transition: all 0s !important;
@@ -11282,23 +11279,38 @@ textarea.form-control::placeholder,
 input.form-control::placeholder {
   color: rgba(255, 255, 255, 0);
 }
+textarea.form-control ~ .form-label,
+.fake-input-box.form-control ~ .form-label,
+input.form-control ~ .form-label {
+  right: 1rem;
+  background-color: #F6F6F6;
+}
 textarea.form-control:focus,
 .fake-input-box.form-control:focus,
 input.form-control:focus {
-  background-color: #FFFFFF;
   border: 1px solid rgba(0, 160, 70, 0.6);
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+textarea.form-control:focus,
+.fake-input-box.form-control:focus,
+input.form-control:focus,
+textarea.form-control:focus ~ .form-label,
+.fake-input-box.form-control:focus ~ .form-label,
+input.form-control:focus ~ .form-label {
+  background-color: #FFFFFF;
 }
 textarea.form-control:-moz-placeholder-shown:not(:focus) ~ .form-label, .fake-input-box.form-control:-moz-placeholder-shown:not(:focus) ~ .form-label, input.form-control:-moz-placeholder-shown:not(:focus) ~ .form-label {
   top: 0.85rem;
   font-size: 1rem;
   color: rgba(31, 34, 43, 0.6);
+  padding-top: 0;
 }
 textarea.form-control:-ms-input-placeholder:not(:focus) ~ .form-label, .fake-input-box.form-control:-ms-input-placeholder:not(:focus) ~ .form-label, input.form-control:-ms-input-placeholder:not(:focus) ~ .form-label {
   top: 0.85rem;
   font-size: 1rem;
   color: rgba(31, 34, 43, 0.6);
+  padding-top: 0;
 }
 textarea.form-control:placeholder-shown:not(:focus) ~ .form-label,
 .fake-input-box.form-control:placeholder-shown:not(:focus) ~ .form-label,
@@ -11306,6 +11318,7 @@ input.form-control:placeholder-shown:not(:focus) ~ .form-label {
   top: 0.85rem;
   font-size: 1rem;
   color: rgba(31, 34, 43, 0.6);
+  padding-top: 0;
 }
 textarea.form-control:-moz-placeholder-shown:not(:focus) ~ .form-label.text-default, .fake-input-box.form-control:-moz-placeholder-shown:not(:focus) ~ .form-label.text-default, input.form-control:-moz-placeholder-shown:not(:focus) ~ .form-label.text-default {
   color: #1F222B;
@@ -11318,10 +11331,10 @@ textarea.form-control:placeholder-shown:not(:focus) ~ .form-label.text-default,
 input.form-control:placeholder-shown:not(:focus) ~ .form-label.text-default {
   color: #1F222B;
 }
-textarea.form-control:not(:-moz-placeholder-shown):not(:focus):valid, .fake-input-box.form-control:not(:-moz-placeholder-shown):not(:focus):valid, input.form-control:not(:-moz-placeholder-shown):not(:focus):valid, textarea.form-control:not(:-moz-placeholder-shown):not(:focus).form-valid, .fake-input-box.form-control:not(:-moz-placeholder-shown):not(:focus).form-valid, input.form-control:not(:-moz-placeholder-shown):not(:focus).form-valid {
+textarea.form-control:not(:-moz-placeholder-shown):not(:focus):valid, .fake-input-box.form-control:not(:-moz-placeholder-shown):not(:focus):valid, input.form-control:not(:-moz-placeholder-shown):not(:focus):valid, textarea.form-control:not(:-moz-placeholder-shown):not(:focus).form-valid, .fake-input-box.form-control:not(:-moz-placeholder-shown):not(:focus).form-valid, input.form-control:not(:-moz-placeholder-shown):not(:focus).form-valid, textarea.form-control:not(:-moz-placeholder-shown):not(:focus):valid ~ .form-label, .fake-input-box.form-control:not(:-moz-placeholder-shown):not(:focus):valid ~ .form-label, input.form-control:not(:-moz-placeholder-shown):not(:focus):valid ~ .form-label, textarea.form-control:not(:-moz-placeholder-shown):not(:focus).form-valid ~ .form-label, .fake-input-box.form-control:not(:-moz-placeholder-shown):not(:focus).form-valid ~ .form-label, input.form-control:not(:-moz-placeholder-shown):not(:focus).form-valid ~ .form-label {
   background-color: #F0F7F3;
 }
-textarea.form-control:not(:-ms-input-placeholder):not(:focus):valid, .fake-input-box.form-control:not(:-ms-input-placeholder):not(:focus):valid, input.form-control:not(:-ms-input-placeholder):not(:focus):valid, textarea.form-control:not(:-ms-input-placeholder):not(:focus).form-valid, .fake-input-box.form-control:not(:-ms-input-placeholder):not(:focus).form-valid, input.form-control:not(:-ms-input-placeholder):not(:focus).form-valid {
+textarea.form-control:not(:-ms-input-placeholder):not(:focus):valid, .fake-input-box.form-control:not(:-ms-input-placeholder):not(:focus):valid, input.form-control:not(:-ms-input-placeholder):not(:focus):valid, textarea.form-control:not(:-ms-input-placeholder):not(:focus).form-valid, .fake-input-box.form-control:not(:-ms-input-placeholder):not(:focus).form-valid, input.form-control:not(:-ms-input-placeholder):not(:focus).form-valid, textarea.form-control:not(:-ms-input-placeholder):not(:focus):valid ~ .form-label, .fake-input-box.form-control:not(:-ms-input-placeholder):not(:focus):valid ~ .form-label, input.form-control:not(:-ms-input-placeholder):not(:focus):valid ~ .form-label, textarea.form-control:not(:-ms-input-placeholder):not(:focus).form-valid ~ .form-label, .fake-input-box.form-control:not(:-ms-input-placeholder):not(:focus).form-valid ~ .form-label, input.form-control:not(:-ms-input-placeholder):not(:focus).form-valid ~ .form-label {
   background-color: #F0F7F3;
 }
 textarea.form-control:not(:placeholder-shown):not(:focus):valid,
@@ -11329,15 +11342,19 @@ textarea.form-control:not(:placeholder-shown):not(:focus):valid,
 input.form-control:not(:placeholder-shown):not(:focus):valid,
 textarea.form-control:not(:placeholder-shown):not(:focus).form-valid,
 .fake-input-box.form-control:not(:placeholder-shown):not(:focus).form-valid,
-input.form-control:not(:placeholder-shown):not(:focus).form-valid {
+input.form-control:not(:placeholder-shown):not(:focus).form-valid,
+textarea.form-control:not(:placeholder-shown):not(:focus):valid ~ .form-label,
+.fake-input-box.form-control:not(:placeholder-shown):not(:focus):valid ~ .form-label,
+input.form-control:not(:placeholder-shown):not(:focus):valid ~ .form-label,
+textarea.form-control:not(:placeholder-shown):not(:focus).form-valid ~ .form-label,
+.fake-input-box.form-control:not(:placeholder-shown):not(:focus).form-valid ~ .form-label,
+input.form-control:not(:placeholder-shown):not(:focus).form-valid ~ .form-label {
   background-color: #F0F7F3;
 }
 textarea.form-control:not(:-moz-placeholder-shown):invalid, .fake-input-box.form-control:not(:-moz-placeholder-shown):invalid, input.form-control:not(:-moz-placeholder-shown):invalid, textarea.form-control:not(:-moz-placeholder-shown).form-invalid, .fake-input-box.form-control:not(:-moz-placeholder-shown).form-invalid, input.form-control:not(:-moz-placeholder-shown).form-invalid {
-  background-color: #FFFFFF;
   border: 1px solid rgba(255, 24, 32, 0.6);
 }
 textarea.form-control:not(:-ms-input-placeholder):invalid, .fake-input-box.form-control:not(:-ms-input-placeholder):invalid, input.form-control:not(:-ms-input-placeholder):invalid, textarea.form-control:not(:-ms-input-placeholder).form-invalid, .fake-input-box.form-control:not(:-ms-input-placeholder).form-invalid, input.form-control:not(:-ms-input-placeholder).form-invalid {
-  background-color: #FFFFFF;
   border: 1px solid rgba(255, 24, 32, 0.6);
 }
 textarea.form-control:not(:placeholder-shown):invalid,
@@ -11346,8 +11363,27 @@ input.form-control:not(:placeholder-shown):invalid,
 textarea.form-control:not(:placeholder-shown).form-invalid,
 .fake-input-box.form-control:not(:placeholder-shown).form-invalid,
 input.form-control:not(:placeholder-shown).form-invalid {
-  background-color: #FFFFFF;
   border: 1px solid rgba(255, 24, 32, 0.6);
+}
+textarea.form-control:not(:-moz-placeholder-shown):invalid, .fake-input-box.form-control:not(:-moz-placeholder-shown):invalid, input.form-control:not(:-moz-placeholder-shown):invalid, textarea.form-control:not(:-moz-placeholder-shown).form-invalid, .fake-input-box.form-control:not(:-moz-placeholder-shown).form-invalid, input.form-control:not(:-moz-placeholder-shown).form-invalid, textarea.form-control:not(:-moz-placeholder-shown):invalid ~ .form-label, .fake-input-box.form-control:not(:-moz-placeholder-shown):invalid ~ .form-label, input.form-control:not(:-moz-placeholder-shown):invalid ~ .form-label, textarea.form-control:not(:-moz-placeholder-shown).form-invalid ~ .form-label, .fake-input-box.form-control:not(:-moz-placeholder-shown).form-invalid ~ .form-label, input.form-control:not(:-moz-placeholder-shown).form-invalid ~ .form-label {
+  background-color: #FFFFFF;
+}
+textarea.form-control:not(:-ms-input-placeholder):invalid, .fake-input-box.form-control:not(:-ms-input-placeholder):invalid, input.form-control:not(:-ms-input-placeholder):invalid, textarea.form-control:not(:-ms-input-placeholder).form-invalid, .fake-input-box.form-control:not(:-ms-input-placeholder).form-invalid, input.form-control:not(:-ms-input-placeholder).form-invalid, textarea.form-control:not(:-ms-input-placeholder):invalid ~ .form-label, .fake-input-box.form-control:not(:-ms-input-placeholder):invalid ~ .form-label, input.form-control:not(:-ms-input-placeholder):invalid ~ .form-label, textarea.form-control:not(:-ms-input-placeholder).form-invalid ~ .form-label, .fake-input-box.form-control:not(:-ms-input-placeholder).form-invalid ~ .form-label, input.form-control:not(:-ms-input-placeholder).form-invalid ~ .form-label {
+  background-color: #FFFFFF;
+}
+textarea.form-control:not(:placeholder-shown):invalid,
+.fake-input-box.form-control:not(:placeholder-shown):invalid,
+input.form-control:not(:placeholder-shown):invalid,
+textarea.form-control:not(:placeholder-shown).form-invalid,
+.fake-input-box.form-control:not(:placeholder-shown).form-invalid,
+input.form-control:not(:placeholder-shown).form-invalid,
+textarea.form-control:not(:placeholder-shown):invalid ~ .form-label,
+.fake-input-box.form-control:not(:placeholder-shown):invalid ~ .form-label,
+input.form-control:not(:placeholder-shown):invalid ~ .form-label,
+textarea.form-control:not(:placeholder-shown).form-invalid ~ .form-label,
+.fake-input-box.form-control:not(:placeholder-shown).form-invalid ~ .form-label,
+input.form-control:not(:placeholder-shown).form-invalid ~ .form-label {
+  background-color: #FFFFFF;
 }
 textarea.form-control:not(:-moz-placeholder-shown):invalid ~ .form-error, .fake-input-box.form-control:not(:-moz-placeholder-shown):invalid ~ .form-error, input.form-control:not(:-moz-placeholder-shown):invalid ~ .form-error, textarea.form-control:not(:-moz-placeholder-shown).form-invalid ~ .form-error, .fake-input-box.form-control:not(:-moz-placeholder-shown).form-invalid ~ .form-error, input.form-control:not(:-moz-placeholder-shown).form-invalid ~ .form-error {
   display: block;
@@ -11365,13 +11401,17 @@ input.form-control:not(:placeholder-shown).form-invalid ~ .form-error {
 }
 textarea.form-control:disabled,
 .fake-input-box.form-control:disabled,
-input.form-control:disabled {
+input.form-control:disabled,
+textarea.form-control:disabled ~ .form-label,
+.fake-input-box.form-control:disabled ~ .form-label,
+input.form-control:disabled ~ .form-label {
   background-color: #F6F6F6;
 }
 .form-label {
   position: absolute;
   font-weight: 400;
-  top: 0.3rem;
+  top: 1px;
+  padding-top: calc(0.3rem - 1px);
   left: 1rem;
   color: rgba(31, 34, 43, 0.4);
   font-size: 0.875rem;
@@ -11574,6 +11614,9 @@ fieldset[disabled] .btn {
   background-color: transparent;
   border: 1px solid #E4E4E4;
 }
+.select2 {
+  width: 100% !important;
+}
 .select2-container {
   display: block;
 }
@@ -11732,6 +11775,19 @@ fieldset[disabled] .btn {
   background-size: cover !important;
   background-position: center !important;
   margin: -1.5rem -1.5rem 1.25rem;
+  overflow: hidden;
+  position: relative;
+}
+.card .card-hero img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  max-width: none;
+  max-height: none;
 }
 .tooltip.in {
   opacity: 1;
@@ -12459,6 +12515,7 @@ fieldset[disabled] a.product-list-item .product-list-item-footer .product-list-i
   background: linear-gradient(180deg, #FFFFFF 0%, #F9F8F8 100%) no-repeat center bottom;
   background-size: 100% 31.25rem;
   padding-bottom: 0;
+  overflow-x: hidden;
 }
 @media (max-width: 991px) {
   .services {
@@ -12476,8 +12533,6 @@ fieldset[disabled] a.product-list-item .product-list-item-footer .product-list-i
     padding-right: 3px;
   }
 }
-@media (min-width: 992px) {
-}
 .services-list-row {
   margin-right: 0;
   margin-left: 0;
@@ -12490,8 +12545,6 @@ fieldset[disabled] a.product-list-item .product-list-item-footer .product-list-i
 .services-list-row::before,
 .services-list-row::after {
   display: none;
-}
-@media (max-width: 575px) {
 }
 @media (max-width: 991px) {
   .services-list-row {
@@ -12620,17 +12673,18 @@ fieldset[disabled] a.product-list-item .product-list-item-footer .product-list-i
   height: 100%;
   width: 100%;
   padding-bottom: 1.25rem;
-}
-.service .card-hero {
   position: relative;
 }
-.service .card-hero::after {
+.service .service-content {
+  position: relative;
+}
+.service .service-content::after {
   content: '';
   display: block;
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
+  top: calc(-1.25rem + 2px);
+  left: -1.5rem;
+  right: -1.5rem;
   height: 1px;
   background-color: #FF9215;
 }
@@ -13909,6 +13963,15 @@ fieldset[disabled] a.product-list-item .product-list-item-footer .product-list-i
 @media (min-width: 992px) {
   .main-header .bottom-header .navigation {
     height: 100%;
+  }
+  .main-header .bottom-header .navigation::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 4px;
+    width: 100%;
   }
 }
 @media (max-width: 991px) {
@@ -15428,10 +15491,23 @@ body.shopping-cart-modal-visible .shopping-cart-modal {
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 575px) {
+  .account .account-wishlist .product-detail .product-detail-small-parameter-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .account .account-wishlist .product-detail .product-detail-small-parameter-wrap .product-parameter {
   margin-right: 1.5rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+@media (max-width: 575px) {
+  .account .account-wishlist .product-detail .product-detail-small-parameter-wrap .product-parameter {
+    margin-right: 0;
+  }
 }
 .account .account-wishlist .product-detail .product-detail-small-parameter-wrap .product-parameter-label {
   font-size: 0.875rem;
@@ -15479,6 +15555,9 @@ body.shopping-cart-modal-visible .shopping-cart-modal {
   .account .account-wishlist .modal-wishlist-product-detail .modal-body {
     padding: 0.5rem;
   }
+}
+.account .account-wishlist .modal-wishlist-product-detail .modal-body .product-parameter-color:hover .product-info-tooltip {
+  display: none;
 }
 .account .account-wishlist .modal-wishlist-product-detail .modal-footer {
   padding: 0;
@@ -15772,6 +15851,12 @@ body.shopping-cart-modal-visible .shopping-cart-modal {
     width: 4.375rem;
   }
 }
+@media (max-width: 359px) {
+  .order-box .order-box-item .order-box-item-img {
+    margin-right: 0.35rem;
+    width: 4.0625rem;
+  }
+}
 .order-box .order-box-item img {
   display: block;
   width: 100%;
@@ -15823,15 +15908,20 @@ body.shopping-cart-modal-visible .shopping-cart-modal {
           justify-content: center;
   color: rgba(31, 34, 43, 0.6);
   font-size: 1.5rem;
-  margin-top: 0.6rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+@media (min-width: 1200px) {
+  .order-box .order-box-item-more {
+    margin-top: 0.6rem;
+  }
 }
 @media (max-width: 767px) {
   .order-box .order-box-item-more {
     height: 2.25rem;
     width: 2.25rem;
     font-size: 1rem;
+    margin-top: 0.6rem;
   }
 }
 @media (min-width: 1200px) {
@@ -16769,7 +16859,7 @@ body.mobile-filters-visible  {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 25rem;
+  width: 100%;
 }
 .product-detail .product-detail-gallery-thumbnails {
   display: -webkit-box;
@@ -16852,6 +16942,26 @@ body.mobile-filters-visible  {
         -ms-flex-pack: start;
             justify-content: flex-start;
     overflow: auto;
+    scrollbar-width: thin;
+    /* "auto" or "thin" */
+    scrollbar-color: #DADADA #EFEFEF;
+    /* scroll thumb and track */
+  }
+  .product-detail-additional-content .product-detail-additional-content-header .container::-webkit-scrollbar {
+    width: 0.25rem;
+    /* width of the entire scrollbar */
+    height: 0.25rem;
+    /* width of the entire scrollbar */
+  }
+  .product-detail-additional-content .product-detail-additional-content-header .container::-webkit-scrollbar-track {
+    background: #EFEFEF;
+    /* color of the tracking area */
+  }
+  .product-detail-additional-content .product-detail-additional-content-header .container::-webkit-scrollbar-thumb {
+    background-color: #DADADA;
+    /* color of the scroll thumb */
+    border-radius: 0.125rem;
+    /* roundness of the scroll thumb */
   }
 }
 .product-detail-additional-content .product-detail-additional-content-header .product-detail-accordion-trigger {

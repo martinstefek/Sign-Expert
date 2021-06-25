@@ -1,7 +1,9 @@
 <?php function article() { ?>
 <a href="<?php href('blog-item.php'); ?>" class="card article">
     <div>
-        <div class="card-hero" style="background-image: url('img/blog.jpg')"></div>
+        <div class="card-hero">
+            <img src="img/blog.jpg" alt="Article image">
+        </div>
 
         <div class="article-date">22. Marec 2020</div>
 

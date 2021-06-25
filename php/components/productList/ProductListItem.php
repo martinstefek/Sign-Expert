@@ -68,13 +68,13 @@
 
                     <div class="product-list-item-actions">
                         <?php if ($stock <= 0 || $wishlist): ?>
-                        <a href="#" class="action">
+                        <a href="#" class="action" aria-label="Odobrať z obľúbených">
                             <svg class="stroke-primary fill-primary">
                                 <use xlink:href="#sprite-heart"></use>
                             </svg>
                         </a>
                         <?php else: ?>
-                        <a href="#" class="action">
+                        <a href="#" class="action" aria-label="Pridať do obľúbených">
                             <svg class="stroke-gray-dark fill-none">
                                 <use xlink:href="#sprite-heart"></use>
                             </svg>
@@ -87,13 +87,14 @@
                            data-toggle="modal"
                            data-target="#wishlist-product-detail"
                             <?php endif; ?>
+                           aria-label="Pridať do košíka"
                         >
                             <svg class="stroke-success"><use xlink:href="#sprite-shopping-cart"></use></svg>
                         </a>
                         <?php endif; ?>
 
                         <?php if ($stock <= 0): ?>
-                            <a href="#" class="action">
+                            <a href="#" class="action" aria-label="Poslať emailom">
                                 <svg class="stroke-primary"><use xlink:href="#sprite-mail"></use></svg>
                             </a>
                         <?php endif; ?>

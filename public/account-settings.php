@@ -17,9 +17,9 @@ $accountNavSelectedIndex = 3;
     <div class="row">
         <div class="col-xs-12 col-md-6">
             <form>
-                <?php input('oldpw', 'Stare heslo') ?>
-                <?php input('newpw', 'Nove heslo') ?>
-                <?php input('newpwagain', 'Nove heslo znova') ?>
+                <?php input('oldpw', 'Stare heslo', false, 'password') ?>
+                <?php input('newpw', 'Nove heslo', false, 'password') ?>
+                <?php input('newpwagain', 'Nove heslo znova', false, 'password') ?>
                 <button class="btn btn-primary mt-2">Uložiť</button>
             </form>
 

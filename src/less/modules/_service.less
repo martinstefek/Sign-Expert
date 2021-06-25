@@ -2,6 +2,7 @@
     background: linear-gradient(180deg, #FFFFFF 0%, #F9F8F8 100%) no-repeat center bottom;
     background-size: 100% .rem(500px)[@value];
     padding-bottom: 0;
+    overflow-x: hidden;
 
     .breakpointMax(lg, {
         padding-bottom: 1.5rem;
@@ -12,32 +13,15 @@
     });
 
     > .container {
-        //
         .breakpointMax(sm, {
             padding-left: (@servicesSmallGutter / 2);
             padding-right: (@servicesSmallGutter / 2);
         });
-        //
-        .breakpoint(lg, {
-            //padding-left: .25rem;
-            //padding-right: .25rem;
-            //overflow: hidden;
-        });
-        //
-        //.breakpoint(xl, {
-        //    padding-left: (@servicesGutter / 2);
-        //    padding-right: (@servicesGutter / 2);
-        //});
     }
 }
 
 .services-list-row {
     .make-row(0);
-
-    .breakpointMax(sm, {
-        //margin-left: -@servicesSmallGutter;
-        //margin-right: -@servicesSmallGutter;
-    });
 
     .breakpointMax(lg, {
         flex-wrap: nowrap;
@@ -82,17 +66,18 @@
     height: 100%;
     width: 100%;
     padding-bottom: .rem(20px)[@value];
+    position: relative;
 
-    .card-hero {
+    .service-content {
         position: relative;
 
         &::after {
             content: '';
             display: block;
             position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
+            top: calc(-1.25rem + 2px);
+            left: -1.5rem;
+            right: -1.5rem;
             height: 1px;
             background-color: @brand-primary;
         }

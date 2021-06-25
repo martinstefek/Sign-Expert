@@ -13,7 +13,6 @@
     }
 
     .order-box-gray-section {
-        //margin-top: .rem(6px)[@value];
         margin-top: .rem(12px)[@value];
         background-color: #F6F6F6;
         padding: .rem(18px)[@value];
@@ -245,7 +244,12 @@
 
             .breakpointMax(md, {
                 width: .rem(70px)[@value];
-            })
+            });
+
+            @media (max-width: 359px) {
+                margin-right: .35rem;
+                width: .rem(65px)[@value];
+            }
         }
 
         img {
@@ -299,13 +303,17 @@
         justify-content: center;
         color: @gray-light;
         font-size: 1.5rem;
-        margin-top: .6rem;
         flex-shrink: 0;
+
+        .breakpoint(xl, {
+            margin-top: .6rem;
+        });
 
         .breakpointMax(md, {
             height: .rem(36px)[@value];
             width: .rem(36px)[@value];
             font-size: 1rem;
+            margin-top: .6rem;
         })
     }
 

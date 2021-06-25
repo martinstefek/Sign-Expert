@@ -1,4 +1,4 @@
-<div class="modal modal-login-register fade" id="login-register-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal modal-login-register fade" id="login-register-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header modal-header-no-content">
@@ -17,21 +17,21 @@
                     </ul>
 
                     <div id="login-tab">
-                        <form>
+                        <form action="<?php href('index-logged-in.php') ?>">
                             <div class="form-group">
                                 <?php input('login-email', 'E-mail'); ?>
                             </div>
 
                             <div class="form-group">
-                                <?php input('login-password', 'Heslo'); ?>
+                                <?php input('login-password', 'Heslo', false, 'password'); ?>
                             </div>
 
-                            <a href="<?php href('index-logged-in.php') ?>" type="submit" class="btn btn-full btn-success btn-icon-right mt-4 mb-3">
+                            <button type="submit" class="btn btn-full btn-success btn-icon-right mt-4 mb-3">
                                 Prihlasiť sa
                                 <svg class="icon stroke-white">
                                     <use xlink:href="#sprite-chevron-right"></use>
                                 </svg>
-                            </a>
+                            </button>
 
                             <div class="text-center">
                                 <a href="#">Zabudnuté heslo</a>
@@ -40,9 +40,9 @@
                     </div>
 
                     <div id="register-tab">
-                        <form>
+                        <form action="<?php href('index-logged-in.php') ?>">
                             <?php select(
-                                'address_country',
+                                'register_address_country',
                                 'Krajina',
                                 'sk',
                                 [
@@ -102,14 +102,14 @@
 
                             <?php input('register-email-login', 'E-mail pre prihlasenie') ?>
 
-                            <?php input('register-password', 'Heslo') ?>
+                            <?php input('register-password', 'Heslo', false, 'password') ?>
 
-                            <a href="<?php href('index-logged-in.php') ?>" type="submit" class="btn btn-full btn-success btn-icon-right mt-4">
+                            <button type="submit" class="btn btn-full btn-success btn-icon-right mt-4">
                                 Vytvoriť konto
                                 <svg class="icon stroke-white">
                                     <use xlink:href="#sprite-chevron-right"></use>
                                 </svg>
-                            </a>
+                            </button>
                         </form>
                     </div>
                 </div>
