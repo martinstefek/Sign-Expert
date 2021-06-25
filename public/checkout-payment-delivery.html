@@ -2,7 +2,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -23,385 +22,403 @@
 <div class="checkout-wrap">
     <header>
         <div class="checkout-header">
-            <a href="./index.html" class="logo">
+            <a href="./index.html" class="logo" aria-label="Logo">
                 <svg class="icon">
                     <use xlink:href="#sprite-logo"></use>
                 </svg>
             </a>
         </div>
 
-        <div class="checkout-progress-wrap">
-            <div class="checkout-progress">
-                <a href="#" class="checkout-progress-item done">
-                    Prihlásenie        </a>
-                <a href="#" class="checkout-progress-item done">
-                    Osobné údaje        </a>
-                <div class="checkout-progress-item active">
-                    Platba a doručenie        </div>
-                <div class="checkout-progress-item ">
-                    Odoslanie objednávky        </div>
+            <div class="checkout-progress-wrap">
+        <div class="checkout-progress">
+                        <a href="#" class="checkout-progress-item done">
+            Prihlásenie        </a>
+                            <a href="#" class="checkout-progress-item done">
+            Osobné údaje        </a>
+                            <div class="checkout-progress-item active">
+            Platba a doručenie        </div>
+                            <div class="checkout-progress-item ">
+            Odoslanie objednávky        </div>
             </div>
-        </div>
+    </div>
     </header>
 
     <div class="checkout-main">
         <div class="container">
 
+<div>
+    <div class="row">
+        <div class="col-xs-12 col-lg-6 col-xl-5">
             <div>
-                <div class="row">
-                    <div class="col-xs-12 col-lg-6 col-xl-5">
-                        <div>
-                            <section class="checkout-section">
-                                <h1 class="checkout-title">Spôsob platby</h1>
+                <section class="checkout-section">
+                    <h1 class="checkout-title">Spôsob platby</h1>
 
-                                <form>
-                                    <div class="checkout-border-box-item">
-                                        <div class="checkout-border-box-item-header">
-                                            <div class="form-radio padding-none">
-                                                <label>
-                                                    <input type="radio" name="payment_method" checked>
-                                                    <span class="form-radio-name font-weight-medium">Platba vopred prevodom</span>
-                                                </label>
-                                            </div>
+                    <form>
+                        <div class="checkout-border-box-item">
+                            <div class="checkout-border-box-item-header">
+                                <div class="form-radio padding-none">
+    <label>
+        <input type="radio" name="payment_method" checked>
+        <span class="form-radio-name font-weight-medium">Platba vopred prevodom</span>
+    </label>
+</div>
 
-                                            <div class="checkout-border-box-item-price">
-                                                Zadarmo
-                                            </div>
+                                <div class="checkout-border-box-item-price">
+                                    Zadarmo
+                                </div>
+                            </div>
+
+                            <div class="checkout-border-box-item-content">
+                                Prosíme, neuhrádzajte zálohu automaticky, bez potvrdenia
+                                o dostupnosti tovaru vo Vašej objednávke. Po spracovaní objednávky a zarezervovaní tovaru Vám bude zaslaná výzva
+                                na úhradu zálohy spolu s podkladmi pre vykonanie platby.
+                                Tovar bude odoslaný po pripísaní platby na náš účet.
+                            </div>
+                        </div>
+
+                        <div class="checkout-border-box-item">
+                            <div class="checkout-border-box-item-header">
+                                <div class="form-radio padding-none">
+    <label>
+        <input type="radio" name="payment_method" >
+        <span class="form-radio-name font-weight-medium">Platba kartou cez TRUSTPAY</span>
+    </label>
+</div>
+
+                                <div class="checkout-border-box-item-price">
+                                    Zadarmo
+                                </div>
+                            </div>
+
+                            <div class="checkout-border-box-item-content">
+                                <img class="mr-1" src="img/payment-methods/mastercard.jpg" alt="Master" width="40" height="28">
+                                <img class="mr-1" src="img/payment-methods/visa.jpg" alt="Visa" width="40" height="28">
+                                <img class="mr-1" src="img/payment-methods/paypal.jpg" alt="Pay pal" width="40" height="28">
+                                <img class="mr-1" src="img/payment-methods/apple-pay.jpg" alt="Apple Pay" width="40" height="28">
+                            </div>
+                        </div>
+
+                        <div class="checkout-border-box-item">
+                            <div class="checkout-border-box-item-header">
+                                <div class="form-radio padding-none">
+    <label>
+        <input type="radio" name="payment_method" >
+        <span class="form-radio-name font-weight-medium">Dobierka (hotovosť pri prevzatí)</span>
+    </label>
+</div>
+
+                                <div class="checkout-border-box-item-price">
+                                    + 1,25 €
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="checkout-section">
+                    <h1 class="checkout-title">Spôsob doručenia</h1>
+
+                    <form>
+                        <div class="checkout-border-box-item">
+                            <div class="checkout-border-box-item-header">
+                                <div class="form-radio padding-none">
+    <label>
+        <input type="radio" name="delivery_type" checked>
+        <span class="form-radio-name font-weight-medium">Kuriér na adresu</span>
+    </label>
+</div>
+
+                                <div class="checkout-border-box-item-price">
+                                    4,45 €
+                                </div>
+                            </div>
+
+                            <div class="checkout-border-box-item-content">
+                                Zásielky tovarov, ktoré objemovo presahujú možnosť zaslania v obálke, budú preklasifikované o hmotnostnú kategóriu vyššie, teda na 5 kilogramov, aj v prípade, že tovar má hmotnosť nižšiu ako 1kg.
+                            </div>
+                        </div>
+
+                        <div class="checkout-border-box-item">
+                            <div class="checkout-border-box-item-header">
+                                <div class="form-radio padding-none">
+    <label>
+        <input type="radio" name="delivery_type" >
+        <span class="form-radio-name font-weight-medium">Osobné vyzdvihnutie</span>
+    </label>
+</div>
+
+                                <div class="checkout-border-box-item-price">
+                                    Zadarmo
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-xl-5 col-xl-offset-2 col-lg-6">
+            <h1 class="checkout-title">Súhrn objednávky</h1>
+
+            <div class="checkout-summary-product-list">
+                                    <div class="product-horizontal-list-item">
+                        <button class="btn product-horizontal-list-item-remove" aria-label="Odstrániť">
+                            <svg class="icon">
+                                <use xlink:href="#sprite-cancel"></use>
+                            </svg>
+                        </button>
+
+                        <a href="#" class="product-horizontal-list-item-img">
+                            <img src="img/product-detail/product-detail.jpg" alt="Product detail image">
+                        </a>
+
+                        <div class="product-horizontal-list-item-info">
+                            <a href="./product-detail.html">
+                                <div class="product-horizontal-list-item-title">SignFlex Screen Green 25</div>
+                            </a>
+
+                            <div class="row mb-2">
+                                <div class="col-xs-6">
+                                    <div>
+                                        <div class="element-label">Počet metrov:</div>
+                                        <div class="input-number-with-controls">
+    <button class="button-minus" type="button" data-toggle="input-number-decrease" data-target="#shopping-cart-item-1" aria-label="minus">
+        <svg class="icon fill-primary"><use xlink:href="#sprite-minus"></use></svg>
+    </button>
+
+    <input id="shopping-cart-item-1" type="number" min="1" value="1" aria-label="Množstvo">
+
+    <button class="button-plus" type="button" data-toggle="input-number-increase" data-target="#shopping-cart-item-1" aria-label="plus">
+        <svg class="icon fill-primary"><use xlink:href="#sprite-plus"></use></svg>
+    </button>
+</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-6 align-self-end">
+                                    <a href="./product-detail.html">
+                                        <div class="product-horizontal-list-item-price">
+                                            224,00 € <span class="text-faded small">bez DPH</span>
                                         </div>
+                                    </a>
+                                </div>
+                            </div>
 
-                                        <div class="checkout-border-box-item-content">
-                                            Prosíme, neuhrádzajte zálohu automaticky, bez potvrdenia
-                                            o dostupnosti tovaru vo Vašej objednávke. Po spracovaní objednávky a zarezervovaní tovaru Vám bude zaslaná výzva
-                                            na úhradu zálohy spolu s podkladmi pre vykonanie platby.
-                                            Tovar bude odoslaný po pripísaní platby na náš účet.
+                            <a href="./product-detail.html">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="product-availability text-success product-horizontal-list-item-availability">
+                                            <svg class="icon">
+                                                <use xlink:href="#sprite-check-circled"></use>
+                                            </svg>
+
+                                            Skladom
                                         </div>
                                     </div>
 
-                                    <div class="checkout-border-box-item">
-                                        <div class="checkout-border-box-item-header">
-                                            <div class="form-radio padding-none">
-                                                <label>
-                                                    <input type="radio" name="payment_method" >
-                                                    <span class="form-radio-name font-weight-medium">Platba kartou cez TRUSTPAY</span>
-                                                </label>
-                                            </div>
-
-                                            <div class="checkout-border-box-item-price">
-                                                Zadarmo
-                                            </div>
-                                        </div>
-
-                                        <div class="checkout-border-box-item-content">
-                                            <img class="mr-1" src="img/payment-methods/mastercard.jpg" alt="Master" width="40" height="28">
-                                            <img class="mr-1" src="img/payment-methods/visa.jpg" alt="Visa" width="40" height="28">
-                                            <img class="mr-1" src="img/payment-methods/paypal.jpg" alt="Pay pal" width="40" height="28">
-                                            <img class="mr-1" src="img/payment-methods/apple-pay.jpg" alt="Apple Pay" width="40" height="28">
+                                    <div class="col-xs-6 align-self-end">
+                                        <div class="product-horizontal-list-item-price-alternative">
+                                            5,20 € /meter
                                         </div>
                                     </div>
-
-                                    <div class="checkout-border-box-item">
-                                        <div class="checkout-border-box-item-header">
-                                            <div class="form-radio padding-none">
-                                                <label>
-                                                    <input type="radio" name="payment_method" >
-                                                    <span class="form-radio-name font-weight-medium">Dobierka (hotovosť pri prevzatí)</span>
-                                                </label>
-                                            </div>
-
-                                            <div class="checkout-border-box-item-price">
-                                                + 1,25 €
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </section>
-
-                            <section class="checkout-section">
-                                <h1 class="checkout-title">Spôsob doručenia</h1>
-
-                                <form>
-                                    <div class="checkout-border-box-item">
-                                        <div class="checkout-border-box-item-header">
-                                            <div class="form-radio padding-none">
-                                                <label>
-                                                    <input type="radio" name="delivery_type" checked>
-                                                    <span class="form-radio-name font-weight-medium">Kuriér na adresu</span>
-                                                </label>
-                                            </div>
-
-                                            <div class="checkout-border-box-item-price">
-                                                4,45 €
-                                            </div>
-                                        </div>
-
-                                        <div class="checkout-border-box-item-content">
-                                            Zásielky tovarov, ktoré objemovo presahujú možnosť zaslania v obálke, budú preklasifikované o hmotnostnú kategóriu vyššie, teda na 5 kilogramov, aj v prípade, že tovar má hmotnosť nižšiu ako 1kg.
-                                        </div>
-                                    </div>
-
-                                    <div class="checkout-border-box-item">
-                                        <div class="checkout-border-box-item-header">
-                                            <div class="form-radio padding-none">
-                                                <label>
-                                                    <input type="radio" name="delivery_type" >
-                                                    <span class="form-radio-name font-weight-medium">Osobné vyzdvihnutie</span>
-                                                </label>
-                                            </div>
-
-                                            <div class="checkout-border-box-item-price">
-                                                Zadarmo
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </section>
+                                </div>
+                            </a>
                         </div>
                     </div>
+                                    <div class="product-horizontal-list-item">
+                        <button class="btn product-horizontal-list-item-remove" aria-label="Odstrániť">
+                            <svg class="icon">
+                                <use xlink:href="#sprite-cancel"></use>
+                            </svg>
+                        </button>
 
-                    <div class="col-xs-12 col-xl-5 col-xl-offset-2 col-lg-6">
-                        <h1 class="checkout-title">Súhrn objednávky</h1>
+                        <a href="#" class="product-horizontal-list-item-img">
+                            <img src="img/product-detail/product-detail.jpg" alt="Product detail image">
+                        </a>
 
-                        <div class="checkout-summary-product-list">
-                            <div class="product-horizontal-list-item">
-                                <button class="btn product-horizontal-list-item-remove">
-                                    <svg class="icon">
-                                        <use xlink:href="#sprite-cancel"></use>
-                                    </svg>
-                                </button>
+                        <div class="product-horizontal-list-item-info">
+                            <a href="./product-detail.html">
+                                <div class="product-horizontal-list-item-title">SignFlex Screen Green 25</div>
+                            </a>
 
-                                <a href="#" class="product-horizontal-list-item-img">
-                                    <img src="img/product-detail/product-detail.jpg" alt="Product detail image">
-                                </a>
+                            <div class="row mb-2">
+                                <div class="col-xs-6">
+                                    <div>
+                                        <div class="element-label">Počet metrov:</div>
+                                        <div class="input-number-with-controls">
+    <button class="button-minus" type="button" data-toggle="input-number-decrease" data-target="#shopping-cart-item-2" aria-label="minus">
+        <svg class="icon fill-primary"><use xlink:href="#sprite-minus"></use></svg>
+    </button>
 
-                                <a href="#" class="product-horizontal-list-item-info">
-                                    <div class="product-horizontal-list-item-title">SignFlex Screen Green 25</div>
+    <input id="shopping-cart-item-2" type="number" min="1" value="1" aria-label="Množstvo">
 
-                                    <div class="row mb-2">
-                                        <div class="col-xs-6">
-                                            <div>
-                                                <div class="element-label">Počet metrov:</div>
-                                                <div class="input-number-with-controls">
-                                                    <button class="button-minus" type="button" data-toggle="input-number-decrease" data-target="#shopping-cart-item-1">
-                                                        <svg class="icon fill-primary"><use xlink:href="#sprite-minus"></use></svg>
-                                                    </button>
-
-                                                    <input id="shopping-cart-item-1" type="number" min="1" value="1">
-
-                                                    <button class="button-plus" type="button" data-toggle="input-number-increase" data-target="#shopping-cart-item-1">
-                                                        <svg class="icon fill-primary"><use xlink:href="#sprite-plus"></use></svg>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xs-6 align-self-end">
-                                            <div class="product-horizontal-list-item-price">
-                                                224,00 € <span class="text-faded small">bez DPH</span>
-                                            </div>
-                                        </div>
+    <button class="button-plus" type="button" data-toggle="input-number-increase" data-target="#shopping-cart-item-2" aria-label="plus">
+        <svg class="icon fill-primary"><use xlink:href="#sprite-plus"></use></svg>
+    </button>
+</div>
                                     </div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <div class="product-availability text-success product-horizontal-list-item-availability">
-                                                <svg class="icon">
-                                                    <use xlink:href="#sprite-check-circled"></use>
-                                                </svg>
-
-                                                Skladom
-                                            </div>
+                                <div class="col-xs-6 align-self-end">
+                                    <a href="./product-detail.html">
+                                        <div class="product-horizontal-list-item-price">
+                                            224,00 € <span class="text-faded small">bez DPH</span>
                                         </div>
-
-                                        <div class="col-xs-6 align-self-end">
-                                            <div class="product-horizontal-list-item-price-alternative">
-                                                5,20 € /meter
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="product-horizontal-list-item">
-                                <button class="btn product-horizontal-list-item-remove">
-                                    <svg class="icon">
-                                        <use xlink:href="#sprite-cancel"></use>
-                                    </svg>
-                                </button>
 
-                                <a href="#" class="product-horizontal-list-item-img">
-                                    <img src="img/product-detail/product-detail.jpg" alt="Product detail image">
-                                </a>
+                            <a href="./product-detail.html">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="product-availability text-success product-horizontal-list-item-availability">
+                                            <svg class="icon">
+                                                <use xlink:href="#sprite-check-circled"></use>
+                                            </svg>
 
-                                <a href="#" class="product-horizontal-list-item-info">
-                                    <div class="product-horizontal-list-item-title">SignFlex Screen Green 25</div>
-
-                                    <div class="row mb-2">
-                                        <div class="col-xs-6">
-                                            <div>
-                                                <div class="element-label">Počet metrov:</div>
-                                                <div class="input-number-with-controls">
-                                                    <button class="button-minus" type="button" data-toggle="input-number-decrease" data-target="#shopping-cart-item-2">
-                                                        <svg class="icon fill-primary"><use xlink:href="#sprite-minus"></use></svg>
-                                                    </button>
-
-                                                    <input id="shopping-cart-item-2" type="number" min="1" value="1">
-
-                                                    <button class="button-plus" type="button" data-toggle="input-number-increase" data-target="#shopping-cart-item-2">
-                                                        <svg class="icon fill-primary"><use xlink:href="#sprite-plus"></use></svg>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xs-6 align-self-end">
-                                            <div class="product-horizontal-list-item-price">
-                                                224,00 € <span class="text-faded small">bez DPH</span>
-                                            </div>
+                                            Skladom
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <div class="product-availability text-success product-horizontal-list-item-availability">
-                                                <svg class="icon">
-                                                    <use xlink:href="#sprite-check-circled"></use>
-                                                </svg>
-
-                                                Skladom
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xs-6 align-self-end">
-                                            <div class="product-horizontal-list-item-price-alternative">
-                                                5,20 € /meter
-                                            </div>
+                                    <div class="col-xs-6 align-self-end">
+                                        <div class="product-horizontal-list-item-price-alternative">
+                                            5,20 € /meter
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="product-horizontal-list-item">
-                                <button class="btn product-horizontal-list-item-remove">
-                                    <svg class="icon">
-                                        <use xlink:href="#sprite-cancel"></use>
-                                    </svg>
-                                </button>
-
-                                <a href="#" class="product-horizontal-list-item-img">
-                                    <img src="img/product-detail/product-detail.jpg" alt="Product detail image">
-                                </a>
-
-                                <a href="#" class="product-horizontal-list-item-info">
-                                    <div class="product-horizontal-list-item-title">SignFlex Screen Green 25</div>
-
-                                    <div class="row mb-2">
-                                        <div class="col-xs-6">
-                                            <div>
-                                                <div class="element-label">Počet metrov:</div>
-                                                <div class="input-number-with-controls">
-                                                    <button class="button-minus" type="button" data-toggle="input-number-decrease" data-target="#shopping-cart-item-3">
-                                                        <svg class="icon fill-primary"><use xlink:href="#sprite-minus"></use></svg>
-                                                    </button>
-
-                                                    <input id="shopping-cart-item-3" type="number" min="1" value="1">
-
-                                                    <button class="button-plus" type="button" data-toggle="input-number-increase" data-target="#shopping-cart-item-3">
-                                                        <svg class="icon fill-primary"><use xlink:href="#sprite-plus"></use></svg>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xs-6 align-self-end">
-                                            <div class="product-horizontal-list-item-price">
-                                                224,00 € <span class="text-faded small">bez DPH</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <div class="product-availability text-success product-horizontal-list-item-availability">
-                                                <svg class="icon">
-                                                    <use xlink:href="#sprite-check-circled"></use>
-                                                </svg>
-
-                                                Skladom
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xs-6 align-self-end">
-                                            <div class="product-horizontal-list-item-price-alternative">
-                                                5,20 € /meter
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
+                    </div>
+                                    <div class="product-horizontal-list-item">
+                        <button class="btn product-horizontal-list-item-remove" aria-label="Odstrániť">
+                            <svg class="icon">
+                                <use xlink:href="#sprite-cancel"></use>
+                            </svg>
+                        </button>
 
-                        <div class="checkout-summary-box">
+                        <a href="#" class="product-horizontal-list-item-img">
+                            <img src="img/product-detail/product-detail.jpg" alt="Product detail image">
+                        </a>
+
+                        <div class="product-horizontal-list-item-info">
+                            <a href="./product-detail.html">
+                                <div class="product-horizontal-list-item-title">SignFlex Screen Green 25</div>
+                            </a>
+
+                            <div class="row mb-2">
+                                <div class="col-xs-6">
+                                    <div>
+                                        <div class="element-label">Počet metrov:</div>
+                                        <div class="input-number-with-controls">
+    <button class="button-minus" type="button" data-toggle="input-number-decrease" data-target="#shopping-cart-item-3" aria-label="minus">
+        <svg class="icon fill-primary"><use xlink:href="#sprite-minus"></use></svg>
+    </button>
+
+    <input id="shopping-cart-item-3" type="number" min="1" value="1" aria-label="Množstvo">
+
+    <button class="button-plus" type="button" data-toggle="input-number-increase" data-target="#shopping-cart-item-3" aria-label="plus">
+        <svg class="icon fill-primary"><use xlink:href="#sprite-plus"></use></svg>
+    </button>
+</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-6 align-self-end">
+                                    <a href="./product-detail.html">
+                                        <div class="product-horizontal-list-item-price">
+                                            224,00 € <span class="text-faded small">bez DPH</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a href="./product-detail.html">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="product-availability text-success product-horizontal-list-item-availability">
+                                            <svg class="icon">
+                                                <use xlink:href="#sprite-check-circled"></use>
+                                            </svg>
+
+                                            Skladom
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 align-self-end">
+                                        <div class="product-horizontal-list-item-price-alternative">
+                                            5,20 € /meter
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                            </div>
+
+            <div class="checkout-summary-box">
                             <div class="form-group">
-                                <input id="coupon"
-                                       type="text"
-                                       class="form-control"
-                                       placeholder="Číslo kupónu"
-                                >
-                                <label for="coupon" class="form-label">Číslo kupónu</label>
-                            </div>
+            <input id="coupon"
+                   type="text"
+                   class="form-control"
+                   placeholder="Číslo kupónu"
+                                            >
+            <label for="coupon" class="form-label">Číslo kupónu</label>
+        </div>
+    
+                <table class="table table-md table-space-between">
+                    <tr>
+                        <td>Medzisúčet:</td>
+                        <td class="font-weight-medium">336,00 €</td>
+                    </tr>
 
-                            <table class="table table-md table-space-between">
-                                <tr>
-                                    <td>Medzisúčet:</td>
-                                    <td class="font-weight-medium">336,00 €</td>
-                                </tr>
+                    <tr>
+                        <td>DPH 20%:</td>
+                        <td class="font-weight-medium">67,20 €</td>
+                    </tr>
 
-                                <tr>
-                                    <td>DPH 20%:</td>
-                                    <td class="font-weight-medium">67,20 €</td>
-                                </tr>
+                    <tr>
+                        <td class="large">Spolu s DPH:</td>
+                        <td class="large font-weight-bold">403,20 €</td>
+                    </tr>
+                </table>
 
-                                <tr>
-                                    <td class="large">Spolu s DPH:</td>
-                                    <td class="large font-weight-bold">403,20 €</td>
-                                </tr>
-                            </table>
+                <div class="alert alert-success checkout-delivery-alert">
+                    <div class="alert-header">
+                        <svg class="icon stroke-success">
+                            <use xlink:href="#sprite-car"></use>
+                        </svg>
 
-                            <div class="alert alert-success checkout-delivery-alert">
-                                <div class="alert-header">
-                                    <svg class="icon stroke-success">
-                                        <use xlink:href="#sprite-car"></use>
-                                    </svg>
-
-                                    <div class="alert-title">
-                                        Predpokladaný dátum doručenia
-                                    </div>
-                                </div>
-
-                                <div class="date">
-                                    10.06.2020
-                                </div>
-                            </div>
+                        <div class="alert-title">
+                            Predpokladaný dátum doručenia
                         </div>
                     </div>
-                </div>
 
-                <div class="checkout-bottom-actions">
-                    <a href="./checkout-personal-info.html" class="btn btn-transparent btn-icon checkout-bottom-action-back">
-                        <svg class="icon fill-primary stroke-primary">
-                            <use xlink:href="#sprite-chevron-left"></use>
-                        </svg>
-
-                        Späť
-                    </a>
-
-                    <a href="./checkout-summary.html" class="btn btn-success btn-icon-right checkout-bottom-action-continue">
-                        Pokračovať
-
-                        <svg class="icon fill-white stroke-white">
-                            <use xlink:href="#sprite-chevron-right"></use>
-                        </svg>
-                    </a>
+                    <div class="date">
+                        10.06.2020
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+        <div class="checkout-bottom-actions">
+        <a href="./checkout-personal-info.html" class="btn btn-transparent btn-icon checkout-bottom-action-back">
+            <svg class="icon fill-primary stroke-primary">
+                <use xlink:href="#sprite-chevron-left"></use>
+            </svg>
+
+            Späť
+        </a>
+
+        <a href="./checkout-summary.html" class="btn btn-success btn-icon-right checkout-bottom-action-continue">
+            Pokračovať
+
+            <svg class="icon fill-white stroke-white">
+                <use xlink:href="#sprite-chevron-right"></use>
+            </svg>
+        </a>
+    </div>
+</div>
 
         </div>
     </div>
@@ -465,7 +482,6 @@
 <script src="./js/jQuery.js"></script>
 <script src="./js/index.js"></script>
 <script src="./js/checkout.js"></script>
-
 
 
 </body>

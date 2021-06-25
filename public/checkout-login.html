@@ -2,7 +2,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -23,153 +22,153 @@
 <div class="checkout-wrap">
     <header>
         <div class="checkout-header">
-            <a href="./index.html" class="logo">
+            <a href="./index.html" class="logo" aria-label="Logo">
                 <svg class="icon">
                     <use xlink:href="#sprite-logo"></use>
                 </svg>
             </a>
         </div>
 
-        <div class="checkout-progress-wrap">
-            <div class="checkout-progress">
-                <div class="checkout-progress-item active">
-                    Prihlásenie        </div>
-                <div class="checkout-progress-item ">
-                    Osobné údaje        </div>
-                <div class="checkout-progress-item ">
-                    Platba a doručenie        </div>
-                <div class="checkout-progress-item ">
-                    Odoslanie objednávky        </div>
+            <div class="checkout-progress-wrap">
+        <div class="checkout-progress">
+                        <div class="checkout-progress-item active">
+            Prihlásenie        </div>
+                            <div class="checkout-progress-item ">
+            Osobné údaje        </div>
+                            <div class="checkout-progress-item ">
+            Platba a doručenie        </div>
+                            <div class="checkout-progress-item ">
+            Odoslanie objednávky        </div>
             </div>
-        </div>
+    </div>
     </header>
 
     <div class="checkout-main">
         <div class="container">
 
-            <div class="checkout-login">
-                <div class="row">
-                    <div class="col-xs-12 col-md-6 col-xl-5 col-xl-offset-1">
-                        <section class="checkout-login-box">
-                            <h1 class="checkout-login-title">Pre registrovaných zákazníkov</h1>
+<div class="checkout-login">
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-xl-5 col-xl-offset-1">
+            <section class="checkout-login-box">
+                <h1 class="checkout-login-title">Pre registrovaných zákazníkov</h1>
 
-                            <form>
-                                <div class="form-group">
+                <form>
+                    <div class="form-group">
                                     <div class="form-group">
-                                        <input id="checkout-login-email"
-                                               type="text"
-                                               class="form-control"
-                                               placeholder="E-mail"
-                                        >
-                                        <label for="checkout-login-email" class="form-label">E-mail</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <input id="checkout-login-password"
-                                               type="password"
-                                               class="form-control"
-                                               placeholder="Heslo"
-                                        >
-                                        <label for="checkout-login-password" class="form-label">Heslo</label>
-                                    </div>
-                                </div>
+            <input id="checkout-login-email"
+                   type="text"
+                   class="form-control"
+                   placeholder="E-mail"
+                                            >
+            <label for="checkout-login-email" class="form-label">E-mail</label>
+        </div>
+                                        <div class="form-group">
+            <input id="checkout-login-password"
+                   type="password"
+                   class="form-control"
+                   placeholder="Heslo"
+                                            >
+            <label for="checkout-login-password" class="form-label">Heslo</label>
+        </div>
+                        </div>
 
-                                <div class="form-group">
-                                    <a href="./checkout-personal-info.html" class="btn btn-success btn-full btn-icon-right">
-                                        Prihlásiť sa
+                    <div class="form-group">
+                        <a href="./checkout-personal-info.html" class="btn btn-success btn-full btn-icon-right">
+                            Prihlásiť sa
 
-                                        <svg class="icon stroke-white">
-                                            <use xlink:href="#sprite-chevron-right"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-
-                                <div class="text-center">
-                                    <a href="#">Zabudnuté heslo</a>
-                                </div>
-                            </form>
-                        </section>
+                            <svg class="icon stroke-white">
+                                <use xlink:href="#sprite-chevron-right"></use>
+                            </svg>
+                        </a>
                     </div>
 
-                    <div class="col-xs-12 col-md-6 col-xl-5">
-                        <section class="checkout-login-box">
-                            <h1 class="checkout-login-title">Pre nových zákazníkov</h1>
+                    <div class="text-center">
+                        <a href="#">Zabudnuté heslo</a>
+                    </div>
+                </form>
+            </section>
+        </div>
 
-                            <form>
-                                <div class="form-group">
-                                    <select name="checkout_address_country"
-                                            id="checkout_address_country"
-                                            data-type="select" class="form-control language-select"
-                                            data-theme="select-image"                        >
-                                        <option value="sk" selected                data-image="img/language/lang-sk.svg"            >
-                                            Slovenska Republika            </option>
-                                        <option value="cz"                 data-image="img/language/lang-cz.svg"            >
-                                            Česká Republika            </option>
-                                        <option value="en"                 data-image="img/language/lang-gb.svg"            >
-                                            Veľká Británia            </option>
-                                    </select>
-                                </div>
+        <div class="col-xs-12 col-md-6 col-xl-5">
+            <section class="checkout-login-box">
+                <h1 class="checkout-login-title">Pre nových zákazníkov</h1>
 
-                                <div class="form-autocomplete-wrap form-margin-bottom-large">
-                                    <div class="form-group">
-                                        <div class="input-group">
+                <form>
+                        <div class="form-group">
+        <select name="checkout_address_country"
+                id="checkout_address_country"
+                data-type="select" class="form-control language-select"
+                data-theme="select-image"                        >
+                        <option value="sk" selected                data-image="img/language/lang-sk.svg"            >
+                Slovenska Republika            </option>
+                        <option value="cz"                 data-image="img/language/lang-cz.svg"            >
+                Česká Republika            </option>
+                        <option value="en"                 data-image="img/language/lang-gb.svg"            >
+                Veľká Británia            </option>
+                    </select>
+    </div>
+
+                    <div class="form-autocomplete-wrap form-margin-bottom-large">
+                        <div class="form-group">
+                            <div class="input-group">
                                 <span class="input-group-addon">
                                     <svg class="icon">
                                         <use xlink:href="#sprite-lens"></use>
                                     </svg>
                                 </span>
 
-                                            <input id="register-search-company"
-                                                   type="text"
-                                                   class="form-control input-autocomplete-search"
-                                                   placeholder="Vyhľadať firmu podľa názvu alebo IČO"
-                                            >
+                                <input id="register-search-company"
+                                       type="text"
+                                       class="form-control input-autocomplete-search"
+                                       placeholder="Vyhľadať firmu podľa názvu alebo IČO"
+                                >
 
-                                            <label for="register-search-company" class="form-label text-default">Vyhľadať firmu podľa názvu alebo IČO</label>
+                                <label for="register-search-company" class="form-label text-default">Vyhľadať firmu podľa názvu alebo IČO</label>
 
-                                            <button id="register-search-company-cancel" class="btn input-value-cancel" type="button">
-                                                <svg class="icon">
-                                                    <use xlink:href="#sprite-cancel"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
+                                <button id="register-search-company-cancel" class="btn input-value-cancel" type="button">
+                                    <svg class="icon">
+                                        <use xlink:href="#sprite-cancel"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
 
-                                    <div class="form-autocomplete" id="register-search-company-autocomplete">
-                                        <div class="form-autocomplete-item">
-                                            <div><strong>ui Star s.r.o.</strong> IČO: 35713003  IČ DPH: SK2020227770</div>
-                                            <div class="text-faded">Sibírska 62, Bratislava, 831 02</div>
-                                        </div>
+                        <div class="form-autocomplete" id="register-search-company-autocomplete">
+                            <div class="form-autocomplete-item">
+                                <div><strong>ui Star s.r.o.</strong> IČO: 35713003  IČ DPH: SK2020227770</div>
+                                <div class="text-faded">Sibírska 62, Bratislava, 831 02</div>
+                            </div>
 
-                                        <div class="form-autocomplete-item">
-                                            <div><strong>ui Star s.r.o.</strong> IČO: 35713003  IČ DPH: SK2020227770</div>
-                                            <div class="text-faded">Sibírska 62, Bratislava, 831 02</div>
-                                        </div>
+                            <div class="form-autocomplete-item">
+                                <div><strong>ui Star s.r.o.</strong> IČO: 35713003  IČ DPH: SK2020227770</div>
+                                <div class="text-faded">Sibírska 62, Bratislava, 831 02</div>
+                            </div>
 
-                                        <div class="form-autocomplete-item">
-                                            <div><strong>ui Star s.r.o.</strong> IČO: 35713003  IČ DPH: SK2020227770</div>
-                                            <div class="text-faded">Sibírska 62, Bratislava, 831 02</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <button class="btn btn-primary btn-full btn-icon-right" disabled>
-                                        Pokračovať v objednávke
-
-                                        <svg class="icon stroke-white">
-                                            <use xlink:href="#sprite-chevron-right"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-
-                                <div class="text-center">
-                                    <a href="#">Zadať firemné údaje ručne</a>
-                                </div>
-                            </form>
-                        </section>
+                            <div class="form-autocomplete-item">
+                                <div><strong>ui Star s.r.o.</strong> IČO: 35713003  IČ DPH: SK2020227770</div>
+                                <div class="text-faded">Sibírska 62, Bratislava, 831 02</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-full btn-icon-right" disabled>
+                            Pokračovať v objednávke
+
+                            <svg class="icon stroke-white">
+                                <use xlink:href="#sprite-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="#">Zadať firemné údaje ručne</a>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
 
         </div>
     </div>
@@ -233,7 +232,6 @@
 <script src="./js/jQuery.js"></script>
 <script src="./js/index.js"></script>
 <script src="./js/checkout.js"></script>
-
 
 
 </body>
