@@ -5,6 +5,7 @@
              data-toggle="accordion"
              data-parent="#techs-accordion"
              data-target="#<?php echo $id; ?>"
+             aria-controls="<?php echo $id; ?>"
     >
         <?php echo $title; ?>
 

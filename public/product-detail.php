@@ -36,8 +36,8 @@ $mainBgActive = false;
 <section id="product-detail-accordion" class="product-detail-additional-content" data-type="accordion">
     <div class="product-detail-additional-content-header">
         <div class="container">
-            <button data-toggle="accordion" data-parent="#product-detail-accordion" data-target="#product-detail-info" class="btn product-detail-accordion-trigger">Popis produktu</button>
-            <button data-toggle="accordion" data-parent="#product-detail-accordion" data-target="#product-detail-info-2" class="btn product-detail-accordion-trigger">Informácie o doprave</button>
+            <button data-toggle="accordion" data-parent="#product-detail-accordion" data-target="#product-detail-info" aria-controls="product-detail-info" class="btn product-detail-accordion-trigger">Popis produktu</button>
+            <button data-toggle="accordion" data-parent="#product-detail-accordion" data-target="#product-detail-info-2" aria-controls="product-detail-info-2" class="btn product-detail-accordion-trigger">Informácie o doprave</button>
         </div>
     </div>
 

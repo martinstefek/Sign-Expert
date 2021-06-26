@@ -4,34 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="All accessibility">
+    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Generate HTML">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/components/homeTechs/homeTechButton.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/homeTechs/homeTechButton.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/components/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-address.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-info-edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-orders.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-wishlist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog-item.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-payment-delivery.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-personal-info-add-address.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-personal-info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-thankyou-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-thankyou-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout-thankyou-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index-logged-in.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product-detail-v2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product-detail-v3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product-detail-v4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product-detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/layout/mobileHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/mobileHeader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-address.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-address.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-info-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-info-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/account-wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-wishlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog-item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-payment-delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-payment-delivery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-payment-delivery.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-payment-delivery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-personal-info-add-address.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-personal-info-add-address.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-personal-info-add-address.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-personal-info-add-address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-personal-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-personal-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-personal-info.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-personal-info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-thankyou-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-thankyou-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-thankyou-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-thankyou-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout-thankyou-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout-thankyou-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index-logged-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index-logged-in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index-logged-in.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index-logged-in.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail-v2.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail-v3.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail-v4.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/accordion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/accordion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_productList.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_productList.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_shoppingCartModal.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_shoppingCartModal.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,19 +101,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="404.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/public/404.php">
       <method v="2" />
     </configuration>
@@ -122,7 +124,8 @@
       <workItem from="1624374509900" duration="12153000" />
       <workItem from="1624457467426" duration="25571000" />
       <workItem from="1624542759169" duration="18835000" />
-      <workItem from="1624632279639" duration="19908000" />
+      <workItem from="1624632279639" duration="20643000" />
+      <workItem from="1624688943860" duration="3302000" />
     </task>
     <task id="LOCAL-00001" summary="Account responsive">
       <created>1624221858045</created>
@@ -236,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624653821630</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Generate HTML">
+      <created>1624656446208</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1624656446208</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +281,8 @@
     <MESSAGE value="Generate HTML files" />
     <MESSAGE value="Remarks and Accessibility for homepage" />
     <MESSAGE value="All accessibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="All accessibility" />
+    <MESSAGE value="Generate HTML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generate HTML" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

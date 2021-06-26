@@ -1,0 +1,1 @@
+for FILE in *.php; do ZAKLAD=$(basename -s .php $FILE); VYSTUP="${ZAKLAD}.html"; rm $VYSTUP; php -f $FILE >> $VYSTUP; done

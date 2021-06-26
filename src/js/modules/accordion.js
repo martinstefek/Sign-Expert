@@ -28,8 +28,10 @@ accordions.each((index, item) => {
                 getTrigger($(panel).attr('id')).each((_index, trigger) => {
                     if (initialState === 'show') {
                         $(trigger).addClass('active');
+                        $(trigger).attr('aria-expanded', 'true');
                     } else {
                         $(trigger).removeClass('active');
+                        $(trigger).attr('aria-expanded', 'false');
                     }
                 });
 
@@ -39,6 +41,7 @@ accordions.each((index, item) => {
 
                     getTrigger($(panel).attr('id')).each((_index, trigger) => {
                         $(trigger).addClass('active');
+                        $(trigger).attr('aria-expanded', 'true');
                     });
                 }
             }
@@ -71,6 +74,7 @@ accordionTriggers.each((index, trigger) => {
 
             getTrigger($(panel).attr('id')).each((_index, _trigger) => {
                 $(_trigger).removeClass('active');
+                $(_trigger).attr('aria-expanded', 'false');
             });
         });
 
@@ -79,10 +83,12 @@ accordionTriggers.each((index, trigger) => {
         if (targetHadClassIn) {
             getTrigger($(target).attr('id')).each((_index, _trigger) => {
                 $(_trigger).removeClass('active');
+                $(_trigger).attr('aria-expanded', 'false');
             });
         } else {
             getTrigger($(target).attr('id')).each((_index, _trigger) => {
                 $(_trigger).addClass('active');
+                $(_trigger).attr('aria-expanded', 'true');
             });
         }
     });

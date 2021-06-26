@@ -394,7 +394,7 @@
                 </button>
 
                 <?php if($editable): ?>
-                    <button class="btn btn-bordered btn-icon" data-order-edit-open="#<?php echo $id . '-edit' ?>">
+                    <button class="btn btn-bordered btn-icon" data-order-edit-open="#<?php echo $id . '-edit' ?>" aria-controls="<?php echo $id . '-edit' ?>">
                         <svg class="icon fill-primary">
                             <use xlink:href="#sprite-pencil"></use>
                         </svg>

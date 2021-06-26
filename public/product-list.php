@@ -16,8 +16,8 @@ $mainBgActive = true;
     'Predmety pre sublimáciu'
 ]); ?>
 
-<div class="product-list">
-    <section class="section">
+<section class="product-list">
+    <div class="section">
         <div class="container">
             <div class="section-header">
                 <h1 class="section-title">Predmety pre sublimáciu</h1>
@@ -57,16 +57,16 @@ $mainBgActive = true;
                 <?php endfor; ?>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="section section-padding-top-small">
+    <div class="section section-padding-top-small">
         <div class="container">
             <div class="mb-2">
                 1 - 32 z 1089 produktov
             </div>
 
             <div class="product-list-top">
-                <button type="button" id="mobile-filters-button-open" class="btn btn-sm btn-bordered mr-2 mobile-filters-button-open">Filtrovať</button>
+                <button type="button" id="mobile-filters-button-open" aria-controls="product-list-sidebar" class="btn btn-sm btn-bordered mr-2 mobile-filters-button-open">Filtrovať</button>
 
                 <div class="filters-cancel-list">
                     <button type="button" class="btn btn-bordered btn-sm filter-button-cancel-all">Zrušiť filter</button>
@@ -120,7 +120,7 @@ $mainBgActive = true;
 
             <div class="product-list-container">
                 <div id="product-list-sidebar-overlay" class="product-list-sidebar-overlay"></div>
-                <div class="product-list-sidebar">
+                <div id="product-list-sidebar" class="product-list-sidebar">
                     <div class="product-list-sidebar-header">
                         <div class="product-list-sidebar-title">
                             Filter
@@ -214,11 +214,11 @@ $mainBgActive = true;
 
                             <div class="product-list-filter-content" id="filter-price" data-type="accordion-item" data-allow-close="true">
                                 <div class="filter-price-flex">
-                                    <input id="filter-price-input-min" type="number" min="0" value="0" class="form-control" aria-label="Minimálna cena" aria-valuemin="0">
+                                    <input id="filter-price-input-min" type="number" min="0" value="0" class="form-control" aria-label="Minimálna cena">
 
                                     <div class="filter-price-input-separator"></div>
 
-                                    <input id="filter-price-input-max" type="number" max="1240" value="1240" class="form-control" aria-label="Maximálna cena" aria-valuemax="1240">
+                                    <input id="filter-price-input-max" type="number" max="1240" value="1240" class="form-control" aria-label="Maximálna cena">
 
                                     <button type="button" class="btn filter-price-btn">Ok</button>
                                 </div>
@@ -269,10 +269,9 @@ $mainBgActive = true;
                     </div>
                 </div>
             </div>
-
         </div>
-    </section>
-</div>
+    </div>
+</section>
 
 
 <?php productListCarousel(); ?>

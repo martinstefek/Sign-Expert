@@ -92,7 +92,7 @@ include_once('../php/layout/checkout/header.php')
             </div>
         </div>
 
-        <div class="col-xs-12 col-xl-5 col-xl-offset-2 col-lg-6">
+        <section class="col-xs-12 col-xl-5 col-xl-offset-2 col-lg-6">
             <h1 class="checkout-title">Súhrn objednávky</h1>
 
             <div class="checkout-summary-product-list">
@@ -190,7 +190,7 @@ include_once('../php/layout/checkout/header.php')
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 
     <?php checkoutFooterActions(hrefReturn('checkout-personal-info.php'), hrefReturn('checkout-summary.php')) ?>

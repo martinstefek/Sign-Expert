@@ -1,7 +1,7 @@
 <?php
 
 const PATH = './';
-const USE_HTML_EXTENSION = false;
+const USE_HTML_EXTENSION = true;
 
 global $loggedIn;
 $loggedIn = false;

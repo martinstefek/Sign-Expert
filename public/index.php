@@ -50,9 +50,9 @@
 
 <section class="section services">
     <div class="container">
-        <header class="section-header">
+        <div class="section-header">
             <h1 class="section-title">Ponúkame riešenia pre</h1>
-        </header>
+        </div>
 
         <div class="services-list-row">
             <?php service(

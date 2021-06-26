@@ -12,9 +12,11 @@
     z-index: @zindex-navbar-fixed;
     .transition();
     transform: translate(110%, 0);
+    visibility: hidden;
 
     .shoppingCartModalVisible({
         transform: translate(0, 0);
+        visibility: visible;
     });
 
     .shopping-cart-modal-header {
