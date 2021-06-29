@@ -12,7 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="sk">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
     <link href="./css/app.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="./img/favicon.ico">
 </head>
@@ -3296,7 +3297,7 @@
                 Vaša správa bola úspešné odoslaná. V krátkom čase vás budeme kontaktovať.
             </div>
 
-            <button type="button" class="btn notice-message-icon-cancel">
+            <button type="button" class="btn notice-message-icon-cancel" aria-label="Zavrieť">
                 <svg class="icon">
                     <use xlink:href="#sprite-cancel"></use>
                 </svg>
