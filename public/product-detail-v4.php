@@ -78,7 +78,7 @@ $mainBgActive = false;
                     </div>
 
                     <form class="product-detail-request-price-form">
-                        <h3 class="product-detail-request-price-form-title">Žiadosť o cenovú ponuku</h3>
+                        <h2 class="product-detail-request-price-form-title">Žiadosť o cenovú ponuku</h2>
                         <p class="product-detail-request-price-description">Vyplňte prosím Vaše kontaktné údaje a my Vás budeme obratom kontaktovať.</p>
                         
                         <div class="form-group">

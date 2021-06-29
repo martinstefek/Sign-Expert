@@ -33,7 +33,7 @@
                 Vaša správa bola úspešné odoslaná. V krátkom čase vás budeme kontaktovať.
             </div>
 
-            <button type="button" class="btn notice-message-icon-cancel">
+            <button type="button" class="btn notice-message-icon-cancel" aria-label="Zavrieť">
                 <svg class="icon">
                     <use xlink:href="#sprite-cancel"></use>
                 </svg>
