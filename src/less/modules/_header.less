@@ -192,7 +192,9 @@
             
             .mobileHeader({
                 display: block;
-                width: 100%;
+                width: calc(100% + .rem(36px)[@value]);
+                margin-left: .rem(-18px)[@value];
+                margin-right: .rem(-18px)[@value];
             });
 
             > * {
@@ -225,11 +227,29 @@
 
                 .mobileHeader({
                     width: 100%;
-                    padding: .rem(20px)[@value] 0;
-                    border-bottom: 1px solid rgba(#FFFFFF, .15);
+                    padding: .rem(14px)[@value] .rem(18px)[@value];
+                    //border-bottom: 1px solid rgba(#FFFFFF, .15);
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        left: .rem(18px)[@value];
+                        right: .rem(18px)[@value];
+                        height: 1px;
+                        background-color: rgba(#FFFFFF, .15);
+                    }
 
                     .caret {
                         margin-left: auto;
+                    }
+
+                    .btn-action-label-mobile-inline {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
                     }
                 });
 
@@ -237,6 +257,7 @@
                     width: .rem(32px)[@value];
                     height: .rem(28px)[@value];
                     margin-right: .rem(12px)[@value];
+                    flex-shrink: 0;
                 }
 
                 &:hover, &:focus, &[aria-expanded="true"] {
@@ -244,12 +265,26 @@
                 }
 
                 &:last-child {
-                    padding-right: 0;
-
                     .desktopHeader({
+                        padding-right: 0;
+
                         &:hover, &:focus, &[aria-expanded="true"] {
                             background: transparent;
                         }
+                    });
+                }
+
+                ~ .dropdown-backdrop {
+                    .mobileHeader({
+                        display: none;
+                    });
+                }
+
+                ~ .dropdown-menu {
+                    .mobileHeader({
+                        position: relative;
+                        max-width: none;
+                        min-width: 100%;
                     });
                 }
             }
@@ -330,6 +365,19 @@
                         width: .rem(22px)[@value];
                         height: .rem(20px)[@value];
                         margin-right: .rem(5px)[@value];
+                    }
+
+                    .chevron-icon {
+                        display: none;
+                        stroke: @brand-primary;
+                        fill: @brand-primary;
+                        width: .rem(22px)[@value];
+                        height: .rem(12px)[@value];
+                        margin-top: -2px;
+
+                        .mobileHeader({
+                            display: inline;
+                        });
                     }
                 }
             }

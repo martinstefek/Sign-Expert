@@ -87,6 +87,10 @@ const shouldNotHideNav = (el) => {
 }
 
 document.addEventListener(clickEvent, (e) => {
+    if (e.target?.getAttribute('id') === 'main-header-overlay' && window.innerWidth <= mobileNavigationThreshold) {
+        e.preventDefault();
+    }
+
     const path = e.path || (e.composedPath && e.composedPath());
 
     allTopLevelItems.each((index, item) => {

@@ -1,1 +1,36 @@
-!function(){var e=$("#register-search-company"),s=$("#register-search-company-cancel"),a=$("#register-search-company-autocomplete"),i=function(e){e>=3?(a.addClass("visible"),s.addClass("visible")):(a.removeClass("visible"),s.removeClass("visible"))};e.on("input",(function(e){var s=e.target.value.length;i(s)})),e.on("focus",(function(e){var s=e.target.value.length;i(s)})),e.on("focusout",(function(e){a.removeClass("visible")})),s.on("click",(function(a){e.val(""),s.removeClass("visible")}))}();
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!****************************!*\
+  !*** ./src/js/checkout.js ***!
+  \****************************/
+var searchCompanyInput = $('#register-search-company');
+var searchCompanyCancel = $('#register-search-company-cancel');
+var searchCompanyAutocomplete = $('#register-search-company-autocomplete');
+
+var showAutocomplete = function showAutocomplete(length) {
+  if (length >= 3) {
+    searchCompanyAutocomplete.addClass('visible');
+    searchCompanyCancel.addClass('visible');
+  } else {
+    searchCompanyAutocomplete.removeClass('visible');
+    searchCompanyCancel.removeClass('visible');
+  }
+};
+
+searchCompanyInput.on('input', function (e) {
+  var length = e.target.value.length;
+  showAutocomplete(length);
+});
+searchCompanyInput.on('focus', function (e) {
+  var length = e.target.value.length;
+  showAutocomplete(length);
+});
+searchCompanyInput.on('focusout', function (e) {
+  searchCompanyAutocomplete.removeClass('visible');
+});
+searchCompanyCancel.on('click', function (e) {
+  searchCompanyInput.val('');
+  searchCompanyCancel.removeClass('visible');
+});
+/******/ })()
+;

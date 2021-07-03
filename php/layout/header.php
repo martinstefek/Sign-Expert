@@ -22,7 +22,7 @@
     <?php include_once(path('img/sprite.svg')) ?>
 </div>
 
-<header class="main-header-overlay">
+<header id="main-header-overlay" class="main-header-overlay">
     <div id="main-header" class="main-header">
         <div class="mobile-navigation-header">
             <div class="mobile-navigation-title">Menu</div>

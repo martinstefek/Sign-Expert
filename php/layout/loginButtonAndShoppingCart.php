@@ -17,16 +17,28 @@
     <ul class="dropdown-menu">
         <li>
             <a href="<?php href('account-orders.php') ?>" class="dropdown-item active">
+                <svg class="icon chevron-icon">
+                    <use xlink:href="#sprite-chevron-right"></use>
+                </svg>
+
                 <span>Objednávky a faktury</span>
             </a>
         </li>
         <li>
             <a href="<?php href('account-info.php') ?>" class="dropdown-item">
+                <svg class="icon chevron-icon">
+                    <use xlink:href="#sprite-chevron-right"></use>
+                </svg>
+
                 <span>Firemné údaje</span>
             </a>
         </li>
         <li>
             <a href="<?php href('account-address.php') ?>" class="dropdown-item">
+                <svg class="icon chevron-icon">
+                    <use xlink:href="#sprite-chevron-right"></use>
+                </svg>
+
                 <span>Adresy</span>
             </a>
         </li>
@@ -59,7 +71,7 @@
         <use xlink:href="#sprite-shopping-cart"></use>
     </svg>
 
-    <span>
+    <span class="btn-action-label-mobile-inline">
         <span class="text-highlighted">Košík (2)</span>
         78,75 €
     </span>
@@ -85,6 +97,11 @@
             <use xlink:href="#sprite-shopping-cart"></use>
         </svg>
 
-        <span>Košík</span>
+        <span class="btn-action-label-mobile-inline">
+            <span>Košík</span>
+            <span class="hidden-lg">
+                0 €
+            </span>
+        </span>
     </button>
 <?php endif; ?>

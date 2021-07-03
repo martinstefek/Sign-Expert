@@ -10,22 +10,43 @@
             </a>
 
             <div class="mobile-header-actions">
-                <button type="button"
-                   class="btn main-header-mobile-action"
-                   data-toggle="modal"
-                   data-target="#login-register-modal"
-                    aria-label="Prihlásenie a registrácia"
-                >
-                    <svg class="icon stroke-primary">
-                        <use xlink:href="#sprite-avatar"></use>
-                    </svg>
-                </button>
+                <?php if (!empty($loggedIn)): ?>
+                    <a href="<?php href('account-info.php') ?>"
+                       class="btn main-header-mobile-action main-header-mobile-btn-logged-in"
+                       aria-label="Zákaznícka zóna"
+                    >
+                        <svg class="icon">
+                            <use xlink:href="#sprite-avatar-logged-in"></use>
+                        </svg>
+                    </a>
+                <?php else: ?>
+                    <button type="button"
+                            class="btn main-header-mobile-action"
+                            data-toggle="modal"
+                            data-target="#login-register-modal"
+                            aria-label="Prihlásenie a registrácia"
+                    >
+                            <svg class="icon stroke-primary">
+                                <use xlink:href="#sprite-avatar"></use>
+                            </svg>
+                    </button>
+                <?php endif; ?>
 
-                <button type="button" class="btn main-header-mobile-action" data-toggle="shopping-cart-modal" aria-label="Otvoriť košík">
-                    <svg class="icon stroke-primary">
-                        <use xlink:href="#sprite-shopping-cart"></use>
-                    </svg>
-                </button>
+                <?php if (!empty($loggedIn)): ?>
+                    <button type="button" class="btn main-header-mobile-action main-header-mobile-btn-shopping-cart" data-toggle="shopping-cart-modal" aria-label="Otvoriť košík">
+                        <svg class="icon stroke-success">
+                            <use xlink:href="#sprite-shopping-cart"></use>
+                        </svg>
+
+                        <span class="main-header-mobile-shopping-cart-items">2</span>
+                    </button>
+                <?php else: ?>
+                    <button type="button" class="btn main-header-mobile-action main-header-mobile-btn-shopping-cart" data-toggle="shopping-cart-modal" aria-label="Otvoriť košík">
+                        <svg class="icon stroke-primary">
+                            <use xlink:href="#sprite-shopping-cart"></use>
+                        </svg>
+                    </button>
+                <?php endif; ?>
 
                 <button id="mobile-nav-open" class="btn btn-transparent main-header-mobile-action" aria-label="Otvoriť navigáciu">
                     <svg class="icon action-icon-grey">

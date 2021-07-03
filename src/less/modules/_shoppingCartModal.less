@@ -42,9 +42,12 @@
     .shopping-cart-modal-body {
         height: 100%;
         padding: 0 .rem(6px)[@value] 1.5rem;
-        margin-right: .rem(6px)[@value];
         overflow: auto;
         .customScrollBar();
+
+        .breakpoint(md, {
+            margin-right: .rem(6px)[@value];
+        });
 
         .product-horizontal-list-item-img {
             width: .rem(80px)[@value];

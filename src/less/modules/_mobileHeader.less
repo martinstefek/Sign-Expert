@@ -36,13 +36,26 @@
         }
 
         .main-header-mobile-action {
+            position: relative;
             display: inline-block;
+            align-items: center;
             width: .rem(28px)[@value];
             height: .rem(28px)[@value];
             margin-left: 1rem;
             cursor: pointer;
             background-color: transparent;
             padding: 0;
+            border: none;
+
+            &.main-header-mobile-btn-logged-in {
+                width: .rem(29px)[@value];
+                height: .rem(29px)[@value];
+            }
+
+            &.main-header-mobile-btn-shopping-cart {
+                margin-right: .rem(3px)[@value];
+                width: .rem(32px)[@value];
+            }
 
             svg, .icon {
                 width: 100%;
@@ -51,6 +64,20 @@
                 &.action-icon-grey {
                     fill: #C9C9C9;
                 }
+            }
+
+            .main-header-mobile-shopping-cart-items {
+                position: absolute;
+                top: .rem(-6px)[@value];
+                right: .rem(-10px)[@value];
+                width: .rem(22px)[@value];
+                height: .rem(22px)[@value];
+                border: 3px solid #333640;
+                border-radius: 50%;
+                background-color: @brand-success;
+                color: #FFFFFF;
+                font-size: .rem(12px)[@value];
+                text-align: center;
             }
         }
     }
