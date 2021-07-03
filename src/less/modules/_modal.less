@@ -17,13 +17,15 @@
 
         .close {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: .25rem;
+            right: .125rem;
             z-index: 1;
+            padding: .rem(12px)[@value] .rem(14px)[@value];
 
             .breakpoint(md, {
-                top: @modal-inner-padding;
-                right: @modal-inner-padding;
+                top: calc(@modal-inner-padding - .rem(6px)[@value]);
+                right: calc(@modal-inner-padding - .rem(8px)[@value]);
+                padding: .rem(6px)[@value] .rem(8px)[@value];
             });
         }
 

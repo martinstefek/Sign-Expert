@@ -10246,14 +10246,16 @@ fieldset[disabled] .btn-lighter.focus {
 }
 .modal .modal-header .close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.25rem;
+  right: 0.125rem;
   z-index: 1;
+  padding: 0.75rem 0.875rem;
 }
 @media (min-width: 768px) {
   .modal .modal-header .close {
-    top: 1.5rem;
-    right: 1.5rem;
+    top: calc(1.5rem - 0.375rem);
+    right: calc(1.5rem - 0.5rem);
+    padding: 0.375rem 0.5rem;
   }
 }
 .modal .modal-header .icon-close {
@@ -15583,6 +15585,11 @@ body.shopping-cart-modal-visible .shopping-cart-modal {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+@media (max-width: 575px) {
+  .account .account-wishlist .product-detail .product-detail-title {
+    font-size: 1.3125rem;
+  }
+}
 .account .account-wishlist .product-detail .product-parameter {
   margin-bottom: 1rem;
 }
@@ -15644,6 +15651,17 @@ body.shopping-cart-modal-visible .shopping-cart-modal {
 .account .account-wishlist .product-detail .product-detail-gallery-thumbnails .product-detail-gallery-thumbnail-item {
   width: 3.125rem;
   height: 3.125rem;
+}
+@media (max-width: 575px) {
+  .account .account-wishlist .product-detail .product-parameter-box-list {
+    margin-right: -0.5rem;
+  }
+}
+@media (max-width: 575px) {
+  .account .account-wishlist .product-detail .product-parameter-box {
+    width: calc(50% - 0.5rem);
+    margin-right: 0.5rem;
+  }
 }
 .account .account-wishlist .modal-wishlist-product-detail .modal-header {
   border-bottom: none;

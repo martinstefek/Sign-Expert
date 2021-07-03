@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Add logged in mobile header and another product detail page">
-      <change beforePath="$PROJECT_DIR$/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-address.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-address.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-info-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-info-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-orders.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/account-wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/account-wishlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog-item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/blog-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog-list.html" afterDir="false" />
+    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Generate HTML">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_account.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_account.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_modal.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_modal.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +92,7 @@
       <workItem from="1624956917425" duration="3394000" />
       <workItem from="1625052300026" duration="2718000" />
       <workItem from="1625216270311" duration="650000" />
-      <workItem from="1625297566174" duration="6941000" />
+      <workItem from="1625297566174" duration="8023000" />
     </task>
     <task id="LOCAL-00001" summary="Account responsive">
       <created>1624221858045</created>
@@ -261,7 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1625307204209</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Generate HTML">
+      <created>1625307362929</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1625307362929</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Generate HTML">
+      <created>1625307455166</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1625307455166</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,11 +306,11 @@
     <MESSAGE value="All accessibility" />
     <MESSAGE value="Accesibility changes" />
     <MESSAGE value="Another remarks" />
-    <MESSAGE value="Generate HTML" />
     <MESSAGE value="Remarks" />
     <MESSAGE value="Change cursor on form-label of input" />
     <MESSAGE value="Add logged in mobile header and another product detail page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add logged in mobile header and another product detail page" />
+    <MESSAGE value="Generate HTML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generate HTML" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
