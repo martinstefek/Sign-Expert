@@ -20,7 +20,13 @@
     </form>
 
     <div id="<?php echo $autocompleteId; ?>" class="search-autocomplete">
-        <div class="search-autocomplete-col">
+        <button type="button" class="btn search-autocomplete-cancel" aria-label="Zavrieť" data-clear-search-input="<?php echo $inputId; ?>">
+            <svg class="icon">
+                <use xlink:href="#sprite-cancel"></use>
+            </svg>
+        </button>
+
+        <div class="search-autocomplete-col search-autocomplete-col-bg-gray">
             <div class="mb-3">
                 <h6>Frázy</h6>
                 <a href="#" class="label label-primary">Sublimácia</a>
@@ -84,5 +90,7 @@
             </div>
         </div>
     </div>
+
+    <div class="search-overlay" data-clear-search-input="<?php echo $inputId; ?>"></div>
 </div>
 <?php } ?>

@@ -1,5 +1,7 @@
 .header-mobile {
     display: none;
+    position: relative;
+    z-index: @zindex-navbar-fixed;
     
     .mobileHeader({
         display: block;
@@ -83,6 +85,7 @@
     }
 
     .bottom-header-mobile {
+        position: relative;
         background: @gray-dark;
 
         .search {

@@ -304,12 +304,39 @@
     flex-basis: @size;
     width: @size;
     max-width: @size;
-    border-right: 1px solid @border-color;
     padding: 1rem;
 
-    &:last-child {
-        border-right: none;
+    &.search-autocomplete-col-bg-gray {
+        background-color: #F9F8F8;
+
+        .desktopHeader({
+            margin-left: -.5rem;
+            flex-basis: calc(@size + .5rem);
+            width: calc(@size + .5rem);
+            max-width: calc(@size + .5rem);
+        });
     }
+
+    .desktopHeader({
+        border-right: 1px solid @border-color;
+
+        &:last-child {
+            border-right: none;
+        }
+    });
+
+    .mobileHeader({
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+        border-bottom: 1px solid @border-color;
+        padding: 1rem .rem(20px)[@value];
+
+
+        &:last-child {
+            border-bottom: none;
+        }
+    });
 }
 
 .customScrollBar(@width: 4px) {

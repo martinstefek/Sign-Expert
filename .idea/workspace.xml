@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Generate HTML">
+    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Update wishlist shopping cart modal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/layout/headerSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/layout/headerSearch.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_account.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_account.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_modal.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_modal.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/searchAutocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/searchAutocomplete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/_mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/_mixins.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_header.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_header.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/modules/_mobileHeader.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_mobileHeader.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +96,8 @@
       <workItem from="1624956917425" duration="3394000" />
       <workItem from="1625052300026" duration="2718000" />
       <workItem from="1625216270311" duration="650000" />
-      <workItem from="1625297566174" duration="8023000" />
+      <workItem from="1625297566174" duration="8405000" />
+      <workItem from="1625596015342" duration="5613000" />
     </task>
     <task id="LOCAL-00001" summary="Account responsive">
       <created>1624221858045</created>
@@ -269,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625307455166</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Update wishlist shopping cart modal">
+      <created>1625308496777</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1625308496777</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +322,8 @@
     <MESSAGE value="Change cursor on form-label of input" />
     <MESSAGE value="Add logged in mobile header and another product detail page" />
     <MESSAGE value="Generate HTML" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generate HTML" />
+    <MESSAGE value="Update wishlist shopping cart modal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update wishlist shopping cart modal" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
