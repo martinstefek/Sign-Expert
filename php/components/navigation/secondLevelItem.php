@@ -4,7 +4,7 @@ include_once ('../../config.php');
 function navigationSecondLevelItem($name) { ?>
     <div class="navigation-second-level">
         <ul class="navigation-first-level-home-link">
-            <li><a href="#">Čo je to <?php echo mb_strtoupper($name, 'UTF-8'); ?>?</a></li>
+            <li><a href="<?php href('./product-list.php'); ?>">Čo je to <?php echo mb_strtoupper($name, 'UTF-8'); ?>?</a></li>
         </ul>
 
         <div class="navigation-columns">

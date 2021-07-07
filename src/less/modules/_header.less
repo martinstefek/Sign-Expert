@@ -1027,9 +1027,9 @@
 
             .search-autocomplete-col-2 {
                 .searchAutocompleteCol(50%);
-                padding-right: 0;
-                padding-left: 0;
-                padding-bottom: .5rem;
+                padding-right: 0 !important;
+                padding-left: 0 !important;
+                padding-bottom: .5rem !important;
                 margin-right: -.5rem;
             }
 
@@ -1059,9 +1059,13 @@
                     padding: .rem(12px)[@value] 2.5rem;
 
                     .mobileHeader({
-                        padding: .rem(17px)[@value] 2.5rem;
+                        padding: .rem(17px)[@value] 2rem;
                         border-radius: 0;
                     });
+
+                    @media (max-width: 359px) {
+                        padding: 1.0625rem 1.5rem 1.0625rem 0.5rem;
+                    }
 
                     .icon {
                         position: absolute;
@@ -1113,7 +1117,9 @@
                 }
 
                 &:nth-child(2n) {
-                    border-left: 1px solid @border-color;
+                    .desktopHeader({
+                        border-left: 1px solid @border-color;
+                    });
                 }
 
                 img {
