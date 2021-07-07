@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Generate HTML of updated mobile search autocomplete">
+    <list default="true" id="4b0c13be-7a44-4a3d-b4d9-7aa5a4e5826b" name="Default Changelist" comment="Generate HTML">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/components/navigation/secondLevelItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/components/navigation/secondLevelItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/_mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/_mixins.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_header.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_header.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/less/modules/_mobileHeader.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/modules/_mobileHeader.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index-logged-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index-logged-in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail-v2.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail-v3.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail-v4.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail-v5.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail-v5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/product-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +100,7 @@
       <workItem from="1625216270311" duration="650000" />
       <workItem from="1625297566174" duration="8405000" />
       <workItem from="1625596015342" duration="6582000" />
-      <workItem from="1625666513336" duration="958000" />
+      <workItem from="1625666513336" duration="2453000" />
     </task>
     <task id="LOCAL-00001" summary="Account responsive">
       <created>1624221858045</created>
@@ -293,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1625602921159</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Fix: Search suggestions bugs">
+      <created>1625667561469</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1625667561469</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Generate HTML">
+      <created>1625667686159</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1625667686159</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,11 +352,12 @@
     <MESSAGE value="Remarks" />
     <MESSAGE value="Change cursor on form-label of input" />
     <MESSAGE value="Add logged in mobile header and another product detail page" />
-    <MESSAGE value="Generate HTML" />
     <MESSAGE value="Update wishlist shopping cart modal" />
     <MESSAGE value="add mobile search autocomplete" />
     <MESSAGE value="Generate HTML of updated mobile search autocomplete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generate HTML of updated mobile search autocomplete" />
+    <MESSAGE value="Fix: Search suggestions bugs" />
+    <MESSAGE value="Generate HTML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generate HTML" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
